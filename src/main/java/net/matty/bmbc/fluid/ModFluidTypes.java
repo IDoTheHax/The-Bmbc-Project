@@ -25,7 +25,7 @@ public class ModFluidTypes {
 
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(WATER_STILL_RL, WATER_FLOWING_RL, SOAP_OVERLAY_RL,
-                0xA13B3131, new Vector3f(59f / 255f, 49f / 255f, 49f / 255f), properties));
+                0xA1876B2B, new Vector3f(135f / 255f, 107f / 255f, 43f / 255f), properties));
     }
 
     public static void register(IEventBus eventBus) {
