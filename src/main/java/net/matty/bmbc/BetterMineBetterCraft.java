@@ -2,6 +2,7 @@ package net.matty.bmbc;
 
 import com.mojang.logging.LogUtils;
 import net.matty.bmbc.block.ModBlocks;
+import net.matty.bmbc.fluid.ModFluids;
 import net.matty.bmbc.item.ModFoodItems;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.ModMineralItems;
@@ -59,6 +60,8 @@ public class BetterMineBetterCraft {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SEWAGE_WATER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SEWAGE_WATER.get(), RenderType.translucent());
         }
     }
 }
