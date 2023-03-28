@@ -18,14 +18,14 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModFluidBlocks {
-    public static final DeferredRegister<Block> BLOCKS =
+    public static final DeferredRegister<Block> FLUID_BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BetterMineBetterCraft.MOD_ID);
 
-    public static final RegistryObject<LiquidBlock> SEWAGE_WATER_BLOCK = BLOCKS.register("sewage_water_block",
+    public static final RegistryObject<LiquidBlock> SEWAGE_WATER_BLOCK = FLUID_BLOCKS.register("sewage_water_block",
             () -> new LiquidBlock(ModFluids.SOURCE_SEWAGE_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        RegistryObject<T> toReturn = FLUID_BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
@@ -37,6 +37,6 @@ public class ModFluidBlocks {
 
 
     public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
+        FLUID_BLOCKS.register(eventBus);
     }
 }

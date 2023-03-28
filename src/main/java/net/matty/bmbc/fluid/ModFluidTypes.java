@@ -14,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModFluidTypes {
     public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");
     public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("block/water_flow");
-    public static final ResourceLocation SOAP_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_soap_water");
+    public static final ResourceLocation SOAP_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_sewage_water");
 
     public static final DeferredRegister<FluidType> FLUID_TYPES =
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, BetterMineBetterCraft.MOD_ID);
@@ -22,8 +22,6 @@ public class ModFluidTypes {
     public static final RegistryObject<FluidType> SEWAGE_WATER_FLUID_TYPE = register("sewage_water_fluid",
             FluidType.Properties.create().lightLevel(2).density(15).viscosity(5).sound(SoundAction.get("drink"),
                     SoundEvents.GENERIC_DRINK));
-
-
 
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(WATER_STILL_RL, WATER_FLOWING_RL, SOAP_OVERLAY_RL,

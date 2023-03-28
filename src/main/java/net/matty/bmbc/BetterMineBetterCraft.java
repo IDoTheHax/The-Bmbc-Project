@@ -2,6 +2,8 @@ package net.matty.bmbc;
 
 import com.mojang.logging.LogUtils;
 import net.matty.bmbc.block.ModBlocks;
+import net.matty.bmbc.block.ModFluidBlocks;
+import net.matty.bmbc.fluid.ModFluidTypes;
 import net.matty.bmbc.fluid.ModFluids;
 import net.matty.bmbc.item.ModFoodItems;
 import net.matty.bmbc.item.ModItems;
@@ -37,8 +39,12 @@ public class BetterMineBetterCraft {
         ModMineralItems.register(modEventBus);
         ModFoodItems.register(modEventBus);
 
+        ModFluidBlocks.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModVillagers.register(modEventBus);
+
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
