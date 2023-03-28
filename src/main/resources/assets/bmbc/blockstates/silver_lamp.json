@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "bmbc:block/silver_lamp_on" },
+    "lit=false": { "model": "bmbc:block/silver_lamp_off" }
+  }
+}

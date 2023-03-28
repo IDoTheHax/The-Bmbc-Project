@@ -1,0 +1,32 @@
+{
+  "item.bmbc.eight_ball": "Eight Ball",
+
+  "item.bmbc.silver_ingot": "Silver Ingot",
+  "item.bmbc.raw_bauxite": "Raw Bauxite",
+  "item.bmbc.raw_silver": "Raw Silver",
+  "item.bmbc.aluminium_ingot": "Aluminium Ingot",
+
+  "block.bmbc.silver_lamp": "Silver Lamp",
+  "block.bmbc.silver_block": "Block of Silver",
+
+  "block.bmbc.bauxite_ore": "Bauxite Ore",
+  "block.bmbc.silver_ore": "Silver Ore",
+  "block.bmbc.deepslate_silver_ore": "Deepslate Silver Ore",
+  "item.bmbc.coffee_crop": "Coffee Crop",
+
+  "itemGroup.bmbc": "This is Bmbc",
+  "itemGroup.bmbc_blocks": "Bmbc Blocks",
+  "itemGroup.bmbc_foods": "Bmbc Food",
+  "itemGroup.ores_and_minerals": "Ores and Minerals",
+
+  "item.bmbc.coffee_cherry": "Coffee Cherry",
+  "item.bmbc.coffee_beans": "Coffee Beans",
+
+  "entity.minecraft.villager.bmbc.silverer": "Silverer",
+
+  "key.category.bmbc": "Bmbc Mod",
+  "key.bmbc.drink_water": "Drink Water",
+
+  "message.bmbc.drink_water": "Drinking Water",
+  "message.bmbc.no_water": "There is no water nearby"
+}

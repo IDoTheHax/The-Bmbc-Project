@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "bmbc:silver_ore",
+    "bmbc:silver_block",
+    "bmbc:deepslate_silver_ore"
+  ]
+}
