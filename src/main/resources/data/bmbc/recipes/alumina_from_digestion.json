@@ -1,0 +1,12 @@
+
+{
+  "type": "bmbc:digestion",
+  "ingredients": [
+    {
+      "item": "bmbc:raw_bauxite"
+    }
+  ],
+  "output": {
+    "item": "bmbc:alumina"
+  }
+}

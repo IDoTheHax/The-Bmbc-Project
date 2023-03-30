@@ -11,6 +11,7 @@ import net.matty.bmbc.item.ModFoodItems;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.ModMineralItems;
 import net.matty.bmbc.networking.ModNetworkingPackets;
+import net.matty.bmbc.recipe.ModRecipes;
 import net.matty.bmbc.screen.ModMenuTypes;
 import net.matty.bmbc.screen.PressureVesselScreen;
 import net.matty.bmbc.villager.ModVillagers;
@@ -56,6 +57,8 @@ public class BetterMineBetterCraft {
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

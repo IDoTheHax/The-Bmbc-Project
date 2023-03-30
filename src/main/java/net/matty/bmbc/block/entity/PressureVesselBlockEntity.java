@@ -1,6 +1,7 @@
 package net.matty.bmbc.block.entity;
 
 import net.matty.bmbc.item.ModMineralItems;
+import net.matty.bmbc.recipe.PressureVesselRecipe;
 import net.matty.bmbc.screen.PressureVesselMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -24,6 +25,8 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class PressureVesselBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
@@ -58,7 +61,7 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
                 switch (index) {
                     case 0 -> PressureVesselBlockEntity.this.progress = value;
                     case 1 -> PressureVesselBlockEntity.this.maxProgress = value;
-                };
+                }
             }
 
             @Override
@@ -148,26 +151,38 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private static void craftItem(PressureVesselBlockEntity pEntity) {
+        Level level = pEntity.level;
+        SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
+        for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
+        }
+
+        Optional<PressureVesselRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(PressureVesselRecipe.Type.INSTANCE, inventory, level);
 
         if (hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(1, 1, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(ModMineralItems.ALUMINIUM.get(),
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem(),
                     pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
+            // it will ignore if you have a count you could do
+            // recipe.get().getResultItem().getCount() + count;
 
             pEntity.resetProgress();
         }
     }
 
     private static boolean hasRecipe(PressureVesselBlockEntity entity) {
+        Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasRawOreInFirstSlot = entity.itemHandler.getStackInSlot(1).getItem() == ModMineralItems.BAUXITE.get();
+        Optional<PressureVesselRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(PressureVesselRecipe.Type.INSTANCE, inventory, level);
 
-        return hasRawOreInFirstSlot && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertAmountIntoOutputSlot(inventory, new ItemStack(ModMineralItems.ALUMINIUM.get(), 1));
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
+                canInsertAmountIntoOutputSlot(inventory, recipe.get().getResultItem());
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
