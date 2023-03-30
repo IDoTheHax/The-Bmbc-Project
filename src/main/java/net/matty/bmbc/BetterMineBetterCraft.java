@@ -6,6 +6,7 @@ import net.matty.bmbc.block.ModFluidBlocks;
 import net.matty.bmbc.block.entity.ModBlockEntities;
 import net.matty.bmbc.fluid.ModFluidTypes;
 import net.matty.bmbc.fluid.ModFluids;
+import net.matty.bmbc.item.ModChemicalCompounds;
 import net.matty.bmbc.item.ModFoodItems;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.ModMineralItems;
@@ -42,6 +43,7 @@ public class BetterMineBetterCraft {
         ModItems.register(modEventBus);
         ModMineralItems.register(modEventBus);
         ModFoodItems.register(modEventBus);
+        ModChemicalCompounds.register(modEventBus);
 
         ModFluidBlocks.register(modEventBus);
         ModBlocks.register(modEventBus);
