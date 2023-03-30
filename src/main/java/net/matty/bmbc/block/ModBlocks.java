@@ -2,6 +2,7 @@ package net.matty.bmbc.block;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.custom.CoffeeCropBlock;
+import net.matty.bmbc.block.custom.PressureVesselBlock;
 import net.matty.bmbc.item.ModBlocksCreativeModeTab;
 import net.matty.bmbc.item.ModResourcesCreativeModeTab;
 import net.matty.bmbc.item.ModItems;
@@ -61,6 +62,10 @@ public class ModBlocks {
     // Crops
     public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop",
             () -> new CoffeeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
+            () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModBlocksCreativeModeTab.BMBC_BLOCKS);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
