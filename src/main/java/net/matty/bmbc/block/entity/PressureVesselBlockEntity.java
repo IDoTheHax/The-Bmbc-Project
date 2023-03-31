@@ -2,9 +2,11 @@ package net.matty.bmbc.block.entity;
 
 import net.matty.bmbc.block.custom.PressureVesselBlock;
 import net.matty.bmbc.item.ModChemicalCompounds;
+import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.ModMineralItems;
 import net.matty.bmbc.recipe.PressureVesselRecipe;
 import net.matty.bmbc.screen.PressureVesselMenu;
+import net.matty.bmbc.util.ModEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -21,8 +23,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
@@ -51,6 +54,15 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
         }
     };
 
+    private final ModEnergyStorage ENERGY_STORAGE = new ModEnergyStorage(60000, 256) {
+        @Override
+        public void onEnergyChanged() {
+            setChanged();
+
+        }
+    };
+    private static final int ENERGY_REQ = 32; // How much energy is consumed per tick to craft something
+
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
             Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
@@ -61,6 +73,8 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
                             (index, stack) -> itemHandler.isItemValid(1, stack))),
                     Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
                             (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))));
+
+    private LazyOptional<IEnergyStorage> lazyEnergyHandler = LazyOptional.empty();
 
 
     protected final ContainerData data;
@@ -107,7 +121,12 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+        if(cap == ForgeCapabilities.ENERGY) {
+            return lazyEnergyHandler.cast();
+        }
+
+
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
             if(side == null) {
                 return lazyItemHandler.cast();
             }
@@ -135,18 +154,21 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
     public void onLoad() {
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
+        lazyEnergyHandler = LazyOptional.of(() -> ENERGY_STORAGE);
     }
 
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
         lazyItemHandler.invalidate();
+        lazyEnergyHandler.invalidate();
     }
 
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
         nbt.putInt("pressure_vessel.progress", this.progress);
+        nbt.putInt("pressure_vessel.energy", ENERGY_STORAGE.getEnergyStored());
 
         super.saveAdditional(nbt);
     }
@@ -156,6 +178,7 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
         progress = nbt.getInt("pressure_vessel.progress");
+        ENERGY_STORAGE.setEnergy(nbt.getInt("pressure_vessel.energy"));
     }
 
     public void drops() {
@@ -172,10 +195,14 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
             return;
         }
 
-        if (hasRecipe(pEntity)) {
-            pEntity.progress++;
-            setChanged(level, pos, state );
+        if(hasGemInFirstSlot(pEntity)) {
+            pEntity.ENERGY_STORAGE.receiveEnergy(64, false);
+        }
 
+        if (hasRecipe(pEntity) && hasEnoughEnergy(pEntity)) {
+            pEntity.progress++;
+            extractEnergy(pEntity);
+            setChanged(level, pos, state );
 
             if(pEntity.progress >= pEntity.maxProgress) {
                 craftItem(pEntity);
@@ -184,6 +211,18 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
             pEntity.resetProgress();
             setChanged(level, pos, state);
         }
+    }
+
+    private static void extractEnergy(PressureVesselBlockEntity pEntity) {
+        pEntity.ENERGY_STORAGE.extractEnergy(ENERGY_REQ, false);
+    }
+
+    private static boolean hasEnoughEnergy(PressureVesselBlockEntity pEntity) {
+        return pEntity.ENERGY_STORAGE.getEnergyStored() >= ENERGY_REQ * pEntity.maxProgress;
+    }
+
+    private static boolean hasGemInFirstSlot(PressureVesselBlockEntity pEntity) {
+        return pEntity.itemHandler.getStackInSlot(0).getItem() == ModItems.BATTERY.get();
     }
 
     private void resetProgress() {
