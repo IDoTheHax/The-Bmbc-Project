@@ -3,6 +3,7 @@ package net.matty.bmbc.item;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.fluid.ModFluids;
+import net.matty.bmbc.item.custom.BatteryItem;
 import net.matty.bmbc.item.custom.EightBallItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -21,6 +22,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, BetterMineBetterCraft.MOD_ID);
 
     // Special or Custom Items
+    public static final RegistryObject<Item> BATTERY = ITEMS.register("battery",
+            () -> new BatteryItem(new Item.Properties().tab(ModDefaultCreativeModeTab.BMBC)));
+
     public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
             () -> new EightBallItem(new Item.Properties().tab(ModDefaultCreativeModeTab.BMBC)));
 
