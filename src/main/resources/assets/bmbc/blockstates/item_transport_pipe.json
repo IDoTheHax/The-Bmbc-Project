@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bmbc:block/item_transport_pipe"
+    },
+    "facing=south": {
+      "model": "bmbc:block/item_transport_pipe",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bmbc:block/item_transport_pipe",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "bmbc:block/item_transport_pipe",
+      "y": 90
+    }
+  }
+}

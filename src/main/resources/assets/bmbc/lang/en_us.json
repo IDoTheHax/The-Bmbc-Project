@@ -37,5 +37,6 @@
   "message.bmbc.drink_water": "Drinking Water",
   "message.bmbc.no_water": "There is no water nearby",
 
-  "block.bmbc.pressure_vessel": "Pressure Vessel"
+  "block.bmbc.pressure_vessel": "Pressure Vessel",
+  "block.bmbc.item_transport_pipe": "Item Transport Pipe"
 }

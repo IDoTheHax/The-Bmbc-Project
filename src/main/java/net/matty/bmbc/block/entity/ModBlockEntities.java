@@ -17,6 +17,12 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(PressureVesselBlockEntity::new,
                             ModBlocks.PRESSURE_VESSEL.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<ItemTransportPipeBlockEntity>> ITEM_TRANSPORT_PIPE =
+            BLOCK_ENTITIES.register("item_transport_pipe",
+            () -> BlockEntityType.Builder.of(ItemTransportPipeBlockEntity::new,
+                    ModBlocks.ITEM_TRANSPORT_PIPE.get()).build(null));
+
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

@@ -2,9 +2,9 @@ package net.matty.bmbc.block;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.custom.CoffeeCropBlock;
+import net.matty.bmbc.block.custom.ItemTransportPipeBlock;
 import net.matty.bmbc.block.custom.PressureVesselBlock;
 import net.matty.bmbc.item.ModBlocksCreativeModeTab;
-import net.matty.bmbc.item.ModResourcesCreativeModeTab;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.custom.SilverLampBlock;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -65,6 +65,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
             () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModBlocksCreativeModeTab.BMBC_BLOCKS);
+
+    // Pipes
+    public static final RegistryObject<Block> ITEM_TRANSPORT_PIPE = registerBlock("item_transport_pipe",
+            () -> new ItemTransportPipeBlock(Block.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModBlocksCreativeModeTab.BMBC_BLOCKS);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
