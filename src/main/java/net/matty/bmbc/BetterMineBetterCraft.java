@@ -79,6 +79,8 @@ public class BetterMineBetterCraft {
         public static void onClientSetup(FMLClientSetupEvent event) {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SEWAGE_WATER.get(), RenderType.solid());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SEWAGE_WATER.get(), RenderType.solid());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SODIUM_HYDROXIDE.get(), RenderType.solid());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SODIUM_HYDROXIDE.get(), RenderType.solid());
 
             MenuScreens.register(ModMenuTypes.PRESSURE_VESSEL_MENU.get(), PressureVesselScreen::new);
         }
