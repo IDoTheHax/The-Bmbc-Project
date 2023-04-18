@@ -1,6 +1,7 @@
 package net.matty.bmbc.item;
 
 import net.matty.bmbc.BetterMineBetterCraft;
+import net.matty.bmbc.item.custom.tooltips.MineralWithToolTipItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,14 +13,19 @@ public class ModMineralItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, BetterMineBetterCraft.MOD_ID);
 
     // Ingots and their raw variants
-    public static final RegistryObject<Item> SILVER = ITEMS.register("silver_ingot",
-            () -> new Item(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)));
-    public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
-            () -> new Item(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)));
-
     public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("aluminium_ingot",
-            () -> new Item(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)));
+            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
+                    ,"Chem. Formula: ", "Al"));
+
+    public static final RegistryObject<Item> SILVER = ITEMS.register("silver_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
+                    ,"Chem. Formula: ", "Ag"));
+
     public static final RegistryObject<Item> BAUXITE = ITEMS.register("raw_bauxite",
+            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
+                    ,"Chem. Formula: ", "Al2H2O4"));
+
+    public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
             () -> new Item(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)));
 
     public static void register(IEventBus eventBus) {

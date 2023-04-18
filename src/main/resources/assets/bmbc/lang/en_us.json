@@ -5,9 +5,9 @@
   "item.bmbc.sodium_hydroxide_bucket": "Sodium hydroxide",
 
   "item.bmbc.silver_ingot": "Silver Ingot",
-  "item.bmbc.raw_bauxite": "Raw Bauxite",
-  "item.bmbc.raw_silver": "Raw Silver",
   "item.bmbc.aluminium_ingot": "Aluminium Ingot",
+  "item.bmbc.raw_silver": "Raw Silver",
+  "item.bmbc.raw_bauxite": "Raw Bauxite",
 
   "item.bmbc.alumina": "Alumina",
 
@@ -19,6 +19,7 @@
   "block.bmbc.bauxite_ore": "Bauxite Ore",
   "block.bmbc.silver_ore": "Silver Ore",
   "block.bmbc.deepslate_silver_ore": "Deepslate Silver Ore",
+
   "item.bmbc.coffee_crop": "Coffee Crop",
 
   "itemGroup.bmbc": "This is Bmbc",
