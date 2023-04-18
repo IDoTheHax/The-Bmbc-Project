@@ -6,6 +6,10 @@
       "item": "bmbc:raw_bauxite"
     }
   ],
+  "fluid": {
+    "FluidName": "bmbc:sodium_hydroxide_fluid",
+    "Amount": 500
+  },
   "output": {
     "item": "bmbc:alumina"
   }

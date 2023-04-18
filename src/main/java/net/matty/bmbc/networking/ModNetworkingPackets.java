@@ -1,10 +1,7 @@
 package net.matty.bmbc.networking;
 
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.matty.bmbc.networking.packet.DrinkWaterC2SPacket;
-import net.matty.bmbc.networking.packet.EnergySyncS2CPacket;
-import net.matty.bmbc.networking.packet.ExampleC2SPacket;
-import net.matty.bmbc.networking.packet.ThirstDataSyncS2CPacket;
+import net.matty.bmbc.networking.packet.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -53,6 +50,12 @@ public class ModNetworkingPackets {
                 .encoder(EnergySyncS2CPacket::toBytes)
                 .consumerMainThread(EnergySyncS2CPacket::handle)
                 .add();
+
+        net.messageBuilder(FluidSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(FluidSyncS2CPacket::new)
+                .encoder(FluidSyncS2CPacket::toBytes)
+                .consumerMainThread(FluidSyncS2CPacket::handle)
+                .add();
     }
 
     public static <MSG> void sendToServer(MSG message) {
@@ -63,7 +66,7 @@ public class ModNetworkingPackets {
         INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), message);
     }
 
-    public static <MSG> void sendToClient(MSG message) {
+    public static <MSG> void sendToClients(MSG message) {
         INSTANCE.send(PacketDistributor.ALL.noArg(), message);
     }
 }

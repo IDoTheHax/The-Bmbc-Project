@@ -39,5 +39,10 @@
   "message.bmbc.no_water": "There is no water nearby",
 
   "block.bmbc.pressure_vessel": "Pressure Vessel",
-  "block.bmbc.item_transport_pipe": "Item Transport Pipe"
+  "block.bmbc.item_transport_pipe": "Item Transport Pipe",
+
+  "bmbc.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "bmbc.tooltip.liquid.amount": "%s mB",
+
+  "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide"
 }

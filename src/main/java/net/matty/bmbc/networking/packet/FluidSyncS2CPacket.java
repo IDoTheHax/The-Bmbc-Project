@@ -5,26 +5,27 @@ import net.matty.bmbc.screen.PressureVesselMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
-public class EnergySyncS2CPacket {
-    private final int energy;
+public class FluidSyncS2CPacket {
+    private final FluidStack fluidStack;
     private final BlockPos pos;
 
-    public EnergySyncS2CPacket(int energy, BlockPos pos){
-        this.energy = energy;
+    public FluidSyncS2CPacket(FluidStack fluidStack, BlockPos pos){
+        this.fluidStack = fluidStack;
         this.pos = pos;
     }
 
-    public EnergySyncS2CPacket(FriendlyByteBuf buf) {
-        this.energy = buf.readInt();
+    public FluidSyncS2CPacket(FriendlyByteBuf buf) {
+        this.fluidStack = buf.readFluidStack();
         this.pos = buf.readBlockPos();
     }
 
     public  void toBytes(FriendlyByteBuf buf) {
-        buf.writeInt(energy);
+        buf.writeFluidStack(fluidStack);
         buf.writeBlockPos(pos);
     }
 
@@ -33,11 +34,11 @@ public class EnergySyncS2CPacket {
         context.enqueueWork(() -> {
             // HERE WE ARE ON THE CLIENT!
             if(Minecraft.getInstance().level.getBlockEntity(pos) instanceof PressureVesselBlockEntity blockEntity) {
-                blockEntity.setEnergyLevel(energy);
+                blockEntity.setFluid(this.fluidStack);
 
                 if(Minecraft.getInstance().player.containerMenu instanceof PressureVesselMenu menu &&
                     menu.getBlockEntity().getBlockPos().equals(pos)) {
-                    blockEntity.setEnergyLevel(energy);
+                    menu.setFluid(this.fluidStack);
                 }
             }
         });
