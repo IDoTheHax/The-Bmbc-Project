@@ -27,6 +27,9 @@ public class ModFluidBlocks {
     public static final RegistryObject<LiquidBlock> SODIUM_HYDROXIDE_BLOCK = FLUID_BLOCKS.register("sodium_hydroxide_block",
             () -> new LiquidBlock(ModFluids.SOURCE_SODIUM_HYDROXIDE, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
+    public static final RegistryObject<LiquidBlock> HELIUM_BLOCK = FLUID_BLOCKS.register("helium_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_HELIUM, BlockBehaviour.Properties.copy(Blocks.AIR)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = FLUID_BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

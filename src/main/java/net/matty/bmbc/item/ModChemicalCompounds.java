@@ -1,6 +1,7 @@
 package net.matty.bmbc.item;
 
 import net.matty.bmbc.BetterMineBetterCraft;
+import net.matty.bmbc.item.custom.tooltips.MineralWithToolTipItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,7 +14,7 @@ public class ModChemicalCompounds {
 
     // Chemical Compounds
     public static final RegistryObject<Item> ALUMINA = ITEMS.register("alumina",
-            () -> new Item(new Item.Properties().tab(ModChemicalCompoundsCreativeModeTab.CHEMICAL_COMPOUNDS)));
+            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModChemicalCompoundsCreativeModeTab.CHEMICAL_COMPOUNDS), "Chem. Formula: ", "Al₂O₃"));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

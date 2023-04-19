@@ -17,13 +17,17 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
                     ,"Chem. Formula: ", "Al"));
 
+    public static final RegistryObject<Item> LITHIUM = ITEMS.register("lithium_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
+                    ,"Chem. Formula: ", "Li"));
+
     public static final RegistryObject<Item> SILVER = ITEMS.register("silver_ingot",
             () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
                     ,"Chem. Formula: ", "Ag"));
 
     public static final RegistryObject<Item> BAUXITE = ITEMS.register("raw_bauxite",
             () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
-                    ,"Chem. Formula: ", "Al2H2O4"));
+                    ,"Chem. Formula: ", "Al₂H₂O₄"));
 
     public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
             () -> new Item(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)));

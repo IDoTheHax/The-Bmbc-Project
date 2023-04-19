@@ -31,6 +31,10 @@ public class ModItems {
             () -> new BucketItem(ModFluids.SOURCE_SODIUM_HYDROXIDE,
                     new Item.Properties().tab(ModDefaultCreativeModeTab.BMBC).craftRemainder(Items.BUCKET).stacksTo(1)));
 
+    public static final RegistryObject<Item> HELIUM_BUCKET = ITEMS.register("helium_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_HELIUM,
+                    new Item.Properties().tab(ModDefaultCreativeModeTab.BMBC).craftRemainder(Items.BUCKET).stacksTo(1)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

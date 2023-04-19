@@ -16,6 +16,8 @@ public class ModFluidTypes {
     public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("block/water_flow");
     public static final ResourceLocation SOAP_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_sewage_water");
     public static final ResourceLocation SODIUM_HYDROXIDE_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_sodium_hydroxide");
+    public static final ResourceLocation HELIUM_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_helium");
+
 
     public static final DeferredRegister<FluidType> FLUID_TYPES =
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, BetterMineBetterCraft.MOD_ID);
@@ -29,6 +31,11 @@ public class ModFluidTypes {
             FluidType.Properties.create().lightLevel(2).density(15).viscosity(5).sound(SoundAction.get("drink"),
                     SoundEvents.GENERIC_DRINK), WATER_STILL_RL, WATER_FLOWING_RL, SODIUM_HYDROXIDE_OVERLAY_RL,
             0xA1CACCCE, new Vector3f(69f / 255f, 69f / 255f, 69f / 255f));
+
+    public static final RegistryObject<FluidType> HELIUM_GAS_TYPE = register("helium_fluid",
+            FluidType.Properties.create().lightLevel(2).density(-999999999).viscosity(5).temperature(-999999999).sound(SoundAction.get("drink"),
+                    SoundEvents.GENERIC_DRINK), WATER_STILL_RL, WATER_FLOWING_RL, HELIUM_OVERLAY_RL,
+            0xA1EAE5D8, new Vector3f(234f / 255f, 229f / 255f, 216f / 255f));
 
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties,
                                                       ResourceLocation still, ResourceLocation flowing,
