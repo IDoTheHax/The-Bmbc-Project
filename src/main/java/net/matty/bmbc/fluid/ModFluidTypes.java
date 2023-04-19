@@ -16,6 +16,7 @@ public class ModFluidTypes {
     public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("block/water_flow");
     public static final ResourceLocation HELIUM_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_helium");
     public static final ResourceLocation NITROGEN_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_nitrogen");
+    public static final ResourceLocation OXYGEN_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_oxygen");
     public static final ResourceLocation SEWAGE_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_sewage_water");
     public static final ResourceLocation SODIUM_HYDROXIDE_OVERLAY_RL = new ResourceLocation(BetterMineBetterCraft.MOD_ID, "misc/in_sodium_hydroxide");
 
@@ -32,6 +33,11 @@ public class ModFluidTypes {
             FluidType.Properties.create().lightLevel(2).density(806).viscosity(1).temperature(-195).sound(SoundAction.get("drink"),
                     SoundEvents.GENERIC_DRINK), WATER_STILL_RL, WATER_FLOWING_RL, NITROGEN_OVERLAY_RL,
             0xA1D0D1F1, new Vector3f(208f / 255f, 209f / 255f, 241f / 255f));
+
+    public static final RegistryObject<FluidType> OXYGEN_FLUID_TYPE = register("oxygen_fluid",
+            FluidType.Properties.create().lightLevel(2).density(1141).viscosity(1).temperature(-297).sound(SoundAction.get("drink"),
+                    SoundEvents.GENERIC_DRINK), WATER_STILL_RL, WATER_FLOWING_RL, OXYGEN_OVERLAY_RL,
+            0xA1528BC5, new Vector3f(82f / 255f, 139f / 255f, 197f / 255f));
 
     public static final RegistryObject<FluidType> SEWAGE_WATER_FLUID_TYPE = register("sewage_water_fluid",
             FluidType.Properties.create().lightLevel(2).density(15).viscosity(5).sound(SoundAction.get("drink"),

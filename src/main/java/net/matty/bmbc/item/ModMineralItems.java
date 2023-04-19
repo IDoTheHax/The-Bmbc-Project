@@ -33,6 +33,10 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
                     ,"Chem. Formula: ", "Ag"));
 
+    public static final RegistryObject<Item> SOLID_OXYGEN = ITEMS.register("solid_oxygen",
+            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
+                    ,"Chem. Formula: ", "O₂"));
+
     public static final RegistryObject<Item> BAUXITE = ITEMS.register("raw_bauxite",
             () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
                     ,"Chem. Formula: ", "Al₂H₂O₄"));

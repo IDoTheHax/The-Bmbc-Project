@@ -33,6 +33,11 @@ public class ModItems {
                     new Item.Properties().tab(ModDefaultCreativeModeTab.BMBC).craftRemainder(Items.BUCKET).stacksTo(1)
                     , "Chem. Formula: ", "LN₂"));
 
+    public static final RegistryObject<Item> LIQUID_OXYGEN_BUCKET = ITEMS.register("oxygen_bucket",
+            () -> new BucketItemWithToolTip(ModFluids.SOURCE_OXYGEN_FLUID,
+                    new Item.Properties().tab(ModDefaultCreativeModeTab.BMBC).craftRemainder(Items.BUCKET).stacksTo(1)
+                    , "Chem. Formula: ", "O₂"));
+
     public static final RegistryObject<Item> SEWAGE_WATER_BUCKET = ITEMS.register("sewage_water_bucket",
             () -> new BucketItem(ModFluids.SOURCE_SEWAGE_WATER,
                     new Item.Properties().tab(ModDefaultCreativeModeTab.BMBC).craftRemainder(Items.BUCKET).stacksTo(1)));

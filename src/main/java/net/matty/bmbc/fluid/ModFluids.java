@@ -25,6 +25,11 @@ public class ModFluids {
     public static final RegistryObject<FlowingFluid> FLOWING_NITROGEN_FLUID = FLUIDS.register("flowing_nitrogen",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.NITROGEN_FLUID_PROPERTIES));
 
+    public static final RegistryObject<FlowingFluid> SOURCE_OXYGEN_FLUID = FLUIDS.register("oxygen_fluid",
+            () -> new ForgeFlowingFluid.Source(ModFluids.OXYGEN_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_OXYGEN_FLUID = FLUIDS.register("flowing_oxygen",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.OXYGEN_FLUID_PROPERTIES));
+
     public static final RegistryObject<FlowingFluid> SOURCE_SEWAGE_WATER = FLUIDS.register("sewage_water_fluid",
             () -> new ForgeFlowingFluid.Source(ModFluids.SEWAGE_WATER_FLUID_PROPERTIES));
     public static final RegistryObject<FlowingFluid> FLOWING_SEWAGE_WATER = FLUIDS.register("flowing_sewage_water",
@@ -44,6 +49,11 @@ public class ModFluids {
             ModFluidTypes.NITROGEN_FLUID_TYPE, SOURCE_NITROGEN_FLUID, FLOWING_NITROGEN_FLUID)
             .slopeFindDistance(2).levelDecreasePerBlock(1).block(ModFluidBlocks.NITROGEN_BLOCK)
             .bucket(ModItems.LIQUID_NITROGEN_BUCKET);
+
+    public static final ForgeFlowingFluid.Properties OXYGEN_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.OXYGEN_FLUID_TYPE, SOURCE_OXYGEN_FLUID, FLOWING_OXYGEN_FLUID)
+            .slopeFindDistance(2).levelDecreasePerBlock(1).block(ModFluidBlocks.OXYGEN_BLOCK)
+            .bucket(ModItems.LIQUID_OXYGEN_BUCKET);
 
     public static final ForgeFlowingFluid.Properties SEWAGE_WATER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.SEWAGE_WATER_FLUID_TYPE, SOURCE_SEWAGE_WATER, FLOWING_SEWAGE_WATER)

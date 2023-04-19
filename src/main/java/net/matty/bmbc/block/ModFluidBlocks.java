@@ -27,6 +27,9 @@ public class ModFluidBlocks {
     public static final RegistryObject<LiquidBlock> NITROGEN_BLOCK = FLUID_BLOCKS.register("nitrogen_block",
             () -> new LiquidBlock(ModFluids.SOURCE_NITROGEN_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER).air()));
 
+    public static final RegistryObject<LiquidBlock> OXYGEN_BLOCK = FLUID_BLOCKS.register("oxygen_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_OXYGEN_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER).air()));
+
     public static final RegistryObject<LiquidBlock> SEWAGE_WATER_BLOCK = FLUID_BLOCKS.register("sewage_water_block",
             () -> new LiquidBlock(ModFluids.SOURCE_SEWAGE_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
