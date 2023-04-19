@@ -17,6 +17,14 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
                     ,"Chem. Formula: ", "Al"));
 
+    public static final RegistryObject<Item> BERYLLIUM = ITEMS.register("beryllium_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
+                    ,"Chem. Formula: ", "Be"));
+
+    public static final RegistryObject<Item> BORON = ITEMS.register("boron_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
+                    ,"Chem. Formula: ", "B"));
+
     public static final RegistryObject<Item> LITHIUM = ITEMS.register("lithium_ingot",
             () -> new MineralWithToolTipItem(new Item.Properties().tab(ModResourcesCreativeModeTab.ORES_AND_MINERALS)
                     ,"Chem. Formula: ", "Li"));

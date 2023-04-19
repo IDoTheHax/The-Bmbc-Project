@@ -21,14 +21,17 @@ public class ModFluidBlocks {
     public static final DeferredRegister<Block> FLUID_BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BetterMineBetterCraft.MOD_ID);
 
+    public static final RegistryObject<LiquidBlock> HELIUM_BLOCK = FLUID_BLOCKS.register("helium_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_HELIUM, BlockBehaviour.Properties.copy(Blocks.WATER).air()));
+
+    public static final RegistryObject<LiquidBlock> NITROGEN_BLOCK = FLUID_BLOCKS.register("nitrogen_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_NITROGEN_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER).air()));
+
     public static final RegistryObject<LiquidBlock> SEWAGE_WATER_BLOCK = FLUID_BLOCKS.register("sewage_water_block",
             () -> new LiquidBlock(ModFluids.SOURCE_SEWAGE_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     public static final RegistryObject<LiquidBlock> SODIUM_HYDROXIDE_BLOCK = FLUID_BLOCKS.register("sodium_hydroxide_block",
             () -> new LiquidBlock(ModFluids.SOURCE_SODIUM_HYDROXIDE, BlockBehaviour.Properties.copy(Blocks.WATER)));
-
-    public static final RegistryObject<LiquidBlock> HELIUM_BLOCK = FLUID_BLOCKS.register("helium_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_HELIUM, BlockBehaviour.Properties.copy(Blocks.AIR)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = FLUID_BLOCKS.register(name, block);

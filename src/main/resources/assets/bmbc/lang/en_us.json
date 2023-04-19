@@ -1,14 +1,18 @@
 {
   "item.bmbc.eight_ball": "Eight Ball",
 
+  "item.bmbc.helium_bucket": "Helium",
+  "item.bmbc.nitrogen_bucket": "Nitrogen",
   "item.bmbc.sewage_water_bucket": "Bucket of Sewage",
   "item.bmbc.sodium_hydroxide_bucket": "Sodium hydroxide",
-  "item.bmbc.helium_bucket": "Helium",
 
-  "item.bmbc.silver_ingot": "Silver Ingot",
   "item.bmbc.aluminium_ingot": "Aluminium Ingot",
-  "item.bmbc.raw_silver": "Raw Silver",
+  "item.bmbc.beryllium_ingot": "Beryllium Ingot",
+  "item.bmbc.boron_ingot": "Boron Ingot",
+  "item.bmbc.lithium_ingot": "Lithium Ingot",
+  "item.bmbc.silver_ingot": "Silver Ingot",
   "item.bmbc.raw_bauxite": "Raw Bauxite",
+  "item.bmbc.raw_silver": "Raw Silver",
 
   "item.bmbc.alumina": "Alumina",
 
@@ -46,6 +50,7 @@
   "bmbc.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "bmbc.tooltip.liquid.amount": "%s mB",
 
-  "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide",
-  "fluid_type.bmbc.helium_fluid": "Helium"
+  "fluid_type.bmbc.helium_fluid": "Liquid Helium",
+  "fluid_type.bmbc.nitrogen_fluid": "Liquid Nitrogen",
+  "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide"
 }
