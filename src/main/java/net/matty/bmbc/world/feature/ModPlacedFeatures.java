@@ -15,11 +15,17 @@ public class ModPlacedFeatures {
             DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, BetterMineBetterCraft.MOD_ID);
 
 
-    public static final RegistryObject<PlacedFeature> SILVER_ORE_PLACED = PLACED_FEATURES.register("silver_ore_placed",
+    public static final RegistryObject<PlacedFeature> SILVER_ORE_DEPOSIT = PLACED_FEATURES.register("silver_ore_deposit",
             () -> new PlacedFeature(ModConfiguredFeatures.SILVER_ORE.getHolder().get(),
-                    commonOrePlacement(7, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+                    commonOrePlacement(100, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(80),
+                                    VerticalAnchor.absolute(384)))));
 
+    public static final RegistryObject<PlacedFeature> BAUXITE_ORE_DEPOSIT = PLACED_FEATURES.register("bauxite_ore_deposit",
+            () -> new PlacedFeature(ModConfiguredFeatures.BAUXITE_ORE.getHolder().get(),
+                    commonOrePlacement(100, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(80),
+                                    VerticalAnchor.absolute(384)))));
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
