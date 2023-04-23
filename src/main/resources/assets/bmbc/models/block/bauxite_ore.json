@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "bmbc:block/bauxite_ore"
+    "all": "bmbc:block/ore/bauxite_ore"
   }
 }
