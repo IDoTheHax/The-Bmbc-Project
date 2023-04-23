@@ -9,12 +9,30 @@
 
   "item.bmbc.aluminium_ingot": "Aluminium Ingot",
   "item.bmbc.beryllium_ingot": "Beryllium Ingot",
+  "item.bmbc.black_phosphorus": "Black Phosphorus",
   "item.bmbc.boron_ingot": "Boron Ingot",
+  "item.bmbc.calcium": "Calcium",
   "item.bmbc.lithium_ingot": "Lithium Ingot",
+  "item.bmbc.magnesium_ingot": "Magnesium Ingot",
+  "item.bmbc.potassium_ingot": "Potassium Ingot",
+  "item.bmbc.red_phosphorus": "Red Phosphorus",
+  "item.bmbc.silicon_crystal": "Silicon Crystal",
   "item.bmbc.silver_ingot": "Silver Ingot",
+  "item.bmbc.sodium_ingot": "Sodium Ingot",
   "item.bmbc.solid_oxygen": "Solid Oxygen",
+  "item.bmbc.sulfur_crystal": "Sulfur Crystal",
+  "item.bmbc.sulfur_powder": "Sulfur Powder",
+
+  "item.bmbc.carnallite": "Carnallite",
+  "item.bmbc.dolomite": "Dolomite",
+  "item.bmbc.evaporite": "Evaporite",
+  "item.bmbc.magnesite": "Magnesite",
+  "item.bmbc.pegmatite": "Pegmatite",
+  "item.bmbc.phosphorite": "Phosphorite",
   "item.bmbc.raw_bauxite": "Raw Bauxite",
   "item.bmbc.raw_silver": "Raw Silver",
+  "item.bmbc.white_phosphorus": "White Phosphorus",
+
 
   "item.bmbc.alumina": "Alumina",
 
