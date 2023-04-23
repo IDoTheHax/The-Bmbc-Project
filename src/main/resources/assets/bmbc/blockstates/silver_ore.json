@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "bmbc:block/silver_ore" }
+    "": { "model": "bmbc:block/ore/silver_ore" }
   }
 }

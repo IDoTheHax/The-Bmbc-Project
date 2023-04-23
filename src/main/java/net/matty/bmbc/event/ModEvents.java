@@ -8,7 +8,6 @@ import net.matty.bmbc.networking.packet.ThirstDataSyncS2CPacket;
 import net.matty.bmbc.thirst.PlayerThirst;
 import net.matty.bmbc.thirst.PlayerThirstProvider;
 import net.matty.bmbc.villager.ModVillagers;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;

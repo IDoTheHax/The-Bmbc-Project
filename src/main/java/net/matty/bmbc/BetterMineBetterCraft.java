@@ -3,6 +3,7 @@ package net.matty.bmbc;
 import com.mojang.logging.LogUtils;
 import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.block.ModFluidBlocks;
+import net.matty.bmbc.block.ModOreBlocks;
 import net.matty.bmbc.block.entity.ModBlockEntities;
 import net.matty.bmbc.fluid.ModFluidTypes;
 import net.matty.bmbc.fluid.ModFluids;
@@ -48,6 +49,7 @@ public class BetterMineBetterCraft {
 
         ModFluidBlocks.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModOreBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModVillagers.register(modEventBus);

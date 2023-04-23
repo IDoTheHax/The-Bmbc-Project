@@ -34,7 +34,7 @@ public class ModOreBlocks {
     public static final RegistryObject<Block> CARNALLITE_ORE = registerBlock(
             "carnallite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6.0F, 3.0F)
+                    .strength(4.0F, 2.0F)
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(1, 3)),
             ModBlocksCreativeModeTab.BMBC_BLOCKS);
@@ -42,7 +42,7 @@ public class ModOreBlocks {
     public static final RegistryObject<Block> DOLOMITE_ORE = registerBlock(
             "dolomite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6.0F, 3.0F)
+                    .strength(5.7F, 2.8F)
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(1, 3)),
             ModBlocksCreativeModeTab.BMBC_BLOCKS);
@@ -50,7 +50,7 @@ public class ModOreBlocks {
     public static final RegistryObject<Block> EVAPORITE_ORE = registerBlock(
             "evaporite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6.0F, 3.0F)
+                    .strength(4.4F, 2.2F)
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(1, 3)),
             ModBlocksCreativeModeTab.BMBC_BLOCKS);
@@ -58,7 +58,7 @@ public class ModOreBlocks {
     public static final RegistryObject<Block> MAGNESITE_ORE = registerBlock(
             "magnesite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6.0F, 3.0F)
+                    .strength(6.6F, 3.25F)
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(1, 3)),
             ModBlocksCreativeModeTab.BMBC_BLOCKS);
@@ -66,7 +66,7 @@ public class ModOreBlocks {
     public static final RegistryObject<Block> PEGMATITE_ORE = registerBlock(
             "pegmatite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6.0F, 3.0F)
+                    .strength(5.5F, 2.75F)
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(1, 3)),
             ModBlocksCreativeModeTab.BMBC_BLOCKS);
@@ -74,7 +74,7 @@ public class ModOreBlocks {
     public static final RegistryObject<Block> PHOSPHORITE_ORE = registerBlock(
             "phosphorite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6.0F, 3.0F)
+                    .strength(6.6F, 3.25F)
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(1, 3)),
             ModBlocksCreativeModeTab.BMBC_BLOCKS);

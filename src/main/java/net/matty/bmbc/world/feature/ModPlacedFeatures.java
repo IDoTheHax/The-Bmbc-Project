@@ -17,26 +17,64 @@ public class ModPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> SILVER_ORE_DEPOSIT = PLACED_FEATURES.register("silver_ore_deposit",
             () -> new PlacedFeature(ModConfiguredFeatures.SILVER_ORE.getHolder().get(),
-                    commonOrePlacement(100, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.absolute(80),
-                                    VerticalAnchor.absolute(384)))));
+                    commonOrePlacement(18, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(80), // lowest
+                                    VerticalAnchor.absolute(384))))); // highest
 
     public static final RegistryObject<PlacedFeature> BAUXITE_ORE_DEPOSIT = PLACED_FEATURES.register("bauxite_ore_deposit",
             () -> new PlacedFeature(ModConfiguredFeatures.BAUXITE_ORE.getHolder().get(),
-                    commonOrePlacement(100, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.absolute(80),
-                                    VerticalAnchor.absolute(384)))));
+                    commonOrePlacement(18, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(80), // lowest
+                                    VerticalAnchor.absolute(384))))); // highest
+
+    public static final RegistryObject<PlacedFeature> CARNALLITE_ORE = PLACED_FEATURES.register("carnallite_ore_placed", // TODO: figure out how to get this generate in shallow water
+            () -> new PlacedFeature(ModConfiguredFeatures.CARNALLITE_ORE.getHolder().get(),
+                    commonOrePlacement(14, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(62), // lowest
+                                    VerticalAnchor.absolute(70))))); // highest
+
+    public static final RegistryObject<PlacedFeature> DOLOMITE_ORE = PLACED_FEATURES.register("dolomite_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.DOLOMITE_ORE.getHolder().get(),
+                    commonOrePlacement(18, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(20), // lowest
+                                    VerticalAnchor.absolute(384))))); // highest
+
+    public static final RegistryObject<PlacedFeature> EVAPORITE_ORE = PLACED_FEATURES.register("evaporite_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.EVAPORITE_ORE.getHolder().get(),
+                    commonOrePlacement(22, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(-34), // lowest
+                                    VerticalAnchor.absolute(70))))); // highest
+
+    public static final RegistryObject<PlacedFeature> MAGNESITE_ORE = PLACED_FEATURES.register("magnesite_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.MAGNESITE_ORE.getHolder().get(),
+                    commonOrePlacement(16, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(-54), // lowest
+                                    VerticalAnchor.absolute(384))))); // highest
+
+    public static final RegistryObject<PlacedFeature> PEGMATITE_ORE = PLACED_FEATURES.register("pegmatite_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.PEGMATITE_ORE.getHolder().get(),
+                    rareOrePlacement(18, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(-54), // lowest
+                                    VerticalAnchor.absolute(384))))); // highest
+
+    public static final RegistryObject<PlacedFeature> PHOSPHORITE_ORE = PLACED_FEATURES.register("phosphorite_ore_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.PHOSPHORITE_ORE.getHolder().get(),
+                    rareOrePlacement(18, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.absolute(-54), // lowest
+                                    VerticalAnchor.absolute(384))))); // highest
+
+
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
     }
 
-    public static List<PlacementModifier> commonOrePlacement(int p_195344_, PlacementModifier p_195345_) {
-        return orePlacement(CountPlacement.of(p_195344_), p_195345_);
+    public static List<PlacementModifier> commonOrePlacement(int i, PlacementModifier placementModifier) {
+        return orePlacement(CountPlacement.of(i), placementModifier);
     }
 
-    public static List<PlacementModifier> rareOrePlacement(int p_195350_, PlacementModifier p_195351_) {
-        return orePlacement(RarityFilter.onAverageOnceEvery(p_195350_), p_195351_);
+    public static List<PlacementModifier> rareOrePlacement(int i, PlacementModifier placementModifier) {
+        return orePlacement(RarityFilter.onAverageOnceEvery(i), placementModifier);
     }
 
     public static void register(IEventBus eventBus) {

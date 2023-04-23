@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "bmbc:block/bauxite_ore" }
+    "": { "model": "bmbc:block/ore/bauxite_ore" }
   }
 }

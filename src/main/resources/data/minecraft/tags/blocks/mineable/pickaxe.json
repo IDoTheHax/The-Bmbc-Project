@@ -1,8 +1,15 @@
 {
   "replace": false,
   "values": [
-    "bmbc:silver_ore",
+    "bmbc:bauxite_ore",
+    "bmbc:carnallite_ore",
+    "bmbc:deepslate_silver_ore",
+    "bmbc:dolomite_ore",
+    "bmbc:evaporite_ore",
+    "bmbc:magnesite_ore",
+    "bmbc:pegmatite_ore",
+    "bmbc:phosphorite_ore",
     "bmbc:silver_block",
-    "bmbc:deepslate_silver_ore"
+    "bmbc:silver_ore"
   ]
 }

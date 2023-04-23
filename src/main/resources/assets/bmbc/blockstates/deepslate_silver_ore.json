@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "bmbc:block/deepslate_silver_ore" }
+    "": { "model": "bmbc:block/ore/deepslate_silver_ore" }
   }
 }

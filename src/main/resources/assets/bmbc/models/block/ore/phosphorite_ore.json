@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "bmbc:block/ore/carnallite_ore"
+    "all": "bmbc:block/ore/phosphorite_ore"
   }
 }

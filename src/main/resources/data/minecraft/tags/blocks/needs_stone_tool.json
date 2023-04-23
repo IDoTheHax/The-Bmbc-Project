@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-
+    "bmbc:carnallite_ore",
+    "bmbc:evaporite_ore"
   ]
 }

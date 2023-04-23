@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "bmbc:block/ore/pegmatite_ore" }
+  }
+}
