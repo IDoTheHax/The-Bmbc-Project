@@ -3,17 +3,17 @@
   "type": "minecraft:jigsaw",
 
   // the path to the template pool json file to use
-  "start_pool": "bmbc:aluminium_factory/start_pool",
+  "start_pool": "bmbc:underground_village_center/start_pool",
 
   // This is how many pieces away from the starting piece a piece of the structure can spawn
   // Think of it like the length of the branch of the structure
-  "size": 2,
+  "size": 3,
 
   // Maximum distance away from center that pieces can spawn. Cannot be greater than 128
   "max_distance_from_center": 80,
 
-  // The biome tag to use for what biomes that this structure can spawn in"
-  "biomes": "#bmbc:has_structure/aluminium_factory",
+  // The biome tag to use for what biomes that this structure can spawn in
+  "biomes": "#bmbc:has_structure/underground_village_center",
 
   // The generation step for when to generate the structure. there are 10 stages you can pick from!
   // This surface structure stage places the structure before plants and ores are generated
@@ -43,14 +43,8 @@
       "bounding_box": "piece",
       "spawns": [
         {
-          "type": "minecraft:parrot",
+          "type": "minecraft:villager",
           "weight": 1,
-          "minCount": 1,
-          "maxCount": 4
-        },
-        {
-          "type": "minecraft:wolf",
-          "weight": 9,
           "minCount": 1,
           "maxCount": 4
         }
