@@ -19,10 +19,10 @@ public class ModFoodItems {
     // Crops and their seed accomplices
     public static final RegistryObject<Item> COFFEE_BEANS = ITEMS.register("coffee_beans",
             () -> new ItemNameBlockItem(ModBlocks.COFFEE_CROP.get(),
-                    new Item.Properties().tab(ModFoodCreativeModTab.BMBC_FOODS)));
+                    new Item.Properties()));
 
     public static final RegistryObject<Item> COFFEE_CHERRY = ITEMS.register("coffee_cherry",
-            () -> new Item(new Item.Properties().tab(ModFoodCreativeModTab.BMBC_FOODS)
+            () -> new Item(new Item.Properties()
                     .food(new FoodProperties.Builder()
                             .nutrition(2)
                             .saturationMod(2f)

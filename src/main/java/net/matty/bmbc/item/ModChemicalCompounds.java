@@ -15,11 +15,11 @@ public class ModChemicalCompounds {
     // Chemical Compounds
     // alumina
     public static final RegistryObject<Item> ALUMINA = ITEMS.register("alumina",
-            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModChemicalCompoundsCreativeModeTab.CHEMICAL_COMPOUNDS),
+            () -> new MineralWithToolTipItem(new Item.Properties(),
                     "Also known as aluminum oxide\nChem. Formula: ", "Al₂O₃"));
 
     public static final RegistryObject<Item> SILICA = ITEMS.register("silica",
-            () -> new MineralWithToolTipItem(new Item.Properties().tab(ModChemicalCompoundsCreativeModeTab.CHEMICAL_COMPOUNDS),
+            () -> new MineralWithToolTipItem(new Item.Properties(),
                     "Also known as silicon dioxide\nChem. Formula: ", "SiO₂"));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

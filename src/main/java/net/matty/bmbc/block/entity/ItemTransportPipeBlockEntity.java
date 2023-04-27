@@ -1,12 +1,6 @@
 package net.matty.bmbc.block.entity;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
-
-
-public class ItemTransportPipeBlockEntity extends BlockEntity {
+/*public class ItemTransportPipeBlockEntity extends BlockEntity {
 
     public ItemTransportPipeBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.ITEM_TRANSPORT_PIPE.get(), pos, state);
@@ -23,4 +17,4 @@ public class ItemTransportPipeBlockEntity extends BlockEntity {
         super.load(compoundTag);
         // Load any additional data from the tag
     }
-}
+}*/

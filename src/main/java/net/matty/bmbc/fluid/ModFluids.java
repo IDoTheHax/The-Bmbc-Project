@@ -43,7 +43,7 @@ public class ModFluids {
     public static final ForgeFlowingFluid.Properties HELIUM_GAS_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.HELIUM_GAS_TYPE, SOURCE_HELIUM, FLOWING_HELIUM)
             .slopeFindDistance(2).levelDecreasePerBlock(1).block(ModFluidBlocks.HELIUM_BLOCK)
-            .bucket(ModItems.HELIUM_BUCKET);
+            .bucket(ModItems.LIQUID_HELIUM_BUCKET);
 
     public static final ForgeFlowingFluid.Properties NITROGEN_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.NITROGEN_FLUID_TYPE, SOURCE_NITROGEN_FLUID, FLOWING_NITROGEN_FLUID)

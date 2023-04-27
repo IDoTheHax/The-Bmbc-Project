@@ -56,8 +56,9 @@
   "itemGroup.bmbc": "This is Bmbc",
   "itemGroup.bmbc_blocks": "Bmbc Blocks",
   "itemGroup.bmbc_foods": "Bmbc Food",
+  "itemGroup.bmbc_fluids": "Fluids",
   "itemGroup.ores_and_minerals": "Ores and Minerals",
-  "itemGroup.chemical_compounds": "Chemical Compounds",
+  "itemGroup.bmbc_chemical_compounds": "Chemical Compounds",
 
   "item.bmbc.coffee_cherry": "Coffee Cherry",
   "item.bmbc.coffee_beans": "Coffee Beans",

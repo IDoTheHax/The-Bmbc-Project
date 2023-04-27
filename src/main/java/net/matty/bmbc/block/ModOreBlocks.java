@@ -1,7 +1,7 @@
 package net.matty.bmbc.block;
 
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.matty.bmbc.item.ModBlocksCreativeModeTab;
+import net.matty.bmbc.creativemode_tab.ModBlocksCreativeModeTab;
 import net.matty.bmbc.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -97,13 +97,12 @@ public class ModOreBlocks {
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
-                                                                            CreativeModeTab tab) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
 
