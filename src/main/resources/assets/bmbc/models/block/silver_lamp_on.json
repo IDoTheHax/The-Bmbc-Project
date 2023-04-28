@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "bmbc:block/silver_lamp_on"
-  }
-}

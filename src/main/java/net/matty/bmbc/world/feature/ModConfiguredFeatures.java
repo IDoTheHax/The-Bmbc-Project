@@ -3,7 +3,7 @@ package net.matty.bmbc.world.feature;
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.matty.bmbc.block.ModOreBlocks;
+import net.matty.bmbc.block.ModBlocks;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -48,36 +48,36 @@ public class ModConfiguredFeatures {
 
     // Ore configuration
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_SILVER_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModOreBlocks.SILVER_ORE.get().defaultBlockState()),
-            OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), ModOreBlocks.DEEPSLATE_SILVER_ORE.get().defaultBlockState())
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.SILVER_ORE.get().defaultBlockState()),
+            OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), ModBlocks.DEEPSLATE_SILVER_ORE.get().defaultBlockState())
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_BAUXITE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModOreBlocks.BAUXITE_ORE.get().defaultBlockState())
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.BAUXITE_ORE.get().defaultBlockState())
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_CARNALLITE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModOreBlocks.CARNALLITE_ORE.get().defaultBlockState())
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.CARNALLITE_ORE.get().defaultBlockState())
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_DOLOMITE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModOreBlocks.DOLOMITE_ORE.get().defaultBlockState())
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.DOLOMITE_ORE.get().defaultBlockState())
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_EVAPORITE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModOreBlocks.EVAPORITE_ORE.get().defaultBlockState())
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.EVAPORITE_ORE.get().defaultBlockState())
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_MAGNESITE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModOreBlocks.MAGNESITE_ORE.get().defaultBlockState())
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.MAGNESITE_ORE.get().defaultBlockState())
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_PEGMATITE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModOreBlocks.PEGMATITE_ORE.get().defaultBlockState())
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.PEGMATITE_ORE.get().defaultBlockState())
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_PHOSPHORITE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModOreBlocks.PHOSPHORITE_ORE.get().defaultBlockState())
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.PHOSPHORITE_ORE.get().defaultBlockState())
     ));
 
     private static ResourceKey<ConfiguredFeature<?,?>> registerKey(String name) {

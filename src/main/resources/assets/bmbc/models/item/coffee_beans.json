@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "render_type": "cutout",
-  "textures": {
-    "layer0": "bmbc:item/coffee_beans"
-  }
-}

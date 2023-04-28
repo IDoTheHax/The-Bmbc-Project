@@ -3,7 +3,6 @@ package net.matty.bmbc;
 import com.mojang.logging.LogUtils;
 import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.block.ModFluidBlocks;
-import net.matty.bmbc.block.ModOreBlocks;
 import net.matty.bmbc.block.entity.ModBlockEntities;
 import net.matty.bmbc.creativemode_tab.*;
 import net.matty.bmbc.fluid.ModFluidTypes;
@@ -48,7 +47,6 @@ public class BetterMineBetterCraft {
 
         ModFluidBlocks.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModOreBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModVillagers.register(modEventBus);
@@ -97,17 +95,17 @@ public class BetterMineBetterCraft {
         
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
             event.accept(ModBlocks.SILVER_BLOCK);
-            event.accept(ModBlocks.SILVER_LAMP);
+            //event.accept(ModBlocks.SILVER_LAMP);
             event.accept(ModBlocks.PRESSURE_VESSEL);
-            event.accept(ModOreBlocks.BAUXITE_ORE);
-            event.accept(ModOreBlocks.CARNALLITE_ORE);
-            event.accept(ModOreBlocks.DOLOMITE_ORE);
-            event.accept(ModOreBlocks.EVAPORITE_ORE);
-            event.accept(ModOreBlocks.MAGNESITE_ORE);
-            event.accept(ModOreBlocks.PEGMATITE_ORE);
-            event.accept(ModOreBlocks.PHOSPHORITE_ORE);
-            event.accept(ModOreBlocks.SILVER_ORE);
-            event.accept(ModOreBlocks.DEEPSLATE_SILVER_ORE);
+            event.accept(ModBlocks.BAUXITE_ORE);
+            event.accept(ModBlocks.CARNALLITE_ORE);
+            event.accept(ModBlocks.DOLOMITE_ORE);
+            event.accept(ModBlocks.EVAPORITE_ORE);
+            event.accept(ModBlocks.MAGNESITE_ORE);
+            event.accept(ModBlocks.PEGMATITE_ORE);
+            event.accept(ModBlocks.PHOSPHORITE_ORE);
+            event.accept(ModBlocks.SILVER_ORE);
+            event.accept(ModBlocks.DEEPSLATE_SILVER_ORE);
         }
         
         if (event.getTab() == ModChemicalCompoundsCreativeModeTab.CHEMICAL_COMPOUNDS) {
@@ -137,7 +135,7 @@ public class BetterMineBetterCraft {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ModNetworkingPackets.register();
-            ModVillagers.registerPOIs();
+            //ModVillagers.registerPOIs();
         });
     }
 
