@@ -20,6 +20,7 @@ import net.matty.bmbc.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -95,8 +96,10 @@ public class BetterMineBetterCraft {
         
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
             event.accept(ModBlocks.SILVER_BLOCK);
-            //event.accept(ModBlocks.SILVER_LAMP);
+            event.accept(ModBlocks.SILVER_LAMP);
             event.accept(ModBlocks.PRESSURE_VESSEL);
+
+            // Ores
             event.accept(ModBlocks.BAUXITE_ORE);
             event.accept(ModBlocks.CARNALLITE_ORE);
             event.accept(ModBlocks.DOLOMITE_ORE);
@@ -106,6 +109,16 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.PHOSPHORITE_ORE);
             event.accept(ModBlocks.SILVER_ORE);
             event.accept(ModBlocks.DEEPSLATE_SILVER_ORE);
+
+            // Wood and Trees
+            event.accept(ModBlocks.MAPLE_LEAVES);
+            event.accept(ModBlocks.MAPLE_LOG);
+            event.accept(ModBlocks.MAPLE_PLANKS);
+            event.accept(ModBlocks.MAPLE_SAPLING);
+            event.accept(ModBlocks.MAPLE_WOOD);
+            event.accept(ModBlocks.STRIPPED_MAPLE_LOG);
+            event.accept(ModBlocks.STRIPPED_MAPLE_WOOD);
+
         }
         
         if (event.getTab() == ModChemicalCompoundsCreativeModeTab.CHEMICAL_COMPOUNDS) {
@@ -116,6 +129,7 @@ public class BetterMineBetterCraft {
         if (event.getTab() == ModDefaultCreativeModeTab.BMBC) {
             event.accept(ModItems.BATTERY);
             event.accept(ModItems.EIGHT_BALL);
+            event.accept(ModBlocks.MAPLE_SAPLING);
         }
 
         if (event.getTab() == ModFoodCreativeModTab.FOOD) {
@@ -129,6 +143,12 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.LIQUID_OXYGEN_BUCKET);
             event.accept(ModItems.SEWAGE_WATER_BUCKET);
             event.accept(ModItems.SODIUM_HYDROXIDE_BUCKET);
+        }
+
+        if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.MAPLE_LEAVES);
+            event.accept(ModBlocks.MAPLE_LOG);
+            event.accept(ModBlocks.MAPLE_SAPLING);
         }
     }
 

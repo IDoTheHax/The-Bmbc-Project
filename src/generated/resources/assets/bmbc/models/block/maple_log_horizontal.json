@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "bmbc:block/maple_log_top",
+    "side": "bmbc:block/maple_log"
+  }
+}

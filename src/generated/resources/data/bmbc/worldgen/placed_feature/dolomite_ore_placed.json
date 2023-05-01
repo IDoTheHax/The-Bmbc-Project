@@ -1,0 +1,27 @@
+{
+  "feature": "bmbc:add_dolomite_ore",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 18
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 384
+        },
+        "min_inclusive": {
+          "absolute": 20
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

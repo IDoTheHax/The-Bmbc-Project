@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#minecraft:is_overworld",
+  "biomes": "#is_overworld",
   "features": "bmbc:carnallite_ore_placed",
   "step": "underground_ores"
 }

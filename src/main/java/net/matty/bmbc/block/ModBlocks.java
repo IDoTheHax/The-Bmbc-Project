@@ -2,16 +2,20 @@ package net.matty.bmbc.block;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.custom.CoffeeCropBlock;
+import net.matty.bmbc.block.custom.ModFlammableRotatedPillarBlock;
 import net.matty.bmbc.block.custom.PressureVesselBlock;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.custom.SilverLampBlock;
+import net.matty.bmbc.worldgen.tree.MapleTreeGrower;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -112,6 +116,77 @@ public class ModBlocks {
                     .strength(6.0f)
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(1, 3)));
+
+
+    // Woods
+    public static final RegistryObject<Block> MAPLE_LOG = registerBlock(
+            "maple_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
+                    .strength(2.0f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MAPLE_WOOD = registerBlock(
+            "maple_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
+                    .strength(2.0f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> STRIPPED_MAPLE_LOG = registerBlock(
+            "stripped_maple_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
+                    .strength(2.0f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> STRIPPED_MAPLE_WOOD = registerBlock(
+            "stripped_maple_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
+                    .strength(2.0f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MAPLE_PLANKS = registerBlock(
+            "maple_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+                    .strength(2.0f)){
+
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+            });
+
+    public static final RegistryObject<Block> MAPLE_LEAVES = registerBlock("maple_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+            });
+
+    public static final RegistryObject<Block> MAPLE_SAPLING = registerBlock(
+            "maple_sapling",
+            () -> new SaplingBlock(new MapleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

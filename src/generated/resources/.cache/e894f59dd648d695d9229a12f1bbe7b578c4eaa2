@@ -1,23 +1,35 @@
-// 1.19.3	2023-04-28T18:32:33.721755	Item Models: bmbc
+// 1.19.3	2023-04-29T14:00:58.075442	Item Models: bmbc
+9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
+35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
 35763d3e3f6d67a34203dcd4a478c60b85860c7d assets/bmbc/models/item/beryllium_ingot.json
 c7ab046baa855fab5670a3e825be9fdb630fcbbb assets/bmbc/models/item/black_phosphorus.json
 13c262ba48191263169c19513b93b4d5229b1e59 assets/bmbc/models/item/boron_ingot.json
 db82d841b3fbb24cf912986375acdf4f4c483adb assets/bmbc/models/item/calcium.json
 56d7c6e188770d2f3b4ffe53a7b50a531b4557c6 assets/bmbc/models/item/carnallite.json
+b2e1e9c11c222bb0f1bdc0a5e6171170b8a8f81e assets/bmbc/models/item/coffee_beans.json
+7feedfd6554da8ea05735ea0855791101f3c4e78 assets/bmbc/models/item/coffee_cherry.json
 dc9a6da40a67f68ee979f88d02969b91a06d4a34 assets/bmbc/models/item/dolomite.json
+aacf62f98b754eba565bf051feb517ca74997e74 assets/bmbc/models/item/eight_ball.json
 415eef7c0989254a6a44ae7c0694153fe6e88200 assets/bmbc/models/item/evaporite.json
+b8797585186df732f96a13ff691dadc0979eb8cc assets/bmbc/models/item/helium_bucket.json
 a59aec084ef8b79066ea041b80afb1994d5254f7 assets/bmbc/models/item/lithium_ingot.json
 ce8c1a6c7b9b59e8447009e041603364fe7bde0d assets/bmbc/models/item/magnesite.json
 13158b81859f30e4c1465c8c46bc44385a4d0844 assets/bmbc/models/item/magnesium_ingot.json
+d401fa0e85d7bebc247f501fd3f66f31548b9913 assets/bmbc/models/item/maple_sapling.json
+6dfbe8753c7ab75b9bc6394ba1621678c1dc05ca assets/bmbc/models/item/nitrogen_bucket.json
+d73f16b9321ad2254e34b3923499735f65f078b3 assets/bmbc/models/item/oxygen_bucket.json
 8b9f9946e1dbfd9fe632db5aac4c806c8a2fb5be assets/bmbc/models/item/pegmatite.json
 1762bc29d7bc75eb028e3babd2c84020de0e1693 assets/bmbc/models/item/phosphorite.json
 a5842e4865b879b18f3c12c7615b139f1fa83e5a assets/bmbc/models/item/potassium_ingot.json
 86e226cfb83aa41fe539f367f167d4fa191d278e assets/bmbc/models/item/raw_bauxite.json
 274c0c68620d8fbf52be76339470d53127813133 assets/bmbc/models/item/raw_silver.json
 ac9da924005fb99ab578f441eab80a17639d09eb assets/bmbc/models/item/red_phosphorus.json
+046e15ae1f74a11099b49cfde1c14f49e088cf19 assets/bmbc/models/item/sewage_water_bucket.json
+45b6b794e265b26dca4abec4baafe475ab07dbd9 assets/bmbc/models/item/silica.json
 ad5926c042eb0e59a0849f8a52eb68b10a70cd42 assets/bmbc/models/item/silicon_crystal.json
 8fc8b417f22346f77ff973ba1e0b3bb4a45d4baa assets/bmbc/models/item/silver_ingot.json
+2cccfacaffdf910ad797bc3d2d75ac4a6a6e639f assets/bmbc/models/item/sodium_hydroxide_bucket.json
 9e83d932630fc97f8c2710353375e4c5b1010fa4 assets/bmbc/models/item/sodium_ingot.json
 e2f9e0ffe22fe75dcfdc3b72805b4e2cb3980cce assets/bmbc/models/item/solid_oxygen.json
 70c09943c34ec02d2cdaff392e4f9f371e437887 assets/bmbc/models/item/sulfur_crystal.json

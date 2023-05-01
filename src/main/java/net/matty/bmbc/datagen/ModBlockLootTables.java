@@ -60,6 +60,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         add(ModBlocks.SILVER_ORE.get(),
                 (block -> createOreDrop(ModBlocks.SILVER_ORE.get(), ModMineralItems.RAW_SILVER.get())));
+        
+        // Trees
+        this.dropSelf(ModBlocks.MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.MAPLE_PLANKS.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.MAPLE_SAPLING.get());
+
+
+
+        this.add(ModBlocks.MAPLE_LEAVES.get(), (block) ->
+                createLeavesDrops(block, ModBlocks.MAPLE_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

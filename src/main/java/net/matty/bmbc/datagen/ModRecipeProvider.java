@@ -3,9 +3,11 @@ package net.matty.bmbc.datagen;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.item.ModMineralItems;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -26,6 +28,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         nineBlockStorageRecipes(consumer, RecipeCategory.MISC, ModMineralItems.SILVER.get(), RecipeCategory.MISC,
                 ModBlocks.SILVER_BLOCK.get());
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MAPLE_PLANKS.get())
+                .requires(ModBlocks.MAPLE_LOG.get())
+                .unlockedBy("has_maple_log", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.MAPLE_PLANKS.get()).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4).group("sticks")
+                .define('#', ModBlocks.MAPLE_PLANKS.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS.get()))
+                .save(consumer, "stick_from_maple_planks");
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

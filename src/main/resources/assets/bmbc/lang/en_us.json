@@ -43,6 +43,14 @@
   "block.bmbc.silver_ore": "Silver Ore",
   "block.bmbc.deepslate_silver_ore": "Deepslate Silver Ore",
 
+  "block.bmbc.maple_log": "Maple Log",
+  "block.bmbc.maple_planks": "Maple Planks",
+  "block.bmbc.maple_wood": "Maple Wood",
+  "block.bmbc.stripped_maple_log": "Stripped Maple Log",
+  "block.bmbc.stripped_maple_wood": "Stripped Maple Wood",
+  "block.bmbc.maple_leaves": "Maple Leaves",
+  "block.bmbc.maple_sapling": "Maple Sapling",
+
   "item.bmbc.alumina": "Alumina",
   "item.bmbc.silica": "Silica",
 
