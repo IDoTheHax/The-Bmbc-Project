@@ -4,12 +4,14 @@ import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
@@ -19,6 +21,7 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
@@ -107,7 +110,7 @@ public class ModConfiguredFeatures {
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_EVAPORITE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.EVAPORITE_ORE.get().defaultBlockState())
+               OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.EVAPORITE_ORE.get().defaultBlockState())
     ));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_MAGNESITE_ORES = Suppliers.memoize(() -> List.of(
@@ -122,13 +125,12 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.PHOSPHORITE_ORE.get().defaultBlockState())
     ));
 
-    private static ResourceKey<ConfiguredFeature<?,?>> registerKey(String name) {
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(BetterMineBetterCraft.MOD_ID, name));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,
-                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key,
-                                                                                          F feature, FC configuration) {
+                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 }
