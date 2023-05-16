@@ -2,6 +2,8 @@ package net.matty.bmbc.datagen;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
+import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -22,10 +24,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_BLOCK);
         blockWithItem(ModBlocks.SILVER_LAMP);
         blockWithItem(ModBlocks.PRESSURE_VESSEL);
-        cubeOrientable(ModBlocks.THREE_D_PRINTER,
-                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
-                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_front"),
-                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top"));
+        blockWithItem(ModBlocks.MACERATOR); // TODO: Change Later !!!
+        generateThreeDPrinter(
+                ModBlocks.THREE_D_PRINTER.get(),
+                cube(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath(),
+                        new ResourceLocation("minecraft:cube"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_front"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top")),
+                cube(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath() + "_on",
+                        new ResourceLocation("minecraft:cube"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_front_on"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top"))
+        );
 
         blockWithItem(ModBlocks.BAUXITE_ORE);
         blockWithItem(ModBlocks.CARNALLITE_ORE);
@@ -65,17 +83,58 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
-    public ModelFile cubeOrientable(RegistryObject<Block> blockRegistryObject, ResourceLocation sideTexture, ResourceLocation frontTexture, ResourceLocation topTexture) {
-        simpleBlockItem(blockRegistryObject.get(), models().withExistingParent(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
-                        new ResourceLocation("minecraft:orientable"))
-                .texture("side", sideTexture)
-                .texture("front", frontTexture)
-                .texture("top", topTexture));
+    public void generateThreeDPrinter(Block block, ModelFile offModel, ModelFile onModel) {
+        getVariantBuilder(block)
+                .partialState()
+                .with(ThreeDPrinterBlock.FACING, Direction.NORTH)
+                .with(ThreeDPrinterBlock.ACTIVE, false)
+                .modelForState()
+                .modelFile(offModel).rotationX(0).addModel()
+                .partialState()
+                .with(ThreeDPrinterBlock.FACING, Direction.SOUTH)
+                .with(ThreeDPrinterBlock.ACTIVE, false)
+                .modelForState()
+                .modelFile(offModel).rotationX(180).addModel()
+                .partialState()
+                .with(ThreeDPrinterBlock.FACING, Direction.EAST)
+                .with(ThreeDPrinterBlock.ACTIVE, false)
+                .modelForState()
+                .modelFile(offModel).rotationX(90).addModel()
+                .partialState()
+                .with(ThreeDPrinterBlock.FACING, Direction.WEST)
+                .with(ThreeDPrinterBlock.ACTIVE, false)
+                .modelForState()
+                .modelFile(offModel).rotationX(270).addModel()
+                .partialState()
+                .with(ThreeDPrinterBlock.FACING, Direction.NORTH)
+                .with(ThreeDPrinterBlock.ACTIVE, true)
+                .modelForState()
+                .modelFile(onModel).rotationX(0).addModel()
+                .partialState()
+                .with(ThreeDPrinterBlock.FACING, Direction.SOUTH)
+                .with(ThreeDPrinterBlock.ACTIVE, true)
+                .modelForState()
+                .modelFile(onModel).rotationX(180).addModel()
+                .partialState()
+                .with(ThreeDPrinterBlock.FACING, Direction.EAST)
+                .with(ThreeDPrinterBlock.ACTIVE, true)
+                .modelForState()
+                .modelFile(onModel).rotationX(90).addModel()
+                .partialState()
+                .with(ThreeDPrinterBlock.FACING, Direction.WEST)
+                .with(ThreeDPrinterBlock.ACTIVE, true)
+                .modelForState()
+                .modelFile(onModel).rotationX(270).addModel();
 
+        simpleBlockItem(block, offModel);
+    }
 
-        return models().withExistingParent(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
-                new ResourceLocation("minecraft:orientable"))
-                .texture("side", sideTexture)
+    public ModelFile cube(String name, ResourceLocation parent, ResourceLocation eastTexture, ResourceLocation westTexture, ResourceLocation northTexture, ResourceLocation southTexture, ResourceLocation frontTexture, ResourceLocation topTexture) {
+        return models().withExistingParent(name, parent)
+                .texture("east", eastTexture)
+                .texture("west", westTexture)
+                .texture("north", northTexture)
+                .texture("south", southTexture)
                 .texture("front", frontTexture)
                 .texture("top", topTexture);
     }

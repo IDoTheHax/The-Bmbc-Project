@@ -1,5 +1,6 @@
 package net.matty.bmbc.block.entity;
 
+import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.screen.ThreeDPrinterMenu;
 import net.minecraft.core.BlockPos;
@@ -128,6 +129,11 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         }
 
         if(hasRecipe(pEntity)) {
+            if (!state.getValue(ThreeDPrinterBlock.ACTIVE)) {
+                state = state.setValue(ThreeDPrinterBlock.ACTIVE, true);
+                level.setBlock(pos, state, 3);
+            }
+
             pEntity.progress++;
             setChanged(level, pos, state);
 
@@ -136,6 +142,11 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
             }
 
         } else {
+            if (state.getValue(ThreeDPrinterBlock.ACTIVE)) {
+                state = state.setValue(ThreeDPrinterBlock.ACTIVE, false);
+                level.setBlock(pos, state, 3);
+            }
+
             pEntity.resetProgress();
             setChanged(level, pos, state);
         }
