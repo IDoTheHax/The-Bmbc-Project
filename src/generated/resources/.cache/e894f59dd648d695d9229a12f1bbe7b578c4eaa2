@@ -1,9 +1,10 @@
-// 1.19.3	2023-05-16T12:36:05.36661	Item Models: bmbc
+// 1.19.3	2023-05-16T18:08:42.544276	Item Models: bmbc
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
 35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
 35763d3e3f6d67a34203dcd4a478c60b85860c7d assets/bmbc/models/item/beryllium_ingot.json
 c7ab046baa855fab5670a3e825be9fdb630fcbbb assets/bmbc/models/item/black_phosphorus.json
+2d30d5575b0a4133d40e73a4835a620b79e6a114 assets/bmbc/models/item/blue_printer_filament.json
 13c262ba48191263169c19513b93b4d5229b1e59 assets/bmbc/models/item/boron_ingot.json
 5a93f62b1c1c2d58e0b13863a35d492df13d9b9e assets/bmbc/models/item/cable_roll.json
 db82d841b3fbb24cf912986375acdf4f4c483adb assets/bmbc/models/item/calcium.json
@@ -13,6 +14,7 @@ b2e1e9c11c222bb0f1bdc0a5e6171170b8a8f81e assets/bmbc/models/item/coffee_beans.js
 dc9a6da40a67f68ee979f88d02969b91a06d4a34 assets/bmbc/models/item/dolomite.json
 aacf62f98b754eba565bf051feb517ca74997e74 assets/bmbc/models/item/eight_ball.json
 415eef7c0989254a6a44ae7c0694153fe6e88200 assets/bmbc/models/item/evaporite.json
+f06f65a98547de5fe4ee00ed69e77c28bcb0a366 assets/bmbc/models/item/green_printer_filament.json
 b8797585186df732f96a13ff691dadc0979eb8cc assets/bmbc/models/item/helium_bucket.json
 a59aec084ef8b79066ea041b80afb1994d5254f7 assets/bmbc/models/item/lithium_ingot.json
 ce8c1a6c7b9b59e8447009e041603364fe7bde0d assets/bmbc/models/item/magnesite.json

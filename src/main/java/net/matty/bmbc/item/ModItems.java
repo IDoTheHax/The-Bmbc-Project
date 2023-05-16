@@ -30,6 +30,14 @@ public class ModItems {
     public static final RegistryObject<Item> RED_PRINTER_FILAMENT = ITEMS.register("red_printer_filament",
             () -> new Item(new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> BLUE_PRINTER_FILAMENT = ITEMS.register("blue_printer_filament",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> GREEN_PRINTER_FILAMENT = ITEMS.register("green_printer_filament",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+
+
     //public static final RegistryObject<Item> DUMMY_TEMPLATE = ITEMS.register("dummy_template",
     //        () -> new Item(new Item.Properties().stacksTo(1)));
 

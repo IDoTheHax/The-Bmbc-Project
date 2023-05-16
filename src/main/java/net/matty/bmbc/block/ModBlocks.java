@@ -53,6 +53,10 @@ public class ModBlocks {
             () -> new ThreeDPrinterBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
 
+    public static final RegistryObject<Block> MACERATOR = registerBlock("macerator",
+            () -> new ThreeDPrinterBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+
     // Pipes
     //public static final RegistryObject<Block> ITEM_TRANSPORT_PIPE = registerBlock("item_transport_pipe",
     //        () -> new ItemTransportPipeBlock(Block.Properties.of(Material.METAL)

@@ -24,6 +24,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.SILVER_BLOCK.get());
         dropSelf(ModBlocks.PRESSURE_VESSEL.get());
         dropSelf(ModBlocks.THREE_D_PRINTER.get());
+        dropSelf(ModBlocks.MACERATOR.get());
 
         dropSelf(ModBlocks.SILVER_LAMP.get());
 

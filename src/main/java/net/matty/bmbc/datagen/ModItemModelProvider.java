@@ -26,6 +26,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // 3D Printer Filaments
         simpleItem(ModItems.RED_PRINTER_FILAMENT);
+        simpleItem(ModItems.BLUE_PRINTER_FILAMENT);
+        simpleItem(ModItems.GREEN_PRINTER_FILAMENT);
 
         // 3D Printer Templates
         simpleItem(ModItems.SCREW_TEMPLATE);

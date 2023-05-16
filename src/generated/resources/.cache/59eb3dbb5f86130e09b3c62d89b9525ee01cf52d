@@ -1,10 +1,11 @@
-// 1.19.3	2023-05-16T12:36:05.36533	Loot Tables
+// 1.19.3	2023-05-16T18:08:42.543465	Loot Tables
 5a1ed8d2579c9a0131fa68deb9da67767cb30da5 data/bmbc/loot_tables/blocks/bauxite_ore.json
 63939ae3d13c39239e710a34d31e9ca69afdba03 data/bmbc/loot_tables/blocks/carnallite_ore.json
 8a6ce402db4dd139b3e62a2867bdd4cf650bda38 data/bmbc/loot_tables/blocks/coffee_crop.json
 ec8a2c3d9bcc5ae91bcb94bc56b9741de042c122 data/bmbc/loot_tables/blocks/deepslate_silver_ore.json
 5fa469fb5723f374a1a0b3c38785c7eaaee66a83 data/bmbc/loot_tables/blocks/dolomite_ore.json
 1e87ae4145db2fbc818360422a798453b261b042 data/bmbc/loot_tables/blocks/evaporite_ore.json
+fd466fddc0011f5e9a5524eb654b46ccca7c4a94 data/bmbc/loot_tables/blocks/macerator.json
 08cb1eb644f70c3d1138a04858a218ee2f849614 data/bmbc/loot_tables/blocks/magnesite_ore.json
 c7e966027f4356016e911fef0627fe2b5bcdfacb data/bmbc/loot_tables/blocks/maple_leaves.json
 6a29067537e53dc96ae15c2d98e9a46ebb3804a3 data/bmbc/loot_tables/blocks/maple_log.json

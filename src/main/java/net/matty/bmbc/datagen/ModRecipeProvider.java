@@ -51,6 +51,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cable_roll", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.CABLE_ROLL.get()).build()))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLUE_PRINTER_FILAMENT.get()).group("printing_filament")
+                .define('R', ModItems.CABLE_ROLL.get())
+                .define('D', Items.BLUE_DYE)
+                .pattern("R")
+                .pattern("D")
+                .unlockedBy("has_cable_roll", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.CABLE_ROLL.get()).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GREEN_PRINTER_FILAMENT.get()).group("printing_filament")
+                .define('R', ModItems.CABLE_ROLL.get())
+                .define('D', Items.GREEN_DYE)
+                .pattern("R")
+                .pattern("D")
+                .unlockedBy("has_cable_roll", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.CABLE_ROLL.get()).build()))
+                .save(consumer);
+
+
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

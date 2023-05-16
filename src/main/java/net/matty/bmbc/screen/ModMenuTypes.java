@@ -20,6 +20,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<ThreeDPrinterMenu>> THREE_D_PRINTER_MENU =
             registerMenuType(ThreeDPrinterMenu::new, "three_d_printer_menu");
 
+    public static final RegistryObject<MenuType<MaceratorMenu>> MACERATOR_MENU =
+            registerMenuType(MaceratorMenu::new, "macerator_menu");
+
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
                                                                                                   String name) {

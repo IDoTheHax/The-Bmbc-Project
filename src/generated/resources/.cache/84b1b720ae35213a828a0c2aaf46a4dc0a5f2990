@@ -1,9 +1,10 @@
-// 1.19.3	2023-05-16T16:37:42.530282	Block States: bmbc
+// 1.19.3	2023-05-16T18:08:42.541599	Block States: bmbc
 58a4f7cc77a0f2517d2aad1f02b078439f384e00 assets/bmbc/blockstates/bauxite_ore.json
 6960f0b39a0fe64291df5ba4cb057730fa52c941 assets/bmbc/blockstates/carnallite_ore.json
 904c2d636f51ce100ecdad71cbb139e45cf94b21 assets/bmbc/blockstates/deepslate_silver_ore.json
 c8a91b39428cd24b0d744ece9c34bdd078f7b792 assets/bmbc/blockstates/dolomite_ore.json
 e2c96d7289ce81eef9d343bda4d6e739d574ac6c assets/bmbc/blockstates/evaporite_ore.json
+11ee82956524e2e4fad8096a10a74731f1ace60e assets/bmbc/blockstates/macerator.json
 943cb73291944e58a79acbf03075e862accaedda assets/bmbc/blockstates/magnesite_ore.json
 6f239b8c0006a20e68542c79e6c124a585a1a599 assets/bmbc/blockstates/maple_leaves.json
 d18319eec4fc8a1f3f083a62da7edd269057773f assets/bmbc/blockstates/maple_log.json
@@ -18,11 +19,13 @@ d419bc807ebb706db290d8a8bf5d38e8f722b6db assets/bmbc/blockstates/phosphorite_ore
 c352dc09b03203ad6bc6574743be1299d3db26a7 assets/bmbc/blockstates/silver_ore.json
 97ba17948de916f9ae8f45a1d512eaca64be9928 assets/bmbc/blockstates/stripped_maple_log.json
 7c936d0ffdc66d1ea45e406c1a3eb460f74bf94f assets/bmbc/blockstates/stripped_maple_wood.json
+83fe66b9c61c8e6295fa442c660a99e5eb91dced assets/bmbc/blockstates/three_d_printer.json
 bec71a6fc5a21f4dec7e0b0a649fd343833e9add assets/bmbc/models/block/bauxite_ore.json
 2d7994d24a2215992763a94a927cb1f0272d77ad assets/bmbc/models/block/carnallite_ore.json
 bb6b5cc427b42efe50fba0eb6c592a870dd317d8 assets/bmbc/models/block/deepslate_silver_ore.json
 99508a1c4c1feacf67f9ac944b81ea390dc3248c assets/bmbc/models/block/dolomite_ore.json
 f8f008d94b43a791290eec28b5caf27a9920bc4f assets/bmbc/models/block/evaporite_ore.json
+a0691bb4823f693d88351862a8c0b8e9bd8f1a84 assets/bmbc/models/block/macerator.json
 b8b1d05c1fb3a4591c68cdffef1713cfd7660abf assets/bmbc/models/block/magnesite_ore.json
 23706399757845e7e707b7b88450f9c96bfd610e assets/bmbc/models/block/maple_leaves.json
 b14c7ebd3703aa77290be14f87df572de4e3e3ff assets/bmbc/models/block/maple_log.json
@@ -41,12 +44,14 @@ dd05c34aee7d50376acdcec270729cbd797b3e3b assets/bmbc/models/block/maple_log_hori
 925da098ea1ea23f0ad8b804508c73af3c6477d0 assets/bmbc/models/block/stripped_maple_log_horizontal.json
 be598ae88769ba45f3e8b19c16d616833c8f4dd3 assets/bmbc/models/block/stripped_maple_wood.json
 292f60c0eae9545af0387a992d0467c0c0484402 assets/bmbc/models/block/stripped_maple_wood_horizontal.json
-09d4d606fc9d70cf94f3ac819fc7e30ccba6547a assets/bmbc/models/block/three_d_printer.json
+e8420cbd6924f88eb6db6ef2e211e283457bd476 assets/bmbc/models/block/three_d_printer.json
+5f017fb3cb18f721de67d7721f6634c901262a8c assets/bmbc/models/block/three_d_printer_on.json
 163aa43b825ecf54514516a3b1f2d95bd4c1f18f assets/bmbc/models/item/bauxite_ore.json
 1f6dbf86f62a1d5c6f372b06fe47bf0ef8d9f819 assets/bmbc/models/item/carnallite_ore.json
 1b96c8658868c8e7946c967ae2e629fe023cecc6 assets/bmbc/models/item/deepslate_silver_ore.json
 440f479f069277ac8b14faa1eecf512f24da0e70 assets/bmbc/models/item/dolomite_ore.json
 ca14a5da0df6dec01b0af25d6f9b39413c0b0325 assets/bmbc/models/item/evaporite_ore.json
+dcd7fcc45993002264c7f719f770928e418db452 assets/bmbc/models/item/macerator.json
 92dcf72361860595ad74683732b32eeb6f9fecc8 assets/bmbc/models/item/magnesite_ore.json
 623e4e6883cd7a282019a98fb23412d415ea5741 assets/bmbc/models/item/maple_leaves.json
 e1ba8f1f91b2010ce03714e676fb532b43f2a384 assets/bmbc/models/item/maple_log.json

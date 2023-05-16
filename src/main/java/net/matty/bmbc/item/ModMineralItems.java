@@ -93,6 +93,11 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties(),
                     "Chem. Formula: ", "KMgCl₃·6(H₂O)"));
 
+    // Crushed Bauxite
+    public static final RegistryObject<Item> CRUSHED_BAUXITE = ITEMS.register("crushed_bauxite",
+            () -> new MineralWithToolTipItem(new Item.Properties(),
+                    "Chem. Formula: ", "Al₂H₂O₄"));
+
     // Dolomite
     public static final RegistryObject<Item> DOLOMITE = ITEMS.register("dolomite",
             () -> new MineralWithToolTipItem(new Item.Properties(),
@@ -119,8 +124,8 @@ public class ModMineralItems {
 
     // Bauxite
     public static final RegistryObject<Item> BAUXITE = ITEMS.register("raw_bauxite",
-            () -> new MineralWithToolTipItem(new Item.Properties()
-                    ,"Chem. Formula: ", "Al₂H₂O₄"));
+            () -> new MineralWithToolTipItem(new Item.Properties(),
+                    "Chem. Formula: ", "Al₂H₂O₄"));
 
     public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
             () -> new Item(new Item.Properties()));

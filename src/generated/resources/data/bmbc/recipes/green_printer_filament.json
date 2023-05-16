@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "printing_filament",
+  "key": {
+    "D": {
+      "item": "minecraft:green_dye"
+    },
+    "R": {
+      "item": "bmbc:cable_roll"
+    }
+  },
+  "pattern": [
+    "R",
+    "D"
+  ],
+  "result": {
+    "item": "bmbc:green_printer_filament"
+  }
+}

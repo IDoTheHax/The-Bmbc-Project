@@ -130,8 +130,10 @@ public class BetterMineBetterCraft {
 
         if (event.getTab() == ModDefaultCreativeModeTab.BMBC) {
             event.accept(ModItems.BATTERY);
+            event.accept(ModItems.BLUE_PRINTER_FILAMENT);
             event.accept(ModItems.CABLE_ROLL);
             event.accept(ModItems.EIGHT_BALL);
+            event.accept(ModItems.GREEN_PRINTER_FILAMENT);
             event.accept(ModItems.RED_PRINTER_FILAMENT);
             event.accept(ModItems.SCREW_TEMPLATE);
             event.accept(ModBlocks.MAPLE_SAPLING);

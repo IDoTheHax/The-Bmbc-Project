@@ -1,7 +1,7 @@
 package net.matty.bmbc.block.entity;
 
 import net.matty.bmbc.item.ModItems;
-import net.matty.bmbc.screen.ThreeDPrinterMenu;
+import net.matty.bmbc.screen.MaceratorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -25,7 +25,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvider {
+public class MaceratorBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -39,14 +39,14 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
     private int progress = 0;
     private int maxProgress = 24000;
 
-    public ThreeDPrinterBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.THREE_D_PRINTER.get(), pos, state);
+    public MaceratorBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.MACERATOR.get(), pos, state);
         this.data = new ContainerData() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> ThreeDPrinterBlockEntity.this.progress;
-                    case 1 -> ThreeDPrinterBlockEntity.this.maxProgress;
+                    case 0 -> MaceratorBlockEntity.this.progress;
+                    case 1 -> MaceratorBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -54,8 +54,8 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> ThreeDPrinterBlockEntity.this.progress = value;
-                    case 1 -> ThreeDPrinterBlockEntity.this.maxProgress = value;
+                    case 0 -> MaceratorBlockEntity.this.progress = value;
+                    case 1 -> MaceratorBlockEntity.this.maxProgress = value;
                 }
             }
 
@@ -74,7 +74,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new ThreeDPrinterMenu(id, inventory, this, this.data);
+        return new MaceratorMenu(id, inventory, this, this.data);
     }
 
     @Override
@@ -101,7 +101,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("three_d_printer.progress", this.progress);
+        nbt.putInt("macerator.progress", this.progress);
 
         super.saveAdditional(nbt);
     }
@@ -110,7 +110,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        progress = nbt.getInt("three_d_printer.progress");
+        progress = nbt.getInt("macerator.progress");
     }
 
     public void drops() {
@@ -122,7 +122,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, ThreeDPrinterBlockEntity pEntity) {
+    public static void tick(Level level, BlockPos pos, BlockState state, MaceratorBlockEntity pEntity) {
         if (level.isClientSide()) {
             return;
         }
@@ -145,7 +145,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         this.progress = 0;
     }
 
-    private static void craftItem(ThreeDPrinterBlockEntity pEntity) {
+    private static void craftItem(MaceratorBlockEntity pEntity) {
 
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
@@ -157,7 +157,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         }
     }
 
-    private static boolean hasRecipe(ThreeDPrinterBlockEntity entity) {
+    private static boolean hasRecipe(MaceratorBlockEntity entity) {
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));

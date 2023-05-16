@@ -2,7 +2,7 @@
   "parent": "minecraft:block/cube",
   "textures": {
     "east": "bmbc:block/3d_printer_sides",
-    "front": "bmbc:block/3d_printer_front",
+    "front": "bmbc:block/3d_printer_front_on",
     "north": "bmbc:block/3d_printer_sides",
     "south": "bmbc:block/3d_printer_sides",
     "top": "bmbc:block/3d_printer_top",
