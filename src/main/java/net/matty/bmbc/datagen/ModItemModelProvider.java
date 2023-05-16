@@ -23,6 +23,13 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         // Register Item Models
+
+        // 3D Printer Filaments
+        simpleItem(ModItems.RED_PRINTER_FILAMENT);
+
+        // 3D Printer Templates
+        simpleItem(ModItems.SCREW_TEMPLATE);
+
         // Chem. Compounds
         simpleItem(ModChemicalCompounds.ALUMINA);
         simpleItem(ModChemicalCompounds.SILICA);
@@ -41,6 +48,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         // Misc
         simpleItem(ModItems.BATTERY);
         simpleItem(ModItems.EIGHT_BALL);
+        simpleItem(ModItems.CABLE_ROLL);
         saplingItem(ModBlocks.MAPLE_SAPLING);
 
         // Ores, Minerals and Ingots

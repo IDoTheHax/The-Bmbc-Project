@@ -17,6 +17,13 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(PressureVesselBlockEntity::new,
                             ModBlocks.PRESSURE_VESSEL.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<ThreeDPrinterBlockEntity>> THREE_D_PRINTER =
+            BLOCK_ENTITIES.register("three_d_printer", () ->
+                    BlockEntityType.Builder.of(ThreeDPrinterBlockEntity::new,
+                            ModBlocks.THREE_D_PRINTER.get()).build(null));
+
+
+
     //public static final RegistryObject<BlockEntityType<ItemTransportPipeBlockEntity>> ITEM_TRANSPORT_PIPE =
     //        BLOCK_ENTITIES.register("item_transport_pipe",
     //        () -> BlockEntityType.Builder.of(ItemTransportPipeBlockEntity::new,

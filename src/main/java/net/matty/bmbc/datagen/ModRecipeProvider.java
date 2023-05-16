@@ -2,6 +2,7 @@ package net.matty.bmbc.datagen;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
+import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.ModMineralItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
@@ -41,6 +42,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#")
                 .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS.get()))
                 .save(consumer, "stick_from_maple_planks");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RED_PRINTER_FILAMENT.get()).group("printing_filament")
+                .define('R', ModItems.CABLE_ROLL.get())
+                .define('D', Items.RED_DYE)
+                .pattern("R")
+                .pattern("D")
+                .unlockedBy("has_cable_roll", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.CABLE_ROLL.get()).build()))
+                .save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

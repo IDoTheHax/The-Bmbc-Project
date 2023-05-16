@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "bmbc:block/3d_printer_front",
+    "side": "bmbc:block/3d_printer_sides",
+    "top": "bmbc:block/3d_printer_top"
+  }
+}

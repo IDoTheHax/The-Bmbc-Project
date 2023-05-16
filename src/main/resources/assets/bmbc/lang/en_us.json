@@ -43,6 +43,8 @@
   "block.bmbc.silver_ore": "Silver Ore",
   "block.bmbc.deepslate_silver_ore": "Deepslate Silver Ore",
 
+  "item.bmbc.cable_roll": "Cable Roll",
+
   "block.bmbc.maple_log": "Maple Log",
   "block.bmbc.maple_planks": "Maple Planks",
   "block.bmbc.maple_wood": "Maple Wood",
@@ -53,6 +55,8 @@
 
   "item.bmbc.alumina": "Alumina",
   "item.bmbc.silica": "Silica",
+
+  "item.bmbc.red_printer_filament": "Red Printer Filament",
 
   "item.bmbc.battery": "Battery",
 
@@ -80,6 +84,7 @@
   "message.bmbc.no_water": "There is no water nearby",
 
   "block.bmbc.pressure_vessel": "Pressure Vessel",
+  "block.bmbc.three_d_printer": "3D Printer",
   "block.bmbc.item_transport_pipe": "Item Transport Pipe",
 
   "bmbc.tooltip.liquid.amount.with.capacity": "%s / %s mB",
@@ -88,5 +93,9 @@
   "fluid_type.bmbc.helium_fluid": "Liquid Helium",
   "fluid_type.bmbc.nitrogen_fluid": "Liquid Nitrogen",
   "fluid_type.bmbc.oxygen_fluid": "Liquid Oxygen",
-  "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide"
+  "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide",
+
+  "item.bmbc.screw_template": "Screw Template"
+
+
 }

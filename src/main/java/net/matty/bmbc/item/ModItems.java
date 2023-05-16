@@ -24,6 +24,18 @@ public class ModItems {
     public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
             () -> new EightBallItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> CABLE_ROLL = ITEMS.register("cable_roll",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RED_PRINTER_FILAMENT = ITEMS.register("red_printer_filament",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+    //public static final RegistryObject<Item> DUMMY_TEMPLATE = ITEMS.register("dummy_template",
+    //        () -> new Item(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> SCREW_TEMPLATE = ITEMS.register("screw_template",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> LIQUID_HELIUM_BUCKET = ITEMS.register("helium_bucket",
             () -> new BucketItem(ModFluids.SOURCE_HELIUM,
                     new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));

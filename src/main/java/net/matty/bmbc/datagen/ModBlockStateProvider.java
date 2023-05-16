@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,6 +22,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_BLOCK);
         blockWithItem(ModBlocks.SILVER_LAMP);
         blockWithItem(ModBlocks.PRESSURE_VESSEL);
+        cubeOrientable(ModBlocks.THREE_D_PRINTER,
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_front"),
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top"));
 
         blockWithItem(ModBlocks.BAUXITE_ORE);
         blockWithItem(ModBlocks.CARNALLITE_ORE);
@@ -58,5 +63,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    public ModelFile cubeOrientable(RegistryObject<Block> blockRegistryObject, ResourceLocation sideTexture, ResourceLocation frontTexture, ResourceLocation topTexture) {
+        simpleBlockItem(blockRegistryObject.get(), models().withExistingParent(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+                        new ResourceLocation("minecraft:orientable"))
+                .texture("side", sideTexture)
+                .texture("front", frontTexture)
+                .texture("top", topTexture));
+
+
+        return models().withExistingParent(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+                new ResourceLocation("minecraft:orientable"))
+                .texture("side", sideTexture)
+                .texture("front", frontTexture)
+                .texture("top", topTexture);
     }
 }

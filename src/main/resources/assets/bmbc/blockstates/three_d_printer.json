@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bmbc:block/three_d_printer"
+    }
+  }
+}

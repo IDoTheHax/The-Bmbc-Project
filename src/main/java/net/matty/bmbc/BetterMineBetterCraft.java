@@ -16,6 +16,7 @@ import net.matty.bmbc.networking.ModNetworkingPackets;
 import net.matty.bmbc.recipe.ModRecipes;
 import net.matty.bmbc.screen.ModMenuTypes;
 import net.matty.bmbc.screen.PressureVesselScreen;
+import net.matty.bmbc.screen.ThreeDPrinterScreen;
 import net.matty.bmbc.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -98,6 +99,7 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.SILVER_LAMP);
             event.accept(ModBlocks.PRESSURE_VESSEL);
+            event.accept(ModBlocks.THREE_D_PRINTER);
 
             // Ores
             event.accept(ModBlocks.BAUXITE_ORE);
@@ -128,8 +130,12 @@ public class BetterMineBetterCraft {
 
         if (event.getTab() == ModDefaultCreativeModeTab.BMBC) {
             event.accept(ModItems.BATTERY);
+            event.accept(ModItems.CABLE_ROLL);
             event.accept(ModItems.EIGHT_BALL);
+            event.accept(ModItems.RED_PRINTER_FILAMENT);
+            event.accept(ModItems.SCREW_TEMPLATE);
             event.accept(ModBlocks.MAPLE_SAPLING);
+
         }
 
         if (event.getTab() == ModFoodCreativeModTab.FOOD) {
@@ -170,6 +176,8 @@ public class BetterMineBetterCraft {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SODIUM_HYDROXIDE.get(), RenderType.solid());
 
             MenuScreens.register(ModMenuTypes.PRESSURE_VESSEL_MENU.get(), PressureVesselScreen::new);
+            MenuScreens.register(ModMenuTypes.THREE_D_PRINTER_MENU.get(), ThreeDPrinterScreen::new);
+
         }
     }
 }

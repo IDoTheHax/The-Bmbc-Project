@@ -4,6 +4,7 @@ import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.custom.CoffeeCropBlock;
 import net.matty.bmbc.block.custom.ModFlammableRotatedPillarBlock;
 import net.matty.bmbc.block.custom.PressureVesselBlock;
+import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.custom.SilverLampBlock;
 import net.matty.bmbc.worldgen.tree.MapleTreeGrower;
@@ -46,6 +47,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
             () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> THREE_D_PRINTER = registerBlock("three_d_printer",
+            () -> new ThreeDPrinterBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
 
     // Pipes

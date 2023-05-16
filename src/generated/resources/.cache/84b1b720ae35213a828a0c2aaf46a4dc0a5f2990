@@ -1,4 +1,4 @@
-// 1.19.3	2023-04-29T13:00:30.272546	Block States: bmbc
+// 1.19.3	2023-05-16T16:37:42.530282	Block States: bmbc
 58a4f7cc77a0f2517d2aad1f02b078439f384e00 assets/bmbc/blockstates/bauxite_ore.json
 6960f0b39a0fe64291df5ba4cb057730fa52c941 assets/bmbc/blockstates/carnallite_ore.json
 904c2d636f51ce100ecdad71cbb139e45cf94b21 assets/bmbc/blockstates/deepslate_silver_ore.json
@@ -41,6 +41,7 @@ dd05c34aee7d50376acdcec270729cbd797b3e3b assets/bmbc/models/block/maple_log_hori
 925da098ea1ea23f0ad8b804508c73af3c6477d0 assets/bmbc/models/block/stripped_maple_log_horizontal.json
 be598ae88769ba45f3e8b19c16d616833c8f4dd3 assets/bmbc/models/block/stripped_maple_wood.json
 292f60c0eae9545af0387a992d0467c0c0484402 assets/bmbc/models/block/stripped_maple_wood_horizontal.json
+09d4d606fc9d70cf94f3ac819fc7e30ccba6547a assets/bmbc/models/block/three_d_printer.json
 163aa43b825ecf54514516a3b1f2d95bd4c1f18f assets/bmbc/models/item/bauxite_ore.json
 1f6dbf86f62a1d5c6f372b06fe47bf0ef8d9f819 assets/bmbc/models/item/carnallite_ore.json
 1b96c8658868c8e7946c967ae2e629fe023cecc6 assets/bmbc/models/item/deepslate_silver_ore.json
@@ -59,3 +60,4 @@ c911beaa1f2a7cb9b5955fa80b3a8b9ee1bedaab assets/bmbc/models/item/silver_lamp.jso
 f365c2e3202f9fecae37ee44c3c4e2bc9d5ba616 assets/bmbc/models/item/silver_ore.json
 375763455abbd4f1e46f51931e9189c20e553beb assets/bmbc/models/item/stripped_maple_log.json
 3e9a7d9de792c250863872d9db9bae3fc7ba603f assets/bmbc/models/item/stripped_maple_wood.json
+8891fb8ef5b4be208b48f441cca24fb16c192b69 assets/bmbc/models/item/three_d_printer.json
