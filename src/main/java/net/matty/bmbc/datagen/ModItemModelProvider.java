@@ -32,6 +32,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         // 3D Printer Templates
         simpleItem(ModItems.SCREW_TEMPLATE);
 
+        // 3D Printed Items
+        simpleItem(ModItems.BLUE_PLASTIC_SCREW);
+        simpleItem(ModItems.GREEN_PLASTIC_SCREW);
+        simpleItem(ModItems.RED_PLASTIC_SCREW);
+
         // Chem. Compounds
         simpleItem(ModChemicalCompounds.ALUMINA);
         simpleItem(ModChemicalCompounds.SILICA);

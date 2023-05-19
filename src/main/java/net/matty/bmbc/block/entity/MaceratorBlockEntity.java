@@ -37,7 +37,7 @@ public class MaceratorBlockEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 24000;
+    private int maxProgress = 120;//24000;
 
     public MaceratorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MACERATOR.get(), pos, state);
@@ -149,8 +149,7 @@ public class MaceratorBlockEntity extends BlockEntity implements MenuProvider {
 
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
-            pEntity.itemHandler.extractItem(1, 0, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(ModItems.BATTERY.get(),
+            pEntity.itemHandler.setStackInSlot(1, new ItemStack(ModItems.BATTERY.get(),
                     pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
 
             pEntity.resetProgress();
@@ -163,10 +162,9 @@ public class MaceratorBlockEntity extends BlockEntity implements MenuProvider {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasFilamentInFilamentSlot = entity.itemHandler.getStackInSlot(0).getItem() == ModItems.RED_PRINTER_FILAMENT.get();
-        boolean hasMoldInMoldSlot = entity.itemHandler.getStackInSlot(1).getItem() == ModItems.SCREW_TEMPLATE.get();
+        boolean hasRockInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == ModItems.RED_PRINTER_FILAMENT.get();
 
-        return hasFilamentInFilamentSlot && hasMoldInMoldSlot && canInsertAmountIntoOutputSlot(inventory) &&
+        return hasRockInFirstSlot && canInsertAmountIntoOutputSlot(inventory) &&
                 canInsertItemIntoOutputSlot(inventory, new ItemStack(ModItems.BATTERY.get(), 1));
     }
 

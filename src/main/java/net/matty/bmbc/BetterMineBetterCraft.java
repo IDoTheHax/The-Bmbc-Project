@@ -100,6 +100,7 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.SILVER_LAMP);
             event.accept(ModBlocks.PRESSURE_VESSEL);
             event.accept(ModBlocks.THREE_D_PRINTER);
+            event.accept(ModBlocks.MACERATOR);
 
             // Ores
             event.accept(ModBlocks.BAUXITE_ORE);
@@ -135,6 +136,9 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.EIGHT_BALL);
             event.accept(ModItems.GREEN_PRINTER_FILAMENT);
             event.accept(ModItems.RED_PRINTER_FILAMENT);
+            event.accept(ModItems.BLUE_PLASTIC_SCREW);
+            event.accept(ModItems.GREEN_PLASTIC_SCREW);
+            event.accept(ModItems.RED_PLASTIC_SCREW);
             event.accept(ModItems.SCREW_TEMPLATE);
             event.accept(ModBlocks.MAPLE_SAPLING);
 

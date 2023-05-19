@@ -60,6 +60,10 @@
   "item.bmbc.blue_printer_filament": "Blue Printer Filament",
   "item.bmbc.green_printer_filament": "Green Printer Filament",
 
+  "item.bmbc.red_plastic_screw": "Red Plastic Screw",
+  "item.bmbc.green_plastic_screw": "Green Plastic Screw",
+  "item.bmbc.blue_plastic_screw": "Blue Plastic Screw",
+
   "item.bmbc.battery": "Battery",
 
   "block.bmbc.silver_lamp": "Silver Lamp",
@@ -87,6 +91,7 @@
 
   "block.bmbc.pressure_vessel": "Pressure Vessel",
   "block.bmbc.three_d_printer": "3D Printer",
+  "block.bmbc.macerator": "Macerator",
   "block.bmbc.item_transport_pipe": "Item Transport Pipe",
 
   "bmbc.tooltip.liquid.amount.with.capacity": "%s / %s mB",

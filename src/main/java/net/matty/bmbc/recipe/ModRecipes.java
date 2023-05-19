@@ -14,6 +14,11 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<PressureVesselRecipe>> DIGESTION_SERIALIZER =
             SERIALIZERS.register("digestion", () -> PressureVesselRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<ThreeDPrinterRecipe>> THREE_D_PRINTING_SERIALIZER =
+            SERIALIZERS.register("3d_printing", () -> new ThreeDPrinterRecipe.Serializer());
+
+    
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

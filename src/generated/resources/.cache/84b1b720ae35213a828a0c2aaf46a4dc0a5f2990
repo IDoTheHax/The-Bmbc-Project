@@ -1,4 +1,4 @@
-// 1.19.3	2023-05-16T18:08:42.541599	Block States: bmbc
+// 1.19.3	2023-05-18T16:26:22.712571	Block States: bmbc
 58a4f7cc77a0f2517d2aad1f02b078439f384e00 assets/bmbc/blockstates/bauxite_ore.json
 6960f0b39a0fe64291df5ba4cb057730fa52c941 assets/bmbc/blockstates/carnallite_ore.json
 904c2d636f51ce100ecdad71cbb139e45cf94b21 assets/bmbc/blockstates/deepslate_silver_ore.json
@@ -19,7 +19,7 @@ d419bc807ebb706db290d8a8bf5d38e8f722b6db assets/bmbc/blockstates/phosphorite_ore
 c352dc09b03203ad6bc6574743be1299d3db26a7 assets/bmbc/blockstates/silver_ore.json
 97ba17948de916f9ae8f45a1d512eaca64be9928 assets/bmbc/blockstates/stripped_maple_log.json
 7c936d0ffdc66d1ea45e406c1a3eb460f74bf94f assets/bmbc/blockstates/stripped_maple_wood.json
-83fe66b9c61c8e6295fa442c660a99e5eb91dced assets/bmbc/blockstates/three_d_printer.json
+a985ad5f686622431aedd1c64cddf061195b54a1 assets/bmbc/blockstates/three_d_printer.json
 bec71a6fc5a21f4dec7e0b0a649fd343833e9add assets/bmbc/models/block/bauxite_ore.json
 2d7994d24a2215992763a94a927cb1f0272d77ad assets/bmbc/models/block/carnallite_ore.json
 bb6b5cc427b42efe50fba0eb6c592a870dd317d8 assets/bmbc/models/block/deepslate_silver_ore.json
@@ -44,8 +44,8 @@ dd05c34aee7d50376acdcec270729cbd797b3e3b assets/bmbc/models/block/maple_log_hori
 925da098ea1ea23f0ad8b804508c73af3c6477d0 assets/bmbc/models/block/stripped_maple_log_horizontal.json
 be598ae88769ba45f3e8b19c16d616833c8f4dd3 assets/bmbc/models/block/stripped_maple_wood.json
 292f60c0eae9545af0387a992d0467c0c0484402 assets/bmbc/models/block/stripped_maple_wood_horizontal.json
-e8420cbd6924f88eb6db6ef2e211e283457bd476 assets/bmbc/models/block/three_d_printer.json
-5f017fb3cb18f721de67d7721f6634c901262a8c assets/bmbc/models/block/three_d_printer_on.json
+e58e5d1051cc3508b5107a777ad94b6da1269918 assets/bmbc/models/block/three_d_printer.json
+5528931b60dd3ade44153311160cc1b7d833ca38 assets/bmbc/models/block/three_d_printer_on.json
 163aa43b825ecf54514516a3b1f2d95bd4c1f18f assets/bmbc/models/item/bauxite_ore.json
 1f6dbf86f62a1d5c6f372b06fe47bf0ef8d9f819 assets/bmbc/models/item/carnallite_ore.json
 1b96c8658868c8e7946c967ae2e629fe023cecc6 assets/bmbc/models/item/deepslate_silver_ore.json

@@ -1,9 +1,10 @@
-// 1.19.3	2023-05-16T18:08:42.544276	Item Models: bmbc
+// 1.19.3	2023-05-18T17:43:57.470314	Item Models: bmbc
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
 35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
 35763d3e3f6d67a34203dcd4a478c60b85860c7d assets/bmbc/models/item/beryllium_ingot.json
 c7ab046baa855fab5670a3e825be9fdb630fcbbb assets/bmbc/models/item/black_phosphorus.json
+b3946c2a8efdbb2c8f1e6e44ded17dd499982998 assets/bmbc/models/item/blue_plastic_screw.json
 2d30d5575b0a4133d40e73a4835a620b79e6a114 assets/bmbc/models/item/blue_printer_filament.json
 13c262ba48191263169c19513b93b4d5229b1e59 assets/bmbc/models/item/boron_ingot.json
 5a93f62b1c1c2d58e0b13863a35d492df13d9b9e assets/bmbc/models/item/cable_roll.json
@@ -14,6 +15,7 @@ b2e1e9c11c222bb0f1bdc0a5e6171170b8a8f81e assets/bmbc/models/item/coffee_beans.js
 dc9a6da40a67f68ee979f88d02969b91a06d4a34 assets/bmbc/models/item/dolomite.json
 aacf62f98b754eba565bf051feb517ca74997e74 assets/bmbc/models/item/eight_ball.json
 415eef7c0989254a6a44ae7c0694153fe6e88200 assets/bmbc/models/item/evaporite.json
+e783758bacb2a2465484f5ca94053dc36e179f52 assets/bmbc/models/item/green_plastic_screw.json
 f06f65a98547de5fe4ee00ed69e77c28bcb0a366 assets/bmbc/models/item/green_printer_filament.json
 b8797585186df732f96a13ff691dadc0979eb8cc assets/bmbc/models/item/helium_bucket.json
 a59aec084ef8b79066ea041b80afb1994d5254f7 assets/bmbc/models/item/lithium_ingot.json
@@ -28,6 +30,7 @@ a5842e4865b879b18f3c12c7615b139f1fa83e5a assets/bmbc/models/item/potassium_ingot
 86e226cfb83aa41fe539f367f167d4fa191d278e assets/bmbc/models/item/raw_bauxite.json
 274c0c68620d8fbf52be76339470d53127813133 assets/bmbc/models/item/raw_silver.json
 ac9da924005fb99ab578f441eab80a17639d09eb assets/bmbc/models/item/red_phosphorus.json
+b50442f4f9e30c80dabdc14279be88310864ccd1 assets/bmbc/models/item/red_plastic_screw.json
 efcbc418dd691040e211cced0d10fb1df8fee70f assets/bmbc/models/item/red_printer_filament.json
 42ee66da7a68889b5fb6de0d1b941e8396e4d003 assets/bmbc/models/item/screw_template.json
 046e15ae1f74a11099b49cfde1c14f49e088cf19 assets/bmbc/models/item/sewage_water_bucket.json

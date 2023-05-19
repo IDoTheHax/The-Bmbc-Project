@@ -2,6 +2,7 @@ package net.matty.bmbc.block.entity;
 
 import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
 import net.matty.bmbc.item.ModItems;
+import net.matty.bmbc.recipe.ThreeDPrinterRecipe;
 import net.matty.bmbc.screen.ThreeDPrinterMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,6 +27,8 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
+
 public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
         @Override
@@ -38,7 +41,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 24000;
+    private int maxProgress = 240;
 
     public ThreeDPrinterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.THREE_D_PRINTER.get(), pos, state);
@@ -157,28 +160,38 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private static void craftItem(ThreeDPrinterBlockEntity pEntity) {
+        Level level = pEntity.level;
+        SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
+        for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
+        }
+
+        Optional<ThreeDPrinterRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(ThreeDPrinterRecipe.Type.INSTANCE, inventory, level);
 
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
             pEntity.itemHandler.extractItem(1, 0, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(ModItems.BATTERY.get(),
-                    pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem()));
 
             pEntity.resetProgress();
         }
     }
 
     private static boolean hasRecipe(ThreeDPrinterBlockEntity entity) {
+        Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasFilamentInFilamentSlot = entity.itemHandler.getStackInSlot(0).getItem() == ModItems.RED_PRINTER_FILAMENT.get();
+        Optional<ThreeDPrinterRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(ThreeDPrinterRecipe.Type.INSTANCE, inventory, level);
+
         boolean hasMoldInMoldSlot = entity.itemHandler.getStackInSlot(1).getItem() == ModItems.SCREW_TEMPLATE.get();
 
-        return hasFilamentInFilamentSlot && hasMoldInMoldSlot && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, new ItemStack(ModItems.BATTERY.get(), 1));
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
+                canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem());
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {

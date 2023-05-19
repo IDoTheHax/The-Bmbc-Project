@@ -1,0 +1,14 @@
+{
+  "type": "bmbc:3d_printing",
+  "ingredients": [
+    {
+      "item": "bmbc:red_printer_filament"
+    },
+    {
+      "item": "bmbc:screw_template"
+    }
+  ],
+  "output": {
+    "item": "bmbc:red_plastic_screw"
+  }
+}

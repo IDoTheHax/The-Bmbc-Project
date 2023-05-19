@@ -18,12 +18,12 @@ public class MaceratorMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public MaceratorMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(3));
+        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
 
     public MaceratorMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.MACERATOR_MENU.get(), id);
-        checkContainerSize(inv, 4);
+        checkContainerSize(inv, 3);
         blockEntity = (ThreeDPrinterBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
@@ -35,7 +35,6 @@ public class MaceratorMenu extends AbstractContainerMenu {
             this.addSlot(new SlotItemHandler(handler, 0, 12, 15));
             this.addSlot(new SlotItemHandler(handler, 1, 64, 37));
             this.addSlot(new SlotItemHandler(handler, 2, 116, 37));
-            this.addSlot(new SlotItemHandler(handler, 3, 12, 60));
         });
 
         addDataSlots(data);

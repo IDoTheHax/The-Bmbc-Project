@@ -1,11 +1,9 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "east": "bmbc:block/3d_printer_sides",
+    "bottom": "bmbc:block/3d_printer_bottom",
     "front": "bmbc:block/3d_printer_front_on",
-    "north": "bmbc:block/3d_printer_sides",
-    "south": "bmbc:block/3d_printer_sides",
-    "top": "bmbc:block/3d_printer_top",
-    "west": "bmbc:block/3d_printer_sides"
+    "side": "bmbc:block/3d_printer_sides",
+    "top": "bmbc:block/3d_printer_top"
   }
 }

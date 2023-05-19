@@ -27,22 +27,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MACERATOR); // TODO: Change Later !!!
         generateThreeDPrinter(
                 ModBlocks.THREE_D_PRINTER.get(),
-                cube(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath(),
-                        new ResourceLocation("minecraft:cube"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                cubeEntity(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath(),
+                        new ResourceLocation("minecraft:orientable"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_front"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top")),
-                cube(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath() + "_on",
-                        new ResourceLocation("minecraft:cube"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/3d_printer_bottom")),
+                cubeEntity(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath() + "_on",
+                        new ResourceLocation("minecraft:orientable"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_front_on"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top"))
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/3d_printer_bottom"))
         );
 
         blockWithItem(ModBlocks.BAUXITE_ORE);
@@ -89,53 +85,52 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .with(ThreeDPrinterBlock.FACING, Direction.NORTH)
                 .with(ThreeDPrinterBlock.ACTIVE, false)
                 .modelForState()
-                .modelFile(offModel).rotationX(0).addModel()
+                .modelFile(offModel).rotationY(0).addModel()
                 .partialState()
                 .with(ThreeDPrinterBlock.FACING, Direction.SOUTH)
                 .with(ThreeDPrinterBlock.ACTIVE, false)
                 .modelForState()
-                .modelFile(offModel).rotationX(180).addModel()
+                .modelFile(offModel).rotationY(180).addModel()
                 .partialState()
                 .with(ThreeDPrinterBlock.FACING, Direction.EAST)
                 .with(ThreeDPrinterBlock.ACTIVE, false)
                 .modelForState()
-                .modelFile(offModel).rotationX(90).addModel()
+                .modelFile(offModel).rotationY(90).addModel()
                 .partialState()
                 .with(ThreeDPrinterBlock.FACING, Direction.WEST)
                 .with(ThreeDPrinterBlock.ACTIVE, false)
                 .modelForState()
-                .modelFile(offModel).rotationX(270).addModel()
+                .modelFile(offModel).rotationY(270).addModel()
+
                 .partialState()
                 .with(ThreeDPrinterBlock.FACING, Direction.NORTH)
                 .with(ThreeDPrinterBlock.ACTIVE, true)
                 .modelForState()
-                .modelFile(onModel).rotationX(0).addModel()
+                .modelFile(onModel).rotationY(0).addModel()
                 .partialState()
                 .with(ThreeDPrinterBlock.FACING, Direction.SOUTH)
                 .with(ThreeDPrinterBlock.ACTIVE, true)
                 .modelForState()
-                .modelFile(onModel).rotationX(180).addModel()
+                .modelFile(onModel).rotationY(180).addModel()
                 .partialState()
                 .with(ThreeDPrinterBlock.FACING, Direction.EAST)
                 .with(ThreeDPrinterBlock.ACTIVE, true)
                 .modelForState()
-                .modelFile(onModel).rotationX(90).addModel()
+                .modelFile(onModel).rotationY(90).addModel()
                 .partialState()
                 .with(ThreeDPrinterBlock.FACING, Direction.WEST)
                 .with(ThreeDPrinterBlock.ACTIVE, true)
                 .modelForState()
-                .modelFile(onModel).rotationX(270).addModel();
+                .modelFile(onModel).rotationY(270).addModel();
 
         simpleBlockItem(block, offModel);
     }
 
-    public ModelFile cube(String name, ResourceLocation parent, ResourceLocation eastTexture, ResourceLocation westTexture, ResourceLocation northTexture, ResourceLocation southTexture, ResourceLocation frontTexture, ResourceLocation topTexture) {
+    public ModelFile cubeEntity(String name, ResourceLocation parent, ResourceLocation sideTexture, ResourceLocation frontTexture, ResourceLocation topTexture, ResourceLocation bottomTexture) {
         return models().withExistingParent(name, parent)
-                .texture("east", eastTexture)
-                .texture("west", westTexture)
-                .texture("north", northTexture)
-                .texture("south", southTexture)
+                .texture("side", sideTexture)
                 .texture("front", frontTexture)
-                .texture("top", topTexture);
+                .texture("top", topTexture)
+                .texture("bottom", bottomTexture);
     }
 }
