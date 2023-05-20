@@ -66,6 +66,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMineralItems.BORON);
         simpleItem(ModMineralItems.CALCIUM);
         simpleItem(ModMineralItems.CARNALLITE);
+        simpleItem(ModMineralItems.CRUSHED_BAUXITE);
         simpleItem(ModMineralItems.DOLOMITE);
         simpleItem(ModMineralItems.EVAPORITE);
         simpleItem(ModMineralItems.LITHIUM);

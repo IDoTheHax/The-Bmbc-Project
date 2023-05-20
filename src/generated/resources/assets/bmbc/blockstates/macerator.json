@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "bmbc:block/macerator",
+      "y": 90
+    },
+    "facing=north": {
       "model": "bmbc:block/macerator"
+    },
+    "facing=south": {
+      "model": "bmbc:block/macerator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bmbc:block/macerator",
+      "y": 270
     }
   }
 }

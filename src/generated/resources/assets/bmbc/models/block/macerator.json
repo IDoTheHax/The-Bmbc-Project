@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "bmbc:block/macerator"
+    "bottom": "bmbc:block/macerator_bottom",
+    "front": "bmbc:block/macerator_front",
+    "side": "bmbc:block/macerator_sides",
+    "south": "bmbc:block/macerator_back",
+    "top": "bmbc:block/macerator_top"
   }
 }

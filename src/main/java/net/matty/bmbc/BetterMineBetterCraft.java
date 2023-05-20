@@ -14,6 +14,7 @@ import net.matty.bmbc.item.ModMineralItems;
 import net.matty.bmbc.loot.ModLootModifiers;
 import net.matty.bmbc.networking.ModNetworkingPackets;
 import net.matty.bmbc.recipe.ModRecipes;
+import net.matty.bmbc.screen.MaceratorScreen;
 import net.matty.bmbc.screen.ModMenuTypes;
 import net.matty.bmbc.screen.PressureVesselScreen;
 import net.matty.bmbc.screen.ThreeDPrinterScreen;
@@ -93,6 +94,8 @@ public class BetterMineBetterCraft {
             event.accept(ModMineralItems.PHOSPHORITE);
             event.accept(ModMineralItems.BAUXITE);
             event.accept(ModMineralItems.RAW_SILVER);
+
+            event.accept(ModMineralItems.CRUSHED_BAUXITE);
         }
         
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
@@ -183,6 +186,8 @@ public class BetterMineBetterCraft {
 
             MenuScreens.register(ModMenuTypes.PRESSURE_VESSEL_MENU.get(), PressureVesselScreen::new);
             MenuScreens.register(ModMenuTypes.THREE_D_PRINTER_MENU.get(), ThreeDPrinterScreen::new);
+            MenuScreens.register(ModMenuTypes.MACERATOR_MENU.get(), MaceratorScreen::new);
+
 
         }
     }

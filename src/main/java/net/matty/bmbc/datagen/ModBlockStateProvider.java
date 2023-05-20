@@ -2,6 +2,7 @@ package net.matty.bmbc.datagen;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
+import net.matty.bmbc.block.custom.MaceratorBlock;
 import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -24,16 +25,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_BLOCK);
         blockWithItem(ModBlocks.SILVER_LAMP);
         blockWithItem(ModBlocks.PRESSURE_VESSEL);
-        blockWithItem(ModBlocks.MACERATOR); // TODO: Change Later !!!
+
+        generateMacerator(ModBlocks.MACERATOR.get(),
+                cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.MACERATOR.get()).getPath(),
+                        new ResourceLocation("minecraft:orientable"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/macerator_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/macerator_back"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/macerator_front"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/macerator_bottom"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/macerator_top")
+                )
+        ); // TODO: Change Later !!!
+
         generateThreeDPrinter(
                 ModBlocks.THREE_D_PRINTER.get(),
-                cubeEntity(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath(),
+                cubeEntityFrontSideTop(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath(),
                         new ResourceLocation("minecraft:orientable"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_front"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_top"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/3d_printer_bottom")),
-                cubeEntity(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath() + "_on",
+                cubeEntityFrontSideTop(ForgeRegistries.BLOCKS.getKey(ModBlocks.THREE_D_PRINTER.get()).getPath() + "_on",
                         new ResourceLocation("minecraft:orientable"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_sides"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/3d_printer_front_on"),
@@ -126,11 +138,43 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(block, offModel);
     }
 
-    public ModelFile cubeEntity(String name, ResourceLocation parent, ResourceLocation sideTexture, ResourceLocation frontTexture, ResourceLocation topTexture, ResourceLocation bottomTexture) {
+    public void generateMacerator(Block block, ModelFile model) {
+        getVariantBuilder(block)
+                .partialState()
+                .with(MaceratorBlock.FACING, Direction.NORTH)
+                .modelForState()
+                .modelFile(model).rotationY(0).addModel()
+                .partialState()
+                .with(MaceratorBlock.FACING, Direction.SOUTH)
+                .modelForState()
+                .modelFile(model).rotationY(180).addModel()
+                .partialState()
+                .with(MaceratorBlock.FACING, Direction.EAST)
+                .modelForState()
+                .modelFile(model).rotationY(90).addModel()
+                .partialState()
+                .with(MaceratorBlock.FACING, Direction.WEST)
+                .modelForState()
+                .modelFile(model).rotationY(270).addModel();
+
+        simpleBlockItem(block, model);
+    }
+
+    public ModelFile cubeEntityFrontSideTop(String name, ResourceLocation parent, ResourceLocation sideTexture, ResourceLocation frontTexture, ResourceLocation topTexture, ResourceLocation bottomTexture) {
         return models().withExistingParent(name, parent)
                 .texture("side", sideTexture)
                 .texture("front", frontTexture)
                 .texture("top", topTexture)
                 .texture("bottom", bottomTexture);
+    }
+
+    public ModelFile cubeEntity2Sides(String name, ResourceLocation parent, ResourceLocation sideTexture, ResourceLocation backTexture, ResourceLocation frontTexture, ResourceLocation bottomTexture, ResourceLocation topTexture) {
+        return models().withExistingParent(name, parent)
+                .texture("side", sideTexture)
+                .texture("south", backTexture)
+                .texture("front", frontTexture)
+                .texture("bottom", bottomTexture)
+                .texture("top", topTexture);
+
     }
 }

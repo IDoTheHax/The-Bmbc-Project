@@ -1,10 +1,10 @@
-// 1.19.3	2023-05-18T16:26:22.712571	Block States: bmbc
+// 1.19.3	2023-05-20T18:45:43.491302	Block States: bmbc
 58a4f7cc77a0f2517d2aad1f02b078439f384e00 assets/bmbc/blockstates/bauxite_ore.json
 6960f0b39a0fe64291df5ba4cb057730fa52c941 assets/bmbc/blockstates/carnallite_ore.json
 904c2d636f51ce100ecdad71cbb139e45cf94b21 assets/bmbc/blockstates/deepslate_silver_ore.json
 c8a91b39428cd24b0d744ece9c34bdd078f7b792 assets/bmbc/blockstates/dolomite_ore.json
 e2c96d7289ce81eef9d343bda4d6e739d574ac6c assets/bmbc/blockstates/evaporite_ore.json
-11ee82956524e2e4fad8096a10a74731f1ace60e assets/bmbc/blockstates/macerator.json
+e31afa90ab7c1b1e12b5d32960c5671cbfd71cb0 assets/bmbc/blockstates/macerator.json
 943cb73291944e58a79acbf03075e862accaedda assets/bmbc/blockstates/magnesite_ore.json
 6f239b8c0006a20e68542c79e6c124a585a1a599 assets/bmbc/blockstates/maple_leaves.json
 d18319eec4fc8a1f3f083a62da7edd269057773f assets/bmbc/blockstates/maple_log.json
@@ -25,7 +25,7 @@ bec71a6fc5a21f4dec7e0b0a649fd343833e9add assets/bmbc/models/block/bauxite_ore.js
 bb6b5cc427b42efe50fba0eb6c592a870dd317d8 assets/bmbc/models/block/deepslate_silver_ore.json
 99508a1c4c1feacf67f9ac944b81ea390dc3248c assets/bmbc/models/block/dolomite_ore.json
 f8f008d94b43a791290eec28b5caf27a9920bc4f assets/bmbc/models/block/evaporite_ore.json
-a0691bb4823f693d88351862a8c0b8e9bd8f1a84 assets/bmbc/models/block/macerator.json
+e61663bbc4c0b6fba11675f37e44eeb98348d29c assets/bmbc/models/block/macerator.json
 b8b1d05c1fb3a4591c68cdffef1713cfd7660abf assets/bmbc/models/block/magnesite_ore.json
 23706399757845e7e707b7b88450f9c96bfd610e assets/bmbc/models/block/maple_leaves.json
 b14c7ebd3703aa77290be14f87df572de4e3e3ff assets/bmbc/models/block/maple_log.json

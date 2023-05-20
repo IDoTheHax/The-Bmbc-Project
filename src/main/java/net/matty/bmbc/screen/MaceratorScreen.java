@@ -9,11 +9,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class MaceratorScreen extends AbstractContainerScreen<ThreeDPrinterMenu> {
+public class MaceratorScreen extends AbstractContainerScreen<MaceratorMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(BetterMineBetterCraft.MOD_ID,"textures/gui/3d_printer_gui.png");
+            new ResourceLocation(BetterMineBetterCraft.MOD_ID,"textures/gui/macerator_gui.png");
 
-    public MaceratorScreen(ThreeDPrinterMenu menu, Inventory inventory, Component component) {
+    public MaceratorScreen(MaceratorMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component);
     }
 
@@ -37,7 +37,7 @@ public class MaceratorScreen extends AbstractContainerScreen<ThreeDPrinterMenu> 
 
     private void renderProgressArrow(PoseStack pPoseStack, int x, int y) {
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 85, y + 40, 176, 0, menu.getScaledProgress(), 27);
+            blit(pPoseStack, x + 82, y + 36, 176, 0, 19, menu.getScaledProgress());
         }
     }
 

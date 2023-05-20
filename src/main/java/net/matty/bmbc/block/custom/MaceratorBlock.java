@@ -3,6 +3,7 @@ package net.matty.bmbc.block.custom;
 import net.matty.bmbc.block.entity.MaceratorBlockEntity;
 import net.matty.bmbc.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -31,6 +32,7 @@ public class MaceratorBlock extends BaseEntityBlock {
 
     public MaceratorBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(ACTIVE, Boolean.valueOf(false)));
     }
 
     private static final VoxelShape SHAPE =

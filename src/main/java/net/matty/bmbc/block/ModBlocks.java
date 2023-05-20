@@ -1,10 +1,7 @@
 package net.matty.bmbc.block;
 
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.matty.bmbc.block.custom.CoffeeCropBlock;
-import net.matty.bmbc.block.custom.ModFlammableRotatedPillarBlock;
-import net.matty.bmbc.block.custom.PressureVesselBlock;
-import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
+import net.matty.bmbc.block.custom.*;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.custom.SilverLampBlock;
 import net.matty.bmbc.worldgen.tree.MapleTreeGrower;
@@ -54,7 +51,7 @@ public class ModBlocks {
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> MACERATOR = registerBlock("macerator",
-            () -> new ThreeDPrinterBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new MaceratorBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
 
     // Pipes

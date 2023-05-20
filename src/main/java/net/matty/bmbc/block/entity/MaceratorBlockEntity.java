@@ -1,6 +1,6 @@
 package net.matty.bmbc.block.entity;
 
-import net.matty.bmbc.item.ModItems;
+import net.matty.bmbc.item.ModMineralItems;
 import net.matty.bmbc.screen.MaceratorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class MaceratorBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -68,7 +68,7 @@ public class MaceratorBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("3D Printer");
+        return Component.literal("Macerator");
     }
 
     @Nullable
@@ -149,8 +149,8 @@ public class MaceratorBlockEntity extends BlockEntity implements MenuProvider {
 
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
-            pEntity.itemHandler.setStackInSlot(1, new ItemStack(ModItems.BATTERY.get(),
-                    pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
+            pEntity.itemHandler.setStackInSlot(1, new ItemStack(ModMineralItems.CRUSHED_BAUXITE.get(),
+                    pEntity.itemHandler.getStackInSlot(1).getCount() + 1));
 
             pEntity.resetProgress();
         }
@@ -162,17 +162,17 @@ public class MaceratorBlockEntity extends BlockEntity implements MenuProvider {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasRockInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == ModItems.RED_PRINTER_FILAMENT.get();
+        boolean hasRockInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == ModMineralItems.BAUXITE.get();
 
         return hasRockInFirstSlot && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, new ItemStack(ModItems.BATTERY.get(), 1));
+                canInsertItemIntoOutputSlot(inventory, new ItemStack(ModMineralItems.CRUSHED_BAUXITE.get(), 1));
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
-        return inventory.getItem(2).getItem() == stack.getItem() || inventory.getItem(2).isEmpty();
+        return inventory.getItem(1).getItem() == stack.getItem() || inventory.getItem(1).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
-        return inventory.getItem(2).getMaxStackSize() > inventory.getItem(2).getCount();
+        return inventory.getItem(1).getMaxStackSize() > inventory.getItem(1).getCount();
     }
 }

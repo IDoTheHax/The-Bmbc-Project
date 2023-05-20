@@ -1,7 +1,7 @@
 package net.matty.bmbc.screen;
 
 import net.matty.bmbc.block.ModBlocks;
-import net.matty.bmbc.block.entity.ThreeDPrinterBlockEntity;
+import net.matty.bmbc.block.entity.MaceratorBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +13,7 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class MaceratorMenu extends AbstractContainerMenu {
-    public final ThreeDPrinterBlockEntity blockEntity;
+    public final MaceratorBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
@@ -24,7 +24,7 @@ public class MaceratorMenu extends AbstractContainerMenu {
     public MaceratorMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.MACERATOR_MENU.get(), id);
         checkContainerSize(inv, 3);
-        blockEntity = (ThreeDPrinterBlockEntity) entity;
+        blockEntity = (MaceratorBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
 
@@ -32,9 +32,9 @@ public class MaceratorMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 12, 15));
-            this.addSlot(new SlotItemHandler(handler, 1, 64, 37));
-            this.addSlot(new SlotItemHandler(handler, 2, 116, 37));
+            this.addSlot(new SlotItemHandler(handler, 0, 80, 15));
+            this.addSlot(new SlotItemHandler(handler, 1, 80, 60));
+            this.addSlot(new SlotItemHandler(handler, 2, 8, 46));
         });
 
         addDataSlots(data);
@@ -44,14 +44,14 @@ public class MaceratorMenu extends AbstractContainerMenu {
         return data.get(0) > 0;
     }
 
-    public ThreeDPrinterBlockEntity getBlockEntity() {
+    public MaceratorBlockEntity getBlockEntity() {
         return this.blockEntity;
     }
 
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);  // Max Progress
-        int progressArrowSize = 27; // This is the height in pixels of your arrow
+        int progressArrowSize = 19; // This is the height in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
@@ -72,7 +72,7 @@ public class MaceratorMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {
         Slot sourceSlot = slots.get(index);
@@ -110,7 +110,7 @@ public class MaceratorMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player player) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                player, ModBlocks.THREE_D_PRINTER.get());
+                player, ModBlocks.MACERATOR.get());
     }
 
     // Where to place the different slots

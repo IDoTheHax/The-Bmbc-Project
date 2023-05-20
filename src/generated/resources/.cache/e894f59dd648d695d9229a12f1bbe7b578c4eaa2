@@ -1,4 +1,4 @@
-// 1.19.3	2023-05-18T17:43:57.470314	Item Models: bmbc
+// 1.19.3	2023-05-20T19:30:13.669107	Item Models: bmbc
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
 35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
@@ -12,6 +12,7 @@ db82d841b3fbb24cf912986375acdf4f4c483adb assets/bmbc/models/item/calcium.json
 56d7c6e188770d2f3b4ffe53a7b50a531b4557c6 assets/bmbc/models/item/carnallite.json
 b2e1e9c11c222bb0f1bdc0a5e6171170b8a8f81e assets/bmbc/models/item/coffee_beans.json
 7feedfd6554da8ea05735ea0855791101f3c4e78 assets/bmbc/models/item/coffee_cherry.json
+bd605a21eade36c2a768947e58c94c5359849365 assets/bmbc/models/item/crushed_bauxite.json
 dc9a6da40a67f68ee979f88d02969b91a06d4a34 assets/bmbc/models/item/dolomite.json
 aacf62f98b754eba565bf051feb517ca74997e74 assets/bmbc/models/item/eight_ball.json
 415eef7c0989254a6a44ae7c0694153fe6e88200 assets/bmbc/models/item/evaporite.json

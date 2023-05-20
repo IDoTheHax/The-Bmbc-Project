@@ -37,13 +37,13 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> BLUE_PLASTIC_SCREW = ITEMS.register("blue_plastic_screw",
-            () -> new Item(new Item.Properties().stacksTo(128)));
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> GREEN_PLASTIC_SCREW = ITEMS.register("green_plastic_screw",
-            () -> new Item(new Item.Properties().stacksTo(128)));
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RED_PLASTIC_SCREW = ITEMS.register("red_plastic_screw",
-            () -> new Item(new Item.Properties().stacksTo(128)));
+            () -> new Item(new Item.Properties()));
 
     //public static final RegistryObject<Item> DUMMY_TEMPLATE = ITEMS.register("dummy_template",
     //        () -> new Item(new Item.Properties().stacksTo(1)));
