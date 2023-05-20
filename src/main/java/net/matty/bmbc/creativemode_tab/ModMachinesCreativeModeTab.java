@@ -11,13 +11,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = BetterMineBetterCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ModBlocksCreativeModeTab {
-    public static CreativeModeTab BMBC_BLOCKS;
+public class ModMachinesCreativeModeTab {
+    public static CreativeModeTab BMBC_MACHINES;
 
     @SubscribeEvent
     public static void registerModBlocksCreativeModeTab(CreativeModeTabEvent.Register event) {
-        BMBC_BLOCKS = event.registerCreativeModeTab(new ResourceLocation(BetterMineBetterCraft.MOD_ID, "bmbc_blocks"),
-                builder -> builder.icon(() -> new ItemStack(ModBlocks.SILVER_LAMP.get())).title(Component.literal("Bmbc Blocks")));
+        BMBC_MACHINES = event.registerCreativeModeTab(new ResourceLocation(BetterMineBetterCraft.MOD_ID, "bmbc_machines"),
+                builder -> builder.icon(() -> new ItemStack(ModBlocks.THREE_D_PRINTER.get())).title(Component.literal("Bmbc Machines")));
     }
 }
 

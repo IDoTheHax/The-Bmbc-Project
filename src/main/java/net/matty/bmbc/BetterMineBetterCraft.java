@@ -101,9 +101,6 @@ public class BetterMineBetterCraft {
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.SILVER_LAMP);
-            event.accept(ModBlocks.PRESSURE_VESSEL);
-            event.accept(ModBlocks.THREE_D_PRINTER);
-            event.accept(ModBlocks.MACERATOR);
 
             // Ores
             event.accept(ModBlocks.BAUXITE_ORE);
@@ -125,6 +122,12 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.STRIPPED_MAPLE_LOG);
             event.accept(ModBlocks.STRIPPED_MAPLE_WOOD);
 
+        }
+
+        if (event.getTab() == ModMachinesCreativeModeTab.BMBC_MACHINES) {
+            event.accept(ModBlocks.MACERATOR);
+            event.accept(ModBlocks.PRESSURE_VESSEL);
+            event.accept(ModBlocks.THREE_D_PRINTER);
         }
         
         if (event.getTab() == ModChemicalCompoundsCreativeModeTab.CHEMICAL_COMPOUNDS) {
