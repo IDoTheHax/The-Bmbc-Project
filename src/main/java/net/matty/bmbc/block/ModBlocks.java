@@ -42,6 +42,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop",
             () -> new CoffeeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
+    public static final RegistryObject<Block> BIOMASS_GENERATOR = registerBlock("biomass_generator",
+            () -> new BiomassGeneratorBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+
     public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
             () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()));

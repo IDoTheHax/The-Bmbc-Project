@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "bmbc:block/biomass_generator_bottom",
+    "front": "bmbc:block/biomass_generator_front",
+    "side": "bmbc:block/biomass_generator_sides",
+    "south": "bmbc:block/biomass_generator_back",
+    "top": "bmbc:block/biomass_generator_top"
+  }
+}

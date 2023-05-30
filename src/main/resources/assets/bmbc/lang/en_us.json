@@ -90,6 +90,7 @@
   "message.bmbc.drink_water": "Drinking Water",
   "message.bmbc.no_water": "There is no water nearby",
 
+  "block.bmbc.biomass_generator": "Biomass Generator",
   "block.bmbc.pressure_vessel": "Pressure Vessel",
   "block.bmbc.three_d_printer": "3D Printer",
   "block.bmbc.macerator": "Macerator",

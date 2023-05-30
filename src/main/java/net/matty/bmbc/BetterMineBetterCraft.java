@@ -14,10 +14,8 @@ import net.matty.bmbc.item.ModMineralItems;
 import net.matty.bmbc.loot.ModLootModifiers;
 import net.matty.bmbc.networking.ModNetworkingPackets;
 import net.matty.bmbc.recipe.ModRecipes;
-import net.matty.bmbc.screen.MaceratorScreen;
-import net.matty.bmbc.screen.ModMenuTypes;
-import net.matty.bmbc.screen.PressureVesselScreen;
-import net.matty.bmbc.screen.ThreeDPrinterScreen;
+import net.matty.bmbc.screen.*;
+import net.matty.bmbc.screen.BiomassGeneratorScreen;
 import net.matty.bmbc.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -125,6 +123,7 @@ public class BetterMineBetterCraft {
         }
 
         if (event.getTab() == ModMachinesCreativeModeTab.BMBC_MACHINES) {
+            //event.accept(ModBlocks.BIOMASS_GENERATOR);
             event.accept(ModBlocks.MACERATOR);
             event.accept(ModBlocks.PRESSURE_VESSEL);
             event.accept(ModBlocks.THREE_D_PRINTER);
@@ -187,6 +186,7 @@ public class BetterMineBetterCraft {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SODIUM_HYDROXIDE.get(), RenderType.solid());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SODIUM_HYDROXIDE.get(), RenderType.solid());
 
+            MenuScreens.register(ModMenuTypes.BIOMASS_GENERATOR_MENU.get(), BiomassGeneratorScreen::new);
             MenuScreens.register(ModMenuTypes.PRESSURE_VESSEL_MENU.get(), PressureVesselScreen::new);
             MenuScreens.register(ModMenuTypes.THREE_D_PRINTER_MENU.get(), ThreeDPrinterScreen::new);
             MenuScreens.register(ModMenuTypes.MACERATOR_MENU.get(), MaceratorScreen::new);

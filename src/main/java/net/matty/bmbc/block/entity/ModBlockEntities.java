@@ -27,6 +27,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(MaceratorBlockEntity::new,
                             ModBlocks.MACERATOR.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<BiomassGeneratorBlockEntity>> BIOMASS_GENERATOR =
+            BLOCK_ENTITIES.register("biomass_generator", () ->
+                    BlockEntityType.Builder.of(BiomassGeneratorBlockEntity::new,
+                            ModBlocks.BIOMASS_GENERATOR.get()).build(null));
+
 
 
 

@@ -35,7 +35,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/macerator_bottom"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/macerator_top")
                 )
-        ); // TODO: Change Later !!!
+        );
+
+        generateBiomassGenerator(ModBlocks.BIOMASS_GENERATOR.get(),
+                cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.BIOMASS_GENERATOR.get()).getPath(),
+                        new ResourceLocation("minecraft:orientable"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_back"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_front"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_bottom"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_top")
+                )
+        );
+
 
         generateThreeDPrinter(
                 ModBlocks.THREE_D_PRINTER.get(),
@@ -139,6 +151,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     public void generateMacerator(Block block, ModelFile model) {
+        getVariantBuilder(block)
+                .partialState()
+                .with(MaceratorBlock.FACING, Direction.NORTH)
+                .modelForState()
+                .modelFile(model).rotationY(0).addModel()
+                .partialState()
+                .with(MaceratorBlock.FACING, Direction.SOUTH)
+                .modelForState()
+                .modelFile(model).rotationY(180).addModel()
+                .partialState()
+                .with(MaceratorBlock.FACING, Direction.EAST)
+                .modelForState()
+                .modelFile(model).rotationY(90).addModel()
+                .partialState()
+                .with(MaceratorBlock.FACING, Direction.WEST)
+                .modelForState()
+                .modelFile(model).rotationY(270).addModel();
+
+        simpleBlockItem(block, model);
+    }
+
+    public void generateBiomassGenerator(Block block, ModelFile model) {
         getVariantBuilder(block)
                 .partialState()
                 .with(MaceratorBlock.FACING, Direction.NORTH)

@@ -52,7 +52,7 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0 -> stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
-                case 1 -> stack.getItem() == ModMineralItems.BAUXITE.get();
+                case 1 -> stack.getItem() == ModMineralItems.CRUSHED_BAUXITE.get();
                 case 2 -> false;
                 default -> super.isItemValid(slot, stack);
             };

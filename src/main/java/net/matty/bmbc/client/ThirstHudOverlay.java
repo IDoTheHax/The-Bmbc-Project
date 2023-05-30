@@ -1,9 +1,6 @@
 package net.matty.bmbc.client;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.minecraft.client.gui.GuiComponent;
-import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
 
@@ -18,22 +15,22 @@ public class ThirstHudOverlay {
         int x = width / 2;
         int y = height;
 
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.setShaderTexture(0, EMPTY_THIRST);
-        for(int i = 0; i < 10; i++) {
-            GuiComponent.blit(poseStack,x - 96 + (i * 9), y - 54,0,0,12,12,
-                    12,12);
-        }
-
-        RenderSystem.setShaderTexture(0, FILLED_THIRST);
-        for(int i = 0; i < 10; i++) {
-            if(ClientThirstData.getPlayerThirst() > i) {
-                GuiComponent.blit(poseStack,x - 96 + (i * 9),y - 54,0,0,12,12,
-                        12,12);
-            } else {
-                break;
-            }
-        }
-    });
+        //RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        //RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        //RenderSystem.setShaderTexture(0, EMPTY_THIRST);
+        //for(int i = 0; i < 10; i++) {
+        //    GuiComponent.blit(poseStack,x - 96 + (i * 9), y - 54,0,0,12,12,
+        //            12,12);
+        //}
+//
+        //RenderSystem.setShaderTexture(0, FILLED_THIRST);
+        //for(int i = 0; i < 10; i++) {
+        //    if(ClientThirstData.getPlayerThirst() > i) {
+        //        GuiComponent.blit(poseStack,x - 96 + (i * 9),y - 54,0,0,12,12,
+        //                12,12);
+        //    } else {
+        //        break;
+        //    }
+        //}
+    });//
 }

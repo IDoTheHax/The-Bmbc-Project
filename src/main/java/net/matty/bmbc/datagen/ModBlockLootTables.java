@@ -22,6 +22,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.SILVER_BLOCK.get());
+        dropSelf(ModBlocks.BAUXITE_ORE.get());
+
+        dropSelf(ModBlocks.BIOMASS_GENERATOR.get());
         dropSelf(ModBlocks.PRESSURE_VESSEL.get());
         dropSelf(ModBlocks.THREE_D_PRINTER.get());
         dropSelf(ModBlocks.MACERATOR.get());
