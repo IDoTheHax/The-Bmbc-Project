@@ -172,7 +172,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
             pEntity.itemHandler.extractItem(1, 0, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem()));
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem()));
 
             pEntity.resetProgress();
         }
@@ -191,7 +191,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         boolean hasMoldInMoldSlot = entity.itemHandler.getStackInSlot(1).getItem() == ModItems.SCREW_TEMPLATE.get();
 
         return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem());
+                canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem(level.registryAccess()));
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {

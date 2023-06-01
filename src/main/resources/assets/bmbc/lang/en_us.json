@@ -104,7 +104,19 @@
   "fluid_type.bmbc.oxygen_fluid": "Liquid Oxygen",
   "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide",
 
-  "item.bmbc.screw_template": "Screw Template"
+  "item.bmbc.screw_template": "Screw Template",
 
+  "item.bmbc.nbc_fabric": "NBC Fabric",
+  "item.bmbc.nbc_hazmat_mask": "Hazmat Mask",
+  "item.bmbc.nbc_hazmat_chestplate": "Hazmat Chestplate",
+  "item.bmbc.nbc_hazmat_leggings": "Hazmat Leggings",
+  "item.bmbc.nbc_hazmat_boots": "Hazmat Boots",
+
+  "item.bmbc.pet_plastic": "PET Plastic",
+  "item.bmbc.hdpe_plastic": "HDPE Plastic",
+  "item.bmbc.pvc_plastic": "PVC Plastic",
+  "item.bmbc.ldpe_plastic": "LDPE Plastic",
+  "item.bmbc.pp_plastic": "PP Plastic",
+  "item.bmbc.ps_plastic": "PS Plastic"
 
 }

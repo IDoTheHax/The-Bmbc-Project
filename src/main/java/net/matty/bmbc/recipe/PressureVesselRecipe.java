@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.util.FluidJSONUtil;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -37,6 +38,11 @@ public class PressureVesselRecipe implements Recipe<SimpleContainer> {
         return recipeItems.get(0).test(pContainer.getItem(1));
     }
 
+    @Override
+    public ItemStack assemble(SimpleContainer pContainer, RegistryAccess p_267165_) {
+        return output;
+    }
+
     public FluidStack getFluidStack() {
         return fluidStack;
     }
@@ -46,10 +52,6 @@ public class PressureVesselRecipe implements Recipe<SimpleContainer> {
         return recipeItems;
     }
 
-    @Override
-    public ItemStack assemble(SimpleContainer pContainer) {
-        return output;
-    }
 
     @Override
     public boolean canCraftInDimensions(int pWidth, int pHeight) {
@@ -57,7 +59,7 @@ public class PressureVesselRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem() {
+    public ItemStack getResultItem(RegistryAccess p_267052_) {
         return output.copy();
     }
 
@@ -123,7 +125,7 @@ public class PressureVesselRecipe implements Recipe<SimpleContainer> {
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.toNetwork(buf);
             }
-            buf.writeItemStack(recipe.getResultItem(), false);
+            buf.writeItemStack(recipe.output, false);
         }
     }
 }

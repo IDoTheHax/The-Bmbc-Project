@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "bmbc:silver_block"
-  }
+  },
+  "show_notification": true
 }

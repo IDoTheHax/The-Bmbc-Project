@@ -6,15 +6,19 @@
     "D": {
       "item": "minecraft:red_dye"
     },
+    "P": {
+      "item": "bmbc:pvc_plastic"
+    },
     "R": {
       "item": "bmbc:cable_roll"
     }
   },
   "pattern": [
-    "R",
-    "D"
+    "RP",
+    "D "
   ],
   "result": {
     "item": "bmbc:red_printer_filament"
-  }
+  },
+  "show_notification": true
 }

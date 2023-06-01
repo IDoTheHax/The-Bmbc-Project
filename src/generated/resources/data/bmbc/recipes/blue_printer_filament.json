@@ -6,15 +6,19 @@
     "D": {
       "item": "minecraft:blue_dye"
     },
+    "P": {
+      "item": "bmbc:pvc_plastic"
+    },
     "R": {
       "item": "bmbc:cable_roll"
     }
   },
   "pattern": [
-    "R",
-    "D"
+    "RP",
+    "D "
   ],
   "result": {
     "item": "bmbc:blue_printer_filament"
-  }
+  },
+  "show_notification": true
 }

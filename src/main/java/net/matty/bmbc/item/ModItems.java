@@ -73,6 +73,29 @@ public class ModItems {
             () -> new BucketItem(ModFluids.SOURCE_SODIUM_HYDROXIDE,
                     new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
+    // Plastics
+    public static final RegistryObject<Item> PET_PLASTIC = ITEMS.register("pet_plastic",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> HDPE_PLASTIC = ITEMS.register("hdpe_plastic",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> PVC_PLASTIC = ITEMS.register("pvc_plastic",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> LDPE_PLASTIC = ITEMS.register("ldpe_plastic",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> PP_PLASTIC = ITEMS.register("pp_plastic",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> PS_PLASTIC = ITEMS.register("ps_plastic",
+            () -> new Item(new Item.Properties()));
+
+    // Radiation
+    public static final RegistryObject<Item> NBC_FABRIC = ITEMS.register("nbc_fabric",
+            () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

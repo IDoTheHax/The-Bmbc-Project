@@ -1,4 +1,4 @@
-// 1.19.3	2023-05-20T19:30:13.669107	Item Models: bmbc
+// 1.19.4	2023-06-01T13:01:21.027735	Item Models: bmbc
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
 35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
@@ -18,16 +18,27 @@ aacf62f98b754eba565bf051feb517ca74997e74 assets/bmbc/models/item/eight_ball.json
 415eef7c0989254a6a44ae7c0694153fe6e88200 assets/bmbc/models/item/evaporite.json
 e783758bacb2a2465484f5ca94053dc36e179f52 assets/bmbc/models/item/green_plastic_screw.json
 f06f65a98547de5fe4ee00ed69e77c28bcb0a366 assets/bmbc/models/item/green_printer_filament.json
+645476cf64b04d3b71c5faf500471ad0abd76e9b assets/bmbc/models/item/hdpe_plastic.json
 b8797585186df732f96a13ff691dadc0979eb8cc assets/bmbc/models/item/helium_bucket.json
+4a1c8a06a49cebb06c7e734a3cebcd88d0412051 assets/bmbc/models/item/ldpe_plastic.json
 a59aec084ef8b79066ea041b80afb1994d5254f7 assets/bmbc/models/item/lithium_ingot.json
 ce8c1a6c7b9b59e8447009e041603364fe7bde0d assets/bmbc/models/item/magnesite.json
 13158b81859f30e4c1465c8c46bc44385a4d0844 assets/bmbc/models/item/magnesium_ingot.json
 d401fa0e85d7bebc247f501fd3f66f31548b9913 assets/bmbc/models/item/maple_sapling.json
+36b6b033281397b0ec953c60a831ae4b29e4a9b9 assets/bmbc/models/item/nbc_fabric.json
+552542dea34381b7afe724ca91f05d9d96cd0646 assets/bmbc/models/item/nbc_hazmat_boots.json
+b745412ac5fd8c926b4c5a31d3d45aa418b42fcb assets/bmbc/models/item/nbc_hazmat_chestplate.json
+e3a176105de97c9dc6f2c9d833a5c9d5382be79d assets/bmbc/models/item/nbc_hazmat_leggings.json
+7eef2d4f5089722d73aa93b14a45d0cf19afb47f assets/bmbc/models/item/nbc_hazmat_mask.json
 6dfbe8753c7ab75b9bc6394ba1621678c1dc05ca assets/bmbc/models/item/nitrogen_bucket.json
 d73f16b9321ad2254e34b3923499735f65f078b3 assets/bmbc/models/item/oxygen_bucket.json
 8b9f9946e1dbfd9fe632db5aac4c806c8a2fb5be assets/bmbc/models/item/pegmatite.json
+705d2f8b9e89fe179d2a3a3d133c83bc701cc713 assets/bmbc/models/item/pet_plastic.json
 1762bc29d7bc75eb028e3babd2c84020de0e1693 assets/bmbc/models/item/phosphorite.json
 a5842e4865b879b18f3c12c7615b139f1fa83e5a assets/bmbc/models/item/potassium_ingot.json
+f7e23fa4b9937382f771ae7d5907f709725c65b5 assets/bmbc/models/item/pp_plastic.json
+6842fbbb4e16aaa89390c86746b760cdd8af9a5d assets/bmbc/models/item/ps_plastic.json
+717df541e9a9341ae12b9c7ec7c808ccc0259e23 assets/bmbc/models/item/pvc_plastic.json
 86e226cfb83aa41fe539f367f167d4fa191d278e assets/bmbc/models/item/raw_bauxite.json
 274c0c68620d8fbf52be76339470d53127813133 assets/bmbc/models/item/raw_silver.json
 ac9da924005fb99ab578f441eab80a17639d09eb assets/bmbc/models/item/red_phosphorus.json

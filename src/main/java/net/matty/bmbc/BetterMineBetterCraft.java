@@ -7,10 +7,7 @@ import net.matty.bmbc.block.entity.ModBlockEntities;
 import net.matty.bmbc.creativemode_tab.*;
 import net.matty.bmbc.fluid.ModFluidTypes;
 import net.matty.bmbc.fluid.ModFluids;
-import net.matty.bmbc.item.ModChemicalCompounds;
-import net.matty.bmbc.item.ModFoodItems;
-import net.matty.bmbc.item.ModItems;
-import net.matty.bmbc.item.ModMineralItems;
+import net.matty.bmbc.item.*;
 import net.matty.bmbc.loot.ModLootModifiers;
 import net.matty.bmbc.networking.ModNetworkingPackets;
 import net.matty.bmbc.recipe.ModRecipes;
@@ -41,6 +38,7 @@ public class BetterMineBetterCraft {
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModArmorItems.register(modEventBus);
         ModItems.register(modEventBus);
         ModMineralItems.register(modEventBus);
         ModFoodItems.register(modEventBus);
@@ -51,7 +49,6 @@ public class BetterMineBetterCraft {
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModVillagers.register(modEventBus);
-
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);
 
@@ -146,6 +143,19 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.RED_PLASTIC_SCREW);
             event.accept(ModItems.SCREW_TEMPLATE);
             event.accept(ModBlocks.MAPLE_SAPLING);
+
+            event.accept(ModItems.PET_PLASTIC);
+            event.accept(ModItems.PP_PLASTIC);
+            event.accept(ModItems.PS_PLASTIC);
+            event.accept(ModItems.PVC_PLASTIC);
+            event.accept(ModItems.HDPE_PLASTIC);
+            event.accept(ModItems.LDPE_PLASTIC);
+
+            event.accept(ModItems.NBC_FABRIC);
+            event.accept(ModArmorItems.NBC_HAZMAT_MASK);
+            event.accept(ModArmorItems.NBC_HAZMAT_CHESTPLATE);
+            event.accept(ModArmorItems.NBC_HAZMAT_LEGGINGS);
+            event.accept(ModArmorItems.NBC_HAZMAT_BOOTS);
 
         }
 

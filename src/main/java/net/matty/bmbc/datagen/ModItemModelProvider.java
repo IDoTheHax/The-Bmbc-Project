@@ -2,10 +2,7 @@ package net.matty.bmbc.datagen;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
-import net.matty.bmbc.item.ModChemicalCompounds;
-import net.matty.bmbc.item.ModFoodItems;
-import net.matty.bmbc.item.ModItems;
-import net.matty.bmbc.item.ModMineralItems;
+import net.matty.bmbc.item.*;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -84,6 +81,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMineralItems.SULFUR_POWDER);
         simpleItem(ModMineralItems.SULFUR_SOLID);
         simpleItem(ModMineralItems.WHITE_PHOSPHORUS);
+
+        // Radiation
+        simpleItem(ModItems.NBC_FABRIC);
+
+        simpleItem(ModArmorItems.NBC_HAZMAT_BOOTS);
+        simpleItem(ModArmorItems.NBC_HAZMAT_CHESTPLATE);
+        simpleItem(ModArmorItems.NBC_HAZMAT_LEGGINGS);
+        simpleItem(ModArmorItems.NBC_HAZMAT_MASK);
+
+        // Plastic
+        simpleItem(ModItems.PET_PLASTIC);
+        simpleItem(ModItems.PP_PLASTIC);
+        simpleItem(ModItems.PS_PLASTIC);
+        simpleItem(ModItems.PVC_PLASTIC);
+        simpleItem(ModItems.HDPE_PLASTIC);
+        simpleItem(ModItems.LDPE_PLASTIC);
+
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

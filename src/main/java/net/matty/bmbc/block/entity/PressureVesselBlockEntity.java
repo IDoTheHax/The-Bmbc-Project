@@ -317,7 +317,7 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
         if(hasRecipe(pEntity)) {
             pEntity.FLUID_TANK.drain(recipe.get().getFluidStack().getAmount(), IFluidHandler.FluidAction.EXECUTE);
             pEntity.itemHandler.extractItem(1, 1, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem(),
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem(),
                     pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
 
             pEntity.resetProgress();
@@ -336,7 +336,7 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
 
 
         return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem()) && hasCorrectFluidInTank(entity, recipe);
+                canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem(level.registryAccess())) && hasCorrectFluidInTank(entity, recipe);
     }
 
     private static boolean hasCorrectFluidInTank(PressureVesselBlockEntity entity, Optional<PressureVesselRecipe> recipe) {
