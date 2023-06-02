@@ -13,6 +13,7 @@ import net.matty.bmbc.networking.ModNetworkingPackets;
 import net.matty.bmbc.recipe.ModRecipes;
 import net.matty.bmbc.screen.*;
 import net.matty.bmbc.screen.BiomassGeneratorScreen;
+import net.matty.bmbc.sound.ModSounds;
 import net.matty.bmbc.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -53,6 +54,7 @@ public class BetterMineBetterCraft {
         ModFluidTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
 
@@ -96,6 +98,7 @@ public class BetterMineBetterCraft {
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.SILVER_LAMP);
+            event.accept(ModBlocks.GARBAGE_BLOCK);
 
             // Ores
             event.accept(ModBlocks.BAUXITE_ORE);
@@ -143,6 +146,7 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.RED_PLASTIC_SCREW);
             event.accept(ModItems.SCREW_TEMPLATE);
             event.accept(ModBlocks.MAPLE_SAPLING);
+            event.accept(ModItems.GARBAGE);
 
             event.accept(ModItems.PET_PLASTIC);
             event.accept(ModItems.PP_PLASTIC);

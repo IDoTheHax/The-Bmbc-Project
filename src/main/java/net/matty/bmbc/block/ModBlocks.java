@@ -4,6 +4,7 @@ import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.custom.*;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.custom.SilverLampBlock;
+import net.matty.bmbc.sound.ModSounds;
 import net.matty.bmbc.worldgen.tree.MapleTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,6 +31,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GARBAGE_BLOCK = registerBlock("garbage_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES)
+                    .strength(6f).explosionResistance(3f).sound(ModSounds.GARBAGE_BLOCK_SOUNDS).noOcclusion()));
 
     // Special Blocks
     public static final RegistryObject<Block> SILVER_LAMP = registerBlock("silver_lamp",

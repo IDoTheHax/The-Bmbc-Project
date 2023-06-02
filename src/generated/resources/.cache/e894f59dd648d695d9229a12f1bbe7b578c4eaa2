@@ -1,4 +1,4 @@
-// 1.19.4	2023-06-01T13:01:21.027735	Item Models: bmbc
+// 1.19.4	2023-06-02T17:14:03.931953	Item Models: bmbc
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
 35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
@@ -16,6 +16,7 @@ bd605a21eade36c2a768947e58c94c5359849365 assets/bmbc/models/item/crushed_bauxite
 dc9a6da40a67f68ee979f88d02969b91a06d4a34 assets/bmbc/models/item/dolomite.json
 aacf62f98b754eba565bf051feb517ca74997e74 assets/bmbc/models/item/eight_ball.json
 415eef7c0989254a6a44ae7c0694153fe6e88200 assets/bmbc/models/item/evaporite.json
+fe34fa18eefa713c433e3f1bf1b40cdb76e95432 assets/bmbc/models/item/garbage.json
 e783758bacb2a2465484f5ca94053dc36e179f52 assets/bmbc/models/item/green_plastic_screw.json
 f06f65a98547de5fe4ee00ed69e77c28bcb0a366 assets/bmbc/models/item/green_printer_filament.json
 645476cf64b04d3b71c5faf500471ad0abd76e9b assets/bmbc/models/item/hdpe_plastic.json

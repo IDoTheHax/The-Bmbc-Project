@@ -2,6 +2,7 @@ package net.matty.bmbc.datagen;
 
 import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.item.ModFoodItems;
+import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.ModMineralItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -30,6 +31,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.MACERATOR.get());
 
         dropSelf(ModBlocks.SILVER_LAMP.get());
+        add(ModBlocks.GARBAGE_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.GARBAGE_BLOCK.get(), ModItems.GARBAGE.get())));
 
         LootItemCondition.Builder coffeeLootItemCondition = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.COFFEE_CROP.get())

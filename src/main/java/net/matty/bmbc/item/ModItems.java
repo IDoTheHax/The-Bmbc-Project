@@ -92,6 +92,10 @@ public class ModItems {
     public static final RegistryObject<Item> PS_PLASTIC = ITEMS.register("ps_plastic",
             () -> new Item(new Item.Properties()));
 
+    // Misc
+    public static final RegistryObject<Item> GARBAGE = ITEMS.register("garbage",
+            () -> new Item(new Item.Properties()));
+
     // Radiation
     public static final RegistryObject<Item> NBC_FABRIC = ITEMS.register("nbc_fabric",
             () -> new Item(new Item.Properties()));

@@ -25,6 +25,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_BLOCK);
         blockWithItem(ModBlocks.SILVER_LAMP);
         blockWithItem(ModBlocks.PRESSURE_VESSEL);
+        blockWithItem(ModBlocks.GARBAGE_BLOCK);
 
         generateMacerator(ModBlocks.MACERATOR.get(),
                 cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.MACERATOR.get()).getPath(),

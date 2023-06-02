@@ -45,6 +45,8 @@
   "block.bmbc.deepslate_silver_ore": "Deepslate Silver Ore",
 
   "item.bmbc.cable_roll": "Cable Roll",
+  "item.bmbc.garbage": "Garbage",
+  "block.bmbc.garbage_block": "Block of Garbage",
 
   "block.bmbc.maple_log": "Maple Log",
   "block.bmbc.maple_planks": "Maple Planks",
@@ -117,6 +119,8 @@
   "item.bmbc.pvc_plastic": "PVC Plastic",
   "item.bmbc.ldpe_plastic": "LDPE Plastic",
   "item.bmbc.pp_plastic": "PP Plastic",
-  "item.bmbc.ps_plastic": "PS Plastic"
+  "item.bmbc.ps_plastic": "PS Plastic",
+
+  "sounds.bmbc.plastic_crush": "Plastic Crush"
 
 }

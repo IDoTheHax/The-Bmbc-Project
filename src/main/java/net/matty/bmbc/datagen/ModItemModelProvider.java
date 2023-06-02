@@ -54,6 +54,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.EIGHT_BALL);
         simpleItem(ModItems.CABLE_ROLL);
         saplingItem(ModBlocks.MAPLE_SAPLING);
+        simpleItem(ModItems.GARBAGE);
 
         // Ores, Minerals and Ingots
         simpleItem(ModMineralItems.ALUMINIUM);
