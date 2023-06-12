@@ -28,8 +28,12 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BetterMineBetterCraft.MOD_ID);
 
+    public static final RegistryObject<Block> C4 = registerBlock("c4",
+            () -> new C4Block(BlockBehaviour.Properties.of(Material.EXPLOSIVE)
+                    .strength(2.5f).instabreak().sound(SoundType.GRASS)));
+
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> GARBAGE_BLOCK = registerBlock("garbage_block",
@@ -53,6 +57,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
             () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> RECHARGER = registerBlock("recharger",
+            () -> new RechargerBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> THREE_D_PRINTER = registerBlock("three_d_printer",

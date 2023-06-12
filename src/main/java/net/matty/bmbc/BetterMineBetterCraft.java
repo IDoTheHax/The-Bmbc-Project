@@ -77,6 +77,7 @@ public class BetterMineBetterCraft {
             event.accept(ModMineralItems.RED_PHOSPHORUS);
             event.accept(ModMineralItems.BLACK_PHOSPHORUS);
             event.accept(ModMineralItems.POTASSIUM);
+            event.accept(ModMineralItems.SCANDIUM);
             event.accept(ModMineralItems.SILICON_CRYSTAL);
             event.accept(ModMineralItems.SILVER);
             event.accept(ModMineralItems.SODIUM);
@@ -137,6 +138,7 @@ public class BetterMineBetterCraft {
         if (event.getTab() == ModDefaultCreativeModeTab.BMBC) {
             event.accept(ModItems.BATTERY);
             event.accept(ModItems.BLUE_PRINTER_FILAMENT);
+            event.accept(ModItems.C4_DETONATOR);
             event.accept(ModItems.CABLE_ROLL);
             event.accept(ModItems.EIGHT_BALL);
             event.accept(ModItems.GREEN_PRINTER_FILAMENT);
@@ -176,6 +178,11 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.SODIUM_HYDROXIDE_BUCKET);
         }
 
+        //if (event.getTab() == ExplosivesCreativeModeTab.BMBC_EXPLOSIVES) {
+            //event.accept(ModBlocks.C4);
+            //event.accept(ModItems.C4_DETONATOR);
+        //}
+
         if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.MAPLE_LEAVES);
             event.accept(ModBlocks.MAPLE_LOG);
@@ -199,6 +206,7 @@ public class BetterMineBetterCraft {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SEWAGE_WATER.get(), RenderType.solid());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SODIUM_HYDROXIDE.get(), RenderType.solid());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SODIUM_HYDROXIDE.get(), RenderType.solid());
+            //ItemBlockRenderTypes.setRenderLayer(ModBlocks.C4.get(), RenderType.solid());
 
             MenuScreens.register(ModMenuTypes.BIOMASS_GENERATOR_MENU.get(), BiomassGeneratorScreen::new);
             MenuScreens.register(ModMenuTypes.PRESSURE_VESSEL_MENU.get(), PressureVesselScreen::new);

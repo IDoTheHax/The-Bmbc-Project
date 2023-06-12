@@ -16,6 +16,7 @@
   "item.bmbc.magnesium_ingot": "Magnesium Ingot",
   "item.bmbc.potassium_ingot": "Potassium Ingot",
   "item.bmbc.red_phosphorus": "Red Phosphorus",
+  "item.bmbc.scandium": "Scandium",
   "item.bmbc.silicon_crystal": "Silicon Crystal",
   "item.bmbc.silver_ingot": "Silver Ingot",
   "item.bmbc.sodium_ingot": "Sodium Ingot",
@@ -59,15 +60,17 @@
   "item.bmbc.alumina": "Alumina",
   "item.bmbc.silica": "Silica",
 
-  "item.bmbc.red_printer_filament": "Red Printer Filament",
+  "item.bmbc.blue_plastic_screw": "Blue Plastic Screw",
+  "item.bmbc.green_plastic_screw": "Green Plastic Screw",
+  "item.bmbc.red_plastic_screw": "Red Plastic Screw",
   "item.bmbc.blue_printer_filament": "Blue Printer Filament",
   "item.bmbc.green_printer_filament": "Green Printer Filament",
+  "item.bmbc.red_printer_filament": "Red Printer Filament",
 
-  "item.bmbc.red_plastic_screw": "Red Plastic Screw",
-  "item.bmbc.green_plastic_screw": "Green Plastic Screw",
-  "item.bmbc.blue_plastic_screw": "Blue Plastic Screw",
-
+  "block.bmbc.c4": "C4",
+  "item.bmbc.c4_detonator": "C4 Detonator",
   "item.bmbc.battery": "Battery",
+  "item.bmbc.tooltip.battery.energy": "%s / %s",
 
   "block.bmbc.silver_lamp": "Silver Lamp",
   "block.bmbc.silver_block": "Block of Silver",

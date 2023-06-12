@@ -3,6 +3,7 @@ package net.matty.bmbc.item;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.fluid.ModFluids;
 import net.matty.bmbc.item.custom.BatteryItem;
+import net.matty.bmbc.item.custom.C4Detonator;
 import net.matty.bmbc.item.custom.EightBallItem;
 import net.matty.bmbc.item.custom.tooltips.BucketItemWithToolTip;
 import net.minecraft.world.item.BucketItem;
@@ -19,7 +20,11 @@ public class ModItems {
 
     // Special or Custom Items
     public static final RegistryObject<Item> BATTERY = ITEMS.register("battery",
-            () -> new BatteryItem(new Item.Properties()));
+            () -> new BatteryItem(new Item.Properties().stacksTo(1), 6000, 64, 32, 6000));
+
+    // C4_DETONATOR
+    public static final RegistryObject<Item> C4_DETONATOR = ITEMS.register("c4_detonator",
+            () -> new C4Detonator(new Item.Properties().durability(64)));
 
     public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
             () -> new EightBallItem(new Item.Properties()));

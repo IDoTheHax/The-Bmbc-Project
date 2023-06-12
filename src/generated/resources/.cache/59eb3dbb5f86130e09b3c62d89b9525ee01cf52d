@@ -1,6 +1,7 @@
-// 1.19.4	2023-06-02T17:14:03.931574	Loot Tables
+// 1.19.4	2023-06-11T17:19:02.977211	Loot Tables
 5a1ed8d2579c9a0131fa68deb9da67767cb30da5 data/bmbc/loot_tables/blocks/bauxite_ore.json
 4fd18d3000471abc9a3c8e4a30ed05f3ad274c16 data/bmbc/loot_tables/blocks/biomass_generator.json
+d1b7fd4bfc9e7fdcc5e2aba2a5a3be34633a1cbe data/bmbc/loot_tables/blocks/c4.json
 63939ae3d13c39239e710a34d31e9ca69afdba03 data/bmbc/loot_tables/blocks/carnallite_ore.json
 8a6ce402db4dd139b3e62a2867bdd4cf650bda38 data/bmbc/loot_tables/blocks/coffee_crop.json
 ec8a2c3d9bcc5ae91bcb94bc56b9741de042c122 data/bmbc/loot_tables/blocks/deepslate_silver_ore.json
@@ -17,6 +18,7 @@ b56cec100016dd0879dbfaa5eb0a441c7c366a34 data/bmbc/loot_tables/blocks/maple_wood
 71fe295e123ea89a420df593f884538b684ca3ab data/bmbc/loot_tables/blocks/pegmatite_ore.json
 8ca8e14729d820303620fcf7d0a63b73ee30126f data/bmbc/loot_tables/blocks/phosphorite_ore.json
 a456a6d1907a8eb7b9e8e721062c8fea2a93c126 data/bmbc/loot_tables/blocks/pressure_vessel.json
+99485bd193ea0a8dc306d02063be28b62cf87b6c data/bmbc/loot_tables/blocks/recharger.json
 bbbfbf2394b71512aedf23828dd4c361edf0f069 data/bmbc/loot_tables/blocks/silver_block.json
 616e395105b6a267c7e20881fcb0502c6083da0d data/bmbc/loot_tables/blocks/silver_lamp.json
 244ff41037d98766d2134beb3d729677b57ca24e data/bmbc/loot_tables/blocks/silver_ore.json

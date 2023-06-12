@@ -1,4 +1,4 @@
-// 1.19.4	2023-06-02T17:14:03.931953	Item Models: bmbc
+// 1.19.4	2023-06-11T17:19:02.978725	Item Models: bmbc
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
 35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
@@ -7,6 +7,7 @@ c7ab046baa855fab5670a3e825be9fdb630fcbbb assets/bmbc/models/item/black_phosphoru
 b3946c2a8efdbb2c8f1e6e44ded17dd499982998 assets/bmbc/models/item/blue_plastic_screw.json
 2d30d5575b0a4133d40e73a4835a620b79e6a114 assets/bmbc/models/item/blue_printer_filament.json
 13c262ba48191263169c19513b93b4d5229b1e59 assets/bmbc/models/item/boron_ingot.json
+cb3596210b2684414743dabdb696428f94719714 assets/bmbc/models/item/c4_detonator.json
 5a93f62b1c1c2d58e0b13863a35d492df13d9b9e assets/bmbc/models/item/cable_roll.json
 db82d841b3fbb24cf912986375acdf4f4c483adb assets/bmbc/models/item/calcium.json
 56d7c6e188770d2f3b4ffe53a7b50a531b4557c6 assets/bmbc/models/item/carnallite.json
@@ -45,6 +46,7 @@ f7e23fa4b9937382f771ae7d5907f709725c65b5 assets/bmbc/models/item/pp_plastic.json
 ac9da924005fb99ab578f441eab80a17639d09eb assets/bmbc/models/item/red_phosphorus.json
 b50442f4f9e30c80dabdc14279be88310864ccd1 assets/bmbc/models/item/red_plastic_screw.json
 efcbc418dd691040e211cced0d10fb1df8fee70f assets/bmbc/models/item/red_printer_filament.json
+7ca9074e1504d73ff4fe0b7194a5217464fa4b65 assets/bmbc/models/item/scandium.json
 42ee66da7a68889b5fb6de0d1b941e8396e4d003 assets/bmbc/models/item/screw_template.json
 046e15ae1f74a11099b49cfde1c14f49e088cf19 assets/bmbc/models/item/sewage_water_bucket.json
 45b6b794e265b26dca4abec4baafe475ab07dbd9 assets/bmbc/models/item/silica.json

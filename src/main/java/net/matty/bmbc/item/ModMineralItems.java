@@ -60,6 +60,11 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties()
                     ,"Chem. Formula: ", "K"));
 
+    // Scandium
+    public static final RegistryObject<Item> SCANDIUM = ITEMS.register("scandium",
+            () -> new MineralWithToolTipItem(new Item.Properties()
+                    ,"Chem. Formula: ", "Sc"));
+
     // Silicon (solid metalloid)
     public static final RegistryObject<Item> SILICON_CRYSTAL = ITEMS.register("silicon_crystal",
             () -> new MineralWithToolTipItem(new Item.Properties()

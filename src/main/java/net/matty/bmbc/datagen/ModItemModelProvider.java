@@ -51,6 +51,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Misc
         simpleItem(ModItems.BATTERY);
+        simpleItem(ModItems.C4_DETONATOR);
         simpleItem(ModItems.EIGHT_BALL);
         simpleItem(ModItems.CABLE_ROLL);
         saplingItem(ModBlocks.MAPLE_SAPLING);
@@ -75,6 +76,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMineralItems.POTASSIUM);
         simpleItem(ModMineralItems.RAW_SILVER);
         simpleItem(ModMineralItems.RED_PHOSPHORUS);
+        simpleItem(ModMineralItems.SCANDIUM);
         simpleItem(ModMineralItems.SILICON_CRYSTAL);
         simpleItem(ModMineralItems.SILVER);
         simpleItem(ModMineralItems.SODIUM);

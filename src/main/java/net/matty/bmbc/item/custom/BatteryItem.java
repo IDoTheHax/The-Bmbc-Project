@@ -1,61 +1,41 @@
 package net.matty.bmbc.item.custom;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.energy.IEnergyStorage;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.energy.EnergyStorage;
+import org.jetbrains.annotations.Nullable;
 
-public class BatteryItem extends Item implements IEnergyStorage {
-    private int energy;
+import java.util.List;
 
-    public BatteryItem(Properties properties) {
-        super(properties);
+public class BatteryItem extends Item {
+    public int capacity;
+    public int maxReceiveAmount;
+    public int maxExtractAmount;
+    public int energyStored;
+
+
+    public BatteryItem(Properties pProperties, int capacity, int maxReceiveAmount, int maxExtractAmount, int energyStored) {
+        super(pProperties);
+        this.capacity = capacity;
+        this.maxReceiveAmount = maxReceiveAmount;
+        this.maxExtractAmount = maxExtractAmount;
+        this.energyStored = energyStored;
     }
 
-    @Override
-    public int receiveEnergy(int maxReceive, boolean simulate) {
-        int energyReceived = Math.min(getMaxEnergyStored() - energy, maxReceive);
-        if (!simulate) {
-            energy += energyReceived;
-        }
-        return energyReceived;
-    }
+    private final EnergyStorage ENERGY_STORAGE = new EnergyStorage(this.capacity, this.maxReceiveAmount, this.maxExtractAmount, this.energyStored) {
+
+    };
 
     @Override
-    public int extractEnergy(int maxExtract, boolean simulate) {
-        int energyExtracted = Math.min(energy, maxExtract);
-        if (!simulate) {
-            energy -= energyExtracted;
-        }
-        return energyExtracted;
-    }
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, level, tooltip, flag);
 
-    @Override
-    public int getEnergyStored() {
-        return energy;
-    }
-
-    @Override
-    public int getMaxEnergyStored() {
-        return 100000; // Example value, replace with your desired maximum energy storage
-    }
-
-    @Override
-    public int getDamage(ItemStack stack) {
-        return getMaxDamage() - energy;
-    }
-
-    @Override
-    public void setDamage(ItemStack stack, int damage) {
-        energy = getMaxDamage() - damage;
-    }
-
-    @Override
-    public boolean canExtract() {
-        return true; // Replace with your condition for whether the item can extract energy
-    }
-
-    @Override
-    public boolean canReceive() {
-        return energy < getMaxEnergyStored(); // Only allow receiving energy if not already fully charged
+        //tooltip.add(Component.translatable("item.bmbc.battery").withStyle(ChatFormatting.DARK_RED, ChatFormatting.ITALIC));
+        tooltip.add(Component.literal("Energy: ").withStyle(ChatFormatting.DARK_PURPLE, ChatFormatting.ITALIC));
+        tooltip.add(Component.translatable("item.bmbc.tooltip.battery.energy", this.energyStored, this.capacity).withStyle(ChatFormatting.RED));
     }
 }
