@@ -3,8 +3,6 @@ package net.matty.bmbc.event;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.item.ModFoodItems;
-import net.matty.bmbc.networking.ModNetworkingPackets;
-import net.matty.bmbc.networking.packet.ThirstDataSyncS2CPacket;
 import net.matty.bmbc.thirst.PlayerThirst;
 import net.matty.bmbc.thirst.PlayerThirstProvider;
 import net.matty.bmbc.villager.ModVillagers;
@@ -85,7 +83,7 @@ public class ModEvents {
             event.player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
                 if(thirst.getThirst() > 0 && event.player.getRandom().nextFloat() < 0.005f) { // Once Every 10 Seconds on Avg
                     thirst.subThirst(1);
-                    ModNetworkingPackets.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), ((ServerPlayer) event.player));
+                    //ModNetworkingPackets.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), ((ServerPlayer) event.player));
                 }
             });
         }
@@ -95,9 +93,9 @@ public class ModEvents {
     public static void onPlayerJoinWorld(EntityJoinLevelEvent event) {
         if(!event.getLevel().isClientSide()) {
             if(event.getEntity() instanceof ServerPlayer player) {
-                player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
-                    ModNetworkingPackets.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
-                });
+                //player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
+                //    ModNetworkingPackets.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
+                //});
             }
         }
     }

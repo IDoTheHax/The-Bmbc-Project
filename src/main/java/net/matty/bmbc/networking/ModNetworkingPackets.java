@@ -33,17 +33,17 @@ public class ModNetworkingPackets {
                 .consumerMainThread(ExampleC2SPacket::handle)
                 .add();
 
-        net.messageBuilder(DrinkWaterC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
-                .decoder(DrinkWaterC2SPacket::new)
-                .encoder(DrinkWaterC2SPacket::toBytes)
-                .consumerMainThread(DrinkWaterC2SPacket::handle)
-                .add();
+        //net.messageBuilder(DrinkWaterC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+        //        .decoder(DrinkWaterC2SPacket::new)
+        //        .encoder(DrinkWaterC2SPacket::toBytes)
+        //        .consumerMainThread(DrinkWaterC2SPacket::handle)
+        //        .add();
 
-        net.messageBuilder(ThirstDataSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
-                .decoder(ThirstDataSyncS2CPacket::new)
-                .encoder(ThirstDataSyncS2CPacket::toBytes)
-                .consumerMainThread(ThirstDataSyncS2CPacket::handle)
-                .add();
+        //net.messageBuilder(ThirstDataSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+        //        .decoder(ThirstDataSyncS2CPacket::new)
+        //        .encoder(ThirstDataSyncS2CPacket::toBytes)
+        //        .consumerMainThread(ThirstDataSyncS2CPacket::handle)
+        //        .add();
 
         net.messageBuilder(EnergySyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
                 .decoder(EnergySyncS2CPacket::new)

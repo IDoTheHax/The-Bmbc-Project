@@ -2,9 +2,6 @@ package net.matty.bmbc.event;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.client.ThirstHudOverlay;
-import net.matty.bmbc.networking.ModNetworkingPackets;
-import net.matty.bmbc.networking.packet.DrinkWaterC2SPacket;
-import net.matty.bmbc.networking.packet.ExampleC2SPacket;
 import net.matty.bmbc.util.KeyBinding;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -22,7 +19,7 @@ public class ClientEvents {
         public static void OnKeyInput(InputEvent.Key event) {
             if(KeyBinding.DRINKING_KEY.consumeClick()) {
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal(""));
-                ModNetworkingPackets.sendToServer(new DrinkWaterC2SPacket());
+                //ModNetworkingPackets.sendToServer(new DrinkWaterC2SPacket());
             }
         }
     }
