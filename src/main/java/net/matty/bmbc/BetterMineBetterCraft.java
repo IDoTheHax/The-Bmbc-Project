@@ -130,6 +130,7 @@ public class BetterMineBetterCraft {
 
         if (event.getTab() == ModMachinesCreativeModeTab.BMBC_MACHINES) {
             //event.accept(ModBlocks.BIOMASS_GENERATOR);
+            event.accept(ModBlocks.EXTRUDER);
             event.accept(ModBlocks.MACERATOR);
             event.accept(ModBlocks.PRESSURE_VESSEL);
             event.accept(ModBlocks.THREE_D_PRINTER);
@@ -146,6 +147,7 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.C4_DETONATOR);
             event.accept(ModItems.CABLE_ROLL);
             event.accept(ModItems.EIGHT_BALL);
+            event.accept(ModItems.WIRE_EXTRUSION_TEMPLATE);
             event.accept(ModItems.GREEN_PRINTER_FILAMENT);
             event.accept(ModItems.RED_PRINTER_FILAMENT);
             event.accept(ModItems.BLUE_PLASTIC_SCREW);
@@ -171,6 +173,7 @@ public class BetterMineBetterCraft {
             // Potentially add Machine Component to its own creative mode tab
             event.accept(ModMachineComponents.COPPER_COIL);
             event.accept(ModMachineComponents.COPPER_WIRE);
+            event.accept(ModMachineComponents.ELECTRIC_MOTOR);
 
         }
 
@@ -218,10 +221,10 @@ public class BetterMineBetterCraft {
             //ItemBlockRenderTypes.setRenderLayer(ModBlocks.C4.get(), RenderType.solid());
 
             MenuScreens.register(ModMenuTypes.BIOMASS_GENERATOR_MENU.get(), BiomassGeneratorScreen::new);
+            MenuScreens.register(ModMenuTypes.EXTRUDER_MENU.get(), ExtruderScreen::new);
+            MenuScreens.register(ModMenuTypes.MACERATOR_MENU.get(), MaceratorScreen::new);
             MenuScreens.register(ModMenuTypes.PRESSURE_VESSEL_MENU.get(), PressureVesselScreen::new);
             MenuScreens.register(ModMenuTypes.THREE_D_PRINTER_MENU.get(), ThreeDPrinterScreen::new);
-            MenuScreens.register(ModMenuTypes.MACERATOR_MENU.get(), MaceratorScreen::new);
-
 
         }
     }

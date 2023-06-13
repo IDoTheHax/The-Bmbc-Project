@@ -12,6 +12,21 @@ public class ModBlockEntities {
     public static DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, BetterMineBetterCraft.MOD_ID);
 
+    public static final RegistryObject<BlockEntityType<BiomassGeneratorBlockEntity>> BIOMASS_GENERATOR =
+            BLOCK_ENTITIES.register("biomass_generator", () ->
+                    BlockEntityType.Builder.of(BiomassGeneratorBlockEntity::new,
+                            ModBlocks.BIOMASS_GENERATOR.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<ExtruderBlockEntity>> EXTRUDER =
+            BLOCK_ENTITIES.register("extruder", () ->
+                    BlockEntityType.Builder.of(ExtruderBlockEntity::new,
+                            ModBlocks.EXTRUDER.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<MaceratorBlockEntity>> MACERATOR =
+            BLOCK_ENTITIES.register("macerator", () ->
+                    BlockEntityType.Builder.of(MaceratorBlockEntity::new,
+                            ModBlocks.MACERATOR.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<PressureVesselBlockEntity>> PRESSURE_VESSEL =
             BLOCK_ENTITIES.register("pressure_vessel", () ->
                     BlockEntityType.Builder.of(PressureVesselBlockEntity::new,
@@ -22,22 +37,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ThreeDPrinterBlockEntity::new,
                             ModBlocks.THREE_D_PRINTER.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<MaceratorBlockEntity>> MACERATOR =
-            BLOCK_ENTITIES.register("macerator", () ->
-                    BlockEntityType.Builder.of(MaceratorBlockEntity::new,
-                            ModBlocks.MACERATOR.get()).build(null));
-
     public static final RegistryObject<BlockEntityType<RechargerBlockEntity>> RECHARGER =
             BLOCK_ENTITIES.register("recharger", () ->
                     BlockEntityType.Builder.of(RechargerBlockEntity::new,
                             ModBlocks.RECHARGER.get()).build(null));
-
-    public static final RegistryObject<BlockEntityType<BiomassGeneratorBlockEntity>> BIOMASS_GENERATOR =
-            BLOCK_ENTITIES.register("biomass_generator", () ->
-                    BlockEntityType.Builder.of(BiomassGeneratorBlockEntity::new,
-                            ModBlocks.BIOMASS_GENERATOR.get()).build(null));
-
-
 
 
 

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "active=false,facing=east": {
+      "model": "bmbc:block/extruder",
+      "y": 90
+    },
+    "active=false,facing=north": {
+      "model": "bmbc:block/extruder"
+    },
+    "active=false,facing=south": {
+      "model": "bmbc:block/extruder",
+      "y": 180
+    },
+    "active=false,facing=west": {
+      "model": "bmbc:block/extruder",
+      "y": 270
+    },
+    "active=true,facing=east": {
+      "model": "bmbc:block/extruder_on",
+      "y": 90
+    },
+    "active=true,facing=north": {
+      "model": "bmbc:block/extruder_on"
+    },
+    "active=true,facing=south": {
+      "model": "bmbc:block/extruder_on",
+      "y": 180
+    },
+    "active=true,facing=west": {
+      "model": "bmbc:block/extruder_on",
+      "y": 270
+    }
+  }
+}

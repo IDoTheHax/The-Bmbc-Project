@@ -3,6 +3,7 @@ package net.matty.bmbc.datagen;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.item.ModItems;
+import net.matty.bmbc.item.ModMachineComponents;
 import net.matty.bmbc.item.ModMineralItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import javax.annotation.Nullable;
@@ -27,6 +29,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
+
         nineBlockStorageRecipes(consumer, RecipeCategory.MISC, ModMineralItems.SILVER.get(), RecipeCategory.MISC,
                 ModBlocks.SILVER_BLOCK.get());
 
@@ -36,14 +39,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModBlocks.MAPLE_PLANKS.get()).build()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4).group("sticks")
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModMachineComponents.COPPER_COIL.get()).group("machine_components")
+                .define('#', ModMachineComponents.COPPER_WIRE.get())
+                .define('R', ModItems.CABLE_ROLL.get())
+                .pattern("###")
+                .pattern("#R#")
+                .pattern("###")
+                .unlockedBy("has_cable_roll", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.CABLE_ROLL.get()).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.CABLE_ROLL.get()).group("machine_components")
+                .define('P', Blocks.OAK_PLANKS)
+                .define('S', Items.STICK)
+                .pattern("P P")
+                .pattern("PSP")
+                .pattern("P P")
+                .unlockedBy("has_planks", has(ModBlocks.MAPLE_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.STICK, 4).group("sticks")
                 .define('#', ModBlocks.MAPLE_PLANKS.get())
                 .pattern("#")
                 .pattern("#")
                 .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS.get()))
                 .save(consumer, "stick_from_maple_planks");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RED_PRINTER_FILAMENT.get()).group("printing_filament")
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.RED_PRINTER_FILAMENT.get()).group("printing_filament")
                 .define('R', ModItems.CABLE_ROLL.get())
                 .define('D', Items.RED_DYE)
                 .define('P', ModItems.PVC_PLASTIC.get())
@@ -53,7 +75,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.CABLE_ROLL.get()).build()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLUE_PRINTER_FILAMENT.get()).group("printing_filament")
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLUE_PRINTER_FILAMENT.get()).group("printing_filament")
                 .define('R', ModItems.CABLE_ROLL.get())
                 .define('D', Items.BLUE_DYE)
                 .define('P', ModItems.PVC_PLASTIC.get())
@@ -73,7 +95,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.CABLE_ROLL.get()).build()))
                 .save(consumer);
 
-
+        // Machine Components
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GREEN_PRINTER_FILAMENT.get()).group("printing_filament")
+                .define('W', ModMachineComponents.COPPER_WIRE.get())
+                .define('D', Items.GREEN_DYE)
+                .define('P', ModItems.PVC_PLASTIC.get())
+                .pattern("RW")
+                .pattern("W W")
+                .pattern(" W ")
+                .unlockedBy("has_cable_roll", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.CABLE_ROLL.get()).build()))
+                .save(consumer);
 
 
     }

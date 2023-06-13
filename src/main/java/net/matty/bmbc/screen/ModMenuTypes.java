@@ -17,14 +17,17 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<BiomassGeneratorMenu>> BIOMASS_GENERATOR_MENU =
             registerMenuType(BiomassGeneratorMenu::new, "biomass_generator_menu");
 
+    public static final RegistryObject<MenuType<ExtruderMenu>> EXTRUDER_MENU =
+            registerMenuType(ExtruderMenu::new, "extruder_menu");
+
+    public static final RegistryObject<MenuType<MaceratorMenu>> MACERATOR_MENU =
+            registerMenuType(MaceratorMenu::new, "macerator_menu");
+
     public static final RegistryObject<MenuType<PressureVesselMenu>> PRESSURE_VESSEL_MENU =
             registerMenuType(PressureVesselMenu::new, "pressure_vessel_menu");
 
     public static final RegistryObject<MenuType<ThreeDPrinterMenu>> THREE_D_PRINTER_MENU =
             registerMenuType(ThreeDPrinterMenu::new, "three_d_printer_menu");
-
-    public static final RegistryObject<MenuType<MaceratorMenu>> MACERATOR_MENU =
-            registerMenuType(MaceratorMenu::new, "macerator_menu");
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,

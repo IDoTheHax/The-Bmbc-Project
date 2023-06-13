@@ -1,24 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
-  "group": "printing_filament",
+  "group": "machine_components",
   "key": {
-    "D": {
-      "item": "minecraft:red_dye"
-    },
-    "P": {
-      "item": "bmbc:pvc_plastic"
+    "#": {
+      "item": "bmbc:copper_wire"
     },
     "R": {
       "item": "bmbc:cable_roll"
     }
   },
   "pattern": [
-    "RP",
-    "D "
+    "###",
+    "#R#",
+    "###"
   ],
   "result": {
-    "item": "bmbc:red_printer_filament"
+    "item": "bmbc:copper_coil"
   },
   "show_notification": true
 }

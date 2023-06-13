@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "bmbc:block/extruder_bottom",
+    "front": "bmbc:block/extruder_front",
+    "side": "bmbc:block/extruder_sides",
+    "south": "bmbc:block/extruder_back",
+    "top": "bmbc:block/extruder_top"
+  }
+}

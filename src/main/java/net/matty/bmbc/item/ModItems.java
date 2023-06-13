@@ -53,6 +53,10 @@ public class ModItems {
     //public static final RegistryObject<Item> DUMMY_TEMPLATE = ITEMS.register("dummy_template",
     //        () -> new Item(new Item.Properties().stacksTo(1)));
 
+    // Templates
+    public static final RegistryObject<Item> WIRE_EXTRUSION_TEMPLATE = ITEMS.register("wire_extrusion_template",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> SCREW_TEMPLATE = ITEMS.register("screw_template",
             () -> new Item(new Item.Properties().stacksTo(1)));
 

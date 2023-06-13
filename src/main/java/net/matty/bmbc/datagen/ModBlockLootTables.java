@@ -27,6 +27,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.C4.get());
         dropSelf(ModBlocks.BIOMASS_GENERATOR.get());
+        dropSelf(ModBlocks.EXTRUDER.get());
         dropSelf(ModBlocks.PRESSURE_VESSEL.get());
         dropSelf(ModBlocks.RECHARGER.get());
         dropSelf(ModBlocks.THREE_D_PRINTER.get());
@@ -72,12 +73,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 (block -> createOreDrop(ModBlocks.SILVER_ORE.get(), ModMineralItems.RAW_SILVER.get())));
         
         // Trees
-        this.dropSelf(ModBlocks.MAPLE_LOG.get());
-        this.dropSelf(ModBlocks.MAPLE_WOOD.get());
-        this.dropSelf(ModBlocks.MAPLE_PLANKS.get());
-        this.dropSelf(ModBlocks.STRIPPED_MAPLE_WOOD.get());
-        this.dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
-        this.dropSelf(ModBlocks.MAPLE_SAPLING.get());
+        dropSelf(ModBlocks.MAPLE_LOG.get());
+        dropSelf(ModBlocks.MAPLE_WOOD.get());
+        dropSelf(ModBlocks.MAPLE_PLANKS.get());
+        dropSelf(ModBlocks.STRIPPED_MAPLE_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
+        dropSelf(ModBlocks.MAPLE_SAPLING.get());
 
 
 

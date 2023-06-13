@@ -1,8 +1,9 @@
 package net.matty.bmbc.block.entity;
 
-import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
-import net.matty.bmbc.recipe.ThreeDPrinterRecipe;
-import net.matty.bmbc.screen.ThreeDPrinterMenu;
+import net.matty.bmbc.block.custom.ExtruderBlock;
+import net.matty.bmbc.item.ModItems;
+import net.matty.bmbc.recipe.ExtruderRecipe;
+import net.matty.bmbc.screen.ExtruderMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -28,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvider {
+public class ExtruderBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -42,14 +43,14 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
     private int progress = 0;
     private int maxProgress = 240;
 
-    public ThreeDPrinterBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.THREE_D_PRINTER.get(), pos, state);
+    public ExtruderBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.EXTRUDER.get(), pos, state);
         this.data = new ContainerData() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> ThreeDPrinterBlockEntity.this.progress;
-                    case 1 -> ThreeDPrinterBlockEntity.this.maxProgress;
+                    case 0 -> ExtruderBlockEntity.this.progress;
+                    case 1 -> ExtruderBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -57,8 +58,8 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> ThreeDPrinterBlockEntity.this.progress = value;
-                    case 1 -> ThreeDPrinterBlockEntity.this.maxProgress = value;
+                    case 0 -> ExtruderBlockEntity.this.progress = value;
+                    case 1 -> ExtruderBlockEntity.this.maxProgress = value;
                 }
             }
 
@@ -71,13 +72,13 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("3D Printer");
+        return Component.literal("Extruder");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new ThreeDPrinterMenu(id, inventory, this, this.data);
+        return new ExtruderMenu(id, inventory, this, this.data);
     }
 
     @Override
@@ -104,7 +105,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("three_d_printer.progress", this.progress);
+        nbt.putInt("extruder.progress", this.progress);
 
         super.saveAdditional(nbt);
     }
@@ -113,7 +114,7 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        progress = nbt.getInt("three_d_printer.progress");
+        progress = nbt.getInt("extruder.progress");
     }
 
     public void drops() {
@@ -125,14 +126,14 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, ThreeDPrinterBlockEntity pEntity) {
+    public static void tick(Level level, BlockPos pos, BlockState state, ExtruderBlockEntity pEntity) {
         if (level.isClientSide()) {
             return;
         }
 
         if(hasRecipe(pEntity)) {
-            if (!state.getValue(ThreeDPrinterBlock.ACTIVE)) {
-                state = state.setValue(ThreeDPrinterBlock.ACTIVE, true);
+            if (!state.getValue(ExtruderBlock.ACTIVE)) {
+                state = state.setValue(ExtruderBlock.ACTIVE, true);
                 level.setBlock(pos, state, 3);
             }
 
@@ -144,8 +145,8 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
             }
 
         } else {
-            if (state.getValue(ThreeDPrinterBlock.ACTIVE)) {
-                state = state.setValue(ThreeDPrinterBlock.ACTIVE, false);
+            if (state.getValue(ExtruderBlock.ACTIVE)) {
+                state = state.setValue(ExtruderBlock.ACTIVE, false);
                 level.setBlock(pos, state, 3);
             }
 
@@ -158,36 +159,37 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         this.progress = 0;
     }
 
-    private static void craftItem(ThreeDPrinterBlockEntity pEntity) {
+    private static void craftItem(ExtruderBlockEntity pEntity) {
         Level level = pEntity.level;
         SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
         for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<ThreeDPrinterRecipe> recipe = level.getRecipeManager()
-                .getRecipeFor(ThreeDPrinterRecipe.Type.INSTANCE, inventory, level);
+        Optional<ExtruderRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(ExtruderRecipe.Type.INSTANCE, inventory, level);
 
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
             pEntity.itemHandler.extractItem(1, 0, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem()));
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem(),
+                    pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
 
             pEntity.resetProgress();
         }
     }
 
-    private static boolean hasRecipe(ThreeDPrinterBlockEntity entity) {
+    private static boolean hasRecipe(ExtruderBlockEntity entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<ThreeDPrinterRecipe> recipe = level.getRecipeManager()
-                .getRecipeFor(ThreeDPrinterRecipe.Type.INSTANCE, inventory, level);
+        Optional<ExtruderRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(ExtruderRecipe.Type.INSTANCE, inventory, level);
 
-        //boolean hasMoldInMoldSlot = entity.itemHandler.getStackInSlot(1).getItem() == ModItems.SCREW_TEMPLATE.get();
+        @Deprecated boolean hasMoldInMoldSlot = entity.itemHandler.getStackInSlot(1).getItem() == ModItems.SCREW_TEMPLATE.get(); // plan to remove
 
         return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
                 canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem(level.registryAccess()));

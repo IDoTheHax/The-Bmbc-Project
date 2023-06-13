@@ -2,6 +2,7 @@ package net.matty.bmbc.datagen;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
+import net.matty.bmbc.block.custom.ExtruderBlock;
 import net.matty.bmbc.block.custom.MaceratorBlock;
 import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
 import net.minecraft.core.Direction;
@@ -27,6 +28,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PRESSURE_VESSEL);
         blockWithItem(ModBlocks.RECHARGER);
         blockWithItem(ModBlocks.GARBAGE_BLOCK);
+
+        generateExtruder(ModBlocks.EXTRUDER.get(),
+                cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.EXTRUDER.get()).getPath(),
+                        new ResourceLocation("minecraft:orientable"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_back"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_front"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_bottom"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_top")),
+                cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.EXTRUDER.get()).getPath() + "_on",
+                        new ResourceLocation("minecraft:orientable"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_sides"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_back"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_front_on"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_bottom"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_top"))
+        );
 
         generateMacerator(ModBlocks.MACERATOR.get(),
                 cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.MACERATOR.get()).getPath(),
@@ -172,6 +190,53 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .modelFile(model).rotationY(270).addModel();
 
         simpleBlockItem(block, model);
+    }
+
+    public void generateExtruder(Block block, ModelFile offModel, ModelFile onModel) {
+        getVariantBuilder(block)
+                .partialState()
+                .with(ExtruderBlock.FACING, Direction.NORTH)
+                .with(ExtruderBlock.ACTIVE, false)
+                .modelForState()
+                .modelFile(offModel).rotationY(0).addModel()
+                .partialState()
+                .with(ExtruderBlock.FACING, Direction.SOUTH)
+                .with(ExtruderBlock.ACTIVE, false)
+                .modelForState()
+                .modelFile(offModel).rotationY(180).addModel()
+                .partialState()
+                .with(ExtruderBlock.FACING, Direction.EAST)
+                .with(ExtruderBlock.ACTIVE, false)
+                .modelForState()
+                .modelFile(offModel).rotationY(90).addModel()
+                .partialState()
+                .with(ExtruderBlock.FACING, Direction.WEST)
+                .with(ExtruderBlock.ACTIVE, false)
+                .modelForState()
+                .modelFile(offModel).rotationY(270).addModel()
+
+                .partialState()
+                .with(ExtruderBlock.FACING, Direction.NORTH)
+                .with(ExtruderBlock.ACTIVE, true)
+                .modelForState()
+                .modelFile(onModel).rotationY(0).addModel()
+                .partialState()
+                .with(ExtruderBlock.FACING, Direction.SOUTH)
+                .with(ExtruderBlock.ACTIVE, true)
+                .modelForState()
+                .modelFile(onModel).rotationY(180).addModel()
+                .partialState()
+                .with(ExtruderBlock.FACING, Direction.EAST)
+                .with(ExtruderBlock.ACTIVE, true)
+                .modelForState()
+                .modelFile(onModel).rotationY(90).addModel()
+                .partialState()
+                .with(ExtruderBlock.FACING, Direction.WEST)
+                .with(ExtruderBlock.ACTIVE, true)
+                .modelForState()
+                .modelFile(onModel).rotationY(270).addModel();
+
+        simpleBlockItem(block, offModel);
     }
 
     public void generateBiomassGenerator(Block block, ModelFile model) {

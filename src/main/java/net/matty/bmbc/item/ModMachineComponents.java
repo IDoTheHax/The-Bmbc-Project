@@ -17,6 +17,9 @@ public class ModMachineComponents {
     public static final RegistryObject<Item> COPPER_COIL = ITEMS.register("copper_coil",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> ELECTRIC_MOTOR = ITEMS.register("electric_motor",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

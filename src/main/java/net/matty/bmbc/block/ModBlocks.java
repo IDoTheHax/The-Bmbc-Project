@@ -32,6 +32,10 @@ public class ModBlocks {
             () -> new C4Block(BlockBehaviour.Properties.of(Material.EXPLOSIVE)
                     .strength(2.5f).instabreak().sound(SoundType.GRASS)));
 
+    public static final RegistryObject<Block> EXTRUDER = registerBlock("extruder",
+            () -> new ExtruderBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops()));

@@ -140,7 +140,7 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("Gem Infusing Station");
+        return Component.literal("Pressure Vessel");
     }
 
     @Nullable

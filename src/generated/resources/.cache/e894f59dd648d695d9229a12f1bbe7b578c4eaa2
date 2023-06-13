@@ -1,4 +1,4 @@
-// 1.19.4	2023-06-13T12:49:01.367858	Item Models: bmbc
+// 1.19.4	2023-06-13T19:55:16.022505	Item Models: bmbc
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
 35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
@@ -65,3 +65,4 @@ e2f9e0ffe22fe75dcfdc3b72805b4e2cb3980cce assets/bmbc/models/item/solid_oxygen.js
 463e9422b150c92133fd50faf355a355fbaaedf9 assets/bmbc/models/item/titanium_ingot.json
 be928620e39734c90e94fc44190148b4634df992 assets/bmbc/models/item/vanadium_ingot.json
 9d720155ed296a05f2382d7e3116dcd755ca94a0 assets/bmbc/models/item/white_phosphorus.json
+0d393dcb40dad24dff729f4eebd5b7ddb635e9ae assets/bmbc/models/item/wire_extrusion_template.json

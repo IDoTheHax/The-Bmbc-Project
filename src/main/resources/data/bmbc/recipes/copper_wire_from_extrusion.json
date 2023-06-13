@@ -1,0 +1,14 @@
+{
+  "type": "bmbc:extrusion",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "bmbc:wire_extrusion_template"
+    }
+  ],
+  "output": {
+    "item": "bmbc:copper_wire"
+  }
+}

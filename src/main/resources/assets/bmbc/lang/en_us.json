@@ -13,6 +13,7 @@
   "item.bmbc.boron_ingot": "Boron Ingot",
   "item.bmbc.calcium": "Calcium",
   "item.bmbc.chromium": "Chromium",
+  "item.bmbc.magnetic_iron_ingot": "Magnetic Iron Ingot",
   "item.bmbc.lithium_ingot": "Lithium Ingot",
   "item.bmbc.magnesium_ingot": "Magnesium Ingot",
   "item.bmbc.manganese_ingot": "Manganese Ingot",
@@ -101,10 +102,11 @@
   "message.bmbc.no_water": "There is no water nearby",
 
   "block.bmbc.biomass_generator": "Biomass Generator",
+  "block.bmbc.extruder": "Extruder",
+  "block.bmbc.item_transport_pipe": "Item Transport Pipe",
+  "block.bmbc.macerator": "Macerator",
   "block.bmbc.pressure_vessel": "Pressure Vessel",
   "block.bmbc.three_d_printer": "3D Printer",
-  "block.bmbc.macerator": "Macerator",
-  "block.bmbc.item_transport_pipe": "Item Transport Pipe",
 
   "bmbc.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "bmbc.tooltip.liquid.amount": "%s mB",
@@ -114,6 +116,7 @@
   "fluid_type.bmbc.oxygen_fluid": "Liquid Oxygen",
   "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide",
 
+  "item.bmbc.wire_extrusion_template": "Wire Extrusion Template",
   "item.bmbc.screw_template": "Screw Template",
 
   "item.bmbc.nbc_fabric": "NBC Fabric",
@@ -129,10 +132,9 @@
   "item.bmbc.pp_plastic": "PP Plastic",
   "item.bmbc.ps_plastic": "PS Plastic",
 
-
   "item.bmbc.copper_wire": "Copper Wire",
   "item.bmbc.copper_coil": "Copper Cable",
+  "item.bmbc.electric_motor": "Electric Motor",
 
   "sounds.bmbc.plastic_crush": "Plastic Crush"
-
 }

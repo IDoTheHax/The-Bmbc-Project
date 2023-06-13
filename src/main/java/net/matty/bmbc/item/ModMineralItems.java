@@ -35,6 +35,11 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties()
                     ,"Chem. Formula: ", "Cr"));
 
+    // Magnetic Iron
+    public static final RegistryObject<Item> MAGNETIC_IRON_INGOT = ITEMS.register("magnetic_iron_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties()
+                    ,"Chem. Formula: ", "Fe"));
+
     // Lithium
     public static final RegistryObject<Item> LITHIUM = ITEMS.register("lithium_ingot",
             () -> new MineralWithToolTipItem(new Item.Properties()
