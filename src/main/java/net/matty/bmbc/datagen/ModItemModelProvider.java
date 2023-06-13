@@ -65,15 +65,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMineralItems.BORON);
         simpleItem(ModMineralItems.CALCIUM);
         simpleItem(ModMineralItems.CARNALLITE);
+        simpleItem(ModMineralItems.CHROMIUM);
         simpleItem(ModMineralItems.CRUSHED_BAUXITE);
         simpleItem(ModMineralItems.DOLOMITE);
         simpleItem(ModMineralItems.EVAPORITE);
         simpleItem(ModMineralItems.LITHIUM);
         simpleItem(ModMineralItems.MAGNESITE);
         simpleItem(ModMineralItems.MAGNESIUM);
+        simpleItem(ModMineralItems.MANGANESE);
         simpleItem(ModMineralItems.PEGMATITE);
         simpleItem(ModMineralItems.PHOSPHORITE);
         simpleItem(ModMineralItems.POTASSIUM);
+        simpleItem(ModMineralItems.RAW_COBALT);
         simpleItem(ModMineralItems.RAW_SILVER);
         simpleItem(ModMineralItems.RED_PHOSPHORUS);
         simpleItem(ModMineralItems.SCANDIUM);
@@ -83,6 +86,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMineralItems.SOLID_OXYGEN);
         simpleItem(ModMineralItems.SULFUR_POWDER);
         simpleItem(ModMineralItems.SULFUR_SOLID);
+        simpleItem(ModMineralItems.TITANIUM);
+        simpleItem(ModMineralItems.VANADIUM);
         simpleItem(ModMineralItems.WHITE_PHOSPHORUS);
 
         // Radiation
@@ -101,6 +106,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.HDPE_PLASTIC);
         simpleItem(ModItems.LDPE_PLASTIC);
 
+        // Machine components
+        simpleItem(ModMachineComponents.COPPER_WIRE);
+        simpleItem(ModMachineComponents.COPPER_COIL);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

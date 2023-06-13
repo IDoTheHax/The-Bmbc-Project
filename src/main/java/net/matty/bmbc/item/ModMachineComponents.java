@@ -1,0 +1,38 @@
+package net.matty.bmbc.item;
+
+import net.matty.bmbc.BetterMineBetterCraft;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ModMachineComponents {
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, BetterMineBetterCraft.MOD_ID);
+
+    public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> COPPER_COIL = ITEMS.register("copper_coil",
+            () -> new Item(new Item.Properties()));
+
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
+}
+
+/*
+{
+                @Override
+                public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
+                    if(Screen.hasShiftDown()){
+                        components.add(Component.literal("Used to make cables,").withStyle(ChatFormatting.AQUA));
+                    } else {
+                        components.add(Component.literal("Press SHIFT for more info").withStyle(ChatFormatting.YELLOW));
+                    }
+
+                    super.appendHoverText(stack, level, components, flag);
+                }
+            });
+ */

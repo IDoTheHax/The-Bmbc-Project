@@ -44,6 +44,7 @@ public class BetterMineBetterCraft {
         ModMineralItems.register(modEventBus);
         ModFoodItems.register(modEventBus);
         ModChemicalCompounds.register(modEventBus);
+        ModMachineComponents.register(modEventBus);
 
         ModFluidBlocks.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -71,8 +72,10 @@ public class BetterMineBetterCraft {
             event.accept(ModMineralItems.BERYLLIUM);
             event.accept(ModMineralItems.BORON);
             event.accept(ModMineralItems.CALCIUM);
+            event.accept(ModMineralItems.CHROMIUM);
             event.accept(ModMineralItems.LITHIUM);
             event.accept(ModMineralItems.MAGNESIUM);
+            event.accept(ModMineralItems.MANGANESE);
             event.accept(ModMineralItems.WHITE_PHOSPHORUS);
             event.accept(ModMineralItems.RED_PHOSPHORUS);
             event.accept(ModMineralItems.BLACK_PHOSPHORUS);
@@ -91,8 +94,10 @@ public class BetterMineBetterCraft {
             event.accept(ModMineralItems.PEGMATITE);
             event.accept(ModMineralItems.PHOSPHORITE);
             event.accept(ModMineralItems.BAUXITE);
+            event.accept(ModMineralItems.RAW_COBALT);
             event.accept(ModMineralItems.RAW_SILVER);
-
+            event.accept(ModMineralItems.TITANIUM);
+            event.accept(ModMineralItems.VANADIUM);
             event.accept(ModMineralItems.CRUSHED_BAUXITE);
         }
         
@@ -162,6 +167,10 @@ public class BetterMineBetterCraft {
             event.accept(ModArmorItems.NBC_HAZMAT_CHESTPLATE);
             event.accept(ModArmorItems.NBC_HAZMAT_LEGGINGS);
             event.accept(ModArmorItems.NBC_HAZMAT_BOOTS);
+
+            // Potentially add Machine Component to its own creative mode tab
+            event.accept(ModMachineComponents.COPPER_COIL);
+            event.accept(ModMachineComponents.COPPER_WIRE);
 
         }
 

@@ -1,4 +1,4 @@
-// 1.19.4	2023-06-11T17:19:02.978725	Item Models: bmbc
+// 1.19.4	2023-06-13T12:49:01.367858	Item Models: bmbc
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
 35d3fcd506e3002b23172c4332f0e0d797e201ec assets/bmbc/models/item/battery.json
@@ -11,8 +11,11 @@ cb3596210b2684414743dabdb696428f94719714 assets/bmbc/models/item/c4_detonator.js
 5a93f62b1c1c2d58e0b13863a35d492df13d9b9e assets/bmbc/models/item/cable_roll.json
 db82d841b3fbb24cf912986375acdf4f4c483adb assets/bmbc/models/item/calcium.json
 56d7c6e188770d2f3b4ffe53a7b50a531b4557c6 assets/bmbc/models/item/carnallite.json
+2d97fb72b365e32a02effbb3fb2141b35f7536ac assets/bmbc/models/item/chromium.json
 b2e1e9c11c222bb0f1bdc0a5e6171170b8a8f81e assets/bmbc/models/item/coffee_beans.json
 7feedfd6554da8ea05735ea0855791101f3c4e78 assets/bmbc/models/item/coffee_cherry.json
+6d88261a31b6eefbf88ae77a71346e1628449a3a assets/bmbc/models/item/copper_coil.json
+c35027b8b0627f9edbfc39da21ecb645bea155fc assets/bmbc/models/item/copper_wire.json
 bd605a21eade36c2a768947e58c94c5359849365 assets/bmbc/models/item/crushed_bauxite.json
 dc9a6da40a67f68ee979f88d02969b91a06d4a34 assets/bmbc/models/item/dolomite.json
 aacf62f98b754eba565bf051feb517ca74997e74 assets/bmbc/models/item/eight_ball.json
@@ -26,6 +29,7 @@ b8797585186df732f96a13ff691dadc0979eb8cc assets/bmbc/models/item/helium_bucket.j
 a59aec084ef8b79066ea041b80afb1994d5254f7 assets/bmbc/models/item/lithium_ingot.json
 ce8c1a6c7b9b59e8447009e041603364fe7bde0d assets/bmbc/models/item/magnesite.json
 13158b81859f30e4c1465c8c46bc44385a4d0844 assets/bmbc/models/item/magnesium_ingot.json
+12d80792e038e5c0ded3335b2a4044fa1af36e48 assets/bmbc/models/item/manganese_ingot.json
 d401fa0e85d7bebc247f501fd3f66f31548b9913 assets/bmbc/models/item/maple_sapling.json
 36b6b033281397b0ec953c60a831ae4b29e4a9b9 assets/bmbc/models/item/nbc_fabric.json
 552542dea34381b7afe724ca91f05d9d96cd0646 assets/bmbc/models/item/nbc_hazmat_boots.json
@@ -42,6 +46,7 @@ f7e23fa4b9937382f771ae7d5907f709725c65b5 assets/bmbc/models/item/pp_plastic.json
 6842fbbb4e16aaa89390c86746b760cdd8af9a5d assets/bmbc/models/item/ps_plastic.json
 717df541e9a9341ae12b9c7ec7c808ccc0259e23 assets/bmbc/models/item/pvc_plastic.json
 86e226cfb83aa41fe539f367f167d4fa191d278e assets/bmbc/models/item/raw_bauxite.json
+ea8d3ce152ef53d3f5b1b53dd52f6b896b502e34 assets/bmbc/models/item/raw_cobalt.json
 274c0c68620d8fbf52be76339470d53127813133 assets/bmbc/models/item/raw_silver.json
 ac9da924005fb99ab578f441eab80a17639d09eb assets/bmbc/models/item/red_phosphorus.json
 b50442f4f9e30c80dabdc14279be88310864ccd1 assets/bmbc/models/item/red_plastic_screw.json
@@ -57,4 +62,6 @@ ad5926c042eb0e59a0849f8a52eb68b10a70cd42 assets/bmbc/models/item/silicon_crystal
 e2f9e0ffe22fe75dcfdc3b72805b4e2cb3980cce assets/bmbc/models/item/solid_oxygen.json
 70c09943c34ec02d2cdaff392e4f9f371e437887 assets/bmbc/models/item/sulfur_crystal.json
 4320afd9d5578e9b8e78587d0e808a0e30d61888 assets/bmbc/models/item/sulfur_powder.json
+463e9422b150c92133fd50faf355a355fbaaedf9 assets/bmbc/models/item/titanium_ingot.json
+be928620e39734c90e94fc44190148b4634df992 assets/bmbc/models/item/vanadium_ingot.json
 9d720155ed296a05f2382d7e3116dcd755ca94a0 assets/bmbc/models/item/white_phosphorus.json

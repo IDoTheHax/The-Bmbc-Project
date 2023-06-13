@@ -30,6 +30,12 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties()
                     ,"Chem. Formula: ", "Ca"));
 
+    // Chromium
+    public static final RegistryObject<Item> CHROMIUM = ITEMS.register("chromium",
+            () -> new MineralWithToolTipItem(new Item.Properties()
+                    ,"Chem. Formula: ", "Cr"));
+
+    // Lithium
     public static final RegistryObject<Item> LITHIUM = ITEMS.register("lithium_ingot",
             () -> new MineralWithToolTipItem(new Item.Properties()
                     ,"Chem. Formula: ", "Li"));
@@ -38,6 +44,11 @@ public class ModMineralItems {
     public static final RegistryObject<Item> MAGNESIUM = ITEMS.register("magnesium_ingot",
             () -> new MineralWithToolTipItem(new Item.Properties()
                     ,"Chem. Formula: ", "Mg"));
+
+    // Manganese
+    public static final RegistryObject<Item> MANGANESE = ITEMS.register("manganese_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties()
+                    ,"Chem. Formula: ", "Mn"));
 
     // Phosphorus
     // White Phosphorus (translucent waxy solid)
@@ -59,6 +70,11 @@ public class ModMineralItems {
     public static final RegistryObject<Item> POTASSIUM = ITEMS.register("potassium_ingot",
             () -> new MineralWithToolTipItem(new Item.Properties()
                     ,"Chem. Formula: ", "K"));
+
+    // Raw Cobalt
+    public static final RegistryObject<Item> RAW_COBALT = ITEMS.register("raw_cobalt",
+            () -> new MineralWithToolTipItem(new Item.Properties()
+                    ,"Chem. Formula: ", "Co"));
 
     // Scandium
     public static final RegistryObject<Item> SCANDIUM = ITEMS.register("scandium",
@@ -93,6 +109,17 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties()
                     , "Chem. Formula: ", "S"));
 
+    // Titanium
+    public static final RegistryObject<Item> TITANIUM = ITEMS.register("titanium_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties()
+                    , "Chem. Formula: ", "Ti"));
+
+    // Vanadium
+    public static final RegistryObject<Item> VANADIUM = ITEMS.register("vanadium_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties()
+                    , "Chem. Formula: ", "V"));
+
+    // Minerals
     // Carnallite
     public static final RegistryObject<Item> CARNALLITE = ITEMS.register("carnallite",
             () -> new MineralWithToolTipItem(new Item.Properties(),
