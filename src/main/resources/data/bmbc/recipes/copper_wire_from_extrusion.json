@@ -5,7 +5,7 @@
       "item": "minecraft:copper_ingot"
     },
     {
-      "item": "bmbc:wire_extrusion_template"
+      "item": "bmbc:wire_template"
     }
   ],
   "output": {

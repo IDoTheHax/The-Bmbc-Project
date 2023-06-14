@@ -13,10 +13,11 @@
   "item.bmbc.boron_ingot": "Boron Ingot",
   "item.bmbc.calcium": "Calcium",
   "item.bmbc.chromium": "Chromium",
-  "item.bmbc.magnetic_iron_ingot": "Magnetic Iron Ingot",
+  "item.bmbc.germanium": "Germanium",
   "item.bmbc.lithium_ingot": "Lithium Ingot",
   "item.bmbc.magnesium_ingot": "Magnesium Ingot",
   "item.bmbc.manganese_ingot": "Manganese Ingot",
+  "item.bmbc.magnetic_iron_ingot": "Magnetic Iron Ingot",
   "item.bmbc.potassium_ingot": "Potassium Ingot",
   "item.bmbc.red_phosphorus": "Red Phosphorus",
   "item.bmbc.scandium": "Scandium",
@@ -116,8 +117,9 @@
   "fluid_type.bmbc.oxygen_fluid": "Liquid Oxygen",
   "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide",
 
-  "item.bmbc.wire_extrusion_template": "Wire Extrusion Template",
+  "item.bmbc.rod_template": "Rod Template",
   "item.bmbc.screw_template": "Screw Template",
+  "item.bmbc.wire_template": "Wire Template",
 
   "item.bmbc.nbc_fabric": "NBC Fabric",
   "item.bmbc.nbc_hazmat_mask": "Hazmat Mask",
@@ -135,6 +137,8 @@
   "item.bmbc.copper_wire": "Copper Wire",
   "item.bmbc.copper_coil": "Copper Cable",
   "item.bmbc.electric_motor": "Electric Motor",
+  "item.bmbc.iron_rod": "Iron Rod",
+  "item.bmbc.magnetic_iron_rod": "Magnetic Iron Rod",
 
   "sounds.bmbc.plastic_crush": "Plastic Crush"
 }

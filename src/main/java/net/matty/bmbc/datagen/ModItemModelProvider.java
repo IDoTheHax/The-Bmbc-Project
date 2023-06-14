@@ -27,8 +27,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GREEN_PRINTER_FILAMENT);
 
         // Templates
-        simpleItem(ModItems.WIRE_EXTRUSION_TEMPLATE);
+        simpleItem(ModItems.ROD_TEMPLATE);
         simpleItem(ModItems.SCREW_TEMPLATE);
+        simpleItem(ModItems.WIRE_TEMPLATE);
 
         // 3D Printed Items
         simpleItem(ModItems.BLUE_PLASTIC_SCREW);
@@ -71,6 +72,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMineralItems.DOLOMITE);
         simpleItem(ModMineralItems.EVAPORITE);
         simpleItem(ModMineralItems.MAGNETIC_IRON_INGOT);
+        simpleItem(ModMineralItems.GERMANIUM);
         simpleItem(ModMineralItems.LITHIUM);
         simpleItem(ModMineralItems.MAGNESITE);
         simpleItem(ModMineralItems.MAGNESIUM);
@@ -112,6 +114,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMachineComponents.COPPER_WIRE);
         simpleItem(ModMachineComponents.COPPER_COIL);
         simpleItem(ModMachineComponents.ELECTRIC_MOTOR);
+        simpleItem(ModMachineComponents.IRON_ROD);
+        simpleItem(ModMachineComponents.MAGNETIC_IRON_ROD);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

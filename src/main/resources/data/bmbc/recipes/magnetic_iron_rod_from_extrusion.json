@@ -1,0 +1,14 @@
+{
+  "type": "bmbc:extrusion",
+  "ingredients": [
+    {
+      "item": "bmbc:magnetic_iron_ingot"
+    },
+    {
+      "item": "bmbc:rod_template"
+    }
+  ],
+  "output": {
+    "item": "bmbc:magnetic_iron_rod"
+  }
+}

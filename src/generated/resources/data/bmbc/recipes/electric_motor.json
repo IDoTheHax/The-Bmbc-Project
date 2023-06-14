@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "machine_components",
+  "key": {
+    "I": {
+      "item": "bmbc:iron_rod"
+    },
+    "M": {
+      "item": "bmbc:magnetic_iron_ingot"
+    },
+    "R": {
+      "item": "bmbc:magnetic_iron_rod"
+    },
+    "W": {
+      "item": "bmbc:copper_wire"
+    }
+  },
+  "pattern": [
+    "MWI",
+    "WRW",
+    "IWM"
+  ],
+  "result": {
+    "item": "bmbc:electric_motor"
+  },
+  "show_notification": true
+}

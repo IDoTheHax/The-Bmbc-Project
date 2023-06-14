@@ -73,7 +73,9 @@ public class BetterMineBetterCraft {
             event.accept(ModMineralItems.BORON);
             event.accept(ModMineralItems.CALCIUM);
             event.accept(ModMineralItems.CHROMIUM);
+            event.accept(ModMineralItems.GERMANIUM);
             event.accept(ModMineralItems.LITHIUM);
+            event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
             event.accept(ModMineralItems.MAGNESIUM);
             event.accept(ModMineralItems.MANGANESE);
             event.accept(ModMineralItems.WHITE_PHOSPHORUS);
@@ -147,13 +149,14 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.C4_DETONATOR);
             event.accept(ModItems.CABLE_ROLL);
             event.accept(ModItems.EIGHT_BALL);
-            event.accept(ModItems.WIRE_EXTRUSION_TEMPLATE);
             event.accept(ModItems.GREEN_PRINTER_FILAMENT);
             event.accept(ModItems.RED_PRINTER_FILAMENT);
             event.accept(ModItems.BLUE_PLASTIC_SCREW);
             event.accept(ModItems.GREEN_PLASTIC_SCREW);
             event.accept(ModItems.RED_PLASTIC_SCREW);
+            event.accept(ModItems.ROD_TEMPLATE);
             event.accept(ModItems.SCREW_TEMPLATE);
+            event.accept(ModItems.WIRE_TEMPLATE);
             event.accept(ModBlocks.MAPLE_SAPLING);
             event.accept(ModItems.GARBAGE);
 
@@ -174,6 +177,9 @@ public class BetterMineBetterCraft {
             event.accept(ModMachineComponents.COPPER_COIL);
             event.accept(ModMachineComponents.COPPER_WIRE);
             event.accept(ModMachineComponents.ELECTRIC_MOTOR);
+            event.accept(ModMachineComponents.IRON_ROD);
+            event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
+            event.accept(ModMachineComponents.MAGNETIC_IRON_ROD);
 
         }
 

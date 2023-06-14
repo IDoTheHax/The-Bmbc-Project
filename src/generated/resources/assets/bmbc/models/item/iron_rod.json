@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "bmbc:item/wire_extrusion_template"
+    "layer0": "bmbc:item/iron_rod"
   }
 }

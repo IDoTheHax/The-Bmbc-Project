@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "bmbc:item/magnetic_iron_ingot"
+  }
+}

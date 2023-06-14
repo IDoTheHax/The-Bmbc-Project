@@ -96,18 +96,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(consumer);
 
         // Machine Components
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GREEN_PRINTER_FILAMENT.get()).group("printing_filament")
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModMachineComponents.ELECTRIC_MOTOR.get()).group("machine_components")
                 .define('W', ModMachineComponents.COPPER_WIRE.get())
-                .define('D', Items.GREEN_DYE)
-                .define('P', ModItems.PVC_PLASTIC.get())
-                .pattern("RW")
-                .pattern("W W")
-                .pattern(" W ")
-                .unlockedBy("has_cable_roll", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(ModItems.CABLE_ROLL.get()).build()))
+                .define('M', ModMineralItems.MAGNETIC_IRON_INGOT.get())
+                .define('I', ModMachineComponents.IRON_ROD.get())
+                .define('R', ModMachineComponents.MAGNETIC_IRON_ROD.get())
+                .pattern("MWI")
+                .pattern("WRW")
+                .pattern("IWM")
+                .unlockedBy("has_copper_wire", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModMachineComponents.COPPER_WIRE.get()).build()))
                 .save(consumer);
-
-
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
