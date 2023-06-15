@@ -4,14 +4,12 @@ import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
@@ -21,7 +19,6 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
-import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
@@ -41,10 +38,13 @@ public class ModConfiguredFeatures {
     // Trees
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
 
+    // Other
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SILICA_SAND_KEY = registerKey("add_silica_sand");
+
     //public static final ResourceKey<ConfiguredFeature<?, ?>> ZIRCON_GEODE_KEY = registerKey("zircon_geode");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
 
         List<OreConfiguration.TargetBlockState> bauxiteOres = List.of(OreConfiguration.target(stoneReplaceables,
                         ModBlocks.BAUXITE_ORE.get().defaultBlockState()));
@@ -71,6 +71,11 @@ public class ModConfiguredFeatures {
                         ModBlocks.SILVER_ORE.get().defaultBlockState()));
 
 
+        // Other
+        List<OreConfiguration.TargetBlockState> silicaSand = List.of(OreConfiguration.target(stoneReplaceables,
+                ModBlocks.SILICA_SAND.get().defaultBlockState()));
+
+
         // register keys
         // Ores
         register(context, OVERWORLD_SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(silverOres, 26));
@@ -88,7 +93,10 @@ public class ModConfiguredFeatures {
                 new StraightTrunkPlacer(5, 6, 3), // placing the truck
                 BlockStateProvider.simple(ModBlocks.MAPLE_LEAVES.get()), // place leaves in block foliage
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
-                new TwoLayersFeatureSize(1, 0, 2)).build()); // Spawning
+                new TwoLayersFeatureSize(1, 0, 1)).build()); // Spawning
+
+        // Other
+        register(context, OVERWORLD_SILICA_SAND_KEY, Feature.ORE, new OreConfiguration(silicaSand, 22));
     }
 
     // Ore configuration
@@ -123,6 +131,10 @@ public class ModConfiguredFeatures {
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_PHOSPHORITE_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.PHOSPHORITE_ORE.get().defaultBlockState())
+    ));
+
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_SILICA_SAND_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), ModBlocks.SILICA_SAND.get().defaultBlockState())
     ));
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

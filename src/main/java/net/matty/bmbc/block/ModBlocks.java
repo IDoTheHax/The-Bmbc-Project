@@ -34,20 +34,23 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> EXTRUDER = registerBlock("extruder",
             () -> new ExtruderBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
-
-    public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()));
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> GARBAGE_BLOCK = registerBlock("garbage_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES)
-                    .strength(6f).explosionResistance(3f).sound(ModSounds.GARBAGE_BLOCK_SOUNDS).noOcclusion()));
+                    .strength(3f).explosionResistance(3f).sound(ModSounds.GARBAGE_BLOCK_SOUNDS).noOcclusion()));
+
+    public static final RegistryObject<Block> SILICA_SAND = registerBlock("silica_sand",
+            () -> new SilicaSand(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND)));
+
+    public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(3f).requiresCorrectToolForDrops()));
 
     // Special Blocks
     public static final RegistryObject<Block> SILVER_LAMP = registerBlock("silver_lamp",
             () -> new SilverLampBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f)
+                    .strength(3f)
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(SilverLampBlock.LIT) ? 15 : 0)));
 
@@ -57,23 +60,23 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BIOMASS_GENERATOR = registerBlock("biomass_generator",
             () -> new BiomassGeneratorBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
             () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> RECHARGER = registerBlock("recharger",
             () -> new RechargerBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> THREE_D_PRINTER = registerBlock("three_d_printer",
             () -> new ThreeDPrinterBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> MACERATOR = registerBlock("macerator",
             () -> new MaceratorBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
     // Pipes
     //public static final RegistryObject<Block> ITEM_TRANSPORT_PIPE = registerBlock("item_transport_pipe",

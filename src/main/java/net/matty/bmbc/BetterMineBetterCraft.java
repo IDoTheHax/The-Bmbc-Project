@@ -128,6 +128,9 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.STRIPPED_MAPLE_LOG);
             event.accept(ModBlocks.STRIPPED_MAPLE_WOOD);
 
+            // Nature
+            event.accept(ModBlocks.SILICA_SAND);
+
         }
 
         if (event.getTab() == ModMachinesCreativeModeTab.BMBC_MACHINES) {
@@ -205,6 +208,7 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.MAPLE_LEAVES);
             event.accept(ModBlocks.MAPLE_LOG);
             event.accept(ModBlocks.MAPLE_SAPLING);
+            event.accept(ModBlocks.SILICA_SAND);
         }
     }
 

@@ -29,6 +29,9 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> PEGMATITE_PLACED_KEY = createKey("pegmatite_ore_placed");
     public static final ResourceKey<PlacedFeature> PHOSPHORITE_PLACED_KEY = createKey("phosphorite_ore_placed");
 
+    // Other
+    public static final ResourceKey<PlacedFeature> SILICA_SAND_PLACED_KEY = createKey("silica_sand_placed");
+
     // Trees
     public static final ResourceKey<PlacedFeature> MAPLE_PLACED_KEY = createKey("maple_placed");
 
@@ -71,7 +74,12 @@ public class ModPlacedFeatures {
 
         // Trees
         register(context, MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.MAPLE_SAPLING.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 2), ModBlocks.MAPLE_SAPLING.get()));
+
+        // Other
+        register(context, SILICA_SAND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_SILICA_SAND_KEY),
+                ModOrePlacement.commonOrePlacement(8, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(384))));
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {

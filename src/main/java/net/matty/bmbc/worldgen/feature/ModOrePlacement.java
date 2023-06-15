@@ -9,8 +9,8 @@ public class ModOrePlacement {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
     }
 
-    public static List<PlacementModifier> commonOrePlacement(int i, PlacementModifier placementModifier) {
-        return orePlacement(CountPlacement.of(i), placementModifier);
+    public static List<PlacementModifier> commonOrePlacement(int veinsPerChunk, PlacementModifier placementModifier) {
+        return orePlacement(CountPlacement.of(veinsPerChunk), placementModifier);
     }
 
     public static List<PlacementModifier> rareOrePlacement(int i, PlacementModifier placementModifier) {

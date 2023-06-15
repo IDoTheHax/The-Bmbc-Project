@@ -23,7 +23,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.SILVER_BLOCK.get());
-        dropSelf(ModBlocks.BAUXITE_ORE.get());
 
         dropSelf(ModBlocks.C4.get());
         dropSelf(ModBlocks.BIOMASS_GENERATOR.get());
@@ -80,6 +79,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
         dropSelf(ModBlocks.MAPLE_SAPLING.get());
 
+
+        // Misc
+        dropSelf(ModBlocks.SILICA_SAND.get());
 
 
         this.add(ModBlocks.MAPLE_LEAVES.get(), (block) ->

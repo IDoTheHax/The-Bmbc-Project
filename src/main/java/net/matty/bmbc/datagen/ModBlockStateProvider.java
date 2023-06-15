@@ -23,11 +23,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.SILVER_BLOCK);
-        blockWithItem(ModBlocks.SILVER_LAMP);
+        blockWithItem(ModBlocks.GARBAGE_BLOCK);
         blockWithItem(ModBlocks.PRESSURE_VESSEL);
         blockWithItem(ModBlocks.RECHARGER);
-        blockWithItem(ModBlocks.GARBAGE_BLOCK);
+        blockWithItem(ModBlocks.SILICA_SAND);
+        blockWithItem(ModBlocks.SILVER_BLOCK);
+        blockWithItem(ModBlocks.SILVER_LAMP);
 
         generateExtruder(ModBlocks.EXTRUDER.get(),
                 cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.EXTRUDER.get()).getPath(),
