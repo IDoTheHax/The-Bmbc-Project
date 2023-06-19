@@ -82,6 +82,7 @@ public class BetterMineBetterCraft {
             event.accept(ModMineralItems.RED_PHOSPHORUS);
             event.accept(ModMineralItems.BLACK_PHOSPHORUS);
             event.accept(ModMineralItems.POTASSIUM);
+            event.accept(ModMineralItems.PURE_SILICON);
             event.accept(ModMineralItems.SCANDIUM);
             event.accept(ModMineralItems.SILICON_CRYSTAL);
             event.accept(ModMineralItems.SILVER);
@@ -176,8 +177,9 @@ public class BetterMineBetterCraft {
             event.accept(ModArmorItems.NBC_HAZMAT_LEGGINGS);
             event.accept(ModArmorItems.NBC_HAZMAT_BOOTS);
 
-            // Potentially add Machine Component to its own creative mode tab
+            // TODO: Potentially add Machine Component to its own creative mode tab
             event.accept(ModMachineComponents.COPPER_COIL);
+            event.accept(ModMachineComponents.COPPER_FOIL);
             event.accept(ModMachineComponents.COPPER_WIRE);
             event.accept(ModMachineComponents.ELECTRIC_MOTOR);
             event.accept(ModMachineComponents.IRON_ROD);
@@ -192,9 +194,15 @@ public class BetterMineBetterCraft {
         }
 
         if (event.getTab() == ModFluidsCreativeModeTab.BMBC_FLUIDS) {
+            event.accept(ModItems.ACETONE_BUCKET);
+            event.accept(ModItems.BISPHENOL_BUCKET);
+            event.accept(ModItems.CHLORINE_BUCKET);
+            event.accept(ModItems.HYDROCHLORIC_ACID_BUCKET);
             event.accept(ModItems.LIQUID_HELIUM_BUCKET);
             event.accept(ModItems.LIQUID_NITROGEN_BUCKET);
             event.accept(ModItems.LIQUID_OXYGEN_BUCKET);
+            event.accept(ModItems.PHENOL_BUCKET);
+            event.accept(ModItems.PROPANE_BUCKET);
             event.accept(ModItems.SEWAGE_WATER_BUCKET);
             event.accept(ModItems.SODIUM_HYDROXIDE_BUCKET);
         }

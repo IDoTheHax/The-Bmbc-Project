@@ -36,6 +36,24 @@ public class ModFluidBlocks {
     public static final RegistryObject<LiquidBlock> SODIUM_HYDROXIDE_BLOCK = FLUID_BLOCKS.register("sodium_hydroxide_block",
             () -> new LiquidBlock(ModFluids.SOURCE_SODIUM_HYDROXIDE, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
+    public static final RegistryObject<LiquidBlock> ACETONE_BLOCK = FLUID_BLOCKS.register("acetone_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_ACETONE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryObject<LiquidBlock> BISPHENOL_BLOCK = FLUID_BLOCKS.register("bisphenol_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_BISPHENOL, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryObject<LiquidBlock> CHLORINE_BLOCK = FLUID_BLOCKS.register("chlorine_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_CHLORINE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryObject<LiquidBlock> HYDROCHLORIC_ACID_BLOCK = FLUID_BLOCKS.register("hydrochloric_acid_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_HYDROCHLORIC_ACID, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryObject<LiquidBlock> PHENOL_BLOCK = FLUID_BLOCKS.register("phenol_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_PHENOL, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryObject<LiquidBlock> PROPANE_BLOCK = FLUID_BLOCKS.register("propane_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_PROPANE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = FLUID_BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

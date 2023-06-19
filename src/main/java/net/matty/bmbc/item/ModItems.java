@@ -63,6 +63,24 @@ public class ModItems {
     public static final RegistryObject<Item> WIRE_TEMPLATE = ITEMS.register("wire_template",
             () -> new Item(new Item.Properties().stacksTo(1)));
 
+
+    // Buckets
+    public static final RegistryObject<Item> ACETONE_BUCKET = ITEMS.register("acetone_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_ACETONE,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> BISPHENOL_BUCKET = ITEMS.register("bisphenol_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_BISPHENOL,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> CHLORINE_BUCKET = ITEMS.register("chlorine_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_CHLORINE,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> HYDROCHLORIC_ACID_BUCKET = ITEMS.register("hydrochloric_acid_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_HYDROCHLORIC_ACID,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
     public static final RegistryObject<Item> LIQUID_HELIUM_BUCKET = ITEMS.register("helium_bucket",
             () -> new BucketItem(ModFluids.SOURCE_HELIUM,
                     new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
@@ -76,6 +94,14 @@ public class ModItems {
             () -> new BucketItemWithToolTip(ModFluids.SOURCE_OXYGEN_FLUID,
                     new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)
                     , "Chem. Formula: ", "O₂"));
+
+    public static final RegistryObject<Item> PHENOL_BUCKET = ITEMS.register("phenol_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_PHENOL,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> PROPANE_BUCKET = ITEMS.register("propane_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_PROPANE,
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static final RegistryObject<Item> SEWAGE_WATER_BUCKET = ITEMS.register("sewage_water_bucket",
             () -> new BucketItem(ModFluids.SOURCE_SEWAGE_WATER,

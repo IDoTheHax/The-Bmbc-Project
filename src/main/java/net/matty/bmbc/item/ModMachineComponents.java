@@ -11,13 +11,19 @@ public class ModMachineComponents {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, BetterMineBetterCraft.MOD_ID);
 
-    public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire",
-            () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> COPPER_COIL = ITEMS.register("copper_coil",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> COPPER_FOIL = ITEMS.register("copper_foil",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> ELECTRIC_MOTOR = ITEMS.register("electric_motor",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> EPOXY_CIRCUIT_BOARD = ITEMS.register("epoxy_circuit_board",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> IRON_ROD = ITEMS.register("iron_rod",

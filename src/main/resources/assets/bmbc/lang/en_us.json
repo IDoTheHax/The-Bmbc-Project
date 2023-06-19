@@ -1,9 +1,15 @@
 {
   "item.bmbc.eight_ball": "Eight Ball",
 
+  "item.bmbc.acetone_bucket": "Acetone",
+  "item.bmbc.bisphenol_bucket": "Bisphenol",
+  "item.bmbc.chlorine_bucket": "Chlorine",
+  "item.bmbc.hydrochloric_acid_bucket": "Hydrochloric Acid",
   "item.bmbc.helium_bucket": "Liquid Helium",
   "item.bmbc.nitrogen_bucket": "Liquid Nitrogen",
   "item.bmbc.oxygen_bucket": "Liquid Oxygen",
+  "item.bmbc.phenol_bucket": "Phenol",
+  "item.bmbc.propane_bucket": "Propane",
   "item.bmbc.sewage_water_bucket": "Bucket of Sewage",
   "item.bmbc.sodium_hydroxide_bucket": "Sodium hydroxide",
 
@@ -19,6 +25,7 @@
   "item.bmbc.manganese_ingot": "Manganese Ingot",
   "item.bmbc.magnetic_iron_ingot": "Magnetic Iron Ingot",
   "item.bmbc.potassium_ingot": "Potassium Ingot",
+  "item.bmbc.pure_silicon_ingot": "Pure Silicon Ingot",
   "item.bmbc.red_phosphorus": "Red Phosphorus",
   "item.bmbc.scandium": "Scandium",
   "item.bmbc.silicon_crystal": "Silicon Crystal",
@@ -114,9 +121,14 @@
   "bmbc.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "bmbc.tooltip.liquid.amount": "%s mB",
 
+  "fluid_type.bmbc.acetone_fluid": "Acetone",
+  "fluid_type.bmbc.bisphenol": "Bisphenol",
+  "fluid_type.bmbc.chlorine_gas": "Chlorine Gas",
+  "fluid_type.bmbc.hydrochloric_acid": "Hydrochloric Acid",
   "fluid_type.bmbc.helium_fluid": "Liquid Helium",
   "fluid_type.bmbc.nitrogen_fluid": "Liquid Nitrogen",
   "fluid_type.bmbc.oxygen_fluid": "Liquid Oxygen",
+  "fluid_type.bmbc.propane_gas": "Propane Gas",
   "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide",
 
   "item.bmbc.rod_template": "Rod Template",
@@ -136,8 +148,9 @@
   "item.bmbc.pp_plastic": "PP Plastic",
   "item.bmbc.ps_plastic": "PS Plastic",
 
-  "item.bmbc.copper_wire": "Copper Wire",
   "item.bmbc.copper_coil": "Copper Cable",
+  "item.bmbc.copper_foil": "Copper Foil",
+  "item.bmbc.copper_wire": "Copper Wire",
   "item.bmbc.electric_motor": "Electric Motor",
   "item.bmbc.iron_rod": "Iron Rod",
   "item.bmbc.magnetic_iron_rod": "Magnetic Iron Rod",

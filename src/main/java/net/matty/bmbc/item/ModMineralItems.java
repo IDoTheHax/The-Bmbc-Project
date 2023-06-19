@@ -80,10 +80,14 @@ public class ModMineralItems {
             () -> new MineralWithToolTipItem(new Item.Properties()
                     ,"Chem. Formula: ", "K"));
 
+    public static final RegistryObject<Item> PURE_SILICON = ITEMS.register("pure_silicon_ingot",
+            () -> new MineralWithToolTipItem(new Item.Properties()
+                    ,"Chem. Formula: ", "Si"));
+
     // Raw Cobalt
     public static final RegistryObject<Item> RAW_COBALT = ITEMS.register("raw_cobalt",
             () -> new MineralWithToolTipItem(new Item.Properties()
-                    ,"Chem. Formula: ", "Co"));
+                    ,"Chem. Formula: ", "Si"));
 
     // Scandium
     public static final RegistryObject<Item> SCANDIUM = ITEMS.register("scandium",

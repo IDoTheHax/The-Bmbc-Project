@@ -22,6 +22,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ExtruderBlockEntity::new,
                             ModBlocks.EXTRUDER.get()).build(null));
 
+    //public static final RegistryObject<BlockEntityType<ErlenmeyerFlaskBlockEntity>> ERLENMEYER_FLASK =
+    //        BLOCK_ENTITIES.register("erlenmeyer_flask", () ->
+    //                BlockEntityType.Builder.of(ErlenmeyerFlaskBlockEntity::new,
+    //                        ModBlocks.ERLENMEYER_FLASK.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<MaceratorBlockEntity>> MACERATOR =
             BLOCK_ENTITIES.register("macerator", () ->
                     BlockEntityType.Builder.of(MaceratorBlockEntity::new,

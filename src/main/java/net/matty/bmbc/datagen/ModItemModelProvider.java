@@ -41,9 +41,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModChemicalCompounds.SILICA);
 
         // Fluids
+        simpleItem(ModItems.ACETONE_BUCKET);
+        simpleItem(ModItems.BISPHENOL_BUCKET);
+        simpleItem(ModItems.CHLORINE_BUCKET);
+        simpleItem(ModItems.HYDROCHLORIC_ACID_BUCKET);
         simpleItem(ModItems.LIQUID_HELIUM_BUCKET);
         simpleItem(ModItems.LIQUID_NITROGEN_BUCKET);
         simpleItem(ModItems.LIQUID_OXYGEN_BUCKET);
+        simpleItem(ModItems.PHENOL_BUCKET);
+        simpleItem(ModItems.PROPANE_BUCKET);
         simpleItem(ModItems.SEWAGE_WATER_BUCKET);
         simpleItem(ModItems.SODIUM_HYDROXIDE_BUCKET);
 
@@ -79,6 +85,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMineralItems.MANGANESE);
         simpleItem(ModMineralItems.PEGMATITE);
         simpleItem(ModMineralItems.PHOSPHORITE);
+        simpleItem(ModMineralItems.PURE_SILICON);
         simpleItem(ModMineralItems.POTASSIUM);
         simpleItem(ModMineralItems.RAW_COBALT);
         simpleItem(ModMineralItems.RAW_SILVER);
@@ -111,8 +118,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.LDPE_PLASTIC);
 
         // Machine components
-        simpleItem(ModMachineComponents.COPPER_WIRE);
         simpleItem(ModMachineComponents.COPPER_COIL);
+        simpleItem(ModMachineComponents.COPPER_FOIL);
+        simpleItem(ModMachineComponents.COPPER_WIRE);
         simpleItem(ModMachineComponents.ELECTRIC_MOTOR);
         simpleItem(ModMachineComponents.IRON_ROD);
         simpleItem(ModMachineComponents.MAGNETIC_IRON_ROD);

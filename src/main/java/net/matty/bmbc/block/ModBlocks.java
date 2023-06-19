@@ -36,6 +36,10 @@ public class ModBlocks {
             () -> new ExtruderBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
+    public static final RegistryObject<Block> FLASK = registerBlock("flask",
+            () -> new FlaskBlock(BlockBehaviour.Properties.of(Material.GLASS)
+                    .strength(2f).requiresCorrectToolForDrops().noOcclusion()));
+
     public static final RegistryObject<Block> GARBAGE_BLOCK = registerBlock("garbage_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES)
                     .strength(3f).explosionResistance(3f).sound(ModSounds.GARBAGE_BLOCK_SOUNDS).noOcclusion()));
