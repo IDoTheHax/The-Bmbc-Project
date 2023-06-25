@@ -6,13 +6,17 @@ import net.matty.bmbc.item.custom.BatteryItem;
 import net.matty.bmbc.item.custom.C4Detonator;
 import net.matty.bmbc.item.custom.EightBallItem;
 import net.matty.bmbc.item.custom.tooltips.BucketItemWithToolTip;
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -118,8 +122,7 @@ public class ModItems {
     public static final RegistryObject<Item> HDPE_PLASTIC = ITEMS.register("hdpe_plastic",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> PVC_PLASTIC = ITEMS.register("pvc_plastic",
-            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PVC_PLASTIC = ITEMS.register("pvc_plastic", () -> new Item(new Item.Properties()){@Override public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {components.add(Component.literal("Chem. Formula: ").withStyle(ChatFormatting.RED).append(Component.literal("(C2H3Cl)n").withStyle(ChatFormatting.BLUE)));super.appendHoverText(stack, level, components, flag);}});
 
     public static final RegistryObject<Item> LDPE_PLASTIC = ITEMS.register("ldpe_plastic",
             () -> new Item(new Item.Properties()));
