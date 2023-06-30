@@ -19,26 +19,26 @@ public class BMBC_Main extends BetterMineBetterCraft {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     // https://www.angelo.edu/faculty/kboudrea/periodic/physical_states.htm
-    public static final Element HYDROGEN = ElementRegister.registerElement(new ResourceLocation(MODID, "hydrogen"), -259.14, -252.87);
-    public static final Element HELIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "helium"), -272.2, -268.934);
-    public static final Element LITHIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "lithium"), 180.54, 1347);
-    public static final Element BERYLLIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "beryllium"), 1278, 2970);
-    public static final Element BORON = ElementRegister.registerElement(new ResourceLocation(MODID, "boron"), 2300, 3658);
-    public static final Element CARBON = ElementRegister.registerElement(new ResourceLocation(MODID, "carbon"), 3527, 4827);
-    public static final Element NITROGEN = ElementRegister.registerElement(new ResourceLocation(MODID, "nitrogen"), -209.86, -195.8);
-    public static final Element OXYGEN = ElementRegister.registerElement(new ResourceLocation(MODID, "oxygen"), -218.4, -182.96);
-    public static final Element FLUORINE = ElementRegister.registerElement(new ResourceLocation(MODID, "fluorine"), -219.62, -118.14);
-    public static final Element NEON = ElementRegister.registerElement(new ResourceLocation(MODID, "neon"), -248.67, -246.05);
-    public static final Element SODIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "sodium"), 97.81, 882.9);
-    public static final Element MAGNESIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "magnesium"), 648.8, 1090);
-    public static final Element ALUMINUM = ElementRegister.registerElement(new ResourceLocation(MODID, "aluminum"), 660.37, 2467);
-    public static final Element SILICON = ElementRegister.registerElement(new ResourceLocation(MODID, "silicon"), 1410, 2355);
-    public static final Element PHOSPHORUS = ElementRegister.registerElement(new ResourceLocation(MODID, "phosphorus"), 44.1, 280);
-    public static final Element SULFUR = ElementRegister.registerElement(new ResourceLocation(MODID, "sulfur"), 130, 444.67);
-    public static final Element CHLORINE = ElementRegister.registerElement(new ResourceLocation(MODID, "chlorine"), -100.98, -33.97);
-    public static final Element ARGON = ElementRegister.registerElement(new ResourceLocation(MODID, "argon"), -189.37, -185.86);
-    public static final Element POTASSIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "potassium"), 63.65, 774);
-    public static final Element CALCIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "calcium"), 839, 1484);
+    public static final Element HYDROGEN = ElementRegister.registerElement(new ResourceLocation(MODID, "hydrogen"), "H", -259.14, -252.87);
+    public static final Element HELIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "helium"), "He", -272.2, -268.934);
+    public static final Element LITHIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "lithium"), "Li", 180.54, 1347);
+    public static final Element BERYLLIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "beryllium"), "Be", 1278, 2970);
+    public static final Element BORON = ElementRegister.registerElement(new ResourceLocation(MODID, "boron"), "B", 2300, 3658);
+    public static final Element CARBON = ElementRegister.registerElement(new ResourceLocation(MODID, "carbon"), "C", 3527, 4827);
+    public static final Element NITROGEN = ElementRegister.registerElement(new ResourceLocation(MODID, "nitrogen"), "N", -209.86, -195.8);
+    public static final Element OXYGEN = ElementRegister.registerElement(new ResourceLocation(MODID, "oxygen"), "O", -218.4, -182.96);
+    public static final Element FLUORINE = ElementRegister.registerElement(new ResourceLocation(MODID, "fluorine"), "F", -219.62, -118.14);
+    public static final Element NEON = ElementRegister.registerElement(new ResourceLocation(MODID, "neon"), "Ne", -248.67, -246.05);
+    public static final Element SODIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "sodium"), "Na", 97.81, 882.9);
+    public static final Element MAGNESIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "magnesium"), "Mg", 648.8, 1090);
+    public static final Element ALUMINUM = ElementRegister.registerElement(new ResourceLocation(MODID, "aluminum"), "Al", 660.37, 2467);
+    public static final Element SILICON = ElementRegister.registerElement(new ResourceLocation(MODID, "silicon"), "Si", 1410, 2355);
+    public static final Element PHOSPHORUS = ElementRegister.registerElement(new ResourceLocation(MODID, "phosphorus"), "P", 44.1, 280);
+    public static final Element SULFUR = ElementRegister.registerElement(new ResourceLocation(MODID, "sulfur"), "S", 130, 444.67);
+    public static final Element CHLORINE = ElementRegister.registerElement(new ResourceLocation(MODID, "chlorine"), "Cl", -100.98, -33.97);
+    public static final Element ARGON = ElementRegister.registerElement(new ResourceLocation(MODID, "argon"), "Ar", -189.37, -185.86);
+    public static final Element POTASSIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "potassium"), "K", 63.65, 774);
+    public static final Element CALCIUM = ElementRegister.registerElement(new ResourceLocation(MODID, "calcium"), "Ca", 839, 1484);
 
     public static final RegistryObject<Item> CONTAINED_HYDROGEN = ITEMS.register("contained_hydrogen", () -> new CompoundItem(new Item.Properties(), HYDROGEN));
     public static final RegistryObject<Item> CONTAINED_HELIUM = ITEMS.register("contained_helium", () -> new CompoundItem(new Item.Properties(), HELIUM));

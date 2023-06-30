@@ -5,20 +5,26 @@ import net.minecraft.resources.ResourceLocation;
 
 public class Element {
     private final TranslatableContents name;
+    private final String atomicName;
     private final double meltingPoint;
     private final double boilingPoint;
 
     /**
      * @apiNote Temperature in Celsius
      */
-    public Element(ResourceLocation name, double meltingPoint, double boilingPoint) {
+    public Element(ResourceLocation name, String atomicSymbol, double meltingPoint, double boilingPoint) {
         this.name = new TranslatableContents("element."+name.getNamespace()+"."+name.getPath(), name.getPath(), TranslatableContents.NO_ARGS);
+        this.atomicName = atomicSymbol;
         this.meltingPoint = meltingPoint;
         this.boilingPoint = boilingPoint;
     }
 
     public String getName() {
         return name.getKey();
+    }
+
+    public String getAtomicName() {
+        return atomicName;
     }
 
     public ElementState getState(float temperature) {
