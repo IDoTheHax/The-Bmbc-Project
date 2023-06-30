@@ -1,6 +1,7 @@
 package net.matty.bmbc;
 
 import com.mojang.logging.LogUtils;
+import gg.hipposgrumm.bmbc.BMBC_Main;
 import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.block.ModFluidBlocks;
 import net.matty.bmbc.block.entity.ModBlockEntities;
@@ -58,6 +59,8 @@ public class BetterMineBetterCraft {
         ModSounds.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        new BMBC_Main(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
