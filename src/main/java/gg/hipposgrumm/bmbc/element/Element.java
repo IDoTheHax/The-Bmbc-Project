@@ -4,27 +4,49 @@ import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.ResourceLocation;
 
 public class Element {
-    private final TranslatableContents name;
-    private final String atomicName;
+    private final Element.Data data;
     private final double meltingPoint;
     private final double boilingPoint;
 
     /**
      * @apiNote Temperature in Celsius
      */
-    public Element(ResourceLocation name, String atomicSymbol, double meltingPoint, double boilingPoint) {
-        this.name = new TranslatableContents("element."+name.getNamespace()+"."+name.getPath(), name.getPath(), TranslatableContents.NO_ARGS);
-        this.atomicName = atomicSymbol;
+    public Element(Element.Data data, double meltingPoint, double boilingPoint) {
+        this.data = data;
         this.meltingPoint = meltingPoint;
         this.boilingPoint = boilingPoint;
     }
 
-    public String getName() {
-        return name.getKey();
+    public static class Data {
+        private final ResourceLocation id;
+        private final String symbol;
+        private final int number;
+        public Data(ResourceLocation id, String atomicSymbol, int atomicNumber) {
+            this.id = id;
+            this.symbol = atomicSymbol;
+            this.number = atomicNumber;
+        }
+
+        public ResourceLocation getId() {
+            return this.id;
+        }
+
+        public String getSymbol() {
+            return this.symbol;
+        }
+
+        public int getNumber() {
+            return this.number;
+        }
+
     }
 
-    public String getAtomicName() {
-        return atomicName;
+    public Element.Data getData() {
+        return data;
+    }
+
+    public String getName() {
+        return new TranslatableContents("element."+ data.id.getNamespace()+"."+ data.id.getPath(), data.id.getPath(), TranslatableContents.NO_ARGS).getKey();
     }
 
     public ElementState getState(float temperature) {
