@@ -55,14 +55,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SODIUM_HYDROXIDE_BUCKET);
 
         // Gases
-        simpleItem(BMBC_Main.COMPRESSED_HYDROGEN);
-        simpleItem(BMBC_Main.COMPRESSED_HELIUM);
-        simpleItem(BMBC_Main.COMPRESSED_NITROGEN);
-        simpleItem(BMBC_Main.COMPRESSED_OXYGEN);
-        simpleItem(BMBC_Main.COMPRESSED_FLUORINE);
-        simpleItem(BMBC_Main.COMPRESSED_NEON);
-        simpleItem(BMBC_Main.COMPRESSED_CHLORINE);
-        simpleItem(BMBC_Main.COMPRESSED_ARGON);
 
         // Foods
         simpleItem(ModFoodItems.COFFEE_BEANS);
@@ -109,21 +101,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         //simpleItem(ModMineralItems.TITANIUM);
         //simpleItem(ModMineralItems.VANADIUM);
 
-        simpleItem(BMBC_Main.LITHIUM_INGOT);
-        simpleItem(BMBC_Main.BERYLLIUM_INGOT);
-        simpleItem(BMBC_Main.BORON_INGOT);
-        simpleItem(BMBC_Main.CARBON_INGOT);
-        simpleItem(BMBC_Main.SODIUM_INGOT);
-        simpleItem(BMBC_Main.MAGNESIUM_INGOT);
-        simpleItem(BMBC_Main.ALUMINIUM_INGOT);
-        simpleItem(BMBC_Main.SILICON_CRYSTAL);
-        simpleItem(BMBC_Main.WHITE_PHOSPHORUS);
-        simpleItem(BMBC_Main.RED_PHOSPHORUS );
-        simpleItem(BMBC_Main.BLACK_PHOSPHORUS);
-        simpleItem(BMBC_Main.SULFUR_CRYSTAL);
-        simpleItem(BMBC_Main.POTASSIUM_INGOT);
-        simpleItem(BMBC_Main.CALCIUM_ROCK);
-
         // Radiation
         simpleItem(ModItems.NBC_FABRIC);
 
@@ -148,6 +125,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMachineComponents.EPOXY_CIRCUIT_BOARD);
         simpleItem(ModMachineComponents.IRON_ROD);
         simpleItem(ModMachineComponents.MAGNETIC_IRON_ROD);
+
+        for (RegistryObject<Item> itemToModel:BMBC_Main.doDatagen()) simpleItem(itemToModel);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
