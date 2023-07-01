@@ -30,8 +30,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
 
-        nineBlockStorageRecipes(consumer, RecipeCategory.MISC, ModMineralItems.SILVER.get(), RecipeCategory.MISC,
-                ModBlocks.SILVER_BLOCK.get());
+        //nineBlockStorageRecipes(consumer, RecipeCategory.MISC, ModMineralItems.SILVER.get(), RecipeCategory.MISC,
+        //        ModBlocks.SILVER_BLOCK.get());
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MAPLE_PLANKS.get())
                 .requires(ModBlocks.MAPLE_LOG.get())

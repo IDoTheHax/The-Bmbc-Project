@@ -70,41 +70,41 @@ public class BetterMineBetterCraft {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == ModResourcesCreativeModeTab.BMBC_RESOURCES) {
-            event.accept(ModMineralItems.ALUMINIUM);
-            event.accept(ModMineralItems.BAUXITE);
-            event.accept(ModMineralItems.BERYLLIUM);
-            event.accept(ModMineralItems.BORON);
-            event.accept(ModMineralItems.CALCIUM);
-            event.accept(ModMineralItems.CHROMIUM);
-            event.accept(ModMineralItems.GERMANIUM);
-            event.accept(ModMineralItems.LITHIUM);
-            event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
-            event.accept(ModMineralItems.MAGNESIUM);
-            event.accept(ModMineralItems.MANGANESE);
-            event.accept(ModMineralItems.WHITE_PHOSPHORUS);
-            event.accept(ModMineralItems.RED_PHOSPHORUS);
-            event.accept(ModMineralItems.BLACK_PHOSPHORUS);
-            event.accept(ModMineralItems.POTASSIUM);
-            event.accept(ModMineralItems.PURE_SILICON);
-            event.accept(ModMineralItems.SCANDIUM);
-            event.accept(ModMineralItems.SILICON_CRYSTAL);
-            event.accept(ModMineralItems.SILVER);
-            event.accept(ModMineralItems.SODIUM);
-            event.accept(ModMineralItems.SOLID_OXYGEN);
-            event.accept(ModMineralItems.SULFUR_SOLID);
-            event.accept(ModMineralItems.SULFUR_POWDER);
-            event.accept(ModMineralItems.CARNALLITE);
-            event.accept(ModMineralItems.DOLOMITE);
-            event.accept(ModMineralItems.EVAPORITE);
-            event.accept(ModMineralItems.MAGNESITE);
-            event.accept(ModMineralItems.PEGMATITE);
-            event.accept(ModMineralItems.PHOSPHORITE);
-            event.accept(ModMineralItems.BAUXITE);
-            event.accept(ModMineralItems.RAW_COBALT);
-            event.accept(ModMineralItems.RAW_SILVER);
-            event.accept(ModMineralItems.TITANIUM);
-            event.accept(ModMineralItems.VANADIUM);
-            event.accept(ModMineralItems.CRUSHED_BAUXITE);
+            //event.accept(ModMineralItems.ALUMINIUM);
+            //event.accept(ModMineralItems.BAUXITE);
+            //event.accept(ModMineralItems.BERYLLIUM);
+            //event.accept(ModMineralItems.BORON);
+            //event.accept(ModMineralItems.CALCIUM);
+            //event.accept(ModMineralItems.CHROMIUM);
+            //event.accept(ModMineralItems.GERMANIUM);
+            //event.accept(ModMineralItems.LITHIUM);
+            //event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
+            //event.accept(ModMineralItems.MAGNESIUM);
+            //event.accept(ModMineralItems.MANGANESE);
+            //event.accept(ModMineralItems.WHITE_PHOSPHORUS);
+            //event.accept(ModMineralItems.RED_PHOSPHORUS);
+            //event.accept(ModMineralItems.BLACK_PHOSPHORUS);
+            //event.accept(ModMineralItems.POTASSIUM);
+            //event.accept(ModMineralItems.PURE_SILICON);
+            //event.accept(ModMineralItems.SCANDIUM);
+            //event.accept(ModMineralItems.SILICON_CRYSTAL);
+            //event.accept(ModMineralItems.SILVER);
+            //event.accept(ModMineralItems.SODIUM);
+            //event.accept(ModMineralItems.SOLID_OXYGEN);
+            //event.accept(ModMineralItems.SULFUR_SOLID);
+            //event.accept(ModMineralItems.SULFUR_POWDER);
+            //event.accept(ModMineralItems.CARNALLITE);
+            //event.accept(ModMineralItems.DOLOMITE);
+            //event.accept(ModMineralItems.EVAPORITE);
+            //event.accept(ModMineralItems.MAGNESITE);
+            //event.accept(ModMineralItems.PEGMATITE);
+            //event.accept(ModMineralItems.PHOSPHORITE);
+            //event.accept(ModMineralItems.BAUXITE);
+            //event.accept(ModMineralItems.RAW_COBALT);
+            //event.accept(ModMineralItems.RAW_SILVER);
+            //event.accept(ModMineralItems.TITANIUM);
+            //event.accept(ModMineralItems.VANADIUM);
+            //event.accept(ModMineralItems.CRUSHED_BAUXITE);
         }
         
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
@@ -155,6 +155,7 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.BLUE_PRINTER_FILAMENT);
             event.accept(ModItems.C4_DETONATOR);
             event.accept(ModItems.CABLE_ROLL);
+            event.accept(ModItems.COMPRESSED_CONTAINER);
             event.accept(ModItems.EIGHT_BALL);
             event.accept(ModItems.GREEN_PRINTER_FILAMENT);
             event.accept(ModItems.RED_PRINTER_FILAMENT);
@@ -186,7 +187,7 @@ public class BetterMineBetterCraft {
             event.accept(ModMachineComponents.COPPER_WIRE);
             event.accept(ModMachineComponents.ELECTRIC_MOTOR);
             event.accept(ModMachineComponents.IRON_ROD);
-            event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
+            //event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
             event.accept(ModMachineComponents.MAGNETIC_IRON_ROD);
 
         }
