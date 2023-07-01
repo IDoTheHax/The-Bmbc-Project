@@ -129,7 +129,7 @@ public class BMBC_Main {
     public static final RegistryObject<Item> CONTAINED_NEON = ITEMS.register("contained_neon", () -> new CompoundItem(new Item.Properties(), NEON));
     //public static final RegistryObject<Item> SODIUM_INGOT = ITEMS.register("sodium_ingot", () -> new CompoundItem(new Item.Properties(), SODIUM));
     //public static final RegistryObject<Item> MAGNESIUM_INGOT = ITEMS.register("magnesium_ingot", () -> new CompoundItem(new Item.Properties(), MAGNESIUM));
-    public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminium_ingot", () -> new CompoundItem(new Item.Properties(), ALUMINIUM));
+    //public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminium_ingot", () -> new CompoundItem(new Item.Properties(), ALUMINIUM));
     public static final RegistryObject<Item> SILICON_INGOT = ITEMS.register("silicon_ingot", () -> new CompoundItem(new Item.Properties(), SILICON));
     public static final RegistryObject<Item> PHOSPHORUS_INGOT = ITEMS.register("phosphorus_ingot", () -> new CompoundItem(new Item.Properties(), PHOSPHORUS));
     public static final RegistryObject<Item> SULFUR_INGOT = ITEMS.register("sulfur_ingot", () -> new CompoundItem(new Item.Properties(), SULFUR));
