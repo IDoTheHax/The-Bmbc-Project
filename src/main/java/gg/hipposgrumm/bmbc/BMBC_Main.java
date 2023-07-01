@@ -55,6 +55,7 @@ public class BMBC_Main {
     public static final Element GALLIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "gallium"), "Ga", 31), 29.78, 2403);
     public static final Element GERMANIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "germanium"), "Ge", 32), 937.4, 2830);
     public static final Element ARSENIC = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "arsenic"), "As", 33), 616, 817);
+    /*
     public static final Element SELENIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "selenium"), "Se", 34), 0000, 0000);
     public static final Element BROMINE = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "bromine"), "Br", 35), 0000, 0000);
     public static final Element KRYPTON = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "krypton"), "Kr", 36), 0000, 0000);
@@ -114,6 +115,7 @@ public class BMBC_Main {
     public static final Element THORIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "thorium"), "Th", 90), 0000, 0000);
     public static final Element PROTACTINIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "protactinium"), "Pa", 91), 0000, 0000);
     public static final Element URANIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "uranium"), "U", 92), 0000, 0000);
+    */
 
     public static final RegistryObject<Item> CONTAINED_HYDROGEN = ITEMS.register("contained_hydrogen", () -> new CompoundItem(new Item.Properties(), HYDROGEN));
     public static final RegistryObject<Item> CONTAINED_HELIUM = ITEMS.register("contained_helium", () -> new CompoundItem(new Item.Properties(), HELIUM));
