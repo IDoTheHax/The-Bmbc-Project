@@ -7,9 +7,7 @@ import gg.hipposgrumm.bmbc.items.CompoundItem;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -117,26 +115,31 @@ public class BMBC_Main {
     public static final Element URANIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "uranium"), "U", 92), 0000, 0000);
     */
 
-    public static final RegistryObject<Item> CONTAINED_HYDROGEN = ITEMS.register("contained_hydrogen", () -> new CompoundItem(new Item.Properties(), HYDROGEN));
-    public static final RegistryObject<Item> CONTAINED_HELIUM = ITEMS.register("contained_helium", () -> new CompoundItem(new Item.Properties(), HELIUM));
-    //public static final RegistryObject<Item> LITHIUM_INGOT = ITEMS.register("lithium_ingot", () -> new CompoundItem(new Item.Properties(), LITHIUM));
-    //public static final RegistryObject<Item> BERYLLIUM_INGOT = ITEMS.register("beryllium_ingot", () -> new CompoundItem(new Item.Properties(), BERYLLIUM));
-    //public static final RegistryObject<Item> BORON_INGOT = ITEMS.register("boron_ingot", () -> new CompoundItem(new Item.Properties(), BORON));
+    // Ingots
+    public static final RegistryObject<Item> LITHIUM_INGOT = ITEMS.register("lithium_ingot", () -> new CompoundItem(new Item.Properties(), LITHIUM));
+    public static final RegistryObject<Item> BERYLLIUM_INGOT = ITEMS.register("beryllium_ingot", () -> new CompoundItem(new Item.Properties(), BERYLLIUM));
+    public static final RegistryObject<Item> BORON_INGOT = ITEMS.register("boron_ingot", () -> new CompoundItem(new Item.Properties(), BORON));
     public static final RegistryObject<Item> CARBON_INGOT = ITEMS.register("carbon_ingot", () -> new CompoundItem(new Item.Properties(), CARBON));
-    public static final RegistryObject<Item> CONTAINED_NITROGEN = ITEMS.register("contained_nitrogen", () -> new CompoundItem(new Item.Properties(), NITROGEN));
-    public static final RegistryObject<Item> CONTAINED_OXYGEN = ITEMS.register("contained_oxygen", () -> new CompoundItem(new Item.Properties(), OXYGEN));
-    public static final RegistryObject<Item> CONTAINED_FLUORINE = ITEMS.register("contained_fluorine", () -> new CompoundItem(new Item.Properties(), FLUORINE));
-    public static final RegistryObject<Item> CONTAINED_NEON = ITEMS.register("contained_neon", () -> new CompoundItem(new Item.Properties(), NEON));
-    //public static final RegistryObject<Item> SODIUM_INGOT = ITEMS.register("sodium_ingot", () -> new CompoundItem(new Item.Properties(), SODIUM));
-    //public static final RegistryObject<Item> MAGNESIUM_INGOT = ITEMS.register("magnesium_ingot", () -> new CompoundItem(new Item.Properties(), MAGNESIUM));
-    //public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminium_ingot", () -> new CompoundItem(new Item.Properties(), ALUMINIUM));
-    public static final RegistryObject<Item> SILICON_INGOT = ITEMS.register("silicon_ingot", () -> new CompoundItem(new Item.Properties(), SILICON));
-    public static final RegistryObject<Item> PHOSPHORUS_INGOT = ITEMS.register("phosphorus_ingot", () -> new CompoundItem(new Item.Properties(), PHOSPHORUS));
-    public static final RegistryObject<Item> SULFUR_INGOT = ITEMS.register("sulfur_ingot", () -> new CompoundItem(new Item.Properties(), SULFUR));
-    public static final RegistryObject<Item> CONTAINED_CHLORINE = ITEMS.register("contained_chlorine", () -> new CompoundItem(new Item.Properties(), CHLORINE));
-    public static final RegistryObject<Item> CONTAINED_ARGON = ITEMS.register("contained_argon", () -> new CompoundItem(new Item.Properties(), ARGON));
-    //public static final RegistryObject<Item> POTASSIUM_INGOT = ITEMS.register("potassium_ingot", () -> new CompoundItem(new Item.Properties(), POTASSIUM));
-    public static final RegistryObject<Item> CALCIUM_INGOT = ITEMS.register("calcium_ingot", () -> new CompoundItem(new Item.Properties(), CALCIUM));
+    public static final RegistryObject<Item> SODIUM_INGOT = ITEMS.register("sodium_ingot", () -> new CompoundItem(new Item.Properties(), SODIUM));
+    public static final RegistryObject<Item> MAGNESIUM_INGOT = ITEMS.register("magnesium_ingot", () -> new CompoundItem(new Item.Properties(), MAGNESIUM));
+    public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminium_ingot", () -> new CompoundItem(new Item.Properties(), ALUMINIUM));
+    public static final RegistryObject<Item> SILICON_CRYSTAL = ITEMS.register("silicon_crystal", () -> new CompoundItem(new Item.Properties(), SILICON));
+    public static final RegistryObject<Item> WHITE_PHOSPHORUS = ITEMS.register("white_phosphorus", () -> new CompoundItem(new Item.Properties(), PHOSPHORUS));
+    public static final RegistryObject<Item> RED_PHOSPHORUS = ITEMS.register("red_phosphorus", () -> new CompoundItem(new Item.Properties(), PHOSPHORUS));
+    public static final RegistryObject<Item> BLACK_PHOSPHORUS = ITEMS.register("black_phosphorus", () -> new CompoundItem(new Item.Properties(), PHOSPHORUS));
+    public static final RegistryObject<Item> SULFUR_CRYSTAL = ITEMS.register("sulfur_crystal", () -> new CompoundItem(new Item.Properties(), SULFUR));
+    public static final RegistryObject<Item> POTASSIUM_INGOT = ITEMS.register("potassium_ingot", () -> new CompoundItem(new Item.Properties(), POTASSIUM));
+    public static final RegistryObject<Item> CALCIUM_ROCK = ITEMS.register("calcium_rock", () -> new CompoundItem(new Item.Properties(), CALCIUM));
+
+    // Gases
+    public static final RegistryObject<Item> COMPRESSED_HYDROGEN = ITEMS.register("compressed_hydrogen", () -> new CompoundItem(new Item.Properties(), HYDROGEN));
+    public static final RegistryObject<Item> COMPRESSED_HELIUM = ITEMS.register("compressed_helium", () -> new CompoundItem(new Item.Properties(), HELIUM));
+    public static final RegistryObject<Item> COMPRESSED_NITROGEN = ITEMS.register("compressed_nitrogen", () -> new CompoundItem(new Item.Properties(), NITROGEN));
+    public static final RegistryObject<Item> COMPRESSED_OXYGEN = ITEMS.register("compressed_oxygen", () -> new CompoundItem(new Item.Properties(), OXYGEN));
+    public static final RegistryObject<Item> COMPRESSED_FLUORINE = ITEMS.register("compressed_fluorine", () -> new CompoundItem(new Item.Properties(), FLUORINE));
+    public static final RegistryObject<Item> COMPRESSED_NEON = ITEMS.register("compressed_neon", () -> new CompoundItem(new Item.Properties(), NEON));
+    public static final RegistryObject<Item> COMPRESSED_CHLORINE = ITEMS.register("compressed_chlorine", () -> new CompoundItem(new Item.Properties(), CHLORINE));
+    public static final RegistryObject<Item> COMPRESSED_ARGON = ITEMS.register("compressed_argon", () -> new CompoundItem(new Item.Properties(), ARGON));
 
     public BMBC_Main(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

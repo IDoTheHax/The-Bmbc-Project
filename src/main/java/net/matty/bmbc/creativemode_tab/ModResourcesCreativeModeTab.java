@@ -1,7 +1,7 @@
 package net.matty.bmbc.creativemode_tab;
 
+import gg.hipposgrumm.bmbc.BMBC_Main;
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.matty.bmbc.item.ModMineralItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,6 +17,6 @@ public class ModResourcesCreativeModeTab {
     @SubscribeEvent
     public static void registerModResourcesCreativeModeTab(CreativeModeTabEvent.Register event) {
         BMBC_RESOURCES = event.registerCreativeModeTab(new ResourceLocation(BetterMineBetterCraft.MOD_ID, "ores_and_minerals"),
-                builder -> builder.icon(() -> new ItemStack(ModMineralItems.ALUMINIUM.get())).title(Component.literal("Ores and Minerals")));
+                builder -> builder.icon(() -> new ItemStack(BMBC_Main.ALUMINIUM_INGOT.get())).title(Component.literal("Ores and Minerals")));
     }
 }

@@ -13,11 +13,20 @@
   "item.bmbc.sewage_water_bucket": "Bucket of Sewage",
   "item.bmbc.sodium_hydroxide_bucket": "Sodium hydroxide",
 
+  "item.bmbc.compressed_hydrogen": "Compressed Hydrogen",
+  "item.bmbc.compressed_helium": "Compressed Helium",
+  "item.bmbc.compressed_nitrogen": "Compressed Nitrogen",
+  "item.bmbc.compressed_oxygen": "Compressed Oxygen",
+  "item.bmbc.compressed_fluorine": "Compressed Fluorine",
+  "item.bmbc.compressed_neon": "Compressed Neon",
+  "item.bmbc.compressed_chlorine": "Compressed Chlorine",
+  "item.bmbc.compressed_argon": "Compressed Argon",
+
   "item.bmbc.aluminium_ingot": "Aluminium Ingot",
   "item.bmbc.beryllium_ingot": "Beryllium Ingot",
   "item.bmbc.black_phosphorus": "Black Phosphorus",
   "item.bmbc.boron_ingot": "Boron Ingot",
-  "item.bmbc.calcium": "Calcium",
+  "item.bmbc.calcium_rock": "Calcium Rock",
   "item.bmbc.chromium": "Chromium",
   "item.bmbc.germanium": "Germanium",
   "item.bmbc.lithium_ingot": "Lithium Ingot",
@@ -130,6 +139,7 @@
   "fluid_type.bmbc.oxygen_fluid": "Liquid Oxygen",
   "fluid_type.bmbc.propane_gas": "Propane Gas",
   "fluid_type.bmbc.sodium_hydroxide_fluid": "Liquid Sodium hydroxide",
+
 
   "item.bmbc.rod_template": "Rod Template",
   "item.bmbc.screw_template": "Screw Template",

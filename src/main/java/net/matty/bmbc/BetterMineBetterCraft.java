@@ -105,8 +105,22 @@ public class BetterMineBetterCraft {
             //event.accept(ModMineralItems.TITANIUM);
             //event.accept(ModMineralItems.VANADIUM);
             //event.accept(ModMineralItems.CRUSHED_BAUXITE);
+
+            event.accept(BMBC_Main.LITHIUM_INGOT);
+            event.accept(BMBC_Main.BERYLLIUM_INGOT);
+            event.accept(BMBC_Main.BORON_INGOT);
+            event.accept(BMBC_Main.CARBON_INGOT);
+            event.accept(BMBC_Main.SODIUM_INGOT);
+            event.accept(BMBC_Main.MAGNESIUM_INGOT);
+            event.accept(BMBC_Main.ALUMINIUM_INGOT);
+            event.accept(BMBC_Main.SILICON_CRYSTAL);
+            event.accept(BMBC_Main.WHITE_PHOSPHORUS);
+            event.accept(BMBC_Main.RED_PHOSPHORUS);
+            event.accept(BMBC_Main.BLACK_PHOSPHORUS);
+            event.accept(BMBC_Main.SULFUR_CRYSTAL);
+            event.accept(BMBC_Main.POTASSIUM_INGOT);
+            event.accept(BMBC_Main.CALCIUM_ROCK);
         }
-        
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.SILVER_LAMP);
@@ -136,7 +150,6 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.SILICA_SAND);
 
         }
-
         if (event.getTab() == ModMachinesCreativeModeTab.BMBC_MACHINES) {
             //event.accept(ModBlocks.BIOMASS_GENERATOR);
             event.accept(ModBlocks.EXTRUDER);
@@ -144,18 +157,16 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.PRESSURE_VESSEL);
             event.accept(ModBlocks.THREE_D_PRINTER);
         }
-        
         if (event.getTab() == ModChemicalCompoundsCreativeModeTab.CHEMICAL_COMPOUNDS) {
             event.accept(ModChemicalCompounds.ALUMINA);
             event.accept(ModChemicalCompounds.SILICA);
         }
-
         if (event.getTab() == ModDefaultCreativeModeTab.BMBC) {
             event.accept(ModItems.BATTERY);
             event.accept(ModItems.BLUE_PRINTER_FILAMENT);
             event.accept(ModItems.C4_DETONATOR);
             event.accept(ModItems.CABLE_ROLL);
-            event.accept(ModItems.COMPRESSED_CONTAINER);
+            //event.accept(ModItems.COMPRESSED_CONTAINER);
             event.accept(ModItems.EIGHT_BALL);
             event.accept(ModItems.GREEN_PRINTER_FILAMENT);
             event.accept(ModItems.RED_PRINTER_FILAMENT);
@@ -191,12 +202,10 @@ public class BetterMineBetterCraft {
             event.accept(ModMachineComponents.MAGNETIC_IRON_ROD);
 
         }
-
         if (event.getTab() == ModFoodCreativeModTab.FOOD) {
             event.accept(ModFoodItems.COFFEE_CHERRY);
             event.accept(ModFoodItems.COFFEE_BEANS);
         }
-
         if (event.getTab() == ModFluidsCreativeModeTab.BMBC_FLUIDS) {
             event.accept(ModItems.ACETONE_BUCKET);
             event.accept(ModItems.BISPHENOL_BUCKET);
@@ -209,6 +218,16 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.PROPANE_BUCKET);
             event.accept(ModItems.SEWAGE_WATER_BUCKET);
             event.accept(ModItems.SODIUM_HYDROXIDE_BUCKET);
+
+            event.accept(BMBC_Main.COMPRESSED_HYDROGEN);
+            event.accept(BMBC_Main.COMPRESSED_HELIUM);
+            event.accept(BMBC_Main.COMPRESSED_NITROGEN);
+            event.accept(BMBC_Main.COMPRESSED_OXYGEN);
+            event.accept(BMBC_Main.COMPRESSED_FLUORINE);
+            event.accept(BMBC_Main.COMPRESSED_NEON);
+            event.accept(BMBC_Main.COMPRESSED_CHLORINE);
+            event.accept(BMBC_Main.COMPRESSED_ARGON);
+
         }
 
         //if (event.getTab() == ExplosivesCreativeModeTab.BMBC_EXPLOSIVES) {
