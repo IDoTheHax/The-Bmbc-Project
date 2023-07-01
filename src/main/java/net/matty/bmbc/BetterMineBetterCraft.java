@@ -105,21 +105,6 @@ public class BetterMineBetterCraft {
             //event.accept(ModMineralItems.TITANIUM);
             //event.accept(ModMineralItems.VANADIUM);
             //event.accept(ModMineralItems.CRUSHED_BAUXITE);
-
-            event.accept(BMBC_Main.LITHIUM_INGOT);
-            event.accept(BMBC_Main.BERYLLIUM_INGOT);
-            event.accept(BMBC_Main.BORON_INGOT);
-            event.accept(BMBC_Main.CARBON_INGOT);
-            event.accept(BMBC_Main.SODIUM_INGOT);
-            event.accept(BMBC_Main.MAGNESIUM_INGOT);
-            event.accept(BMBC_Main.ALUMINIUM_INGOT);
-            event.accept(BMBC_Main.SILICON_CRYSTAL);
-            event.accept(BMBC_Main.WHITE_PHOSPHORUS);
-            event.accept(BMBC_Main.RED_PHOSPHORUS);
-            event.accept(BMBC_Main.BLACK_PHOSPHORUS);
-            event.accept(BMBC_Main.SULFUR_CRYSTAL);
-            event.accept(BMBC_Main.POTASSIUM_INGOT);
-            event.accept(BMBC_Main.CALCIUM_ROCK);
         }
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
             event.accept(ModBlocks.SILVER_BLOCK);
@@ -218,15 +203,6 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.PROPANE_BUCKET);
             event.accept(ModItems.SEWAGE_WATER_BUCKET);
             event.accept(ModItems.SODIUM_HYDROXIDE_BUCKET);
-
-            event.accept(BMBC_Main.COMPRESSED_HYDROGEN);
-            event.accept(BMBC_Main.COMPRESSED_HELIUM);
-            event.accept(BMBC_Main.COMPRESSED_NITROGEN);
-            event.accept(BMBC_Main.COMPRESSED_OXYGEN);
-            event.accept(BMBC_Main.COMPRESSED_FLUORINE);
-            event.accept(BMBC_Main.COMPRESSED_NEON);
-            event.accept(BMBC_Main.COMPRESSED_CHLORINE);
-            event.accept(BMBC_Main.COMPRESSED_ARGON);
 
         }
 
