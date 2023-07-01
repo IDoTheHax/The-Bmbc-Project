@@ -49,18 +49,26 @@ public class Element {
         return new TranslatableContents("element."+ data.id.getNamespace()+"."+ data.id.getPath(), data.id.getPath(), TranslatableContents.NO_ARGS).getKey();
     }
 
-    public ElementState getState(float temperature) {
+    public enum State {
+        UNKNOWN,
+        SOLID,
+        LIQUID,
+        GAS,
+        PLASMA
+    }
+
+    public State getState(float temperature) {
         if (temperature >= meltingPoint) {
             if (temperature >= boilingPoint) {
-                if (temperature > 150000000) return ElementState.PLASMA;
-                return ElementState.GAS;
+                if (temperature > 150000000) return State.PLASMA;
+                return State.GAS;
             } else {
-                return ElementState.SOLID;
+                return State.SOLID;
             }
         } else if (temperature < meltingPoint) {
-            return ElementState.LIQUID;
+            return State.LIQUID;
         } else {
-            return ElementState.UNKNOWN;
+            return State.UNKNOWN;
         }
     }
 }
