@@ -5,11 +5,8 @@ import gg.hipposgrumm.bmbc.element.Element;
 import gg.hipposgrumm.bmbc.element.ElementRegister;
 import gg.hipposgrumm.bmbc.items.CompoundItem;
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.creativemode_tab.*;
-import net.matty.bmbc.item.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -168,6 +165,7 @@ public class BMBC_Main {
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", () -> new CompoundItem(new Item.Properties(), TIN));
     public static final RegistryObject<Item> ANTIMONY_INGOT = ITEMS.register("antimony_ingot", () -> new CompoundItem(new Item.Properties(), ANTIMONY));
     public static final RegistryObject<Item> TELLURIUM_INGOT = ITEMS.register("tellurium_ingot", () -> new CompoundItem(new Item.Properties(), TELLURIUM));
+    public static final RegistryObject<Item> IODINE_INGOT = ITEMS.register("iodine_ingot", () -> new CompoundItem(new Item.Properties(), IODINE));
     public static final RegistryObject<Item> CESIUM_INGOT = ITEMS.register("cesium_ingot", () -> new CompoundItem(new Item.Properties(), CESIUM));
     public static final RegistryObject<Item> BARIUM_INGOT = ITEMS.register("barium_ingot", () -> new CompoundItem(new Item.Properties(), BARIUM));
     public static final RegistryObject<Item> LANTHANUM_INGOT = ITEMS.register("lanthanum_ingot", () -> new CompoundItem(new Item.Properties(), LANTHANUM));
@@ -206,6 +204,7 @@ public class BMBC_Main {
     public static final RegistryObject<Item> URANIUM_INGOT = ITEMS.register("uranium_ingot", () -> new CompoundItem(new Item.Properties(), URANIUM));
 
     // Liquid
+    public static final RegistryObject<Item> BROMINE_CANISTER = ITEMS.register("bromine_canister", () -> new CompoundItem(new Item.Properties(), BROMINE));
     public static final RegistryObject<Item> MERCURY_CANISTER = ITEMS.register("mercury_canister", () -> new CompoundItem(new Item.Properties(), MERCURY));
 
     // Gases
@@ -217,6 +216,9 @@ public class BMBC_Main {
     public static final RegistryObject<Item> COMPRESSED_NEON = ITEMS.register("compressed_neon", () -> new CompoundItem(new Item.Properties(), NEON));
     public static final RegistryObject<Item> COMPRESSED_CHLORINE = ITEMS.register("compressed_chlorine", () -> new CompoundItem(new Item.Properties(), CHLORINE));
     public static final RegistryObject<Item> COMPRESSED_ARGON = ITEMS.register("compressed_argon", () -> new CompoundItem(new Item.Properties(), ARGON));
+    public static final RegistryObject<Item> COMPRESSED_KRYPTON = ITEMS.register("compressed_krypton", () -> new CompoundItem(new Item.Properties(), KRYPTON));
+    public static final RegistryObject<Item> COMPRESSED_XENON = ITEMS.register("compressed_xenon", () -> new CompoundItem(new Item.Properties(), XENON));
+    public static final RegistryObject<Item> COMPRESSED_RADON = ITEMS.register("compressed_radon", () -> new CompoundItem(new Item.Properties(), RADON));
 
     public BMBC_Main(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
@@ -225,13 +227,99 @@ public class BMBC_Main {
     public static List<RegistryObject<Item>> doDatagen() {
         return new ArrayList<>() {{
             add(LITHIUM_INGOT);
+            add(BERYLLIUM_INGOT);
+            add(BORON_INGOT);
+            add(CARBON_INGOT);
+            add(SODIUM_INGOT);
+            add(MAGNESIUM_INGOT);
+            add(ALUMINIUM_INGOT);
+            add(SILICON_CRYSTAL);
+            add(WHITE_PHOSPHORUS);
+            add(RED_PHOSPHORUS);
+            add(BLACK_PHOSPHORUS);
+            add(SULFUR_CRYSTAL);
+            add(POTASSIUM_INGOT);
+            add(CALCIUM_ROCK);
+            add(SCANDIUM_INGOT);
+            add(TITANIUM_INGOT);
+            add(VANADIUM_INGOT);
+            add(CHROMIUM_INGOT);
+            add(MANGANESE_INGOT);
+            add(IRON_INGOT);
+            add(COBALT_INGOT);
+            add(NICKEL_INGOT);
+            add(COPPER_INGOT);
+            add(ZINC_INGOT);
+            add(GALLIUM_INGOT);
+            add(GERMANIUM_INGOT);
+            add(ARSENIC_INGOT);
+            add(SELENIUM_INGOT);
+            add(BROMINE_CANISTER);
+            add(COMPRESSED_KRYPTON);
+            add(RUBIDIUM_INGOT);
+            add(STRONTIUM_INGOT);
+            add(YTTRIUM_INGOT);
+            add(ZIRCONIUM_INGOT);
+            add(NIOBIUM_INGOT);
+            add(MOLYBDENUM_INGOT);
+            add(TECHNETIUM_INGOT);
+            add(RUTHENIUM_INGOT);
+            add(RHODIUM_INGOT);
+            add(PALLADIUM_INGOT);
+            add(SILVER_INGOT);
+            add(CADMIUM_INGOT);
+            add(INDIUM_INGOT);
+            add(TIN_INGOT);
+            add(ANTIMONY_INGOT);
+            add(TELLURIUM_INGOT);
+            add(IODINE_INGOT);
+            add(COMPRESSED_XENON);
+            add(CESIUM_INGOT);
+            add(BARIUM_INGOT);
+            add(LANTHANUM_INGOT);
+            add(CERIUM_INGOT);
+            add(PRASEODYMIUM_INGOT);
+            add(NEODYMIUM_INGOT);
+            add(PROMETHIUM_INGOT);
+            add(SAMARIUM_INGOT);
+            add(EUROPIUM_INGOT);
+            add(GADOLINIUM_INGOT);
+            add(TERBIUM_INGOT);
+            add(DYSPROSIUM_INGOT);
+            add(HOLMIUM_INGOT);
+            add(ERBIUM_INGOT);
+            add(THULIUM_INGOT);
+            add(YTTERBIUM_INGOT);
+            add(LUTETIUM_INGOT);
+            add(HAFNIUM_INGOT);
+            add(TANTALUM_INGOT);
+            add(TUNGSTEN_INGOT);
+            add(RHENIUM_INGOT);
+            add(OSMIUM_INGOT);
+            add(IRIDIUM_INGOT);
+            add(PLATINUM_INGOT);
+            add(GOLD_INGOT);
+            add(MERCURY_CANISTER);
+            add(THALLIUM_INGOT);
+            add(LEAD_INGOT);
+            add(BISMUTH_INGOT);
+            add(POLONIUM_INGOT);
+            add(ASTATINE_INGOT);
+            add(COMPRESSED_RADON);
+            add(FRANCIUM_INGOT);
+            add(RADIUM_INGOT);
+            add(ACTINIUM_INGOT);
+            add(THORIUM_INGOT);
+            add(PROTACTINIUM_INGOT);
+            add(URANIUM_INGOT);
+
         }};
     }
 
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ModEvents {
         @SubscribeEvent
-        private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        public static void addCreative(CreativeModeTabEvent.BuildContents event) {
             if (event.getTab() == ModResourcesCreativeModeTab.BMBC_RESOURCES) {
                 // Solid
                 event.accept(LITHIUM_INGOT);
@@ -248,9 +336,77 @@ public class BMBC_Main {
                 event.accept(SULFUR_CRYSTAL);
                 event.accept(POTASSIUM_INGOT);
                 event.accept(CALCIUM_ROCK);
+                event.accept(SCANDIUM_INGOT);
+                event.accept(TITANIUM_INGOT);
+                event.accept(VANADIUM_INGOT);
+                event.accept(CHROMIUM_INGOT);
+                event.accept(MANGANESE_INGOT);
+                event.accept(IRON_INGOT);
+                event.accept(COBALT_INGOT);
+                event.accept(NICKEL_INGOT);
+                event.accept(COPPER_INGOT);
+                event.accept(ZINC_INGOT);
+                event.accept(GALLIUM_INGOT);
+                event.accept(GERMANIUM_INGOT);
+                event.accept(ARSENIC_INGOT);
+                event.accept(SELENIUM_INGOT);
+                event.accept(RUBIDIUM_INGOT);
+                event.accept(STRONTIUM_INGOT);
+                event.accept(YTTRIUM_INGOT);
+                event.accept(ZIRCONIUM_INGOT);
+                event.accept(NIOBIUM_INGOT);
+                event.accept(MOLYBDENUM_INGOT);
+                event.accept(TECHNETIUM_INGOT);
+                event.accept(RUTHENIUM_INGOT);
+                event.accept(RHODIUM_INGOT);
+                event.accept(PALLADIUM_INGOT);
+                event.accept(SILVER_INGOT);
+                event.accept(CADMIUM_INGOT);
+                event.accept(INDIUM_INGOT);
+                event.accept(TIN_INGOT);
+                event.accept(ANTIMONY_INGOT);
+                event.accept(TELLURIUM_INGOT);
+                event.accept(IODINE_INGOT);
+                event.accept(CESIUM_INGOT);
+                event.accept(BARIUM_INGOT);
+                event.accept(LANTHANUM_INGOT);
+                event.accept(CERIUM_INGOT);
+                event.accept(PRASEODYMIUM_INGOT);
+                event.accept(NEODYMIUM_INGOT);
+                event.accept(PROMETHIUM_INGOT);
+                event.accept(SAMARIUM_INGOT);
+                event.accept(EUROPIUM_INGOT);
+                event.accept(GADOLINIUM_INGOT);
+                event.accept(TERBIUM_INGOT);
+                event.accept(DYSPROSIUM_INGOT);
+                event.accept(HOLMIUM_INGOT);
+                event.accept(ERBIUM_INGOT);
+                event.accept(THULIUM_INGOT);
+                event.accept(YTTERBIUM_INGOT);
+                event.accept(LUTETIUM_INGOT);
+                event.accept(HAFNIUM_INGOT);
+                event.accept(TANTALUM_INGOT);
+                event.accept(TUNGSTEN_INGOT);
+                event.accept(RHENIUM_INGOT);
+                event.accept(OSMIUM_INGOT);
+                event.accept(IRIDIUM_INGOT);
+                event.accept(PLATINUM_INGOT);
+                event.accept(GOLD_INGOT);
+                event.accept(THALLIUM_INGOT);
+                event.accept(LEAD_INGOT);
+                event.accept(BISMUTH_INGOT);
+                event.accept(POLONIUM_INGOT);
+                event.accept(ASTATINE_INGOT);
+                event.accept(FRANCIUM_INGOT);
+                event.accept(RADIUM_INGOT);
+                event.accept(ACTINIUM_INGOT);
+                event.accept(THORIUM_INGOT);
+                event.accept(PROTACTINIUM_INGOT);
+                event.accept(URANIUM_INGOT);
             }
             if (event.getTab() == ModFluidsCreativeModeTab.BMBC_FLUIDS) {
                 // Liquid
+                event.accept(BROMINE_CANISTER);
                 event.accept(MERCURY_CANISTER);
 
                 // Gas
@@ -262,7 +418,9 @@ public class BMBC_Main {
                 event.accept(COMPRESSED_NEON);
                 event.accept(COMPRESSED_CHLORINE);
                 event.accept(COMPRESSED_ARGON);
-
+                event.accept(COMPRESSED_KRYPTON);
+                event.accept(COMPRESSED_XENON);
+                event.accept(COMPRESSED_RADON);
             }
         }
     }
