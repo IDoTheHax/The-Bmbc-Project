@@ -121,10 +121,16 @@ public class BMBC_Main {
     public static final Element URANIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "uranium"), "U", 92), 1132.3, 3745);
 
     // Solid
+     public static final RegistryObject<Item> HYDROGEN_INGOT = ITEMS.register("hydrogen_ingot", () -> new CompoundItem(new Item.Properties(), HYDROGEN));
+     public static final RegistryObject<Item> HELIUM_INGOT = ITEMS.register("helium_ingot", () -> new CompoundItem(new Item.Properties(), HELIUM));
     public static final RegistryObject<Item> LITHIUM_INGOT = ITEMS.register("lithium_ingot", () -> new CompoundItem(new Item.Properties(), LITHIUM));
     public static final RegistryObject<Item> BERYLLIUM_INGOT = ITEMS.register("beryllium_ingot", () -> new CompoundItem(new Item.Properties(), BERYLLIUM));
     public static final RegistryObject<Item> BORON_INGOT = ITEMS.register("boron_ingot", () -> new CompoundItem(new Item.Properties(), BORON));
     public static final RegistryObject<Item> CARBON_INGOT = ITEMS.register("carbon_ingot", () -> new CompoundItem(new Item.Properties(), CARBON));
+     public static final RegistryObject<Item> NITROGEN_INGOT = ITEMS.register("nitrogen_ingot", () -> new CompoundItem(new Item.Properties(), NITROGEN));
+     public static final RegistryObject<Item> OXYGEN_INGOT = ITEMS.register("oxygen_ingot", () -> new CompoundItem(new Item.Properties(), OXYGEN));
+     public static final RegistryObject<Item> FLUORINE_INGOT = ITEMS.register("fluorine_ingot", () -> new CompoundItem(new Item.Properties(), FLUORINE));
+     public static final RegistryObject<Item> NEON_INGOT = ITEMS.register("neon_ingot", () -> new CompoundItem(new Item.Properties(), NEON));
     public static final RegistryObject<Item> SODIUM_INGOT = ITEMS.register("sodium_ingot", () -> new CompoundItem(new Item.Properties(), SODIUM));
     public static final RegistryObject<Item> MAGNESIUM_INGOT = ITEMS.register("magnesium_ingot", () -> new CompoundItem(new Item.Properties(), MAGNESIUM));
     public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register("aluminium_ingot", () -> new CompoundItem(new Item.Properties(), ALUMINIUM));
@@ -133,6 +139,8 @@ public class BMBC_Main {
     public static final RegistryObject<Item> RED_PHOSPHORUS = ITEMS.register("red_phosphorus", () -> new CompoundItem(new Item.Properties(), PHOSPHORUS));
     public static final RegistryObject<Item> BLACK_PHOSPHORUS = ITEMS.register("black_phosphorus", () -> new CompoundItem(new Item.Properties(), PHOSPHORUS));
     public static final RegistryObject<Item> SULFUR_CRYSTAL = ITEMS.register("sulfur_crystal", () -> new CompoundItem(new Item.Properties(), SULFUR));
+     public static final RegistryObject<Item> CHLORINE_INGOT = ITEMS.register("chlorine_ingot", () -> new CompoundItem(new Item.Properties(), CHLORINE));
+     public static final RegistryObject<Item> ARGON_INGOT = ITEMS.register("argon_ingot", () -> new CompoundItem(new Item.Properties(), ARGON));
     public static final RegistryObject<Item> POTASSIUM_INGOT = ITEMS.register("potassium_ingot", () -> new CompoundItem(new Item.Properties(), POTASSIUM));
     public static final RegistryObject<Item> CALCIUM_ROCK = ITEMS.register("calcium_rock", () -> new CompoundItem(new Item.Properties(), CALCIUM));
     public static final RegistryObject<Item> SCANDIUM_INGOT = ITEMS.register("scandium_ingot", () -> new CompoundItem(new Item.Properties(), SCANDIUM));
@@ -149,6 +157,8 @@ public class BMBC_Main {
     public static final RegistryObject<Item> GERMANIUM_INGOT = ITEMS.register("germanium_ingot", () -> new CompoundItem(new Item.Properties(), GERMANIUM));
     public static final RegistryObject<Item> ARSENIC_INGOT = ITEMS.register("arsenic_ingot", () -> new CompoundItem(new Item.Properties(), ARSENIC));
     public static final RegistryObject<Item> SELENIUM_INGOT = ITEMS.register("selenium_ingot", () -> new CompoundItem(new Item.Properties(), SELENIUM));
+     public static final RegistryObject<Item> BROMINE_INGOT = ITEMS.register("bromine_ingot", () -> new CompoundItem(new Item.Properties(), BROMINE));
+     public static final RegistryObject<Item> KRYPTON_INGOT = ITEMS.register("krypton_ingot", () -> new CompoundItem(new Item.Properties(), KRYPTON));
     public static final RegistryObject<Item> RUBIDIUM_INGOT = ITEMS.register("rubidium_ingot", () -> new CompoundItem(new Item.Properties(), RUBIDIUM));
     public static final RegistryObject<Item> STRONTIUM_INGOT = ITEMS.register("strontium_ingot", () -> new CompoundItem(new Item.Properties(), STRONTIUM));
     public static final RegistryObject<Item> YTTRIUM_INGOT = ITEMS.register("yttrium_ingot", () -> new CompoundItem(new Item.Properties(), YTTRIUM));
@@ -166,6 +176,7 @@ public class BMBC_Main {
     public static final RegistryObject<Item> ANTIMONY_INGOT = ITEMS.register("antimony_ingot", () -> new CompoundItem(new Item.Properties(), ANTIMONY));
     public static final RegistryObject<Item> TELLURIUM_INGOT = ITEMS.register("tellurium_ingot", () -> new CompoundItem(new Item.Properties(), TELLURIUM));
     public static final RegistryObject<Item> IODINE_INGOT = ITEMS.register("iodine_ingot", () -> new CompoundItem(new Item.Properties(), IODINE));
+     public static final RegistryObject<Item> XENON_INGOT = ITEMS.register("xenon_ingot", () -> new CompoundItem(new Item.Properties(), XENON));
     public static final RegistryObject<Item> CESIUM_INGOT = ITEMS.register("cesium_ingot", () -> new CompoundItem(new Item.Properties(), CESIUM));
     public static final RegistryObject<Item> BARIUM_INGOT = ITEMS.register("barium_ingot", () -> new CompoundItem(new Item.Properties(), BARIUM));
     public static final RegistryObject<Item> LANTHANUM_INGOT = ITEMS.register("lanthanum_ingot", () -> new CompoundItem(new Item.Properties(), LANTHANUM));
@@ -196,6 +207,7 @@ public class BMBC_Main {
     public static final RegistryObject<Item> BISMUTH_INGOT = ITEMS.register("bismuth_ingot", () -> new CompoundItem(new Item.Properties(), BISMUTH));
     public static final RegistryObject<Item> POLONIUM_INGOT = ITEMS.register("polonium_ingot", () -> new CompoundItem(new Item.Properties(), POLONIUM));
     public static final RegistryObject<Item> ASTATINE_INGOT = ITEMS.register("astatine_ingot", () -> new CompoundItem(new Item.Properties(), ASTATINE));
+     public static final RegistryObject<Item> RADON_INGOT = ITEMS.register("radon_ingot", () -> new CompoundItem(new Item.Properties(), RADON));
     public static final RegistryObject<Item> FRANCIUM_INGOT = ITEMS.register("francium_ingot", () -> new CompoundItem(new Item.Properties(), FRANCIUM));
     public static final RegistryObject<Item> RADIUM_INGOT = ITEMS.register("radium_ingot", () -> new CompoundItem(new Item.Properties(), RADIUM));
     public static final RegistryObject<Item> ACTINIUM_INGOT = ITEMS.register("actinium_ingot", () -> new CompoundItem(new Item.Properties(), ACTINIUM));
@@ -226,10 +238,17 @@ public class BMBC_Main {
 
     public static List<RegistryObject<Item>> doDatagen() {
         return new ArrayList<>() {{
+            // Solid
+            add(HYDROGEN_INGOT);
+            add(HELIUM_INGOT);
             add(LITHIUM_INGOT);
             add(BERYLLIUM_INGOT);
             add(BORON_INGOT);
             add(CARBON_INGOT);
+            add(NITROGEN_INGOT);
+            add(OXYGEN_INGOT);
+            add(FLUORINE_INGOT);
+            add(NEON_INGOT);
             add(SODIUM_INGOT);
             add(MAGNESIUM_INGOT);
             add(ALUMINIUM_INGOT);
@@ -238,6 +257,8 @@ public class BMBC_Main {
             add(RED_PHOSPHORUS);
             add(BLACK_PHOSPHORUS);
             add(SULFUR_CRYSTAL);
+            add(CHLORINE_INGOT);
+            add(ARGON_INGOT);
             add(POTASSIUM_INGOT);
             add(CALCIUM_ROCK);
             add(SCANDIUM_INGOT);
@@ -254,8 +275,8 @@ public class BMBC_Main {
             add(GERMANIUM_INGOT);
             add(ARSENIC_INGOT);
             add(SELENIUM_INGOT);
-            add(BROMINE_CANISTER);
-            add(COMPRESSED_KRYPTON);
+            add(BROMINE_INGOT);
+            add(KRYPTON_INGOT);
             add(RUBIDIUM_INGOT);
             add(STRONTIUM_INGOT);
             add(YTTRIUM_INGOT);
@@ -273,7 +294,7 @@ public class BMBC_Main {
             add(ANTIMONY_INGOT);
             add(TELLURIUM_INGOT);
             add(IODINE_INGOT);
-            add(COMPRESSED_XENON);
+            add(XENON_INGOT);
             add(CESIUM_INGOT);
             add(BARIUM_INGOT);
             add(LANTHANUM_INGOT);
@@ -305,7 +326,7 @@ public class BMBC_Main {
             add(BISMUTH_INGOT);
             add(POLONIUM_INGOT);
             add(ASTATINE_INGOT);
-            add(COMPRESSED_RADON);
+            add(RADON_INGOT);
             add(FRANCIUM_INGOT);
             add(RADIUM_INGOT);
             add(ACTINIUM_INGOT);
@@ -313,6 +334,22 @@ public class BMBC_Main {
             add(PROTACTINIUM_INGOT);
             add(URANIUM_INGOT);
 
+            // Liquid
+            add(BROMINE_CANISTER);
+            add(MERCURY_CANISTER);
+
+            // Gas
+            add(COMPRESSED_HYDROGEN);
+            add(COMPRESSED_HELIUM);
+            add(COMPRESSED_NITROGEN);
+            add(COMPRESSED_OXYGEN);
+            add(COMPRESSED_FLUORINE);
+            add(COMPRESSED_NEON);
+            add(COMPRESSED_CHLORINE);
+            add(COMPRESSED_ARGON);
+            add(COMPRESSED_KRYPTON);
+            add(COMPRESSED_XENON);
+            add(COMPRESSED_RADON);
         }};
     }
 
@@ -322,10 +359,16 @@ public class BMBC_Main {
         public static void addCreative(CreativeModeTabEvent.BuildContents event) {
             if (event.getTab() == ModResourcesCreativeModeTab.BMBC_RESOURCES) {
                 // Solid
+                event.accept(HYDROGEN_INGOT);
+                event.accept(HELIUM_INGOT);
                 event.accept(LITHIUM_INGOT);
                 event.accept(BERYLLIUM_INGOT);
                 event.accept(BORON_INGOT);
                 event.accept(CARBON_INGOT);
+                event.accept(NITROGEN_INGOT);
+                event.accept(OXYGEN_INGOT);
+                event.accept(FLUORINE_INGOT);
+                event.accept(NEON_INGOT);
                 event.accept(SODIUM_INGOT);
                 event.accept(MAGNESIUM_INGOT);
                 event.accept(ALUMINIUM_INGOT);
@@ -334,6 +377,8 @@ public class BMBC_Main {
                 event.accept(RED_PHOSPHORUS);
                 event.accept(BLACK_PHOSPHORUS);
                 event.accept(SULFUR_CRYSTAL);
+                event.accept(CHLORINE_INGOT);
+                event.accept(ARGON_INGOT);
                 event.accept(POTASSIUM_INGOT);
                 event.accept(CALCIUM_ROCK);
                 event.accept(SCANDIUM_INGOT);
@@ -350,6 +395,8 @@ public class BMBC_Main {
                 event.accept(GERMANIUM_INGOT);
                 event.accept(ARSENIC_INGOT);
                 event.accept(SELENIUM_INGOT);
+                event.accept(BROMINE_INGOT);
+                event.accept(KRYPTON_INGOT);
                 event.accept(RUBIDIUM_INGOT);
                 event.accept(STRONTIUM_INGOT);
                 event.accept(YTTRIUM_INGOT);
@@ -367,6 +414,7 @@ public class BMBC_Main {
                 event.accept(ANTIMONY_INGOT);
                 event.accept(TELLURIUM_INGOT);
                 event.accept(IODINE_INGOT);
+                event.accept(XENON_INGOT);
                 event.accept(CESIUM_INGOT);
                 event.accept(BARIUM_INGOT);
                 event.accept(LANTHANUM_INGOT);
@@ -391,12 +439,14 @@ public class BMBC_Main {
                 event.accept(OSMIUM_INGOT);
                 event.accept(IRIDIUM_INGOT);
                 event.accept(PLATINUM_INGOT);
-                // event.accept(GOLD_INGOT);
+                //event.accept(GOLD_INGOT);
+                event.accept(MERCURY_CANISTER);
                 event.accept(THALLIUM_INGOT);
                 event.accept(LEAD_INGOT);
                 event.accept(BISMUTH_INGOT);
                 event.accept(POLONIUM_INGOT);
                 event.accept(ASTATINE_INGOT);
+                event.accept(RADON_INGOT);
                 event.accept(FRANCIUM_INGOT);
                 event.accept(RADIUM_INGOT);
                 event.accept(ACTINIUM_INGOT);
