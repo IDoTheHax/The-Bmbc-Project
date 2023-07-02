@@ -101,6 +101,26 @@ public class ModItemModelProvider extends ItemModelProvider {
         //simpleItem(ModMineralItems.TITANIUM);
         //simpleItem(ModMineralItems.VANADIUM);
 
+        simpleItem(BMBC_Main.LITHIUM_INGOT);
+        simpleItem(BMBC_Main.BERYLLIUM_INGOT);
+        simpleItem(BMBC_Main.BORON_INGOT);
+        simpleItem(BMBC_Main.CARBON_INGOT);
+        simpleItem(BMBC_Main.SODIUM_INGOT);
+        simpleItem(BMBC_Main.MAGNESIUM_INGOT);
+        simpleItem(BMBC_Main.ALUMINIUM_INGOT);
+        simpleItem(BMBC_Main.SILICON_CRYSTAL);
+        simpleItem(BMBC_Main.WHITE_PHOSPHORUS);
+        simpleItem(BMBC_Main.RED_PHOSPHORUS );
+        simpleItem(BMBC_Main.BLACK_PHOSPHORUS);
+        simpleItem(BMBC_Main.SULFUR_CRYSTAL);
+        simpleItem(BMBC_Main.POTASSIUM_INGOT);
+        simpleItem(BMBC_Main.CALCIUM_ROCK);
+        simpleItem(BMBC_Main.SCANDIUM_INGOT);
+        simpleItem(BMBC_Main.TITANIUM_INGOT);
+        simpleItem(BMBC_Main.VANADIUM_INGOT);
+        simpleItem(BMBC_Main.CHROMIUM_CRYSTAL);
+        simpleItem(BMBC_Main.MANGANESE_INGOT);
+
         // Radiation
         simpleItem(ModItems.NBC_FABRIC);
 
