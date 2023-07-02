@@ -160,5 +160,7 @@
   "item.bmbc.iron_rod": "Iron Rod",
   "item.bmbc.magnetic_iron_rod": "Magnetic Iron Rod",
 
-  "sounds.bmbc.plastic_crush": "Plastic Crush"
+  "sounds.bmbc.plastic_crush": "Plastic Crush",
+
+  "container.bmbc.alloy_furnace": "Alloy Furnace"
 }
