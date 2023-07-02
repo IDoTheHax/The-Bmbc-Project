@@ -140,10 +140,10 @@ public class BMBC_Main {
     public static final RegistryObject<Item> VANADIUM_INGOT = ITEMS.register("vanadium_ingot", () -> new CompoundItem(new Item.Properties(), VANADIUM));
     public static final RegistryObject<Item> CHROMIUM_CRYSTAL = ITEMS.register("chromium_crystal", () -> new CompoundItem(new Item.Properties(), CHROMIUM));
     public static final RegistryObject<Item> MANGANESE_INGOT = ITEMS.register("manganese_ingot", () -> new CompoundItem(new Item.Properties(), MANGANESE));
-    // public static final RegistryObject<Item> IRON_INGOT = ITEMS.register("iron_ingot", () -> new CompoundItem(new Item.Properties(), IRON)); // ...Why do we need another iron ingot
+    // public static final RegistryObject<Item> IRON_INGOT = ITEMS.register("iron_ingot", () -> new CompoundItem(new Item.Properties(), IRON));
     public static final RegistryObject<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot", () -> new CompoundItem(new Item.Properties(), COBALT));
     public static final RegistryObject<Item> NICKEL_INGOT = ITEMS.register("nickel_ingot", () -> new CompoundItem(new Item.Properties(), NICKEL));
-    // public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", () -> new CompoundItem(new Item.Properties(), COPPER)); same thing here
+    // public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", () -> new CompoundItem(new Item.Properties(), COPPER));
     public static final RegistryObject<Item> ZINC_INGOT = ITEMS.register("zinc_ingot", () -> new CompoundItem(new Item.Properties(), ZINC));
     public static final RegistryObject<Item> GALLIUM_INGOT = ITEMS.register("gallium_ingot", () -> new CompoundItem(new Item.Properties(), GALLIUM));
     public static final RegistryObject<Item> GERMANIUM_INGOT = ITEMS.register("germanium_ingot", () -> new CompoundItem(new Item.Properties(), GERMANIUM));
@@ -190,7 +190,7 @@ public class BMBC_Main {
     public static final RegistryObject<Item> OSMIUM_INGOT = ITEMS.register("osmium_ingot", () -> new CompoundItem(new Item.Properties(), OSMIUM));
     public static final RegistryObject<Item> IRIDIUM_INGOT = ITEMS.register("iridium_ingot", () -> new CompoundItem(new Item.Properties(), IRIDIUM));
     public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot", () -> new CompoundItem(new Item.Properties(), PLATINUM));
-    // public static final RegistryObject<Item> GOLD_INGOT = ITEMS.register("gold_ingot", () -> new CompoundItem(new Item.Properties(), GOLD)); and here
+    // public static final RegistryObject<Item> GOLD_INGOT = ITEMS.register("gold_ingot", () -> new CompoundItem(new Item.Properties(), GOLD));
     public static final RegistryObject<Item> THALLIUM_INGOT = ITEMS.register("thallium_ingot", () -> new CompoundItem(new Item.Properties(), THALLIUM));
     public static final RegistryObject<Item> LEAD_INGOT = ITEMS.register("lead_ingot", () -> new CompoundItem(new Item.Properties(), LEAD));
     public static final RegistryObject<Item> BISMUTH_INGOT = ITEMS.register("bismuth_ingot", () -> new CompoundItem(new Item.Properties(), BISMUTH));
@@ -245,10 +245,10 @@ public class BMBC_Main {
             add(VANADIUM_INGOT);
             add(CHROMIUM_CRYSTAL);
             add(MANGANESE_INGOT);
-            //add(IRON_INGOT); and here
+            //add(IRON_INGOT);
             add(COBALT_INGOT);
             add(NICKEL_INGOT);
-            //add(COPPER_INGOT); and here
+            //add(COPPER_INGOT);
             add(ZINC_INGOT);
             add(GALLIUM_INGOT);
             add(GERMANIUM_INGOT);
@@ -341,7 +341,7 @@ public class BMBC_Main {
                 event.accept(VANADIUM_INGOT);
                 event.accept(CHROMIUM_CRYSTAL);
                 event.accept(MANGANESE_INGOT);
-                //event.accept(IRON_INGOT); and here we might consider removing it you know
+                //event.accept(IRON_INGOT);
                 event.accept(COBALT_INGOT);
                 event.accept(NICKEL_INGOT);
                 //event.accept(COPPER_INGOT);
@@ -391,7 +391,7 @@ public class BMBC_Main {
                 event.accept(OSMIUM_INGOT);
                 event.accept(IRIDIUM_INGOT);
                 event.accept(PLATINUM_INGOT);
-                // event.accept(GOLD_INGOT); and here
+                // event.accept(GOLD_INGOT);
                 event.accept(THALLIUM_INGOT);
                 event.accept(LEAD_INGOT);
                 event.accept(BISMUTH_INGOT);
