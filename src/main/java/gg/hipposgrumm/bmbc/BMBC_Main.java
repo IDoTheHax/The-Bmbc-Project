@@ -1,13 +1,26 @@
 package gg.hipposgrumm.bmbc;
 
 import com.mojang.logging.LogUtils;
+import gg.hipposgrumm.bmbc.blocks.AlloyFurnaceBlock;
+import gg.hipposgrumm.bmbc.blocks.AlloyFurnaceBlockEntity;
 import gg.hipposgrumm.bmbc.element.Element;
 import gg.hipposgrumm.bmbc.element.ElementRegister;
+import gg.hipposgrumm.bmbc.gui.AlloyFurnaceMenu;
 import gg.hipposgrumm.bmbc.items.CompoundItem;
+import gg.hipposgrumm.bmbc.recipes.AlloySmeltingRecipe;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.creativemode_tab.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.TorchBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,7 +37,11 @@ public class BMBC_Main {
     public static final String MODID = BetterMineBetterCraft.MOD_ID;
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    public static final DeferredRegister<MenuType<?>> MENU_TYPES = DeferredRegister.create(ForgeRegistries.MENU_TYPES, MODID);
+    public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, MODID);
 
     // https://www.angelo.edu/faculty/kboudrea/periodic/physical_states.htm
     public static final Element HYDROGEN = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "hydrogen"), "H", 1), -259.14, -252.87);
@@ -119,6 +136,8 @@ public class BMBC_Main {
     public static final Element THORIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "thorium"), "Th", 90), 1750, 4787);
     public static final Element PROTACTINIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "protactinium"), "Pa", 91), 1840, 4027);
     public static final Element URANIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "uranium"), "U", 92), 1132.3, 3745);
+
+    public static final RegistryObject<Block> ALLOY_FURNACE = BLOCKS.register("alloy_furnace", () -> new AlloyFurnaceBlock(BlockBehaviour.Properties.of(Material.METAL))); // TODO: Set this to the correct material later.
 
     // Solid
      public static final RegistryObject<Item> HYDROGEN_INGOT = ITEMS.register("hydrogen_ingot", () -> new CompoundItem(new Item.Properties(), HYDROGEN));
@@ -232,8 +251,16 @@ public class BMBC_Main {
     public static final RegistryObject<Item> COMPRESSED_XENON = ITEMS.register("compressed_xenon", () -> new CompoundItem(new Item.Properties(), XENON));
     public static final RegistryObject<Item> COMPRESSED_RADON = ITEMS.register("compressed_radon", () -> new CompoundItem(new Item.Properties(), RADON));
 
+    public static final RegistryObject<BlockEntityType<AlloyFurnaceBlockEntity>> ALLOY_FURNACE_BE = BLOCK_ENTITIES.register("alloy_furnace", () -> BlockEntityType.Builder.of(AlloyFurnaceBlockEntity::new, ALLOY_FURNACE.get()).build(null));
+
+    public static final RegistryObject<MenuType<AlloyFurnaceMenu>> ALLOY_FURNACE_MENU = MENU_TYPES.register("alloy_furnace_menu", () -> IForgeMenuType.create(AlloyFurnaceMenu::new));
+
+    public static final RegistryObject<RecipeSerializer<AlloySmeltingRecipe>> ALLOY_SMELTING_SERIALIZER = RECIPE_SERIALIZERS.register("alloy_smelting", () -> AlloySmeltingRecipe.Serializer.INSTANCE);
+
     public BMBC_Main(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
+        MENU_TYPES.register(modEventBus);
+        RECIPE_SERIALIZERS.register(modEventBus);
     }
 
     public static List<RegistryObject<Item>> doDatagen() {
