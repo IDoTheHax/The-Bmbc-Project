@@ -17,4 +17,8 @@ public class CompoundItem extends Item {
             compoundElements = List.of(ElementRegister.UNKNOWN);
         }
     }
+
+    public List<Element> getCompoundElements() {
+        return compoundElements;
+    }
 }

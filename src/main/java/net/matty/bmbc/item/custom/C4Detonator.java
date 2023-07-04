@@ -1,5 +1,8 @@
 package net.matty.bmbc.item.custom;
 
+import net.matty.bmbc.BetterMineBetterCraft;
+import net.matty.bmbc.block.ModBlocks;
+import net.matty.bmbc.block.custom.C4Block;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -17,14 +20,29 @@ import java.util.List;
 
 public class C4Detonator extends Item {
 
+    public static int RADIUS = 15;
+
     public C4Detonator(Properties properties) {
         super(properties);
     }
 
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, BlockPos pos, InteractionHand hand) {
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
             // Set a Cooldown
-            player.getCooldowns().addCooldown(this, 200);
+            //player.getCooldowns().addCooldown(this, 200);
+            BlockPos pos = player.blockPosition();
+            BetterMineBetterCraft.LOGGER.debug("Testing for c4");
+            for (int x = pos.getX()-RADIUS; x<pos.getX()+RADIUS; x++) {
+                for (int y = pos.getY()-RADIUS; y<pos.getY()+RADIUS; y++) {
+                    for (int z = pos.getZ()-RADIUS; z< pos.getZ()+RADIUS; z++) {
+                        if(player.getServer().overworld().getBlockState(new BlockPos(x, y, z)).getBlock() == ModBlocks.C4.get()){
+                            BetterMineBetterCraft.LOGGER.debug("Detonating C4 at "+x+" "+y+" "+z);
+                            C4Block.explode(player.getServer().overworld(), new BlockPos(x,y,z), player);
+                        }
+                    }
+                }
+            }
         }
 
         return super.use(level, player, hand);

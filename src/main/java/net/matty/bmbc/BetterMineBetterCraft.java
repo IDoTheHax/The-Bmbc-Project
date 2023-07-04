@@ -34,7 +34,7 @@ import org.slf4j.Logger;
 @Mod(BetterMineBetterCraft.MOD_ID)
 public class BetterMineBetterCraft {
     public static final String MOD_ID = "bmbc";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public BetterMineBetterCraft()
     {

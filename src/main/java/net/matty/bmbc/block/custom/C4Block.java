@@ -67,20 +67,22 @@ public class C4Block extends Block {
         explode(pLevel, pPos, (LivingEntity)null);
     }
 
-    private static void explode(Level pLevel, BlockPos pPos, @Nullable LivingEntity pEntity) {
+    public static void explode(Level pLevel, BlockPos pPos, @Nullable LivingEntity pEntity) {
         if (!pLevel.isClientSide) {
-            PrimedTnt primedtnt = new PrimedTnt(pLevel, (double)pPos.getX() + 0.5D, (double)pPos.getY(), (double)pPos.getZ() + 0.5D, pEntity);
+            /*PrimedTnt primedtnt = new PrimedTnt(pLevel, (double)pPos.getX() + 0.5D, (double)pPos.getY(), (double)pPos.getZ() + 0.5D, pEntity);
             pLevel.addFreshEntity(primedtnt);
             pLevel.playSound((Player)null, primedtnt.getX(), primedtnt.getY(), primedtnt.getZ(), SoundEvents.TNT_PRIMED, SoundSource.BLOCKS, 1.0F, 1.0F);
-            pLevel.gameEvent(pEntity, GameEvent.PRIME_FUSE, pPos);
+            pLevel.gameEvent(pEntity, GameEvent.PRIME_FUSE, pPos);*/
+            pLevel.explode(pEntity, pPos.getX(), pPos.getY(), pPos.getZ(), 4.0F, Level.ExplosionInteraction.BLOCK);
         }
     }
 
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    /*public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
         if (!itemstack.is(ModItems.C4_DETONATOR.get())) {
             return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
         } else {
+            explode(pLevel, pPos, pPlayer);
             pLevel.setBlock(pPos, Blocks.AIR.defaultBlockState(), 11);
             Item item = itemstack.getItem();
             //if (!pPlayer.isCreative()) {
@@ -96,7 +98,7 @@ public class C4Block extends Block {
             pPlayer.awardStat(Stats.ITEM_USED.get(item));
             return InteractionResult.sidedSuccess(pLevel.isClientSide);
         }
-    }
+    }*/
 
     public boolean dropFromExplosion(Explosion pExplosion) {
         return false;
