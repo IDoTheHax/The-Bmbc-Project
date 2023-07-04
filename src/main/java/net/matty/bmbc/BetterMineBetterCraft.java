@@ -70,7 +70,7 @@ public class BetterMineBetterCraft {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == ModResourcesCreativeModeTab.BMBC_RESOURCES) {
-            //event.accept(ModMineralItems.ALUMINIUM);
+
             //event.accept(ModMineralItems.BAUXITE);
             //event.accept(ModMineralItems.BERYLLIUM);
             //event.accept(ModMineralItems.BORON);
@@ -105,26 +105,6 @@ public class BetterMineBetterCraft {
             //event.accept(ModMineralItems.TITANIUM);
             //event.accept(ModMineralItems.VANADIUM);
             //event.accept(ModMineralItems.CRUSHED_BAUXITE);
-
-            event.accept(BMBC_Main.LITHIUM_INGOT);
-            event.accept(BMBC_Main.BERYLLIUM_INGOT);
-            event.accept(BMBC_Main.BORON_INGOT);
-            event.accept(BMBC_Main.CARBON_INGOT);
-            event.accept(BMBC_Main.SODIUM_INGOT);
-            event.accept(BMBC_Main.MAGNESIUM_INGOT);
-            event.accept(BMBC_Main.ALUMINIUM_INGOT);
-            event.accept(BMBC_Main.SILICON_CRYSTAL);
-            event.accept(BMBC_Main.WHITE_PHOSPHORUS);
-            event.accept(BMBC_Main.RED_PHOSPHORUS);
-            event.accept(BMBC_Main.BLACK_PHOSPHORUS);
-            event.accept(BMBC_Main.SULFUR_CRYSTAL);
-            event.accept(BMBC_Main.POTASSIUM_INGOT);
-            event.accept(BMBC_Main.CALCIUM_ROCK);
-            event.accept(BMBC_Main.SCANDIUM_INGOT);
-            event.accept(BMBC_Main.TITANIUM_INGOT);
-            event.accept(BMBC_Main.VANADIUM_INGOT);
-            event.accept(BMBC_Main.CHROMIUM_CRYSTAL);
-            event.accept(BMBC_Main.MANGANESE_INGOT);
 
         }
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
