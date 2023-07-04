@@ -4,21 +4,38 @@ import gg.hipposgrumm.bmbc.element.Element;
 import gg.hipposgrumm.bmbc.element.ElementRegister;
 import net.minecraft.world.item.Item;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CompoundItem extends Item {
-    private final List<Element> compoundElements;
-    public CompoundItem(Properties pProperties, Element... elements) {
+    private static Map<Item, Compound> compatibleItems = new HashMap<>();
+    private final Compound compound;
+
+    public CompoundItem(Properties pProperties, Compound compound) {
         super(pProperties);
-        if (elements.length>0) {
-            compoundElements = List.of(elements);
-        } else {
-            compoundElements = List.of(ElementRegister.UNKNOWN);
-        }
+        this.compound = compound;
+    }
+
+    public static void addCompatibleItem(Item item, Compound compound) {
+        compatibleItems.put(item, compound);
+    }
+
+    public Compound getCompound() {
+        return compound;
     }
 
     public List<Element> getCompoundElements() {
-        return compoundElements;
+        return compound.getElements();
+    }
+
+    public static List<Element> getCompoundElementsOf(Item item) {
+        if (item instanceof CompoundItem compoundItem) {
+            return compoundItem.getCompoundElements();
+        } else if (compatibleItems.getOrDefault(item, Compound.EMPTY) != Compound.EMPTY) {
+            return compatibleItems.getOrDefault(item, Compound.EMPTY).getElements();
+        } else {
+            return Compound.EMPTY.getElements();
+        }
     }
 }

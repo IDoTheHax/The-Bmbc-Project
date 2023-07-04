@@ -4,9 +4,7 @@ import com.mojang.logging.LogUtils;
 import gg.hipposgrumm.bmbc.BMBC_Main;
 import net.minecraft.resources.ResourceLocation;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ElementRegister {
