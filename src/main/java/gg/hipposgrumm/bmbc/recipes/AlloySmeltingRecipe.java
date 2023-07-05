@@ -1,9 +1,7 @@
 package gg.hipposgrumm.bmbc.recipes;
 
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonSyntaxException;
 import gg.hipposgrumm.bmbc.BMBC_Main;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
@@ -14,27 +12,26 @@ import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.List;
-
-public class AlloySmeltingRecipe implements Recipe<Container> {
+public class AlloySmeltingRecipe extends AbstractCookingRecipe {
     protected final ResourceLocation id;
-    protected final NonNullList<Ingredient> ingredient;
+    protected final NonNullList<Ingredient> ingredients;
     protected final ItemStack result;
     protected final float experience;
     protected final int cookingTime;
 
     public AlloySmeltingRecipe(ResourceLocation id, NonNullList<Ingredient> ingredients, ItemStack result, float experience, int cookingTime) {
+        super(Type.INSTANCE, id, id.getPath(), CookingBookCategory.MISC, ingredients.get(0), result, experience, cookingTime);
         this.id = id;
-        this.ingredient = ingredients;
+        this.ingredients = ingredients;
         this.result = result;
         this.experience = experience;
         this.cookingTime = cookingTime;
     }
 
+    @Override
     public boolean matches(Container inventory, Level level) {
-        return this.ingredient.get(0).test(inventory.getItem(0));
+        return this.ingredients.get(0).test(inventory.getItem(0));
     }
 
     public ItemStack assemble(Container container, RegistryAccess access) {
@@ -50,10 +47,9 @@ public class AlloySmeltingRecipe implements Recipe<Container> {
         return this.result;
     }
 
+    @Override
     public NonNullList<Ingredient> getIngredients() {
-        NonNullList<Ingredient> nonnulllist = NonNullList.create();
-        nonnulllist.addAll(this.ingredient);
-        return nonnulllist;
+        return this.ingredients;
     }
 
     public float getExperience() {

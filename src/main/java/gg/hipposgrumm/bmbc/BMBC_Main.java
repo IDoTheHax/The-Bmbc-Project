@@ -3,22 +3,28 @@ package gg.hipposgrumm.bmbc;
 import com.mojang.logging.LogUtils;
 import gg.hipposgrumm.bmbc.blocks.AlloyFurnaceBlock;
 import gg.hipposgrumm.bmbc.blocks.AlloyFurnaceBlockEntity;
+import gg.hipposgrumm.bmbc.blocks.AlloyFurnaceBlockEntityRenderer;
 import gg.hipposgrumm.bmbc.element.Element;
 import gg.hipposgrumm.bmbc.element.ElementRegister;
 import gg.hipposgrumm.bmbc.gui.AlloyFurnaceMenu;
+import gg.hipposgrumm.bmbc.gui.AlloyFurnaceScreen;
 import gg.hipposgrumm.bmbc.items.Compound;
 import gg.hipposgrumm.bmbc.items.CompoundItem;
 import gg.hipposgrumm.bmbc.recipes.AlloySmeltingRecipe;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.creativemode_tab.*;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -138,10 +144,7 @@ public class BMBC_Main {
     public static final Element PROTACTINIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "protactinium"), "Pa", 91), 1840, 4027);
     public static final Element URANIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(MODID, "uranium"), "U", 92), 1132.3, 3745);
 
-    public static final RegistryObject<Block> ALLOY_FURNACE = BLOCKS.register("alloy_furnace", () -> new AlloyFurnaceBlock(BlockBehaviour.Properties.of(Material.METAL))); // TODO: Set this to the correct material later.
-
     // All Generic Compounds
-
     // Solid
     public static final Compound HYDROGEN_COMPOUND = new Compound(HYDROGEN);
     public static final Compound HELIUM_COMPOUND = new Compound(HELIUM);
@@ -520,7 +523,9 @@ public class BMBC_Main {
     public static final RegistryObject<Item> COMPRESSED_PROTACTINIUM = ITEMS.register("compressed_protactinium", () -> new CompoundItem(new Item.Properties(), PROTACTINIUM_COMPOUND));
     public static final RegistryObject<Item> COMPRESSED_URANIUM = ITEMS.register("compressed_uranium", () -> new CompoundItem(new Item.Properties(), URANIUM_COMPOUND));
 
+    public static final RegistryObject<Block> ALLOY_FURNACE = BLOCKS.register("alloy_furnace", () -> new AlloyFurnaceBlock(BlockBehaviour.Properties.of(Material.METAL).lightLevel(b -> b.getValue(BlockStateProperties.LIT)?15:0))); // TODO: Set this to the correct material later.
     public static final RegistryObject<BlockEntityType<AlloyFurnaceBlockEntity>> ALLOY_FURNACE_BE = BLOCK_ENTITIES.register("alloy_furnace", () -> BlockEntityType.Builder.of(AlloyFurnaceBlockEntity::new, ALLOY_FURNACE.get()).build(null));
+    public static final RegistryObject<Item> ALLOY_FURNACE_ITEM = ITEMS.register("alloy_furnace", () -> new BlockItem(ALLOY_FURNACE.get(), new Item.Properties()));
 
     public static final RegistryObject<MenuType<AlloyFurnaceMenu>> ALLOY_FURNACE_MENU = MENU_TYPES.register("alloy_furnace_menu", () -> IForgeMenuType.create(AlloyFurnaceMenu::new));
 
@@ -823,6 +828,19 @@ public class BMBC_Main {
     }
 
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ClientEvents {
+        @SubscribeEvent
+        public static void doSetup(FMLClientSetupEvent event) {
+            MenuScreens.register(ALLOY_FURNACE_MENU.get(), AlloyFurnaceScreen::new);
+        }
+
+        @SubscribeEvent
+        public static void registerBlockRender(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ALLOY_FURNACE_BE.get(), AlloyFurnaceBlockEntityRenderer::new);
+        }
+    }
+
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ModEvents {
         @SubscribeEvent
         public static void doCompatStuff(FMLLoadCompleteEvent event) {
@@ -855,6 +873,9 @@ public class BMBC_Main {
 
         @SubscribeEvent
         public static void addCreative(CreativeModeTabEvent.BuildContents event) {
+            if (event.getTab() == ModMachinesCreativeModeTab.BMBC_MACHINES) {
+                event.accept(ALLOY_FURNACE_ITEM);
+            }
             if (event.getTab() == ModResourcesCreativeModeTab.BMBC_RESOURCES) {
                 // Solid
                 event.accept(HYDROGEN_INGOT);
