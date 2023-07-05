@@ -21,9 +21,9 @@ public class AlloyFurnaceScreen extends AbstractContainerScreen<AlloyFurnaceMenu
         int i = this.leftPos;
         int j = this.topPos;
         blit(poseStack, i, j, 0, 0, this.imageWidth, this.imageHeight);
-        //if (this.menu.isLit()) {
+        //if (this.menu..isLit()) {
         //    int k = this.menu.getLitProgress();
-        //    blit(pPoseStack, i + 56, j + 36 + 12 - k, 176, 12 - k, 14, k + 1);
+        //    blit(poseStack, i + 56, j + 36 + 12 - k, 176, 12 - k, 14, k + 1);
         //}
 
         //int l = this.menu.getBurnProgress();

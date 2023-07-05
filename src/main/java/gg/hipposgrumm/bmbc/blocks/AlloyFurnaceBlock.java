@@ -1,9 +1,11 @@
 package gg.hipposgrumm.bmbc.blocks;
 
+import com.mojang.logging.LogUtils;
 import gg.hipposgrumm.bmbc.BMBC_Main;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -19,6 +21,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraftforge.network.NetworkHooks;
 
 import javax.annotation.Nullable;
 
@@ -28,7 +31,7 @@ public class AlloyFurnaceBlock extends AbstractFurnaceBlock {
     }
 
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new FurnaceBlockEntity(pPos, pState);
+        return new AlloyFurnaceBlockEntity(pPos, pState);
     }
 
     @Nullable
@@ -39,10 +42,9 @@ public class AlloyFurnaceBlock extends AbstractFurnaceBlock {
     protected void openContainer(Level level, BlockPos pos, Player player) {
         BlockEntity blockentity = level.getBlockEntity(pos);
         if (blockentity instanceof AlloyFurnaceBlockEntity) {
-            player.openMenu((MenuProvider)blockentity);
+            NetworkHooks.openScreen((ServerPlayer)player, (MenuProvider)blockentity, pos);
             //player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
-
     }
 
     public void animateTick(BlockState state, Level pLevel, BlockPos pPos, RandomSource pRandom) {
