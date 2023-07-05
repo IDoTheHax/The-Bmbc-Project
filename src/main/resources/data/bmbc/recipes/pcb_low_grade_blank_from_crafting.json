@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bmbc:copper_foil"
+    },
+    {
+      "item": "bmbc:pc_plastic"
+    }
+  ],
+    "result": {
+        "item": "bmbc:pcb_low_grade_blank",
+        "count": 4
+    }
+}

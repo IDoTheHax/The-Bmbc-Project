@@ -1,8 +1,12 @@
 package gg.hipposgrumm.bmbc.items;
 
+import gg.hipposgrumm.bmbc.BMBC_Main;
 import gg.hipposgrumm.bmbc.element.Element;
 import gg.hipposgrumm.bmbc.element.ElementRegister;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +15,11 @@ import java.util.Map;
 public class CompoundItem extends Item {
     private static Map<Item, Compound> compatibleItems = new HashMap<>();
     private final Compound compound;
+
+    public CompoundItem(Properties pProperties, Element element){
+        super(pProperties);
+        this.compound = new Compound(element);
+    }
 
     public CompoundItem(Properties pProperties, Compound compound) {
         super(pProperties);
@@ -29,6 +38,15 @@ public class CompoundItem extends Item {
         return compound.getElements();
     }
 
+    @Override
+    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity){
+        new Thread(() -> {
+            if(((CompoundItem) stack.getItem()).compound.getElements().size()==1&&((CompoundItem) stack.getItem()).compound.getElements().get(0)==BMBC_Main.LITHIUM) {
+                if(entity.isInWater()) entity.getServer().overworld().explode(null, entity.getX(), entity.getY(), entity.getZ(), 2, true, Level.ExplosionInteraction.NONE);
+            }
+        }).start();
+        return super.onEntityItemUpdate(stack, entity);
+    }
     public static List<Element> getCompoundElementsOf(Item item) {
         if (item instanceof CompoundItem compoundItem) {
             return compoundItem.getCompoundElements();

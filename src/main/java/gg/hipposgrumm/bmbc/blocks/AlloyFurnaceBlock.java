@@ -1,5 +1,6 @@
 package gg.hipposgrumm.bmbc.blocks;
 
+import gg.hipposgrumm.bmbc.BMBC_Main;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -11,11 +12,13 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AbstractFurnaceBlock;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import javax.annotation.Nullable;
 
@@ -30,7 +33,7 @@ public class AlloyFurnaceBlock extends AbstractFurnaceBlock {
 
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState block, BlockEntityType<T> blockEntityType) {
-        return createFurnaceTicker(level, blockEntityType, BlockEntityType.FURNACE);
+        return createFurnaceTicker(level, blockEntityType, BMBC_Main.ALLOY_FURNACE_BE.get());
     }
 
     protected void openContainer(Level level, BlockPos pos, Player player) {
@@ -42,8 +45,8 @@ public class AlloyFurnaceBlock extends AbstractFurnaceBlock {
 
     }
 
-    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
-        if (pState.getValue(LIT)) {
+    public void animateTick(BlockState state, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+        if (state.getValue(BlockStateProperties.LIT)) {
             double d0 = pPos.getX() + 0.5D;
             double d1 = pPos.getY();
             double d2 = pPos.getZ() + 0.5D;
@@ -51,7 +54,7 @@ public class AlloyFurnaceBlock extends AbstractFurnaceBlock {
                 pLevel.playLocalSound(d0, d1, d2, SoundEvents.FURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
             }
 
-            Direction direction = pState.getValue(FACING);
+            Direction direction = state.getValue(BlockStateProperties.FACING);
             Direction.Axis direction$axis = direction.getAxis();
             double d3 = 0.52D;
             double d4 = pRandom.nextDouble() * 0.6D - 0.3D;

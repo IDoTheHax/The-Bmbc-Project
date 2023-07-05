@@ -136,6 +136,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PVC_PLASTIC);
         simpleItem(ModItems.HDPE_PLASTIC);
         simpleItem(ModItems.LDPE_PLASTIC);
+        simpleItem(ModItems.EPOXY_RESIN);
+        simpleItem(ModItems.PC_PLASTIC);
+
+        // Other materials
+        simpleItem(ModItems.FIBERGLASS);
+
+        // PCBs
+        simpleItem(ModItems.PCB_LOW_GRADE_BLANK);
+        simpleItem(ModItems.PCB_HIGH_GRADE_BLANK);
 
         // Machine components
         simpleItem(ModMachineComponents.COPPER_COIL);
