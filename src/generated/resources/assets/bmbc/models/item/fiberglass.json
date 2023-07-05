@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "bmbc:item/compressed_nitrogen"
+    "layer0": "bmbc:item/fiberglass"
   }
 }

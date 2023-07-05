@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "bmbc:item/compressed_chlorine"
+    "layer0": "bmbc:item/pcb_high_grade_blank"
   }
 }

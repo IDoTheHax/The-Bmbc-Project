@@ -165,6 +165,7 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.MAPLE_SAPLING);
             event.accept(ModItems.GARBAGE);
 
+            event.accept(ModItems.PC_PLASTIC);
             event.accept(ModItems.PET_PLASTIC);
             event.accept(ModItems.PP_PLASTIC);
             event.accept(ModItems.PS_PLASTIC);
@@ -184,8 +185,10 @@ public class BetterMineBetterCraft {
             event.accept(ModMachineComponents.COPPER_WIRE);
             event.accept(ModMachineComponents.ELECTRIC_MOTOR);
             event.accept(ModMachineComponents.IRON_ROD);
-            //event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
+            event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
             event.accept(ModMachineComponents.MAGNETIC_IRON_ROD);
+            event.accept(ModItems.PCB_HIGH_GRADE_BLANK);
+            event.accept(ModItems.PCB_LOW_GRADE_BLANK);
 
         }
         if (event.getTab() == ModFoodCreativeModTab.FOOD) {
@@ -196,6 +199,7 @@ public class BetterMineBetterCraft {
             event.accept(ModItems.ACETONE_BUCKET);
             event.accept(ModItems.BISPHENOL_BUCKET);
             event.accept(ModItems.CHLORINE_BUCKET);
+            event.accept(ModItems.EPOXY_RESIN_FLUID);
             event.accept(ModItems.HYDROCHLORIC_ACID_BUCKET);
             event.accept(ModItems.LIQUID_HELIUM_BUCKET);
             event.accept(ModItems.LIQUID_NITROGEN_BUCKET);

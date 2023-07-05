@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "bmbc:item/compressed_oxygen"
+    "layer0": "bmbc:item/pcb_low_grade_blank"
   }
 }

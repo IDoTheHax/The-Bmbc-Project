@@ -136,7 +136,7 @@ public class ModItems {
     public static final RegistryObject<Item> PS_PLASTIC = ITEMS.register("ps_plastic",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> EPOXY_RESIN = ITEMS.register("epoxy_resin",
+    public static final RegistryObject<Item> EPOXY_RESIN_FLUID = ITEMS.register("epoxy_resin_fluid",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> FIBERGLASS = ITEMS.register("fiberglass",

@@ -136,7 +136,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PVC_PLASTIC);
         simpleItem(ModItems.HDPE_PLASTIC);
         simpleItem(ModItems.LDPE_PLASTIC);
-        simpleItem(ModItems.EPOXY_RESIN);
+        simpleItem(ModItems.EPOXY_RESIN_FLUID);
         simpleItem(ModItems.PC_PLASTIC);
 
         // Other materials

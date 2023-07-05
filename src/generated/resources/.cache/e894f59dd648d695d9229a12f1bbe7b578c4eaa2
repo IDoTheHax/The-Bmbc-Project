@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-01T22:09:46.249553	Item Models: bmbc
+// 1.19.4	2023-07-05T20:17:54.50135	Item Models: bmbc
 8930d1140f2b6445babba140de8f39b1296240ec assets/bmbc/models/item/acetone_bucket.json
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
@@ -17,20 +17,14 @@ db5f77947965d5b340ccd2f87ef3eeb42351899c assets/bmbc/models/item/carbon_ingot.js
 f8c6760a39a5b0deb98ba8a2d05bba82601553f6 assets/bmbc/models/item/chromium_crystal.json
 b2e1e9c11c222bb0f1bdc0a5e6171170b8a8f81e assets/bmbc/models/item/coffee_beans.json
 7feedfd6554da8ea05735ea0855791101f3c4e78 assets/bmbc/models/item/coffee_cherry.json
-da578a0cdef95408738c2e2abcd64164f17bc438 assets/bmbc/models/item/compressed_argon.json
-3691b7be1a492ec492b5e45469143538f5c57d7b assets/bmbc/models/item/compressed_chlorine.json
-14a098e8443b0b850e262b2912971570584b81fe assets/bmbc/models/item/compressed_fluorine.json
-e518baa767a667c72fd6a35269609ebdb1a43f45 assets/bmbc/models/item/compressed_helium.json
-7d6f7a7c7928beb4803177888ee59e83f6cd7053 assets/bmbc/models/item/compressed_hydrogen.json
-b9f64d06c3d87b3de0a5b06a4e98678a19935364 assets/bmbc/models/item/compressed_neon.json
-968ab69a2cef46312b6a568e044c9988257d0229 assets/bmbc/models/item/compressed_nitrogen.json
-053900191cc58bbec125e73c8409c3e511843e43 assets/bmbc/models/item/compressed_oxygen.json
 6d88261a31b6eefbf88ae77a71346e1628449a3a assets/bmbc/models/item/copper_coil.json
 0f2f3e5d3e52675b1a8c323c36af3d68d71f310a assets/bmbc/models/item/copper_foil.json
 c35027b8b0627f9edbfc39da21ecb645bea155fc assets/bmbc/models/item/copper_wire.json
 aacf62f98b754eba565bf051feb517ca74997e74 assets/bmbc/models/item/eight_ball.json
 98f33b63ab7dd92f389cfad2cc07dec195d8c225 assets/bmbc/models/item/electric_motor.json
 fc43b02f56296bd48f80ff9b4b5ba7d1f45ff69c assets/bmbc/models/item/epoxy_circuit_board.json
+30f192844565a7ba07925d5ba3935b61b11a3121 assets/bmbc/models/item/epoxy_resin_fluid.json
+a80e54bd1e3a12a85a3cad205216bb8ba035f079 assets/bmbc/models/item/fiberglass.json
 fe34fa18eefa713c433e3f1bf1b40cdb76e95432 assets/bmbc/models/item/garbage.json
 e783758bacb2a2465484f5ca94053dc36e179f52 assets/bmbc/models/item/green_plastic_screw.json
 f06f65a98547de5fe4ee00ed69e77c28bcb0a366 assets/bmbc/models/item/green_printer_filament.json
@@ -51,6 +45,9 @@ e3a176105de97c9dc6f2c9d833a5c9d5382be79d assets/bmbc/models/item/nbc_hazmat_legg
 7eef2d4f5089722d73aa93b14a45d0cf19afb47f assets/bmbc/models/item/nbc_hazmat_mask.json
 6dfbe8753c7ab75b9bc6394ba1621678c1dc05ca assets/bmbc/models/item/nitrogen_bucket.json
 d73f16b9321ad2254e34b3923499735f65f078b3 assets/bmbc/models/item/oxygen_bucket.json
+1f8ca26d029e32ddba0bae4d62c005299ae24817 assets/bmbc/models/item/pc_plastic.json
+bda7aec73a1d1dc8e6ea31f34ef8f28e0c62bd45 assets/bmbc/models/item/pcb_high_grade_blank.json
+30be29fa7ef360025e155543bc60fe8f1d83f5e3 assets/bmbc/models/item/pcb_low_grade_blank.json
 705d2f8b9e89fe179d2a3a3d133c83bc701cc713 assets/bmbc/models/item/pet_plastic.json
 81a4d37053e137f3b1a8a3b87a619cec6d0dc565 assets/bmbc/models/item/phenol_bucket.json
 a5842e4865b879b18f3c12c7615b139f1fa83e5a assets/bmbc/models/item/potassium_ingot.json
