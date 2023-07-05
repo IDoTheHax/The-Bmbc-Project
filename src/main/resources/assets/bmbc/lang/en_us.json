@@ -152,6 +152,9 @@
   "item.bmbc.ldpe_plastic": "LDPE Plastic",
   "item.bmbc.pp_plastic": "PP Plastic",
   "item.bmbc.ps_plastic": "PS Plastic",
+  "item.bmbc.pc_plastic": "PC Plastic",
+
+  "item.bmbc.fiberglass": "Fiberglass",
 
   "item.bmbc.copper_coil": "Copper Cable",
   "item.bmbc.copper_foil": "Copper Foil",
@@ -159,6 +162,9 @@
   "item.bmbc.electric_motor": "Electric Motor",
   "item.bmbc.iron_rod": "Iron Rod",
   "item.bmbc.magnetic_iron_rod": "Magnetic Iron Rod",
+
+  "item.bmbc.pcb_low_grade_blank": "Low grade PCB",
+  "item.bmbc.pcb_high_grade_blank": "High grade PCB",
 
   "sounds.bmbc.plastic_crush": "Plastic Crush",
 

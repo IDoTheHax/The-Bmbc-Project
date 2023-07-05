@@ -44,6 +44,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES)
                     .strength(3f).explosionResistance(3f).sound(ModSounds.GARBAGE_BLOCK_SOUNDS).noOcclusion()));
 
+    public static final RegistryObject<Block> MECHANICAL_ROLLER = registerBlock("mechanical_roller",
+            () -> new MechanicalRoller(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
     public static final RegistryObject<Block> SILICA_SAND = registerBlock("silica_sand",
             () -> new SilicaSand(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND)));
 

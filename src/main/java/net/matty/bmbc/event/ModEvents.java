@@ -63,7 +63,7 @@ public class ModEvents {
         }
     }
 
-    @SubscribeEvent
+    /*@SubscribeEvent
     public static void onItemDropped(ItemTossEvent event) {
         Item item = event.getEntity().getItem().getItem();
         if(!(item instanceof CompoundItem &&((CompoundItem) item).getCompoundElements().contains(BMBC_Main.LITHIUM))) return;
@@ -77,7 +77,7 @@ public class ModEvents {
                 event.getPlayer().getServer().overworld().explode(null, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), 2, true, Level.ExplosionInteraction.NONE);
             }
         }).start();
-    }
+    }*/
 
     @SubscribeEvent
     public static void onAttachCapabilitiesPlayer(AttachCapabilitiesEvent<Entity> event) {

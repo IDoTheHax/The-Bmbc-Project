@@ -130,7 +130,16 @@ public class ModItems {
     public static final RegistryObject<Item> PP_PLASTIC = ITEMS.register("pp_plastic",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PC_PLASTIC = ITEMS.register("pc_plastic",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> PS_PLASTIC = ITEMS.register("ps_plastic",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> EPOXY_RESIN = ITEMS.register("epoxy_resin",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> FIBERGLASS = ITEMS.register("fiberglass",
             () -> new Item(new Item.Properties()));
 
     // Misc
@@ -140,6 +149,12 @@ public class ModItems {
     // Radiation
     public static final RegistryObject<Item> NBC_FABRIC = ITEMS.register("nbc_fabric",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> PCB_LOW_GRADE_BLANK = ITEMS.register("pcb_low_grade_blank",
+            () -> new Item(new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> PCB_HIGH_GRADE_BLANK = ITEMS.register("pcb_high_grade_blank",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
 
     public static void register(IEventBus eventBus) {
