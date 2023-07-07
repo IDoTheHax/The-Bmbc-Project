@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "bmbc:hydroelectric_plant"
+          "name": "bmbc:alloy_furnace"
         }
       ],
       "rolls": 1.0

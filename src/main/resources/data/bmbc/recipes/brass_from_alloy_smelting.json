@@ -1,0 +1,15 @@
+
+{
+  "type": "bmbc:alloy_smelting",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "bmbc:zinc_ingot"
+    }
+  ],
+  "output": {
+    "item": "bmbc:brass_ingot"
+  }
+}

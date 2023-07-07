@@ -13,7 +13,6 @@ import net.matty.bmbc.loot.ModLootModifiers;
 import net.matty.bmbc.networking.ModNetworkingPackets;
 import net.matty.bmbc.recipe.ModRecipes;
 import net.matty.bmbc.screen.*;
-import net.matty.bmbc.screen.BiomassGeneratorScreen;
 import net.matty.bmbc.sound.ModSounds;
 import net.matty.bmbc.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -40,6 +39,7 @@ public class BetterMineBetterCraft {
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModAlloyItems.register(modEventBus);
         ModArmorItems.register(modEventBus);
         ModItems.register(modEventBus);
         ModMineralItems.register(modEventBus);
@@ -107,6 +107,11 @@ public class BetterMineBetterCraft {
             //event.accept(ModMineralItems.CRUSHED_BAUXITE);
 
         }
+
+        if (event.getTab() == AlloysCreativeModeTab.BMBC_ALLOYS) {
+            event.accept(ModAlloyItems.BRASS);
+        }
+
         if (event.getTab() == ModBlocksCreativeModeTab.BMBC_BLOCKS) {
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.SILVER_LAMP);
@@ -138,6 +143,7 @@ public class BetterMineBetterCraft {
         }
         if (event.getTab() == ModMachinesCreativeModeTab.BMBC_MACHINES) {
             //event.accept(ModBlocks.BIOMASS_GENERATOR);
+            event.accept(ModBlocks.ALLOY_FURNACE);
             event.accept(ModBlocks.EXTRUDER);
             event.accept(ModBlocks.MACERATOR);
             event.accept(ModBlocks.PRESSURE_VESSEL);
@@ -150,6 +156,7 @@ public class BetterMineBetterCraft {
         if (event.getTab() == ModDefaultCreativeModeTab.BMBC) {
             event.accept(ModItems.BATTERY);
             event.accept(ModItems.BLUE_PRINTER_FILAMENT);
+            event.accept(ModBlocks.C4);
             event.accept(ModItems.C4_DETONATOR);
             event.accept(ModItems.CABLE_ROLL);
             //event.accept(ModItems.COMPRESSED_CONTAINER);
@@ -212,8 +219,8 @@ public class BetterMineBetterCraft {
         }
 
         //if (event.getTab() == ExplosivesCreativeModeTab.BMBC_EXPLOSIVES) {
-            //event.accept(ModBlocks.C4);
-            //event.accept(ModItems.C4_DETONATOR);
+        //  //event.accept(ModBlocks.C4);
+        //  //event.accept(ModItems.C4_DETONATOR);
         //}
 
         if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
@@ -242,6 +249,7 @@ public class BetterMineBetterCraft {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SODIUM_HYDROXIDE.get(), RenderType.solid());
             //ItemBlockRenderTypes.setRenderLayer(ModBlocks.C4.get(), RenderType.solid());
 
+            MenuScreens.register(ModMenuTypes.ALLOY_FURNACE_MENU.get(), AlloyFurnaceScreen::new);
             MenuScreens.register(ModMenuTypes.BIOMASS_GENERATOR_MENU.get(), BiomassGeneratorScreen::new);
             MenuScreens.register(ModMenuTypes.EXTRUDER_MENU.get(), ExtruderScreen::new);
             MenuScreens.register(ModMenuTypes.MACERATOR_MENU.get(), MaceratorScreen::new);

@@ -12,6 +12,11 @@ public class ModBlockEntities {
     public static DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, BetterMineBetterCraft.MOD_ID);
 
+    public static final RegistryObject<BlockEntityType<AlloyFurnaceBlockEntity>> ALLOY_FURNACE =
+            BLOCK_ENTITIES.register("alloy_furnace", () ->
+                    BlockEntityType.Builder.of(AlloyFurnaceBlockEntity::new,
+                            ModBlocks.ALLOY_FURNACE.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<BiomassGeneratorBlockEntity>> BIOMASS_GENERATOR =
             BLOCK_ENTITIES.register("biomass_generator", () ->
                     BlockEntityType.Builder.of(BiomassGeneratorBlockEntity::new,
@@ -22,10 +27,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ExtruderBlockEntity::new,
                             ModBlocks.EXTRUDER.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<HydroelectricBlockEntity>> HYDROELECTRIC_PLANT =
-            BLOCK_ENTITIES.register("hydroelectric_plant", () ->
-                    BlockEntityType.Builder.of(HydroelectricBlockEntity::new,
-                            ModBlocks.HYDROELECTRIC_PLANT.get()).build(null));
+    //public static final RegistryObject<BlockEntityType<HydroelectricBlockEntity>> HYDROELECTRIC_PLANT =
+    //        BLOCK_ENTITIES.register("hydroelectric_plant", () ->
+    //                BlockEntityType.Builder.of(HydroelectricBlockEntity::new,
+    //                        ModBlocks.HYDROELECTRIC_PLANT.get()).build(null));
 
     //public static final RegistryObject<BlockEntityType<ErlenmeyerFlaskBlockEntity>> ERLENMEYER_FLASK =
     //        BLOCK_ENTITIES.register("erlenmeyer_flask", () ->

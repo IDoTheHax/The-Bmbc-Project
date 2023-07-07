@@ -14,6 +14,9 @@ public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, BetterMineBetterCraft.MOD_ID);
 
+    public static final RegistryObject<MenuType<AlloyFurnaceMenu>> ALLOY_FURNACE_MENU =
+            registerMenuType(AlloyFurnaceMenu::new, "alloy_furnace_menu");
+
     public static final RegistryObject<MenuType<BiomassGeneratorMenu>> BIOMASS_GENERATOR_MENU =
             registerMenuType(BiomassGeneratorMenu::new, "biomass_generator_menu");
 

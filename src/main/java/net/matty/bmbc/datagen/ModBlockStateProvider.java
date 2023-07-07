@@ -1,7 +1,10 @@
 package net.matty.bmbc.datagen;
 
+//import net.matty.bmbc.block.custom.AlloyFurnaceBlock;
+
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
+import net.matty.bmbc.block.custom.AlloyFurnaceBlock;
 import net.matty.bmbc.block.custom.ExtruderBlock;
 import net.matty.bmbc.block.custom.MaceratorBlock;
 import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
@@ -29,6 +32,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILICA_SAND);
         blockWithItem(ModBlocks.SILVER_BLOCK);
         blockWithItem(ModBlocks.SILVER_LAMP);
+
+        generateAlloyFurnace(
+                ModBlocks.ALLOY_FURNACE.get(),
+                cubeEntityFrontSideTop(ForgeRegistries.BLOCKS.getKey(ModBlocks.ALLOY_FURNACE.get()).getPath(),
+                        new ResourceLocation("minecraft:orientable"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/lv_machine_side1"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/alloy_furnace_front"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/alloy_furnace_top"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/lv_machine_bottom1")),
+                cubeEntityFrontSideTop(ForgeRegistries.BLOCKS.getKey(ModBlocks.ALLOY_FURNACE.get()).getPath() + "_on",
+                        new ResourceLocation("minecraft:orientable"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/lv_machine_side1"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/alloy_furnace_front_on"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/alloy_furnace_top_on"),
+                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/lv_machine_bottom1"))
+        );
 
         generateExtruder(ModBlocks.EXTRUDER.get(),
                 cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.EXTRUDER.get()).getPath(),
@@ -122,6 +141,52 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+    public void generateAlloyFurnace(Block block, ModelFile offModel, ModelFile onModel) {
+        getVariantBuilder(block)
+                .partialState()
+                .with(AlloyFurnaceBlock.FACING, Direction.NORTH)
+                .with(AlloyFurnaceBlock.LIT, false)
+                .modelForState()
+                .modelFile(offModel).rotationY(0).addModel()
+                .partialState()
+                .with(AlloyFurnaceBlock.FACING, Direction.SOUTH)
+                .with(AlloyFurnaceBlock.LIT, false)
+                .modelForState()
+                .modelFile(offModel).rotationY(180).addModel()
+                .partialState()
+                .with(AlloyFurnaceBlock.FACING, Direction.EAST)
+                .with(AlloyFurnaceBlock.LIT, false)
+                .modelForState()
+                .modelFile(offModel).rotationY(90).addModel()
+                .partialState()
+                .with(AlloyFurnaceBlock.FACING, Direction.WEST)
+                .with(AlloyFurnaceBlock.LIT, false)
+                .modelForState()
+                .modelFile(offModel).rotationY(270).addModel()
+
+                .partialState()
+                .with(AlloyFurnaceBlock.FACING, Direction.NORTH)
+                .with(AlloyFurnaceBlock.LIT, true)
+                .modelForState()
+                .modelFile(onModel).rotationY(0).addModel()
+                .partialState()
+                .with(AlloyFurnaceBlock.FACING, Direction.SOUTH)
+                .with(AlloyFurnaceBlock.LIT, true)
+                .modelForState()
+                .modelFile(onModel).rotationY(180).addModel()
+                .partialState()
+                .with(AlloyFurnaceBlock.FACING, Direction.EAST)
+                .with(AlloyFurnaceBlock.LIT, true)
+                .modelForState()
+                .modelFile(onModel).rotationY(90).addModel()
+                .partialState()
+                .with(AlloyFurnaceBlock.FACING, Direction.WEST)
+                .with(AlloyFurnaceBlock.LIT, true)
+                .modelForState()
+                .modelFile(onModel).rotationY(270).addModel();
+
+        simpleBlockItem(block, offModel);
     }
 
     public void generateThreeDPrinter(Block block, ModelFile offModel, ModelFile onModel) {

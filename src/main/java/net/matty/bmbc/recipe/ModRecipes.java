@@ -11,6 +11,9 @@ public class ModRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, BetterMineBetterCraft.MOD_ID);
 
+    public static final RegistryObject<RecipeSerializer<AlloySmeltingRecipe>> ALLOY_SMELTER_SERIALIZER =
+            SERIALIZERS.register("alloy_smelting", AlloySmeltingRecipe.Serializer::new);
+
     public static final RegistryObject<RecipeSerializer<ThreeDPrinterRecipe>> THREE_D_PRINTING_SERIALIZER =
             SERIALIZERS.register("3d_printing", ThreeDPrinterRecipe.Serializer::new);
 

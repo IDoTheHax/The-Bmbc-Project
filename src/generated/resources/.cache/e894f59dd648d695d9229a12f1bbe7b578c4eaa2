@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-05T20:17:54.50135	Item Models: bmbc
+// 1.19.4	2023-07-07T11:52:55.757027	Item Models: bmbc
 8930d1140f2b6445babba140de8f39b1296240ec assets/bmbc/models/item/acetone_bucket.json
 9bfe326e732b67d70c4d3a625c774c835a7fd06e assets/bmbc/models/item/alumina.json
 5d20a39726d5a4f54ab2a1b2863eb75ebaf7d42b assets/bmbc/models/item/aluminium_ingot.json
@@ -9,6 +9,7 @@ c7ab046baa855fab5670a3e825be9fdb630fcbbb assets/bmbc/models/item/black_phosphoru
 b3946c2a8efdbb2c8f1e6e44ded17dd499982998 assets/bmbc/models/item/blue_plastic_screw.json
 2d30d5575b0a4133d40e73a4835a620b79e6a114 assets/bmbc/models/item/blue_printer_filament.json
 13c262ba48191263169c19513b93b4d5229b1e59 assets/bmbc/models/item/boron_ingot.json
+1674d9f35857ae39d73d0c1816cb565749934160 assets/bmbc/models/item/brass_ingot.json
 cb3596210b2684414743dabdb696428f94719714 assets/bmbc/models/item/c4_detonator.json
 5a93f62b1c1c2d58e0b13863a35d492df13d9b9e assets/bmbc/models/item/cable_roll.json
 ab482cd80df8930a9eaf5951fb59a6cb9524b843 assets/bmbc/models/item/calcium_rock.json

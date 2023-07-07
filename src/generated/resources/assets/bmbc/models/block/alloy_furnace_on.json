@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "bmbc:block/lv_machine_bottom1",
+    "front": "bmbc:block/alloy_furnace_front_on",
+    "side": "bmbc:block/lv_machine_side1",
+    "top": "bmbc:block/alloy_furnace_top_on"
+  }
+}
