@@ -10,21 +10,18 @@ import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.creativemode_tab.ModFluidsCreativeModeTab;
 import net.matty.bmbc.creativemode_tab.ModResourcesCreativeModeTab;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -524,10 +521,10 @@ public class BMBC_Main {
     //public static final RegistryObject<RecipeSerializer<AlloySmeltingRecipe>> ALLOY_SMELTING_SERIALIZER = RECIPE_SERIALIZERS.register("alloy_smelting", () -> AlloySmeltingRecipe.Serializer.INSTANCE);
 
     // Menu Register
-    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
-                                                                                                  String name) {
-        return MENUS.register(name, () -> IForgeMenuType.create(factory));
-    }
+    //private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
+    //                                                                                              String name) {
+    //    return MENUS.register(name, () -> IForgeMenuType.create(factory));
+    //}
 
     public BMBC_Main(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);

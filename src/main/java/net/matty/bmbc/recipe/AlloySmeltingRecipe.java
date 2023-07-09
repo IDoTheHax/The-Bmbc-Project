@@ -32,7 +32,7 @@ public class AlloySmeltingRecipe implements Recipe<SimpleContainer> {
             return false;
         }
 
-        if (recipeItems.get(0).test(pContainer.getItem(1)) && recipeItems.get(1).test(pContainer.getItem(1))) {
+        if (recipeItems.get(0).test(pContainer.getItem(0)) && recipeItems.get(1).test(pContainer.getItem(1))) {
             return true;
         } else {
             return false;
@@ -79,14 +79,14 @@ public class AlloySmeltingRecipe implements Recipe<SimpleContainer> {
         private Type() {
         }
 
-        public static final AlloySmeltingRecipe.Type INSTANCE = new Type();
-        public static final String ID = "alloy_smelting";
+        public static final Type INSTANCE = new Type();
+        public static final String ID = "extrusion";
     }
 
     public static class Serializer implements RecipeSerializer<AlloySmeltingRecipe> {
-        public static final AlloySmeltingRecipe.Serializer INSTANCE = new Serializer();
+        public static final Serializer INSTANCE = new Serializer();
         public static final ResourceLocation ID =
-                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "alloy_smelting");
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "extrusion");
 
         @Override
         public AlloySmeltingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {

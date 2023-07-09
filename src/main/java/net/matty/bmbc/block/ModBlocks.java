@@ -15,7 +15,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -93,8 +92,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ALLOY_FURNACE = registerBlock("alloy_furnace",
             () -> new AlloyFurnaceBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()
-                    .lightLevel(b -> b.getValue(BlockStateProperties.LIT)?15:0))); // TODO: Set this to the correct material later.
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+                    //.lightLevel(b -> b.getValue(BlockStateProperties.LIT)?15:0))); // TODO: Set this to the correct material later.
 
     // Pipes
     //public static final RegistryObject<Block> ITEM_TRANSPORT_PIPE = registerBlock("item_transport_pipe",

@@ -37,7 +37,7 @@ public class AlloyFurnaceScreen extends AbstractContainerScreen<AlloyFurnaceMenu
 
     private void renderProgressArrow(PoseStack pPoseStack, int x, int y) {
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 74, y + 42, 176, 0, menu.getScaledProgress(), 26);
+            blit(pPoseStack, x + 74, y + 40, 176, 0, menu.getScaledProgress(), 27);
         }
     }
 

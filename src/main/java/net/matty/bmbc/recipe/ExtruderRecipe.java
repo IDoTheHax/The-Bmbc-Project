@@ -157,6 +157,5 @@ public class ExtruderRecipe implements Recipe<SimpleContainer> {
             }
             buf.writeItemStack(recipe.output, false);
         }
-
     }
 }

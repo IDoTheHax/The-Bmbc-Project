@@ -158,22 +158,23 @@ public class ThreeDPrinterBlockEntity extends BlockEntity implements MenuProvide
         this.progress = 0;
     }
 
-    private static void craftItem(ThreeDPrinterBlockEntity pEntity) {
-        Level level = pEntity.level;
-        SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
-        for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
-            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
+    private static void craftItem(ThreeDPrinterBlockEntity entity) {
+        Level level = entity.level;
+        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
+        for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
         Optional<ThreeDPrinterRecipe> recipe = level.getRecipeManager()
                 .getRecipeFor(ThreeDPrinterRecipe.Type.INSTANCE, inventory, level);
 
-        if(hasRecipe(pEntity)) {
-            pEntity.itemHandler.extractItem(0, 1, false);
-            pEntity.itemHandler.extractItem(1, 0, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem()));
+        if(hasRecipe(entity)) {
+            entity.itemHandler.extractItem(0, 1, false);
+            entity.itemHandler.extractItem(1, 0, false);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem(), // Careful this can apparently cause data leaks using level.registryAccess so TODO: Find a better way
+                    entity.itemHandler.getStackInSlot(2).getCount() + 1)); // if you add a count in the .json recipe files it will not work pls fix
 
-            pEntity.resetProgress();
+            entity.resetProgress();
         }
     }
 

@@ -232,10 +232,8 @@ public class BetterMineBetterCraft {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ModNetworkingPackets.register();
-            //ModVillagers.registerPOIs();
-        });
+        //ModVillagers.registerPOIs();
+        event.enqueueWork(ModNetworkingPackets::register);
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

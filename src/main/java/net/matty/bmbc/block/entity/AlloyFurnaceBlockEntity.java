@@ -1,5 +1,6 @@
 package net.matty.bmbc.block.entity;
 
+import net.matty.bmbc.block.custom.AlloyFurnaceBlock;
 import net.matty.bmbc.recipe.AlloySmeltingRecipe;
 import net.matty.bmbc.screen.AlloyFurnaceMenu;
 import net.minecraft.core.BlockPos;
@@ -39,7 +40,7 @@ public class AlloyFurnaceBlockEntity extends BlockEntity implements MenuProvider
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 120;//24000;
+    private int maxProgress = 220;//24000;
 
     public AlloyFurnaceBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.ALLOY_FURNACE.get(), pos, state);
@@ -103,7 +104,7 @@ public class AlloyFurnaceBlockEntity extends BlockEntity implements MenuProvider
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("alloy_smelter.progress", this.progress);
+        nbt.putInt("alloy_furnace.progress", this.progress);
 
         super.saveAdditional(nbt);
     }
@@ -112,7 +113,7 @@ public class AlloyFurnaceBlockEntity extends BlockEntity implements MenuProvider
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        progress = nbt.getInt("alloy_smelter.progress");
+        progress = nbt.getInt("alloy_furnace.progress");
     }
 
     public void drops() {
@@ -130,6 +131,11 @@ public class AlloyFurnaceBlockEntity extends BlockEntity implements MenuProvider
         }
 
         if(hasRecipe(pEntity)) {
+            if (!state.getValue(AlloyFurnaceBlock.ACTIVE)) {
+                state = state.setValue(AlloyFurnaceBlock.ACTIVE, true);
+                level.setBlock(pos, state, 3);
+            }
+
             pEntity.progress++;
             setChanged(level, pos, state);
 
@@ -138,6 +144,11 @@ public class AlloyFurnaceBlockEntity extends BlockEntity implements MenuProvider
             }
 
         } else {
+            if (state.getValue(AlloyFurnaceBlock.ACTIVE)) {
+                state = state.setValue(AlloyFurnaceBlock.ACTIVE, false);
+                level.setBlock(pos, state, 3);
+            }
+
             pEntity.resetProgress();
             setChanged(level, pos, state);
         }
@@ -160,8 +171,8 @@ public class AlloyFurnaceBlockEntity extends BlockEntity implements MenuProvider
         if(hasRecipe(entity)) {
             entity.itemHandler.extractItem(0, 1, false);
             entity.itemHandler.extractItem(1, 1, false);
-            entity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem(),  // Carefull this can apperently cause data leaks using level.registryAccess so TODO: Find a better way
-                    entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem(level.registryAccess()).getItem(), // Careful this can apparently cause data leaks using level.registryAccess so TODO: Find a better way
+                    entity.itemHandler.getStackInSlot(2).getCount() + 1)); // if you add a count in the .json recipe files it will not work pls fix
 
             entity.resetProgress();
         }

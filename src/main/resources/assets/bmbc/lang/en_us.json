@@ -42,6 +42,8 @@
   "item.bmbc.chromium_crystal": "Chromium Crystal",
   "item.bmbc.manganese_ingot": "Manganese Ingot",
 
+  "item.bmbc.brass_ingot": "Brass Ingot",
+
   "item.bmbc.carnallite": "Carnallite",
   "item.bmbc.crushed_bauxite": "Crushed Bauxite",
   "item.bmbc.dolomite": "Dolomite",
@@ -115,6 +117,7 @@
   "message.bmbc.drink_water": "Drinking Water",
   "message.bmbc.no_water": "There is no water nearby",
 
+  "block.bmbc.alloy_furnace": "Alloy Smelter",
   "block.bmbc.biomass_generator": "Biomass Generator",
   "block.bmbc.extruder": "Extruder",
   "block.bmbc.item_transport_pipe": "Item Transport Pipe",

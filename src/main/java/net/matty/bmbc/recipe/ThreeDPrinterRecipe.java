@@ -32,11 +32,7 @@ public class ThreeDPrinterRecipe implements Recipe<SimpleContainer> {
             return false;
         }
 
-        if (recipeItems.get(0).test(pContainer.getItem(0)) && recipeItems.get(1).test(pContainer.getItem(1))) {
-            return true;
-        } else {
-            return false;
-        }
+        return recipeItems.get(0).test(pContainer.getItem(0)) && recipeItems.get(1).test(pContainer.getItem(1));
     }
 
     @Override
