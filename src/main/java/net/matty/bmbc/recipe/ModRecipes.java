@@ -23,6 +23,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<ExtruderRecipe>> EXTRUSION_SERIALIZER =
             SERIALIZERS.register("extrusion", () -> ExtruderRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<MaceratorRecipe>> MACERATOR_SERIALIZER =
+            SERIALIZERS.register("maceration", () -> MaceratorRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

@@ -58,9 +58,13 @@ public class PressureVesselRecipe implements Recipe<SimpleContainer> {
         return true;
     }
 
+    public ItemStack getResultItem() {
+        return output.copy();
+    }
+
     @Override
     public ItemStack getResultItem(RegistryAccess p_267052_) {
-        return output.copy();
+        return null;
     }
 
     @Override

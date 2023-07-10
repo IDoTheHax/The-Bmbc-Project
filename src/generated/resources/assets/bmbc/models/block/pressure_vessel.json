@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "bmbc:block/pressure_vessel"
+    "all": "bmbc:block/pressure_vessel",
+    "bottom": "bmbc:block/pressure_vessel_bottom",
+    "front": "bmbc:block/pressure_vessel_front",
+    "side": "bmbc:block/pressure_vessel_sides",
+    "top": "bmbc:block/pressure_vessel_top"
   }
 }

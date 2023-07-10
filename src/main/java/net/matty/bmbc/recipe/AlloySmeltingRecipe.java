@@ -56,7 +56,12 @@ public class AlloySmeltingRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem(RegistryAccess access) {
+    public ItemStack getResultItem(RegistryAccess p_267052_) {
+        return null;
+    }
+
+
+    public ItemStack getResultItem() {
         return output.copy();
     }
 
@@ -74,6 +79,7 @@ public class AlloySmeltingRecipe implements Recipe<SimpleContainer> {
     public RecipeType<?> getType() {
         return Type.INSTANCE;
     }
+
 
     public static class Type implements RecipeType<AlloySmeltingRecipe> {
         private Type() {

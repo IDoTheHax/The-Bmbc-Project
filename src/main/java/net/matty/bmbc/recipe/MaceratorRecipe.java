@@ -15,12 +15,12 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import org.jetbrains.annotations.Nullable;
 
-public class ThreeDPrinterRecipe implements Recipe<SimpleContainer> {
+public class MaceratorRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final ItemStack output;
     private final NonNullList<Ingredient> recipeItems;
 
-    public ThreeDPrinterRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems) {
+    public MaceratorRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems) {
         this.id = id;
         this.output = output;
         this.recipeItems = recipeItems;
@@ -32,7 +32,7 @@ public class ThreeDPrinterRecipe implements Recipe<SimpleContainer> {
             return false;
         }
 
-        return recipeItems.get(0).test(pContainer.getItem(0)) && recipeItems.get(1).test(pContainer.getItem(1));
+        return recipeItems.get(0).test(pContainer.getItem(0));
     }
 
     @Override
@@ -51,13 +51,13 @@ public class ThreeDPrinterRecipe implements Recipe<SimpleContainer> {
         return true;
     }
 
-    public ItemStack getResultItem() {
-        return output.copy();
-    }
-
     @Override
     public ItemStack getResultItem(RegistryAccess p_267052_) {
         return null;
+    }
+
+    public ItemStack getResultItem() {
+        return output.copy();
     }
 
     @Override
@@ -75,35 +75,35 @@ public class ThreeDPrinterRecipe implements Recipe<SimpleContainer> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<ThreeDPrinterRecipe> {
+    public static class Type implements RecipeType<MaceratorRecipe> {
         private Type() {
         }
 
         public static final Type INSTANCE = new Type();
-        public static final String ID = "3d_printing";
+        public static final String ID = "maceration";
     }
 
-    public static class Serializer implements RecipeSerializer<ThreeDPrinterRecipe> {
+    public static class Serializer implements RecipeSerializer<MaceratorRecipe> {
         public static final Serializer INSTANCE = new Serializer();
         public static final ResourceLocation ID =
-                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "3d_printing");
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "maceration");
 
         @Override
-        public ThreeDPrinterRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
+        public MaceratorRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
+            NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new ThreeDPrinterRecipe(pRecipeId, output, inputs);
+            return new MaceratorRecipe(pRecipeId, output, inputs);
         }
 
         @Override
-        public @Nullable ThreeDPrinterRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
+        public @Nullable MaceratorRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
             NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
@@ -111,11 +111,11 @@ public class ThreeDPrinterRecipe implements Recipe<SimpleContainer> {
             }
 
             ItemStack output = buf.readItem();
-            return new ThreeDPrinterRecipe(id, output, inputs);
+            return new MaceratorRecipe(id, output, inputs);
         }
 
         @Override
-        public ThreeDPrinterRecipe fromJson(ResourceLocation recipeLoc, JsonObject recipeJson, ICondition.IContext context) {
+        public MaceratorRecipe fromJson(ResourceLocation recipeLoc, JsonObject recipeJson, ICondition.IContext context) {
             return RecipeSerializer.super.fromJson(recipeLoc, recipeJson, context);
         }
 
@@ -149,7 +149,7 @@ public class ThreeDPrinterRecipe implements Recipe<SimpleContainer> {
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf buf, ThreeDPrinterRecipe recipe) {
+        public void toNetwork(FriendlyByteBuf buf, MaceratorRecipe recipe) {
             buf.writeInt(recipe.getIngredients().size());
 
             for (Ingredient ing : recipe.getIngredients()) {
@@ -157,6 +157,5 @@ public class ThreeDPrinterRecipe implements Recipe<SimpleContainer> {
             }
             buf.writeItemStack(recipe.output, false);
         }
-
     }
 }

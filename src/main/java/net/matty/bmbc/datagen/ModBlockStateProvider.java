@@ -77,6 +77,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 )
         );
 
+        cubeEntityFrontSideTop(ForgeRegistries.BLOCKS.getKey(ModBlocks.PRESSURE_VESSEL.get()).getPath(),
+                new ResourceLocation("minecraft:orientable"),
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/pressure_vessel_sides"),
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/pressure_vessel_front"),
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/pressure_vessel_top"),
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/pressure_vessel_bottom"));
+
         generateBiomassGenerator(ModBlocks.BIOMASS_GENERATOR.get(),
                 cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.BIOMASS_GENERATOR.get()).getPath(),
                         new ResourceLocation("minecraft:orientable"),
@@ -188,7 +195,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockItem(block, offModel);
     }
-
     public void generateThreeDPrinter(Block block, ModelFile offModel, ModelFile onModel) {
         getVariantBuilder(block)
                 .partialState()
@@ -235,7 +241,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockItem(block, offModel);
     }
-
     public void generateMacerator(Block block, ModelFile model) {
         getVariantBuilder(block)
                 .partialState()
@@ -257,7 +262,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockItem(block, model);
     }
-
     public void generateExtruder(Block block, ModelFile offModel, ModelFile onModel) {
         getVariantBuilder(block)
                 .partialState()
@@ -304,7 +308,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockItem(block, offModel);
     }
-
     public void generateBiomassGenerator(Block block, ModelFile model) {
         getVariantBuilder(block)
                 .partialState()
