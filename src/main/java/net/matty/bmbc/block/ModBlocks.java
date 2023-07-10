@@ -75,28 +75,28 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
             () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3.5F).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> RECHARGER = registerBlock("recharger",
             () -> new RechargerBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3.5F).requiresCorrectToolForDrops().noOcclusion()));
 
 
     public static final RegistryObject<Block> THREE_D_PRINTER = registerBlock("three_d_printer",
             () -> new ThreeDPrinterBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3.5F).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> MACERATOR = registerBlock("macerator",
             () -> new MaceratorBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3.5F).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> ALLOY_FURNACE = registerBlock("alloy_furnace",
             () -> new AlloyFurnaceBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
-                    //.lightLevel(b -> b.getValue(BlockStateProperties.LIT)?15:0))); // TODO: Set this to the correct material later.
+                    .strength(3.5F).requiresCorrectToolForDrops().noOcclusion()
+                    .lightLevel(b -> b.getValue(AlloyFurnaceBlock.ACTIVE) ? 13:0)));
 
     // Pipes
-    //public static final RegistryObject<Block> ITEM_TRANSPORT_PIPE = registerBlock("item_transport_pipe",
+    //public static final RegistryObject<Block> ITEM_TRANSPORT_PIPE = registerBlock("item_transport_pipe", TODO: Add Pipes
     //        () -> new ItemTransportPipeBlock(Block.Properties.of(Material.METAL)
     //                .strength(6f).requiresCorrectToolForDrops().noOcclusion()));
 

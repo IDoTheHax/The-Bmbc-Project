@@ -56,7 +56,12 @@ public class ExtruderRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem(RegistryAccess access) {
+    public ItemStack getResultItem(RegistryAccess p_267052_) {
+        return null;
+    }
+
+
+    public ItemStack getResultItem() {
         return output.copy();
     }
 
