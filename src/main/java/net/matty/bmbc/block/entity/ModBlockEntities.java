@@ -27,10 +27,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ExtruderBlockEntity::new,
                             ModBlocks.EXTRUDER.get()).build(null));
 
-    //public static final RegistryObject<BlockEntityType<HydroelectricBlockEntity>> HYDROELECTRIC_PLANT =
-    //        BLOCK_ENTITIES.register("hydroelectric_plant", () ->
-    //                BlockEntityType.Builder.of(HydroelectricBlockEntity::new,
-    //                        ModBlocks.HYDROELECTRIC_PLANT.get()).build(null));
+    public static final RegistryObject<BlockEntityType<HydroelectricBlockEntity>> HYDROELECTRIC_PLANT =
+            BLOCK_ENTITIES.register("hydroelectric_plant", () ->
+                    BlockEntityType.Builder.of(HydroelectricBlockEntity::new,
+                            ModBlocks.HYDROELECTRIC_PLANT.get()).build(null));
 
     //public static final RegistryObject<BlockEntityType<ErlenmeyerFlaskBlockEntity>> ERLENMEYER_FLASK =
     //        BLOCK_ENTITIES.register("erlenmeyer_flask", () ->

@@ -4,10 +4,7 @@ package net.matty.bmbc.datagen;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
-import net.matty.bmbc.block.custom.AlloyFurnaceBlock;
-import net.matty.bmbc.block.custom.ExtruderBlock;
-import net.matty.bmbc.block.custom.MaceratorBlock;
-import net.matty.bmbc.block.custom.ThreeDPrinterBlock;
+import net.matty.bmbc.block.custom.*;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -65,6 +62,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_bottom"),
                         new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/extruder_top"))
         );
+        generateHydroelectricPlant(ModBlocks.HYDROELECTRIC_PLANT.get(),
+                cubeEntityFrontSideTop(ForgeRegistries.BLOCKS.getKey(ModBlocks.HYDROELECTRIC_PLANT.get()).getPath(),
+                    new ResourceLocation("minecraft:orientable"),
+                    new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/rf_energy_sides"),
+                    new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/lv_machine_side1"),
+                    new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/hydroelectric_plant_top"),
+                    new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/lv_machine_bottom1")));
+
 
         generateMacerator(ModBlocks.MACERATOR.get(),
                 cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.MACERATOR.get()).getPath(),
@@ -84,16 +89,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/pressure_vessel_top"),
                 new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/pressure_vessel_bottom"));
 
-        generateBiomassGenerator(ModBlocks.BIOMASS_GENERATOR.get(),
-                cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.BIOMASS_GENERATOR.get()).getPath(),
-                        new ResourceLocation("minecraft:orientable"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_sides"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_back"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_front"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_bottom"),
-                        new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_top")
-                )
-        );
+        //generateBiomassGenerator(ModBlocks.BIOMASS_GENERATOR.get(),
+        //        cubeEntity2Sides(ForgeRegistries.BLOCKS.getKey(ModBlocks.BIOMASS_GENERATOR.get()).getPath(),
+        //                new ResourceLocation("minecraft:orientable"),
+        //                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_sides"),
+        //                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_back"),
+        //                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_front"),
+        //                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_bottom"),
+        //                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/biomass_generator_top")
+        //        )
+        //);
 
 
         generateThreeDPrinter(
@@ -308,22 +313,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockItem(block, offModel);
     }
-    public void generateBiomassGenerator(Block block, ModelFile model) {
+    public void generateHydroelectricPlant(Block block, ModelFile model) {
         getVariantBuilder(block)
                 .partialState()
-                .with(MaceratorBlock.FACING, Direction.NORTH)
+                .with(HydroelectricPlantBlock.FACING, Direction.NORTH)
                 .modelForState()
                 .modelFile(model).rotationY(0).addModel()
                 .partialState()
-                .with(MaceratorBlock.FACING, Direction.SOUTH)
+                .with(HydroelectricPlantBlock.FACING, Direction.SOUTH)
                 .modelForState()
                 .modelFile(model).rotationY(180).addModel()
                 .partialState()
-                .with(MaceratorBlock.FACING, Direction.EAST)
+                .with(HydroelectricPlantBlock.FACING, Direction.EAST)
                 .modelForState()
                 .modelFile(model).rotationY(90).addModel()
                 .partialState()
-                .with(MaceratorBlock.FACING, Direction.WEST)
+                .with(HydroelectricPlantBlock.FACING, Direction.WEST)
                 .modelForState()
                 .modelFile(model).rotationY(270).addModel();
 

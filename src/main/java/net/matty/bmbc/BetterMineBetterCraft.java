@@ -145,6 +145,7 @@ public class BetterMineBetterCraft {
             //event.accept(ModBlocks.BIOMASS_GENERATOR);
             event.accept(ModBlocks.ALLOY_FURNACE);
             event.accept(ModBlocks.EXTRUDER);
+            event.accept(ModBlocks.HYDROELECTRIC_PLANT);
             event.accept(ModBlocks.MACERATOR);
             event.accept(ModBlocks.PRESSURE_VESSEL);
             event.accept(ModBlocks.THREE_D_PRINTER);

@@ -23,6 +23,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<ExtruderMenu>> EXTRUDER_MENU =
             registerMenuType(ExtruderMenu::new, "extruder_menu");
 
+    public static final RegistryObject<MenuType<HydroelectricPlantMenu>> HYDROELECTRIC_PLANT_MENU =
+            registerMenuType(HydroelectricPlantMenu::new, "hydroelectric_plant_menu");
+
     public static final RegistryObject<MenuType<MaceratorMenu>> MACERATOR_MENU =
             registerMenuType(MaceratorMenu::new, "macerator_menu");
 

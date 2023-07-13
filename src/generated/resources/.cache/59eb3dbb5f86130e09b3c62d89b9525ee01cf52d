@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-07T11:52:55.756677	Loot Tables
+// 1.19.4	2023-07-12T20:44:02.858863	Loot Tables
 74bfbbf46b071027936db6023e6b2ffc1f06d59a data/bmbc/loot_tables/blocks/alloy_furnace.json
 5a1ed8d2579c9a0131fa68deb9da67767cb30da5 data/bmbc/loot_tables/blocks/bauxite_ore.json
 4fd18d3000471abc9a3c8e4a30ed05f3ad274c16 data/bmbc/loot_tables/blocks/biomass_generator.json
@@ -10,6 +10,7 @@ ec8a2c3d9bcc5ae91bcb94bc56b9741de042c122 data/bmbc/loot_tables/blocks/deepslate_
 1e87ae4145db2fbc818360422a798453b261b042 data/bmbc/loot_tables/blocks/evaporite_ore.json
 1686fabe6e0cfa077b5c55537afc4bb9ae92481c data/bmbc/loot_tables/blocks/extruder.json
 f81d6388864751761656d65c8d93e69a2aaf6b3d data/bmbc/loot_tables/blocks/garbage_block.json
+59f811b261ca134e799606955937a213d344cc0b data/bmbc/loot_tables/blocks/hydroelectric_plant.json
 fd466fddc0011f5e9a5524eb654b46ccca7c4a94 data/bmbc/loot_tables/blocks/macerator.json
 08cb1eb644f70c3d1138a04858a218ee2f849614 data/bmbc/loot_tables/blocks/magnesite_ore.json
 c7e966027f4356016e911fef0627fe2b5bcdfacb data/bmbc/loot_tables/blocks/maple_leaves.json

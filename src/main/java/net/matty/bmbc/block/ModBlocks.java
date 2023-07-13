@@ -69,9 +69,9 @@ public class ModBlocks {
             () -> new BiomassGeneratorBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
-    //public static final RegistryObject<Block> HYDROELECTRIC_PLANT = registerBlock("hydroelectric_plant",
-    //        () -> new HydroelectricPlantBlock(BlockBehaviour.Properties.of(Material.METAL)
-    //                .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+    public static final RegistryObject<Block> HYDROELECTRIC_PLANT = registerBlock("hydroelectric_plant",
+            () -> new HydroelectricPlantBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
             () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
