@@ -246,11 +246,11 @@ public class BetterMineBetterCraft {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SEWAGE_WATER.get(), RenderType.solid());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SODIUM_HYDROXIDE.get(), RenderType.solid());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SODIUM_HYDROXIDE.get(), RenderType.solid());
-            //ItemBlockRenderTypes.setRenderLayer(ModBlocks.C4.get(), RenderType.solid());
 
             MenuScreens.register(ModMenuTypes.ALLOY_FURNACE_MENU.get(), AlloyFurnaceScreen::new);
             MenuScreens.register(ModMenuTypes.BIOMASS_GENERATOR_MENU.get(), BiomassGeneratorScreen::new);
             MenuScreens.register(ModMenuTypes.EXTRUDER_MENU.get(), ExtruderScreen::new);
+            MenuScreens.register(ModMenuTypes.HYDROELECTRIC_PLANT_MENU.get(), HydroelectricPlantScreen::new);
             MenuScreens.register(ModMenuTypes.MACERATOR_MENU.get(), MaceratorScreen::new);
             MenuScreens.register(ModMenuTypes.PRESSURE_VESSEL_MENU.get(), PressureVesselScreen::new);
             MenuScreens.register(ModMenuTypes.THREE_D_PRINTER_MENU.get(), ThreeDPrinterScreen::new);

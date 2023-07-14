@@ -66,9 +66,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 cubeEntityFrontSideTop(ForgeRegistries.BLOCKS.getKey(ModBlocks.HYDROELECTRIC_PLANT.get()).getPath(),
                     new ResourceLocation("minecraft:orientable"),
                     new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/rf_energy_sides"),
-                    new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/lv_machine_side1"),
+                    new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/rf_energy_sides"),
                     new ResourceLocation(BetterMineBetterCraft.MOD_ID,"block/hydroelectric_plant_top"),
-                    new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/lv_machine_bottom1")));
+                    new ResourceLocation(BetterMineBetterCraft.MOD_ID, "block/lv_machine_side1")));
 
 
         generateMacerator(ModBlocks.MACERATOR.get(),

@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-12T20:49:37.046744	Block States: bmbc
+// 1.19.4	2023-07-13T20:05:03.746264	Block States: bmbc
 32893381a887a09274bf046f95aca46fe661a35e assets/bmbc/blockstates/alloy_furnace.json
 58a4f7cc77a0f2517d2aad1f02b078439f384e00 assets/bmbc/blockstates/bauxite_ore.json
 6960f0b39a0fe64291df5ba4cb057730fa52c941 assets/bmbc/blockstates/carnallite_ore.json
@@ -36,7 +36,7 @@ f8f008d94b43a791290eec28b5caf27a9920bc4f assets/bmbc/models/block/evaporite_ore.
 1abeacb3ccf746ecf3dfe1564e8e6aaeb54285af assets/bmbc/models/block/extruder.json
 6dc2a0d7837a295169f1a60e479e34b62207d195 assets/bmbc/models/block/extruder_on.json
 54c1a06061605bb7eb262d3258f6a88ee328d884 assets/bmbc/models/block/garbage_block.json
-47904fd6392e1866c951838ad8cdebb01f4e50c6 assets/bmbc/models/block/hydroelectric_plant.json
+fe43fb219539683539ffb32a96f760d157c35256 assets/bmbc/models/block/hydroelectric_plant.json
 e61663bbc4c0b6fba11675f37e44eeb98348d29c assets/bmbc/models/block/macerator.json
 b8b1d05c1fb3a4591c68cdffef1713cfd7660abf assets/bmbc/models/block/magnesite_ore.json
 23706399757845e7e707b7b88450f9c96bfd610e assets/bmbc/models/block/maple_leaves.json

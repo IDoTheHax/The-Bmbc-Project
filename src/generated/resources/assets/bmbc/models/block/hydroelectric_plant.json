@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "bottom": "bmbc:block/lv_machine_bottom1",
-    "front": "bmbc:block/lv_machine_side1",
+    "bottom": "bmbc:block/lv_machine_side1",
+    "front": "bmbc:block/rf_energy_sides",
     "side": "bmbc:block/rf_energy_sides",
     "top": "bmbc:block/hydroelectric_plant_top"
   }

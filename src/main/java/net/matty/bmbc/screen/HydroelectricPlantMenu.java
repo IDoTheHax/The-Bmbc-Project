@@ -1,7 +1,7 @@
 package net.matty.bmbc.screen;
 
 import net.matty.bmbc.block.ModBlocks;
-import net.matty.bmbc.block.entity.AlloyFurnaceBlockEntity;
+import net.matty.bmbc.block.entity.HydroelectricBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +13,7 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class HydroelectricPlantMenu extends AbstractContainerMenu {
-    private AlloyFurnaceBlockEntity blockEntity;
+    private HydroelectricBlockEntity blockEntity;
     private Level level;
     private final ContainerData data;
 
@@ -24,7 +24,7 @@ public class HydroelectricPlantMenu extends AbstractContainerMenu {
     public HydroelectricPlantMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.HYDROELECTRIC_PLANT_MENU.get(), id);
         checkContainerSize(inv, 2);
-        blockEntity = (AlloyFurnaceBlockEntity) entity;
+        blockEntity = (HydroelectricBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
 
@@ -32,8 +32,8 @@ public class HydroelectricPlantMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 79, 12));
-            this.addSlot(new SlotItemHandler(handler, 1, 79, 60));
+            this.addSlot(new SlotItemHandler(handler, 0, 80, 13));
+            this.addSlot(new SlotItemHandler(handler, 1, 80, 61));
         });
 
         addDataSlots(data);
@@ -43,7 +43,7 @@ public class HydroelectricPlantMenu extends AbstractContainerMenu {
         return data.get(0) > 0;
     }
 
-    public AlloyFurnaceBlockEntity getBlockEntity() {
+    public HydroelectricBlockEntity getBlockEntity() {
         return this.blockEntity;
     }
 
@@ -109,7 +109,7 @@ public class HydroelectricPlantMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player player) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                player, ModBlocks.ALLOY_FURNACE.get());
+                player, ModBlocks.HYDROELECTRIC_PLANT.get());
     }
 
     // Where to place the different slots
