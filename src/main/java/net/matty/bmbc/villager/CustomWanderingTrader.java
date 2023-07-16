@@ -80,7 +80,7 @@ public class CustomWanderingTrader extends AbstractVillager {
 
     public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
-        if (!itemstack.is(Items.VILLAGER_SPAWN_EGG) && this.isAlive() && !this.isTrading() && !this.isBaby()) {
+        if (!itemstack.is(Items.WANDERING_TRADER_SPAWN_EGG) && this.isAlive() && !this.isTrading() && !this.isBaby()) {
             if (pHand == InteractionHand.MAIN_HAND) {
                 pPlayer.awardStat(Stats.TALKED_TO_VILLAGER);
             }

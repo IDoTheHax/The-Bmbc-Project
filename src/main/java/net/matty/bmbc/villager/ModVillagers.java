@@ -24,10 +24,20 @@ public class ModVillagers {
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.SILVER_LAMP.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
+    public static final RegistryObject<PoiType> VENDOR_OFFICE_POI = POI_TYPES.register("vendor_office_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.VENDOR_OFFICE.get().getStateDefinition().getPossibleStates()),
+                    1, 1));
+
     public static final RegistryObject<VillagerProfession> SILVERER = VILLAGER_PROFESSIONS.register("silverer",
             () -> new VillagerProfession("silverer", x -> x.get() == SILVER_LAMP_POI.get(),
                     x -> x.get() == SILVER_LAMP_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_FARMER));
+
+    public static final RegistryObject<VillagerProfession> VENDOR = VILLAGER_PROFESSIONS.register("vendor",
+            () -> new VillagerProfession("vendor", x -> x.get() == VENDOR_OFFICE_POI.get(),
+                    x -> x.get() == VENDOR_OFFICE_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
+
 
     /*public static final RegistryObject<CustomWanderingTrader> VENDOR = CustomWanderingTrader.register("vendor",
             () -> EntityType.Builder.create(CustomWanderingTrader::new, EntityClassification.CREATURE)
@@ -41,6 +51,8 @@ public class ModVillagers {
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
                     "registerBlockStates", PoiType.class).invoke(null, SILVER_LAMP_POI.get());
+            ObfuscationReflectionHelper.findMethod(PoiType.class,
+                    "registerBlockStates", PoiType.class).invoke(null, VENDOR_OFFICE_POI.get());
         } catch (InvocationTargetException | IllegalAccessException exception) {
             exception.printStackTrace();
         }

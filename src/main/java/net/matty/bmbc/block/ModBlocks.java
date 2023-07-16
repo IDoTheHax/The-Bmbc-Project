@@ -61,6 +61,11 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(SilverLampBlock.LIT) ? 15 : 0)));
 
+    public static final RegistryObject<Block> VENDOR_OFFICE = registerBlock("vendor_office",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL) // This will later maybe be a BE
+                    .strength(3f)
+                    .requiresCorrectToolForDrops()));
+
     // Crops
     public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop",
             () -> new CoffeeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));

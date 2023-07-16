@@ -1,13 +1,9 @@
 package net.matty.bmbc.event;
 
-import gg.hipposgrumm.bmbc.BMBC_Main;
-import gg.hipposgrumm.bmbc.element.Element;
-import gg.hipposgrumm.bmbc.items.CompoundItem;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.matty.bmbc.item.ModChemicalCompounds;
 import net.matty.bmbc.item.ModFoodItems;
-import net.matty.bmbc.item.ModMineralItems;
+import net.matty.bmbc.item.ModMachineComponents;
 import net.matty.bmbc.thirst.PlayerThirst;
 import net.matty.bmbc.thirst.PlayerThirstProvider;
 import net.matty.bmbc.villager.ModVillagers;
@@ -17,26 +13,20 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 
-import java.util.Collection;
 import java.util.List;
-
-import java.lang.Thread;
 
 @Mod.EventBusSubscriber(modid = BetterMineBetterCraft.MOD_ID)
 public class ModEvents {
@@ -60,6 +50,22 @@ public class ModEvents {
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 1),
                     stack,10,8,0.02F));
+        }
+
+        if(event.getType() == ModVillagers.VENDOR.get()) {
+            // Here we do the trades these are sorted by level and in sublevel are sorted alphabetically
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades(); // But first we set up the list for the trades
+            //int villagerLevel = 100;
+
+            // items you sell
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), new ItemStack(ModMachineComponents.COPPER_WIRE.get(), 3),10,2,0.02F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), new ItemStack(ModMachineComponents.IRON_ROD.get(), 3),10,1,0.02F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(ModMachineComponents.MAGNETIC_IRON_ROD.get(), 3),10,4,0.04F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), new ItemStack(ModMachineComponents.COPPER_COIL.get(), 3),10,2,0.02F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), new ItemStack(ModMachineComponents.COPPER_FOIL.get(), 3),10,2,0.02F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 5), new ItemStack(ModMachineComponents.ELECTRIC_MOTOR.get(), 1),4,4,0.04F));
+
+
         }
     }
 

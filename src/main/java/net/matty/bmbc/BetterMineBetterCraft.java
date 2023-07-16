@@ -71,16 +71,8 @@ public class BetterMineBetterCraft {
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == ModResourcesCreativeModeTab.BMBC_RESOURCES) {
 
-            //event.accept(ModMineralItems.BAUXITE);
-            //event.accept(ModMineralItems.BERYLLIUM);
-            //event.accept(ModMineralItems.BORON);
-            //event.accept(ModMineralItems.CALCIUM);
-            //event.accept(ModMineralItems.CHROMIUM);
-            //event.accept(ModMineralItems.GERMANIUM);
-            //event.accept(ModMineralItems.LITHIUM);
-            //event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
-            //event.accept(ModMineralItems.MAGNESIUM);
-            //event.accept(ModMineralItems.MANGANESE);
+            event.accept(ModMineralItems.BAUXITE);
+            event.accept(ModMineralItems.MAGNETIC_IRON_INGOT);
             //event.accept(ModMineralItems.WHITE_PHOSPHORUS);
             //event.accept(ModMineralItems.RED_PHOSPHORUS);
             //event.accept(ModMineralItems.BLACK_PHOSPHORUS);
