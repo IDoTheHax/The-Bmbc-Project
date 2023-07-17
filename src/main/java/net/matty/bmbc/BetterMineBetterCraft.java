@@ -108,6 +108,7 @@ public class BetterMineBetterCraft {
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.SILVER_LAMP);
             event.accept(ModBlocks.GARBAGE_BLOCK);
+            event.accept(ModBlocks.URANIUM_BLOCK);
 
             // Ores
             event.accept(ModBlocks.BAUXITE_ORE);

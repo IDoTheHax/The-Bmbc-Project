@@ -47,6 +47,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MECHANICAL_ROLLER = registerBlock("mechanical_roller",
             () -> new MechanicalRoller(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+
     public static final RegistryObject<Block> SILICA_SAND = registerBlock("silica_sand",
             () -> new SilicaSand(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND)));
 
@@ -65,6 +66,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL) // This will later maybe be a BE
                     .strength(3f)
                     .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block",
+            () -> new RadioactiveBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
 
     // Crops
     public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop",

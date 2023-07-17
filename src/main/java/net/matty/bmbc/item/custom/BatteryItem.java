@@ -1,5 +1,6 @@
 package net.matty.bmbc.item.custom;
 
+import net.matty.bmbc.util.BmbcEnergyStorage;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -26,8 +27,12 @@ public class BatteryItem extends Item {
         this.energyStored = energyStored;
     }
 
-    private final EnergyStorage ENERGY_STORAGE = new EnergyStorage(this.capacity, this.maxReceiveAmount, this.maxExtractAmount, this.energyStored) {
+    private final EnergyStorage ENERGY_STORAGE = new BmbcEnergyStorage(this.capacity, this.maxReceiveAmount, this.maxExtractAmount, this.energyStored) {
 
+        @Override
+        public void onEnergyChanged() {
+
+        }
     };
 
     @Override

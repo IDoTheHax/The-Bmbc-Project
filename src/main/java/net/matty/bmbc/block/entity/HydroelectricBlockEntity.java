@@ -4,8 +4,10 @@ import net.matty.bmbc.block.custom.PressureVesselBlock;
 import net.matty.bmbc.fluid.ModFluids;
 import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.networking.ModNetworkingPackets;
+import net.matty.bmbc.networking.packet.EnergySyncS2CPacket;
 import net.matty.bmbc.networking.packet.FluidSyncS2CPacket;
 import net.matty.bmbc.screen.HydroelectricPlantMenu;
+import net.matty.bmbc.util.BmbcEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -50,6 +52,14 @@ public class HydroelectricBlockEntity extends BlockEntity implements MenuProvide
                 case 1 -> stack.getItem() == ModItems.BATTERY.get();
                 default -> super.isItemValid(slot, stack);
             };
+        }
+    };
+
+    private final BmbcEnergyStorage ENERGY_STORAGE = new BmbcEnergyStorage(60000, 256, 100, 0) {
+        @Override
+        public void onEnergyChanged() {
+            setChanged();
+            ModNetworkingPackets.sendToClients(new EnergySyncS2CPacket(this.energy, getBlockPos()));
         }
     };
 
@@ -220,6 +230,34 @@ public class HydroelectricBlockEntity extends BlockEntity implements MenuProvide
             transferItemFluidToFluidTank(pEntity);
         }
     }
+
+    //private void chargeItem(ItemStack itemStack){
+    //    energy.ifPresent(teEnergy -> {
+    //        if(teEnergy.getEnergyStored() > 0){
+    //            itemStack.getCapability(ForgeCapabilities.ENERGY).ifPresent(energyItem -> {
+    //                if(energyItem.canReceive()){
+    //                    int toReceive;
+    //                    if(itemStack.getItem() instanceof VEEnergyItem){
+    //                        int maxReceiveItem = ((VEEnergyItem) itemStack.getItem()).getMaxTransfer();
+    //                        toReceive = Math.min(
+    //                                (energyItem.getMaxEnergyStored() - energyItem.getEnergyStored()),
+    //                                maxReceiveItem);
+    //                        toReceive = Math.min(toReceive, POWER_MAX_TX);
+    //                        toReceive = Math.min(toReceive, teEnergy.getEnergyStored());
+    //                    } else toReceive = Math.min((energyItem.getMaxEnergyStored() - energyItem.getEnergyStored()), POWER_MAX_TX);
+//
+    //                    if(toReceive + teEnergy.getEnergyStored() <= energyItem.getMaxEnergyStored()){
+    //                        teEnergy.extractEnergy(toReceive, false);
+    //                        energyItem.receiveEnergy(toReceive, false);
+    //                    } else if(energyItem.getEnergyStored() != energyItem.getMaxEnergyStored()){ // Actually, this might not be needed
+    //                        teEnergy.extractEnergy(energyItem.getMaxEnergyStored() - energyItem.getEnergyStored(), false);
+    //                        energyItem.receiveEnergy(energyItem.getMaxEnergyStored() - energyItem.getEnergyStored(), false);
+    //                    }
+    //                }
+    //            });
+    //        }
+    //    });
+    //}
 
     private static void transferItemFluidToFluidTank(HydroelectricBlockEntity pEntity) {
         pEntity.itemHandler.getStackInSlot(0).getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).ifPresent(handler -> {

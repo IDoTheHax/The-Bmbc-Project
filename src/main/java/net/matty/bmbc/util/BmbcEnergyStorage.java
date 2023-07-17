@@ -3,8 +3,8 @@ package net.matty.bmbc.util;
 import net.minecraftforge.energy.EnergyStorage;
 
 public abstract class BmbcEnergyStorage extends EnergyStorage {
-    public BmbcEnergyStorage(int capacity, int maxTransfer) {
-        super(capacity, maxTransfer);
+    public BmbcEnergyStorage(int capacity, int maxReceive, int maxExtract, int energy) {
+        super(capacity, maxReceive, maxExtract, energy);
     }
 
     @Override
