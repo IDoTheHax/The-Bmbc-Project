@@ -34,6 +34,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.THREE_D_PRINTER.get());
         dropSelf(ModBlocks.MACERATOR.get());
         dropSelf(ModBlocks.MECHANICAL_ROLLER.get());
+        dropSelf(ModBlocks.VENDOR_OFFICE.get());
 
         dropSelf(ModBlocks.SILVER_LAMP.get());
         add(ModBlocks.GARBAGE_BLOCK.get(),
@@ -86,6 +87,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         // Misc
         dropSelf(ModBlocks.SILICA_SAND.get());
 
+        // Radioactive
+        dropSelf(ModBlocks.URANIUM_BLOCK.get());
 
         this.add(ModBlocks.MAPLE_LEAVES.get(), (block) ->
                 createLeavesDrops(block, ModBlocks.MAPLE_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));

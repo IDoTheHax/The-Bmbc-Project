@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bmbc:block/uranium_block"
+    }
+  }
+}

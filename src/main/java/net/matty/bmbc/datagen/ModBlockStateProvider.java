@@ -127,6 +127,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PHOSPHORITE_ORE);
         blockWithItem(ModBlocks.SILVER_ORE);
 
+        // Radioactive
+        blockWithItem(ModBlocks.URANIUM_BLOCK);
+
         // Trees
         logBlock(((RotatedPillarBlock) ModBlocks.MAPLE_LOG.get()));
         axisBlock((RotatedPillarBlock) ModBlocks.MAPLE_WOOD.get(), blockTexture(ModBlocks.MAPLE_LOG.get()), blockTexture(ModBlocks.MAPLE_LOG.get()));

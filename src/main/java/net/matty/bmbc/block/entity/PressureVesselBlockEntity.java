@@ -59,7 +59,7 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
         }
     };
 
-    private final BmbcEnergyStorage ENERGY_STORAGE = new BmbcEnergyStorage(60000, 256, 100, 0) {
+    private final BmbcEnergyStorage ENERGY_STORAGE = new BmbcEnergyStorage(60000, 256) {
         @Override
         public void onEnergyChanged() {
             setChanged();

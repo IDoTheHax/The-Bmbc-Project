@@ -55,7 +55,7 @@ public class HydroelectricBlockEntity extends BlockEntity implements MenuProvide
         }
     };
 
-    private final BmbcEnergyStorage ENERGY_STORAGE = new BmbcEnergyStorage(60000, 256, 100, 0) {
+    private final BmbcEnergyStorage ENERGY_STORAGE = new BmbcEnergyStorage(60000, 256) {
         @Override
         public void onEnergyChanged() {
             setChanged();

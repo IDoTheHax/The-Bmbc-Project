@@ -27,7 +27,7 @@ public class BatteryItem extends Item {
         this.energyStored = energyStored;
     }
 
-    private final EnergyStorage ENERGY_STORAGE = new BmbcEnergyStorage(this.capacity, this.maxReceiveAmount, this.maxExtractAmount, this.energyStored) {
+    private final EnergyStorage ENERGY_STORAGE = new BmbcEnergyStorage(this.capacity, this.maxReceiveAmount) {
 
         @Override
         public void onEnergyChanged() {

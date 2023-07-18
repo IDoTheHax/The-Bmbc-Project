@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-12T20:44:02.858863	Loot Tables
+// 1.19.4	2023-07-18T12:13:58.741958	Loot Tables
 74bfbbf46b071027936db6023e6b2ffc1f06d59a data/bmbc/loot_tables/blocks/alloy_furnace.json
 5a1ed8d2579c9a0131fa68deb9da67767cb30da5 data/bmbc/loot_tables/blocks/bauxite_ore.json
 4fd18d3000471abc9a3c8e4a30ed05f3ad274c16 data/bmbc/loot_tables/blocks/biomass_generator.json
@@ -30,3 +30,5 @@ bbbfbf2394b71512aedf23828dd4c361edf0f069 data/bmbc/loot_tables/blocks/silver_blo
 615e686b12cf8a0e2732c476c198b86257f4e152 data/bmbc/loot_tables/blocks/stripped_maple_log.json
 83d476f55708cb28ac57bd8e009cb27749162e32 data/bmbc/loot_tables/blocks/stripped_maple_wood.json
 d68aae1ac199da4077442cc2df030350fe571336 data/bmbc/loot_tables/blocks/three_d_printer.json
+42e102b69b50af7b8e39bfd3212746fbfdc13904 data/bmbc/loot_tables/blocks/uranium_block.json
+6e62860236888ecb86338c0f41bc97e84b4610fe data/bmbc/loot_tables/blocks/vendor_office.json
