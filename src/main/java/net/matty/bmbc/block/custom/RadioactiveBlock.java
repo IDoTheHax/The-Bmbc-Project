@@ -26,6 +26,7 @@ public class RadioactiveBlock extends Block {
     //}
 
 
+
     @Override
     public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
         if (hasHazmatSuit(player) == false) {
