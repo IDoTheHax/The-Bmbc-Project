@@ -69,7 +69,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> URANIUM_BLOCK = registerBlock("uranium_block",
             () -> new RadioactiveBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(1f).requiresCorrectToolForDrops().noOcclusion(), 5, 2.0f));
 
     // Crops
     public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop",
@@ -77,11 +77,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BIOMASS_GENERATOR = registerBlock("biomass_generator",
             () -> new BiomassGeneratorBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(0.5f).requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().strength(0.5f).noOcclusion()));
 
     public static final RegistryObject<Block> HYDROELECTRIC_PLANT = registerBlock("hydroelectric_plant",
             () -> new HydroelectricPlantBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(0.5f).requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().strength(0.5f).noOcclusion()));
 
     public static final RegistryObject<Block> PRESSURE_VESSEL = registerBlock("pressure_vessel",
             () -> new PressureVesselBlock(BlockBehaviour.Properties.of(Material.METAL)
@@ -89,16 +89,16 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RECHARGER = registerBlock("recharger",
             () -> new RechargerBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(0.5F).requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().strength(0.5f).noOcclusion()));
 
 
     public static final RegistryObject<Block> THREE_D_PRINTER = registerBlock("three_d_printer",
             () -> new ThreeDPrinterBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(0.5F).requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().strength(0.5f).noOcclusion()));
 
     public static final RegistryObject<Block> MACERATOR = registerBlock("macerator",
             () -> new MaceratorBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(0.5F).requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().strength(0.5f).noOcclusion()));
 
     public static final RegistryObject<Block> ALLOY_FURNACE = registerBlock("alloy_furnace",
             () -> new AlloyFurnaceBlock(BlockBehaviour.Properties.of(Material.METAL)
