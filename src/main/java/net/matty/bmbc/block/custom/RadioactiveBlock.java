@@ -3,6 +3,7 @@ package net.matty.bmbc.block.custom;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.item.ModArmorItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -16,6 +17,10 @@ import java.util.stream.StreamSupport;
 
 @Mod.EventBusSubscriber(modid = BetterMineBetterCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class RadioactiveBlock extends Block {
+    private static final int COOLDOWN_MIN = 100; // 100 ticks = 5 seconds (20 ticks per second)
+    private static final int COOLDOWN_MAX = 200; // 200 ticks = 10 seconds
+
+    private static int currentCooldown = 0;
     public static int radiationRange;
     public static float radiationDamage;
 
@@ -28,12 +33,7 @@ public class RadioactiveBlock extends Block {
     @Override
     public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
         if (player != null) {
-            if (hasHazmatSuit(player)) {
-                System.out.println("TEsT");
-            } else {
-                // Damage the player for breaking the block without a full hazmat suit.
-                player.hurt(level.damageSources().generic(), radiationDamage);
-            }
+            applyRadiationDamage(player, level);
         }
 
         return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
@@ -58,12 +58,39 @@ public class RadioactiveBlock extends Block {
 
     public static void applyRadiationDamage(Player player, Level level) {
         if (player != null) {
-            if (hasHazmatSuit(player)) {
-                System.out.println("NOT HAZARDOUS");
-            } else {
-                // Damage the player for breaking the block without a full hazmat suit.
-                System.out.println("RADIOACTIVE");
+            if (!hasHazmatSuit(player)) {
                 player.hurt(level.damageSources().generic(), radiationDamage);
+            } else {
+                // Decrease the armour durability
+                // Increment the cooldown timer
+                if (currentCooldown > 0) {
+                    currentCooldown--;
+                }
+
+                // TODO: There is a bug that when taken out of the slot the durability resets
+                if (RadioactiveBlock.hasHazmatSuit(player) && currentCooldown <= 0 && !player.isCreative()) {
+                    // Decrease the durability of the custom armor items
+                    decreaseDurability(player.getItemBySlot(EquipmentSlot.HEAD));
+                    decreaseDurability(player.getItemBySlot(EquipmentSlot.CHEST));
+                    decreaseDurability(player.getItemBySlot(EquipmentSlot.LEGS));
+                    decreaseDurability(player.getItemBySlot(EquipmentSlot.FEET));
+
+                    // Reset the cooldown
+                    currentCooldown = player.level.random.nextInt(COOLDOWN_MAX - COOLDOWN_MIN + 1) + COOLDOWN_MIN;
+                }
+            }
+        }
+    }
+
+    private static void decreaseDurability(ItemStack itemStack) {
+        // Check if the itemStack is not empty and if it is armor with durability
+        if (!itemStack.isEmpty() && itemStack.isDamageableItem()) {
+            // Decrease the item's durability
+            itemStack.setDamageValue(itemStack.getDamageValue() + 1);
+
+            // If the durability reaches 0, the item will break, so you may want to handle that case
+            if (itemStack.getDamageValue() >= itemStack.getMaxDamage()) {
+                itemStack.shrink(1); // Remove the item from the player's inventory when it breaks
             }
         }
     }

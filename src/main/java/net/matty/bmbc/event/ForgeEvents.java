@@ -32,10 +32,17 @@ public class ForgeEvents {
                         if (level.getBlockState(mutablePos).getBlock() instanceof RadioactiveBlock) {
                             // The player is near the radioactive block.
                             // Apply damage here using the same method as in onDestroyedByPlayer.
+
                             RadioactiveBlock.applyRadiationDamage(player, level);
                             break; // No need to check further if we found a radioactive block.
                         }
                     }
+                    if (RadioactiveBlock.hasHazmatSuit(player)) {
+                        break;
+                    }
+                }
+                if (RadioactiveBlock.hasHazmatSuit(player)) {
+                    break;
                 }
             }
         }
