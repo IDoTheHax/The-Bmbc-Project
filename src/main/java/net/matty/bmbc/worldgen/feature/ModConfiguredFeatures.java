@@ -34,6 +34,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_MAGNESITE_ORE_KEY = registerKey("add_magnesite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_PEGMATITE_ORE_KEY = registerKey("add_pegmatite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_PHOSPHORITE_ORE_KEY = registerKey("add_phosphorite_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_URANITE_ORE_KEY = registerKey("add_uranite_ore");
 
     // Trees
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
@@ -70,6 +71,9 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> silverOres = List.of(OreConfiguration.target(stoneReplaceables,
                         ModBlocks.SILVER_ORE.get().defaultBlockState()));
 
+        List<OreConfiguration.TargetBlockState> uraniteOres = List.of(OreConfiguration.target(stoneReplaceables,
+                ModBlocks.URANITE_ORE.get().defaultBlockState()));
+
 
         // Other
         List<OreConfiguration.TargetBlockState> silicaSand = List.of(OreConfiguration.target(stoneReplaceables,
@@ -86,6 +90,7 @@ public class ModConfiguredFeatures {
         register(context, OVERWORLD_MAGNESITE_ORE_KEY, Feature.ORE, new OreConfiguration(magnesiteOres, 11));
         register(context, OVERWORLD_PEGMATITE_ORE_KEY, Feature.ORE, new OreConfiguration(pegmatiteOres, 11));
         register(context, OVERWORLD_PHOSPHORITE_ORE_KEY, Feature.ORE, new OreConfiguration(phosphoriteOres, 11));
+        register(context, OVERWORLD_URANITE_ORE_KEY, Feature.ORE, new OreConfiguration(uraniteOres, 5));
 
         // Trees
         register(context, MAPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(

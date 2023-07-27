@@ -126,6 +126,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PEGMATITE_ORE);
         blockWithItem(ModBlocks.PHOSPHORITE_ORE);
         blockWithItem(ModBlocks.SILVER_ORE);
+        blockWithItem(ModBlocks.URANITE_ORE);
 
         // Radioactive
         blockWithItem(ModBlocks.URANIUM_BLOCK);

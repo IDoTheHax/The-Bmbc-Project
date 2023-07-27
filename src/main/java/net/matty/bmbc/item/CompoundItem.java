@@ -1,8 +1,6 @@
-package gg.hipposgrumm.bmbc.items;
+package net.matty.bmbc.item;
 
-import gg.hipposgrumm.bmbc.BMBC_Main;
-import gg.hipposgrumm.bmbc.element.Element;
-import gg.hipposgrumm.bmbc.element.ElementRegister;
+import net.matty.bmbc.element.Element;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -41,7 +39,7 @@ public class CompoundItem extends Item {
     @Override
     public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity){
         new Thread(() -> {
-            if(((CompoundItem) stack.getItem()).compound.getElements().size()==1&&((CompoundItem) stack.getItem()).compound.getElements().get(0)==BMBC_Main.LITHIUM) {
+            if(((CompoundItem) stack.getItem()).compound.getElements().size()==1&&((CompoundItem) stack.getItem()).compound.getElements().get(0)==ElementItems.LITHIUM) {
                 if(entity.isInWater()) entity.getServer().overworld().explode(null, entity.getX(), entity.getY(), entity.getZ(), 2, true, Level.ExplosionInteraction.NONE);
             }
         }).start();

@@ -1,6 +1,5 @@
 package net.matty.bmbc.datagen;
 
-import gg.hipposgrumm.bmbc.BMBC_Main;
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.block.ModBlocks;
 import net.matty.bmbc.item.*;
@@ -101,25 +100,25 @@ public class ModItemModelProvider extends ItemModelProvider {
         //simpleItem(ModMineralItems.TITANIUM);
         //simpleItem(ModMineralItems.VANADIUM);
 
-        simpleItem(BMBC_Main.LITHIUM_INGOT);
-        simpleItem(BMBC_Main.BERYLLIUM_INGOT);
-        simpleItem(BMBC_Main.BORON_INGOT);
-        simpleItem(BMBC_Main.CARBON_INGOT);
-        simpleItem(BMBC_Main.SODIUM_INGOT);
-        simpleItem(BMBC_Main.MAGNESIUM_INGOT);
-        simpleItem(BMBC_Main.ALUMINIUM_INGOT);
-        simpleItem(BMBC_Main.SILICON_CRYSTAL);
-        simpleItem(BMBC_Main.WHITE_PHOSPHORUS);
-        simpleItem(BMBC_Main.RED_PHOSPHORUS );
-        simpleItem(BMBC_Main.BLACK_PHOSPHORUS);
-        simpleItem(BMBC_Main.SULFUR_CRYSTAL);
-        simpleItem(BMBC_Main.POTASSIUM_INGOT);
-        simpleItem(BMBC_Main.CALCIUM_ROCK);
-        simpleItem(BMBC_Main.SCANDIUM_INGOT);
-        simpleItem(BMBC_Main.TITANIUM_INGOT);
-        simpleItem(BMBC_Main.VANADIUM_INGOT);
-        simpleItem(BMBC_Main.CHROMIUM_CRYSTAL);
-        simpleItem(BMBC_Main.MANGANESE_INGOT);
+        simpleItem(ModMineralItems.LITHIUM_INGOT);
+        simpleItem(ModMineralItems.BERYLLIUM_INGOT);
+        simpleItem(ModMineralItems.BORON_INGOT);
+        simpleItem(ModMineralItems.CARBON_INGOT);
+        simpleItem(ModMineralItems.SODIUM_INGOT);
+        simpleItem(ModMineralItems.MAGNESIUM_INGOT);
+        simpleItem(ModMineralItems.ALUMINIUM_INGOT);
+        simpleItem(ModMineralItems.SILICON_CRYSTAL);
+        simpleItem(ModMineralItems.WHITE_PHOSPHORUS);
+        simpleItem(ModMineralItems.RED_PHOSPHORUS );
+        simpleItem(ModMineralItems.BLACK_PHOSPHORUS);
+        simpleItem(ModMineralItems.SULFUR_CRYSTAL);
+        simpleItem(ModMineralItems.POTASSIUM_INGOT);
+        simpleItem(ModMineralItems.CALCIUM_ROCK);
+        simpleItem(ModMineralItems.SCANDIUM_INGOT);
+        simpleItem(ModMineralItems.TITANIUM_INGOT);
+        simpleItem(ModMineralItems.VANADIUM_INGOT);
+        simpleItem(ModMineralItems.CHROMIUM_CRYSTAL);
+        simpleItem(ModMineralItems.MANGANESE_INGOT);
 
         // Radiation
         simpleItem(ModItems.NBC_FABRIC);
@@ -158,7 +157,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMachineComponents.IRON_ROD);
         simpleItem(ModMachineComponents.MAGNETIC_IRON_ROD);
 
-        for (RegistryObject<Item> itemToModel:BMBC_Main.doDatagen()) simpleItem(itemToModel);
+        //for (RegistryObject<Item> itemToModel:BMBC_Main.doDatagen()) simpleItem(itemToModel);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

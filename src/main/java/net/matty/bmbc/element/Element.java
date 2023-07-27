@@ -1,4 +1,4 @@
-package gg.hipposgrumm.bmbc.element;
+package net.matty.bmbc.element;
 
 import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.ResourceLocation;

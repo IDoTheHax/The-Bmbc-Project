@@ -1,4 +1,4 @@
-// 1.19.4	2023-06-15T14:12:01.758031	Registries
+// 1.19.4	2023-07-27T19:57:09.581068	Registries
 c54b8b9c9acecf2d7e4a5d969d7a7ba722621f84 data/bmbc/worldgen/configured_feature/add_bauxite_ore.json
 6bdc59854b2673fe7fcce5dd94db88fa879d07cc data/bmbc/worldgen/configured_feature/add_carnallite_ore.json
 7ef734f1556c6848be87fad1e7371618627f60cd data/bmbc/worldgen/configured_feature/add_dolomite_ore.json
@@ -8,6 +8,7 @@ adbc9287e4d762e10dfc43d564abf765eaab371a data/bmbc/worldgen/configured_feature/a
 9b0f0acbfe9b2d061fb2b03fbed091017449a2a9 data/bmbc/worldgen/configured_feature/add_phosphorite_ore.json
 05a8df08a08e052686689e9ecc351e3ecab15cc8 data/bmbc/worldgen/configured_feature/add_silica_sand.json
 3f8ab69d0fe3bf0ebb96bf4c318703e11cd7e4d5 data/bmbc/worldgen/configured_feature/add_silver_ore.json
+9f72c3f009ac53d61926459813cc0431e16c7def data/bmbc/worldgen/configured_feature/add_uranite_ore.json
 4d4de115bc3bd9de9511fbb3b184f3f0b309f854 data/bmbc/worldgen/configured_feature/maple.json
 9e5bbd8a7b5abb25997765df01749e7a80de724f data/bmbc/worldgen/placed_feature/bauxite_ore_deposit.json
 08761aa9fa43c12f0c8181d5245885fc4b038e9b data/bmbc/worldgen/placed_feature/carnallite_ore_placed.json
@@ -19,3 +20,4 @@ b39d850d2dc4ed34cd3e3cddd01c2b8780b038ff data/bmbc/worldgen/placed_feature/pegma
 2efe6820ff5a7dbcd70bc3db3e789e88beb39afc data/bmbc/worldgen/placed_feature/phosphorite_ore_placed.json
 92665c5f8da05bcbf6e6aa2292688315167bad2b data/bmbc/worldgen/placed_feature/silica_sand_placed.json
 b3be8c64e8b09785e8cf1c4edac83debb92f3718 data/bmbc/worldgen/placed_feature/silver_ore_deposit.json
+745230aa1c5d6c8cf5befefa265e473fbd1ede20 data/bmbc/worldgen/placed_feature/uranite_ore_placed.json

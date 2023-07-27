@@ -1,0 +1,111 @@
+package net.matty.bmbc.item;
+
+import net.matty.bmbc.BetterMineBetterCraft;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class GasStorageItems {
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, BetterMineBetterCraft.MOD_ID);
+
+    // Gas
+    public static final RegistryObject<Item> COMPRESSED_HYDROGEN = ITEMS.register("compressed_hydrogen", () -> new CompoundItem(new Item.Properties(), CompoundItems.HYDROGEN_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_HELIUM = ITEMS.register("compressed_helium", () -> new CompoundItem(new Item.Properties(), CompoundItems.HELIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_LITHIUM = ITEMS.register("compressed_lithium", () -> new CompoundItem(new Item.Properties(), CompoundItems.LITHIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_BERYLLIUM = ITEMS.register("compressed_beryllium", () -> new CompoundItem(new Item.Properties(), CompoundItems.BERYLLIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_BORON = ITEMS.register("compressed_boron", () -> new CompoundItem(new Item.Properties(), CompoundItems.BORON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_CARBON = ITEMS.register("compressed_carbon", () -> new CompoundItem(new Item.Properties(), CompoundItems.CARBON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_NITROGEN = ITEMS.register("compressed_nitrogen", () -> new CompoundItem(new Item.Properties(), CompoundItems.NITROGEN_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_OXYGEN = ITEMS.register("compressed_oxygen", () -> new CompoundItem(new Item.Properties(), CompoundItems.OXYGEN_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_FLUORINE = ITEMS.register("compressed_fluorine", () -> new CompoundItem(new Item.Properties(), CompoundItems.FLUORINE_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_NEON = ITEMS.register("compressed_neon", () -> new CompoundItem(new Item.Properties(), CompoundItems.NEON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_SODIUM = ITEMS.register("compressed_sodium", () -> new CompoundItem(new Item.Properties(), CompoundItems.SODIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_MAGNESIUM = ITEMS.register("compressed_magnesium", () -> new CompoundItem(new Item.Properties(), CompoundItems.MAGNESIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ALUMINIUM = ITEMS.register("compressed_aluminium", () -> new CompoundItem(new Item.Properties(), CompoundItems.ALUMINIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_SILICON = ITEMS.register("compressed_silicon", () -> new CompoundItem(new Item.Properties(), CompoundItems.SILICON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_PHOSPHORUS = ITEMS.register("compressed_phosphorus", () -> new CompoundItem(new Item.Properties(), CompoundItems.PHOSPHORUS_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_SULFUR = ITEMS.register("compressed_sulfur", () -> new CompoundItem(new Item.Properties(), CompoundItems.SULFUR_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_CHLORINE = ITEMS.register("compressed_chlorine", () -> new CompoundItem(new Item.Properties(), CompoundItems.CHLORINE_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ARGON = ITEMS.register("compressed_argon", () -> new CompoundItem(new Item.Properties(), CompoundItems.ARGON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_POTASSIUM = ITEMS.register("compressed_potassium", () -> new CompoundItem(new Item.Properties(), CompoundItems.POTASSIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_CALCIUM = ITEMS.register("compressed_calcium", () -> new CompoundItem(new Item.Properties(), CompoundItems.CALCIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_SCANDIUM = ITEMS.register("compressed_scandium", () -> new CompoundItem(new Item.Properties(), CompoundItems.SCANDIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_TITANIUM = ITEMS.register("compressed_titanium", () -> new CompoundItem(new Item.Properties(), CompoundItems.TITANIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_VANADIUM = ITEMS.register("compressed_vanadium", () -> new CompoundItem(new Item.Properties(), CompoundItems.VANADIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_CHROMIUM = ITEMS.register("compressed_chromium", () -> new CompoundItem(new Item.Properties(), CompoundItems.CHROMIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_MANGANESE = ITEMS.register("compressed_manganese", () -> new CompoundItem(new Item.Properties(), CompoundItems.MANGANESE_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_IRON = ITEMS.register("compressed_iron", () -> new CompoundItem(new Item.Properties(), CompoundItems.IRON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_COBALT = ITEMS.register("compressed_cobalt", () -> new CompoundItem(new Item.Properties(), CompoundItems.COBALT_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_NICKEL = ITEMS.register("compressed_nickel", () -> new CompoundItem(new Item.Properties(), CompoundItems.NICKEL_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_COPPER = ITEMS.register("compressed_copper", () -> new CompoundItem(new Item.Properties(), CompoundItems.COPPER_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ZINC = ITEMS.register("compressed_zinc", () -> new CompoundItem(new Item.Properties(), CompoundItems.ZINC_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_GALLIUM = ITEMS.register("compressed_gallium", () -> new CompoundItem(new Item.Properties(), CompoundItems.GALLIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_GERMANIUM = ITEMS.register("compressed_germanium", () -> new CompoundItem(new Item.Properties(), CompoundItems.GERMANIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ARSENIC = ITEMS.register("compressed_arsenic", () -> new CompoundItem(new Item.Properties(), CompoundItems.ARSENIC_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_SELENIUM = ITEMS.register("compressed_selenium", () -> new CompoundItem(new Item.Properties(), CompoundItems.SELENIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_BROMINE = ITEMS.register("compressed_bromine", () -> new CompoundItem(new Item.Properties(), CompoundItems.BROMINE_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_KRYPTON = ITEMS.register("compressed_krypton", () -> new CompoundItem(new Item.Properties(), CompoundItems.KRYPTON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_RUBIDIUM = ITEMS.register("compressed_rubidium", () -> new CompoundItem(new Item.Properties(), CompoundItems.RUBIDIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_STRONTIUM = ITEMS.register("compressed_strontium", () -> new CompoundItem(new Item.Properties(), CompoundItems.STRONTIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_YTTRIUM = ITEMS.register("compressed_yttrium", () -> new CompoundItem(new Item.Properties(), CompoundItems.YTTRIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ZIRCONIUM = ITEMS.register("compressed_zirconium", () -> new CompoundItem(new Item.Properties(), CompoundItems.ZIRCONIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_NIOBIUM = ITEMS.register("compressed_niobium", () -> new CompoundItem(new Item.Properties(), CompoundItems.NIOBIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_MOLYBDENUM = ITEMS.register("compressed_molybdenum", () -> new CompoundItem(new Item.Properties(), CompoundItems.MOLYBDENUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_TECHNETIUM = ITEMS.register("compressed_technetium", () -> new CompoundItem(new Item.Properties(), CompoundItems.TECHNETIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_RUTHENIUM = ITEMS.register("compressed_ruthenium", () -> new CompoundItem(new Item.Properties(), CompoundItems.RUTHENIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_RHODIUM = ITEMS.register("compressed_rhodium", () -> new CompoundItem(new Item.Properties(), CompoundItems.RHODIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_PALLADIUM = ITEMS.register("compressed_palladium", () -> new CompoundItem(new Item.Properties(), CompoundItems.PALLADIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_SILVER = ITEMS.register("compressed_silver", () -> new CompoundItem(new Item.Properties(), CompoundItems.SILVER_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_CADMIUM = ITEMS.register("compressed_cadmium", () -> new CompoundItem(new Item.Properties(), CompoundItems.CADMIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_INDIUM = ITEMS.register("compressed_indium", () -> new CompoundItem(new Item.Properties(), CompoundItems.INDIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_TIN = ITEMS.register("compressed_tin", () -> new CompoundItem(new Item.Properties(), CompoundItems.TIN_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ANTIMONY = ITEMS.register("compressed_antimony", () -> new CompoundItem(new Item.Properties(), CompoundItems.ANTIMONY_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_TELLURIUM = ITEMS.register("compressed_tellurium", () -> new CompoundItem(new Item.Properties(), CompoundItems.TELLURIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_IODINE = ITEMS.register("compressed_iodine", () -> new CompoundItem(new Item.Properties(), CompoundItems.IODINE_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_XENON = ITEMS.register("compressed_xenon", () -> new CompoundItem(new Item.Properties(), CompoundItems.XENON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_CESIUM = ITEMS.register("compressed_cesium", () -> new CompoundItem(new Item.Properties(), CompoundItems.CESIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_BARIUM = ITEMS.register("compressed_barium", () -> new CompoundItem(new Item.Properties(), CompoundItems.BARIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_LANTHANUM = ITEMS.register("compressed_lanthanum", () -> new CompoundItem(new Item.Properties(), CompoundItems.LANTHANUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_CERIUM = ITEMS.register("compressed_cerium", () -> new CompoundItem(new Item.Properties(), CompoundItems.CERIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_PRASEODYMIUM = ITEMS.register("compressed_praseodymium", () -> new CompoundItem(new Item.Properties(), CompoundItems.PRASEODYMIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_NEODYMIUM = ITEMS.register("compressed_neodymium", () -> new CompoundItem(new Item.Properties(), CompoundItems.NEODYMIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_PROMETHIUM = ITEMS.register("compressed_promethium", () -> new CompoundItem(new Item.Properties(), CompoundItems.PROMETHIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_SAMARIUM = ITEMS.register("compressed_samarium", () -> new CompoundItem(new Item.Properties(), CompoundItems.SAMARIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_EUROPIUM = ITEMS.register("compressed_europium", () -> new CompoundItem(new Item.Properties(), CompoundItems.EUROPIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_GADOLINIUM = ITEMS.register("compressed_gadolinium", () -> new CompoundItem(new Item.Properties(), CompoundItems.GADOLINIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_TERBIUM = ITEMS.register("compressed_terbium", () -> new CompoundItem(new Item.Properties(), CompoundItems.TERBIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_DYSPROSIUM = ITEMS.register("compressed_dysprosium", () -> new CompoundItem(new Item.Properties(), CompoundItems.DYSPROSIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_HOLMIUM = ITEMS.register("compressed_holmium", () -> new CompoundItem(new Item.Properties(), CompoundItems.HOLMIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ERBIUM = ITEMS.register("compressed_erbium", () -> new CompoundItem(new Item.Properties(), CompoundItems.ERBIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_THULIUM = ITEMS.register("compressed_thulium", () -> new CompoundItem(new Item.Properties(), CompoundItems.THULIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_YTTERBIUM = ITEMS.register("compressed_ytterbium", () -> new CompoundItem(new Item.Properties(), CompoundItems.YTTERBIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_LUTETIUM = ITEMS.register("compressed_lutetium", () -> new CompoundItem(new Item.Properties(), CompoundItems.LUTETIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_HAFNIUM = ITEMS.register("compressed_hafnium", () -> new CompoundItem(new Item.Properties(), CompoundItems.HAFNIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_TANTALUM = ITEMS.register("compressed_tantalum", () -> new CompoundItem(new Item.Properties(), CompoundItems.TANTALUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_TUNGSTEN = ITEMS.register("compressed_tungsten", () -> new CompoundItem(new Item.Properties(), CompoundItems.TUNGSTEN_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_RHENIUM = ITEMS.register("compressed_rhenium", () -> new CompoundItem(new Item.Properties(), CompoundItems.RHENIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_OSMIUM = ITEMS.register("compressed_osmium", () -> new CompoundItem(new Item.Properties(), CompoundItems.OSMIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_IRIDIUM = ITEMS.register("compressed_iridium", () -> new CompoundItem(new Item.Properties(), CompoundItems.IRIDIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_PLATINUM = ITEMS.register("compressed_platinum", () -> new CompoundItem(new Item.Properties(), CompoundItems.PLATINUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_GOLD = ITEMS.register("compressed_gold", () -> new CompoundItem(new Item.Properties(), CompoundItems.GOLD_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_MERCURY = ITEMS.register("compressed_mercury", () -> new CompoundItem(new Item.Properties(), CompoundItems.MERCURY_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_THALLIUM = ITEMS.register("compressed_thallium", () -> new CompoundItem(new Item.Properties(), CompoundItems.THALLIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_LEAD = ITEMS.register("compressed_lead", () -> new CompoundItem(new Item.Properties(), CompoundItems.LEAD_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_BISMUTH = ITEMS.register("compressed_bismuth", () -> new CompoundItem(new Item.Properties(), CompoundItems.BISMUTH_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_POLONIUM = ITEMS.register("compressed_polonium", () -> new CompoundItem(new Item.Properties(), CompoundItems.POLONIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ASTATINE = ITEMS.register("compressed_astatine", () -> new CompoundItem(new Item.Properties(), CompoundItems.ASTATINE_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_RADON = ITEMS.register("compressed_radon", () -> new CompoundItem(new Item.Properties(), CompoundItems.RADON_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_FRANCIUM = ITEMS.register("compressed_francium", () -> new CompoundItem(new Item.Properties(), CompoundItems.FRANCIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_RADIUM = ITEMS.register("compressed_radium", () -> new CompoundItem(new Item.Properties(), CompoundItems.RADIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_ACTINIUM = ITEMS.register("compressed_actinium", () -> new CompoundItem(new Item.Properties(), CompoundItems.ACTINIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_THORIUM = ITEMS.register("compressed_thorium", () -> new CompoundItem(new Item.Properties(), CompoundItems.THORIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_PROTACTINIUM = ITEMS.register("compressed_protactinium", () -> new CompoundItem(new Item.Properties(), CompoundItems.PROTACTINIUM_COMPOUND));
+    public static final RegistryObject<Item> COMPRESSED_URANIUM = ITEMS.register("compressed_uranium", () -> new CompoundItem(new Item.Properties(), CompoundItems.URANIUM_COMPOUND));
+
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
+}

@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-18T12:13:58.740252	Block States: bmbc
+// 1.19.4	2023-07-27T19:57:09.577082	Block States: bmbc
 32893381a887a09274bf046f95aca46fe661a35e assets/bmbc/blockstates/alloy_furnace.json
 58a4f7cc77a0f2517d2aad1f02b078439f384e00 assets/bmbc/blockstates/bauxite_ore.json
 6960f0b39a0fe64291df5ba4cb057730fa52c941 assets/bmbc/blockstates/carnallite_ore.json
@@ -26,6 +26,7 @@ c352dc09b03203ad6bc6574743be1299d3db26a7 assets/bmbc/blockstates/silver_ore.json
 97ba17948de916f9ae8f45a1d512eaca64be9928 assets/bmbc/blockstates/stripped_maple_log.json
 7c936d0ffdc66d1ea45e406c1a3eb460f74bf94f assets/bmbc/blockstates/stripped_maple_wood.json
 a985ad5f686622431aedd1c64cddf061195b54a1 assets/bmbc/blockstates/three_d_printer.json
+66e2cdeabfcf902deaa4069ee9133ec9071b006d assets/bmbc/blockstates/uranite_ore.json
 d4c81c91bbac0fed8cfd26446f19fc8cee3e3719 assets/bmbc/blockstates/uranium_block.json
 8427fe9d61637ea62e3b1bc3dc62d6adf14b464b assets/bmbc/models/block/alloy_furnace.json
 923f1434cb98c5c6dfd4241e0632bff56a0aae56 assets/bmbc/models/block/alloy_furnace_on.json
@@ -61,6 +62,7 @@ be598ae88769ba45f3e8b19c16d616833c8f4dd3 assets/bmbc/models/block/stripped_maple
 292f60c0eae9545af0387a992d0467c0c0484402 assets/bmbc/models/block/stripped_maple_wood_horizontal.json
 e58e5d1051cc3508b5107a777ad94b6da1269918 assets/bmbc/models/block/three_d_printer.json
 5528931b60dd3ade44153311160cc1b7d833ca38 assets/bmbc/models/block/three_d_printer_on.json
+4c3f07be3e353dc95f78ff50e98bea1fa6af1be0 assets/bmbc/models/block/uranite_ore.json
 0443fdfba87a41f71a686d77c7927772722223eb assets/bmbc/models/block/uranium_block.json
 ebc40ef9f76242ebabc8d01bdb075d388b1a35cd assets/bmbc/models/item/alloy_furnace.json
 163aa43b825ecf54514516a3b1f2d95bd4c1f18f assets/bmbc/models/item/bauxite_ore.json
@@ -88,4 +90,5 @@ f365c2e3202f9fecae37ee44c3c4e2bc9d5ba616 assets/bmbc/models/item/silver_ore.json
 375763455abbd4f1e46f51931e9189c20e553beb assets/bmbc/models/item/stripped_maple_log.json
 3e9a7d9de792c250863872d9db9bae3fc7ba603f assets/bmbc/models/item/stripped_maple_wood.json
 8891fb8ef5b4be208b48f441cca24fb16c192b69 assets/bmbc/models/item/three_d_printer.json
+aab59c3aca3ebd76dc5ee93fe9fb31b941b2c1cc assets/bmbc/models/item/uranite_ore.json
 f59ee41d0df44a5db1f2ffeb748f7bffac6d14aa assets/bmbc/models/item/uranium_block.json

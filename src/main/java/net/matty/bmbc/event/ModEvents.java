@@ -2,8 +2,7 @@ package net.matty.bmbc.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.matty.bmbc.BetterMineBetterCraft;
-import net.matty.bmbc.item.ModFoodItems;
-import net.matty.bmbc.item.ModMachineComponents;
+import net.matty.bmbc.item.*;
 import net.matty.bmbc.thirst.PlayerThirst;
 import net.matty.bmbc.thirst.PlayerThirstProvider;
 import net.matty.bmbc.villager.ModVillagers;
@@ -13,6 +12,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
@@ -25,7 +25,10 @@ import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = BetterMineBetterCraft.MOD_ID)
@@ -84,6 +87,35 @@ public class ModEvents {
             }
         }).start();
     }*/
+
+    @SubscribeEvent
+    public static void doCompatStuff(FMLLoadCompleteEvent event) {
+        List<CompoundItem> compoundItems = new ArrayList<>();
+        for (Item item: ForgeRegistries.ITEMS.getValues()) {
+            if (item instanceof CompoundItem compoundItem) compoundItems.add(compoundItem);
+        }
+        for (Item item:ForgeRegistries.ITEMS.getValues()) {
+            if (item instanceof CompoundItem) continue;
+            boolean ImTheException = false;
+            if (ForgeRegistries.ITEMS.getKey(item).getPath() == "iron_ingot") {
+                CompoundItem.addCompatibleItem(item, new Compound(ElementItems.IRON));
+                ImTheException = true;
+            } else if (ForgeRegistries.ITEMS.getKey(item).getPath() == "copper_ingot") {
+                CompoundItem.addCompatibleItem(item, new Compound(ElementItems.COPPER));
+                ImTheException = true;
+            } else if (ForgeRegistries.ITEMS.getKey(item).getPath() == "gold_ingot") {
+                CompoundItem.addCompatibleItem(item, new Compound(ElementItems.GOLD));
+                ImTheException = true;
+            }
+            if (ImTheException) continue;
+            for (CompoundItem compoundItem:compoundItems) {
+                if (ForgeRegistries.ITEMS.getKey(item).getPath().replace("aluminum","aluminium") == ForgeRegistries.ITEMS.getKey(compoundItem).getPath()) {
+                    CompoundItem.addCompatibleItem(item, compoundItem.getCompound());
+                    break;
+                }
+            }
+        }
+    }
 
     @SubscribeEvent
     public static void onAttachCapabilitiesPlayer(AttachCapabilitiesEvent<Entity> event) {

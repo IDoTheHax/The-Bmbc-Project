@@ -28,6 +28,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MAGNESITE_PLACED_KEY = createKey("magnesite_ore_placed");
     public static final ResourceKey<PlacedFeature> PEGMATITE_PLACED_KEY = createKey("pegmatite_ore_placed");
     public static final ResourceKey<PlacedFeature> PHOSPHORITE_PLACED_KEY = createKey("phosphorite_ore_placed");
+    public static final ResourceKey<PlacedFeature> URANITE_PLACED_KEY = createKey("uranite_ore_placed");
 
     // Other
     public static final ResourceKey<PlacedFeature> SILICA_SAND_PLACED_KEY = createKey("silica_sand_placed");
@@ -70,6 +71,10 @@ public class ModPlacedFeatures {
 
         register(context, PHOSPHORITE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_PHOSPHORITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(18, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-54), VerticalAnchor.absolute(384))));
+
+        register(context, URANITE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_URANITE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(13, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-54), VerticalAnchor.absolute(384))));
 
         // Trees

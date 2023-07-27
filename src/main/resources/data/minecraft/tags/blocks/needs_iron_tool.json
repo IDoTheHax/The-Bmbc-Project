@@ -7,6 +7,8 @@
     "bmbc:dolomite_ore",
     "bmbc:evaporite_ore",
     "bmbc:magnesite_ore",
-    "bmbc:pegmatite_ore"
+    "bmbc:pegmatite_ore",
+    "bmbc:uranium_block",
+    "bmbc:uranite_ore"
   ]
 }

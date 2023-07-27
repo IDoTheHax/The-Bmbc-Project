@@ -72,6 +72,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.PHOSPHORITE_ORE.get(),
                 (block -> createOreDrop(ModBlocks.PHOSPHORITE_ORE.get(), ModMineralItems.PHOSPHORITE.get())));
 
+        add(ModBlocks.URANITE_ORE.get(),
+                (block -> createOreDrop(ModBlocks.URANITE_ORE.get(), ModMineralItems.MAGNESITE.get())));
+
         add(ModBlocks.SILVER_ORE.get(),
                 (block -> createOreDrop(ModBlocks.SILVER_ORE.get(), ModMineralItems.RAW_SILVER.get())));
         

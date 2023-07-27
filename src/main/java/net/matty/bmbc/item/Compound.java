@@ -1,12 +1,9 @@
-package gg.hipposgrumm.bmbc.items;
+package net.matty.bmbc.item;
 
-import gg.hipposgrumm.bmbc.element.Element;
-import gg.hipposgrumm.bmbc.element.ElementRegister;
-import net.minecraft.world.item.Item;
+import net.matty.bmbc.element.Element;
+import net.matty.bmbc.element.ElementRegister;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Compound {
     public static final Compound EMPTY = new Compound(ElementRegister.UNKNOWN);

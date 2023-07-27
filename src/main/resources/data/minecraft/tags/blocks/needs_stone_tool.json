@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "bmbc:carnallite_ore",
-    "bmbc:evaporite_ore",
-    "bmbc:uranium_block"
+    "bmbc:evaporite_ore"
   ]
 }
