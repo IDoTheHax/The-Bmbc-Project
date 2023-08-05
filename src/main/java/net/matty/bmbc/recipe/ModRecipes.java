@@ -15,7 +15,7 @@ public class ModRecipes {
             SERIALIZERS.register("alloy_smelting", () -> AlloySmeltingRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<RecipeSerializer<ThreeDPrinterRecipe>> THREE_D_PRINTING_SERIALIZER =
-            SERIALIZERS.register("3d_printing", ThreeDPrinterRecipe.Serializer::new);
+            SERIALIZERS.register("3d_printing", () -> ThreeDPrinterRecipe.Serializer.INSTANCE);
 
     public static final RegistryObject<RecipeSerializer<PressureVesselRecipe>> DIGESTION_SERIALIZER =
             SERIALIZERS.register("digestion", () -> PressureVesselRecipe.Serializer.INSTANCE);
