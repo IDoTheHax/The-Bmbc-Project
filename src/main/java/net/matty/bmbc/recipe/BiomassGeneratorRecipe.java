@@ -12,6 +12,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.common.crafting.conditions.ICondition;
 import org.jetbrains.annotations.Nullable;
 
 public class BiomassGeneratorRecipe implements Recipe<SimpleContainer> {
@@ -107,6 +108,40 @@ public class BiomassGeneratorRecipe implements Recipe<SimpleContainer> {
 
             ItemStack output = buf.readItem();
             return new BiomassGeneratorRecipe(id, output, inputs);
+        }
+
+        @Override
+        public BiomassGeneratorRecipe fromJson(ResourceLocation recipeLoc, JsonObject recipeJson, ICondition.IContext context) {
+            return RecipeSerializer.super.fromJson(recipeLoc, recipeJson, context);
+        }
+
+        public Serializer() {
+            super();
+        }
+
+        @Override
+        public int hashCode() {
+            return super.hashCode();
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            return super.equals(obj);
+        }
+
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+            return super.clone();
+        }
+
+        @Override
+        public String toString() {
+            return super.toString();
+        }
+
+        @Override
+        protected void finalize() throws Throwable {
+            super.finalize();
         }
 
         @Override

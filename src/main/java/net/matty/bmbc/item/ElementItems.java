@@ -13,7 +13,7 @@ public class ElementItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, BetterMineBetterCraft.MOD_ID);
 
-    // https://www.angelo.edu/faculty/kboudrea/periodic/physical_states.htm
+    // https://www.angelo.edu/faculty/kboudrea/periodic/physical_states.html
     public static final Element HYDROGEN = ElementRegister.registerElement(new Element.Data(new ResourceLocation(BetterMineBetterCraft.MOD_ID, "hydrogen"), "H", 1), -259.14, -252.87);
     public static final Element HELIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(BetterMineBetterCraft.MOD_ID, "helium"), "He", 2), -272.2, -268.934);
     public static final Element LITHIUM = ElementRegister.registerElement(new Element.Data(new ResourceLocation(BetterMineBetterCraft.MOD_ID, "lithium"), "Li", 3), 180.54, 1347);

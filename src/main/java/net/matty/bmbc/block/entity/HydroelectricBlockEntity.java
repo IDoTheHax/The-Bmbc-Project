@@ -127,6 +127,7 @@ public class HydroelectricBlockEntity extends BlockEntity implements MenuProvide
         };
     }
 
+
     @Override
     public Component getDisplayName() {
         return Component.literal("Hydroelectric Plant");

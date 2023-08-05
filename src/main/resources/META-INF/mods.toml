@@ -42,7 +42,8 @@ authors="IDoTheHax, Hipposcrum, TheChiefPotatoPeeler, Jack, Simeeow" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-The Bmbc mod is a mod that makes minecraft ultra realistic and then add a tonne of science and tech
+The Bmbc mod is a mod that makes minecraft ultra realistic and adds a tonne of science and tech.
+Based of mods like Create, Buildcraft, GregTech, Mekanism, ect
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.bmbc]] #optional
@@ -51,7 +52,7 @@ The Bmbc mod is a mod that makes minecraft ultra realistic and then add a tonne 
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[41,)" #mandatory
+    versionRange="[44,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
@@ -61,6 +62,12 @@ The Bmbc mod is a mod that makes minecraft ultra realistic and then add a tonne 
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="(1.19, 1.20)"
+    versionRange="[1.19.3,1.20)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.bmbc]]
+    modId="geckolib" #mandatory
+    mandatory=true #mandatory
+    versionRange="[4.2,)" #mandatory
     ordering="NONE"
     side="BOTH"

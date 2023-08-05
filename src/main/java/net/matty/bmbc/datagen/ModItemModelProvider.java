@@ -68,14 +68,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GARBAGE);
 
         // Ores, Minerals and Ingots
-        //simpleItem(ModMineralItems.ALUMINIUM);
-        //simpleItem(ModMineralItems.BAUXITE);
-        //simpleItem(ModMineralItems.BERYLLIUM);
-        //simpleItem(ModMineralItems.BORON);
-        //simpleItem(ModMineralItems.CALCIUM);
-        //simpleItem(ModMineralItems.CARNALLITE);
-        //simpleItem(ModMineralItems.CHROMIUM);
-        //simpleItem(ModMineralItems.CRUSHED_BAUXITE);
         //simpleItem(ModMineralItems.DOLOMITE);
         //simpleItem(ModMineralItems.EVAPORITE);
         //simpleItem(ModMineralItems.MAGNETIC_IRON_INGOT);
@@ -100,6 +92,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         //simpleItem(ModMineralItems.TITANIUM);
         //simpleItem(ModMineralItems.VANADIUM);
 
+        simpleItem(ModMineralItems.BAUXITE);
+        simpleItem(ModMineralItems.CRUSHED_BAUXITE);
+
         simpleItem(ModMineralItems.LITHIUM_INGOT);
         simpleItem(ModMineralItems.BERYLLIUM_INGOT);
         simpleItem(ModMineralItems.BORON_INGOT);
@@ -119,6 +114,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModMineralItems.VANADIUM_INGOT);
         simpleItem(ModMineralItems.CHROMIUM_CRYSTAL);
         simpleItem(ModMineralItems.MANGANESE_INGOT);
+        simpleItem(ModMineralItems.COBALT_INGOT);
+        simpleItem(ModMineralItems.NICKEL_INGOT);
+        simpleItem(ModMineralItems.ZINC_INGOT);
+        simpleItem(ModMineralItems.GALLIUM_INGOT);
 
         // Radiation
         simpleItem(ModItems.NBC_FABRIC);

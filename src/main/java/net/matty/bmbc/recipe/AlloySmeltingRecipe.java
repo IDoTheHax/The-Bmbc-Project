@@ -92,7 +92,7 @@ public class AlloySmeltingRecipe implements Recipe<SimpleContainer> {
     public static class Serializer implements RecipeSerializer<AlloySmeltingRecipe> {
         public static final Serializer INSTANCE = new Serializer();
         public static final ResourceLocation ID =
-                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "extrusion");
+                new ResourceLocation(BetterMineBetterCraft.MOD_ID, "alloy_smelting");
 
         @Override
         public AlloySmeltingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {

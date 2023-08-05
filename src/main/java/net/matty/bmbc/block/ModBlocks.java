@@ -36,6 +36,10 @@ public class ModBlocks {
             () -> new ExtruderBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(0.5f).requiresCorrectToolForDrops().noOcclusion()));
 
+    //public static final RegistryObject<Block> TEST_MULTI_BLOCK = registerBlock("test_multi_block",
+    //        TestMultiBlock::new
+    //);
+
     //public static final RegistryObject<Block> FLASK = registerBlock("flask",
     //        () -> new FlaskBlock(BlockBehaviour.Properties.of(Material.GLASS)
     //                .strength(2f).requiresCorrectToolForDrops().noOcclusion()));
@@ -118,8 +122,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAGNESITE_ORE = registerBlock("magnesite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6.6F, 3.25F).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
     public static final RegistryObject<Block> PEGMATITE_ORE = registerBlock("pegmatite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5.5F, 2.75F).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
     public static final RegistryObject<Block> PHOSPHORITE_ORE = registerBlock("phosphorite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6.6F, 3.25F).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
-    public static final RegistryObject<Block> SILVER_ORE = registerBlock("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6.0f).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
-    public static final RegistryObject<Block> URANITE_ORE = registerBlock("uranite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6.0f).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
+    public static final RegistryObject<Block> SILVER_ORE = registerBlock("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6.0f, 2.4f).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
+    public static final RegistryObject<Block> URANITE_ORE = registerBlock("uranite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6.0f, 2.4f).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
     public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6.0f).requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
 
 

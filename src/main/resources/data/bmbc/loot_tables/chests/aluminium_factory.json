@@ -76,7 +76,7 @@
         {
           "type": "minecraft:item",
           "weight": 40,
-          "name": "bmbc:bauxite",
+          "name": "bmbc:raw_bauxite",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -92,7 +92,7 @@
         {
           "type": "minecraft:item",
           "weight": 20,
-          "name": "bmbc:aluminium"
+          "name": "bmbc:aluminium_ingot"
         },
         {
           "type": "minecraft:item",
@@ -117,7 +117,7 @@
         {
           "type": "minecraft:item",
           "weight": 10,
-          "name": "minecraft:gunpowder",
+          "name": "bmbc:crushed_bauxite",
           "functions": [
             {
               "function": "minecraft:set_count",
