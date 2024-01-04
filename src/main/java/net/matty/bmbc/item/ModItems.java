@@ -2,9 +2,10 @@ package net.matty.bmbc.item;
 
 import net.matty.bmbc.BetterMineBetterCraft;
 import net.matty.bmbc.fluid.ModFluids;
-import net.matty.bmbc.item.custom.BatteryItem;
 import net.matty.bmbc.item.custom.C4Detonator;
 import net.matty.bmbc.item.custom.EightBallItem;
+import net.matty.bmbc.item.custom.MetalDetectorItem;
+import net.matty.bmbc.item.custom.NuclearBombDetonator;
 import net.matty.bmbc.item.custom.tooltips.BucketItemWithToolTip;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -23,49 +24,31 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, BetterMineBetterCraft.MOD_ID);
 
     // Special or Custom Items
-    public static final RegistryObject<Item> BATTERY = ITEMS.register("battery",
-            () -> new BatteryItem(new Item.Properties().stacksTo(1), 6000, 64, 32, 6000));
+    //public static final RegistryObject<Item> BATTERY = ITEMS.register("battery",
+    //        () -> new BatteryItem(new Item.Properties().stacksTo(1)))//, 6000, 64, 32, 6000)); // TODO:
 
     // C4_DETONATOR
-    public static final RegistryObject<Item> C4_DETONATOR = ITEMS.register("c4_detonator",
-            () -> new C4Detonator(new Item.Properties().durability(64)));
-
-    public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
-            () -> new EightBallItem(new Item.Properties()));
-
-    public static final RegistryObject<Item> CABLE_ROLL = ITEMS.register("cable_roll",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> RED_PRINTER_FILAMENT = ITEMS.register("red_printer_filament",
-            () -> new Item(new Item.Properties().stacksTo(1)));
-
-    public static final RegistryObject<Item> BLUE_PRINTER_FILAMENT = ITEMS.register("blue_printer_filament",
-            () -> new Item(new Item.Properties().stacksTo(1)));
-
-    public static final RegistryObject<Item> GREEN_PRINTER_FILAMENT = ITEMS.register("green_printer_filament",
-            () -> new Item(new Item.Properties().stacksTo(1)));
-
-    public static final RegistryObject<Item> BLUE_PLASTIC_SCREW = ITEMS.register("blue_plastic_screw",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> GREEN_PLASTIC_SCREW = ITEMS.register("green_plastic_screw",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> RED_PLASTIC_SCREW = ITEMS.register("red_plastic_screw",
-            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> C4_DETONATOR = ITEMS.register("c4_detonator", () -> new C4Detonator(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> NUCLEAR_BOMB_DETONATOR = ITEMS.register("nuclear_bomb_detonator", () -> new NuclearBombDetonator(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball", () -> new EightBallItem(new Item.Properties()));
+    public static final RegistryObject<Item> CABLE_ROLL = ITEMS.register("cable_roll", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RED_PRINTER_FILAMENT = ITEMS.register("red_printer_filament", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BLUE_PRINTER_FILAMENT = ITEMS.register("blue_printer_filament", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GREEN_PRINTER_FILAMENT = ITEMS.register("green_printer_filament", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BLUE_PLASTIC_SCREW = ITEMS.register("blue_plastic_screw", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GREEN_PLASTIC_SCREW = ITEMS.register("green_plastic_screw", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RED_PLASTIC_SCREW = ITEMS.register("red_plastic_screw", () -> new Item(new Item.Properties()));
 
     //public static final RegistryObject<Item> DUMMY_TEMPLATE = ITEMS.register("dummy_template",
     //        () -> new Item(new Item.Properties().stacksTo(1)));
 
     // Templates
-    public static final RegistryObject<Item> ROD_TEMPLATE = ITEMS.register("rod_template",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ROD_TEMPLATE = ITEMS.register("rod_template", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SCREW_TEMPLATE = ITEMS.register("screw_template", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WIRE_TEMPLATE = ITEMS.register("wire_template", () -> new Item(new Item.Properties().stacksTo(1)));
 
-    public static final RegistryObject<Item> SCREW_TEMPLATE = ITEMS.register("screw_template",
-            () -> new Item(new Item.Properties().stacksTo(1)));
 
-    public static final RegistryObject<Item> WIRE_TEMPLATE = ITEMS.register("wire_template",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", () -> new MetalDetectorItem(new Item.Properties().stacksTo(1)));
 
 
     // Buckets

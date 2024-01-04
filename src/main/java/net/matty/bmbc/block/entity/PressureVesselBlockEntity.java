@@ -2,7 +2,6 @@ package net.matty.bmbc.block.entity;
 
 import net.matty.bmbc.block.custom.PressureVesselBlock;
 import net.matty.bmbc.fluid.ModFluids;
-import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.item.ModMineralItems;
 import net.matty.bmbc.networking.ModNetworkingPackets;
 import net.matty.bmbc.networking.packet.EnergySyncS2CPacket;
@@ -22,6 +21,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -297,7 +297,7 @@ public class PressureVesselBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private static boolean hasPowerStorageItemInFirstSlot(PressureVesselBlockEntity pEntity) {
-        return pEntity.itemHandler.getStackInSlot(0).getItem() == ModItems.BATTERY.get();
+        return pEntity.itemHandler.getStackInSlot(0).getItem() == Items.REDSTONE; // TODO: Change to battery once its fixed
     }
 
     private void resetProgress() {

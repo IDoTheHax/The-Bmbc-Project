@@ -52,10 +52,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ThreeDPrinterBlockEntity::new,
                             ModBlocks.THREE_D_PRINTER.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<RechargerBlockEntity>> RECHARGER =
-            BLOCK_ENTITIES.register("recharger", () ->
-                    BlockEntityType.Builder.of(RechargerBlockEntity::new,
-                            ModBlocks.RECHARGER.get()).build(null));
+    //public static final RegistryObject<BlockEntityType<RechargerBlockEntity>> RECHARGER = TODO: Change to battery once its fixed
+    //        BLOCK_ENTITIES.register("recharger", () ->
+    //                BlockEntityType.Builder.of(RechargerBlockEntity::new,
+    //                        ModBlocks.RECHARGER.get()).build(null));
 
 
 

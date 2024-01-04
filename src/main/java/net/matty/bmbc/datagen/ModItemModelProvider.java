@@ -60,7 +60,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModFoodItems.COFFEE_CHERRY);
 
         // Misc
-        simpleItem(ModItems.BATTERY);
+        //simpleItem(ModItems.BATTERY); TODO: Change to battery once its fixed
         simpleItem(ModItems.C4_DETONATOR);
         simpleItem(ModItems.EIGHT_BALL);
         simpleItem(ModItems.CABLE_ROLL);

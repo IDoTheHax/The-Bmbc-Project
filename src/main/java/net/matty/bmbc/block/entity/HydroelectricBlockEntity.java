@@ -2,7 +2,6 @@ package net.matty.bmbc.block.entity;
 
 import net.matty.bmbc.block.custom.PressureVesselBlock;
 import net.matty.bmbc.fluid.ModFluids;
-import net.matty.bmbc.item.ModItems;
 import net.matty.bmbc.networking.ModNetworkingPackets;
 import net.matty.bmbc.networking.packet.EnergySyncS2CPacket;
 import net.matty.bmbc.networking.packet.FluidSyncS2CPacket;
@@ -49,7 +48,7 @@ public class HydroelectricBlockEntity extends BlockEntity implements MenuProvide
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0 -> stack.getItem() == Items.WATER_BUCKET;
-                case 1 -> stack.getItem() == ModItems.BATTERY.get();
+                case 1 -> stack.getItem() == Items.REDSTONE; // TODO: Change to battery once its fixed
                 default -> super.isItemValid(slot, stack);
             };
         }

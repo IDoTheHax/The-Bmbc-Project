@@ -28,9 +28,14 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BetterMineBetterCraft.MOD_ID);
 
+    // Bombs
     public static final RegistryObject<Block> C4 = registerBlock("c4",
             () -> new C4Block(BlockBehaviour.Properties.of(Material.EXPLOSIVE)
                     .strength(2.5f).instabreak().sound(SoundType.GRASS)));
+
+    public static final RegistryObject<Block> NUCLEAR_BOMB = registerBlock("nuclear_bomb",
+            () -> new NuclearBombBlock(BlockBehaviour.Properties.of(Material.EXPLOSIVE)
+                    .strength(2.5f).instabreak().sound(SoundType.ANCIENT_DEBRIS)));
 
     public static final RegistryObject<Block> EXTRUDER = registerBlock("extruder",
             () -> new ExtruderBlock(BlockBehaviour.Properties.of(Material.METAL)
@@ -92,7 +97,7 @@ public class ModBlocks {
                     .strength(0.5F).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> RECHARGER = registerBlock("recharger",
-            () -> new RechargerBlock(BlockBehaviour.Properties.of(Material.METAL)
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL) // TODO: Change Block class to Recharger block after its fixed
                     .requiresCorrectToolForDrops().strength(0.5f).noOcclusion()));
 
 

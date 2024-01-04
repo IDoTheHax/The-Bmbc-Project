@@ -17,6 +17,6 @@ public class ModDefaultCreativeModeTab {
     @SubscribeEvent
     public static void registerModDefaultCompoundsCreativeModeTab(CreativeModeTabEvent.Register event) {
         BMBC = event.registerCreativeModeTab(new ResourceLocation(BetterMineBetterCraft.MOD_ID, "bmbc"),
-                builder -> builder.icon(() -> new ItemStack(ModItems.BATTERY.get())).title(Component.literal("This is Bmbc!")));
+                builder -> builder.icon(() -> new ItemStack(ModItems.RED_PRINTER_FILAMENT.get())).title(Component.literal("This is Bmbc!")));
     }
 }

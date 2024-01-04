@@ -221,7 +221,7 @@ public class BetterMineBetterCraft {
             event.accept(ModChemicalCompounds.SILICA);
         }
         if (event.getTab() == ModDefaultCreativeModeTab.BMBC) {
-            event.accept(ModItems.BATTERY);
+            //event.accept(ModItems.BATTERY); TODO: Change to battery once its fixed
             event.accept(ModItems.BLUE_PRINTER_FILAMENT);
             event.accept(ModBlocks.C4);
             event.accept(ModItems.C4_DETONATOR);
