@@ -42,6 +42,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(MaceratorBlockEntity::new,
                             ModBlocks.MACERATOR.get()).build(null));
 
+    //public static final RegistryObject<BlockEntityType<NuclearBombBlockEntity>> NUCLEAR_BOMB =
+    //        BLOCK_ENTITIES.register("nuclear_bomb", () ->
+    //                BlockEntityType.Builder.of(NuclearBombBlockEntity::new,
+    //                        ModBlocks.NUCLEAR_BOMB.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<PressureVesselBlockEntity>> PRESSURE_VESSEL =
             BLOCK_ENTITIES.register("pressure_vessel", () ->
                     BlockEntityType.Builder.of(PressureVesselBlockEntity::new,

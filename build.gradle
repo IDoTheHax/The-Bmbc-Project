@@ -182,6 +182,9 @@ dependencies {
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${mc_version}:${geckolib_version}")
     //runtimeOnly fg.deobf("curse.maven:mekanism-268560:3922056")
 
+    // Apply Mixin AP
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
@@ -195,6 +198,15 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
     /* other minecraft dependencies are here */
+}
+
+mixin {
+    // MixinGradle Settings
+    add sourceSets.main, 'mixins.bmbc.refmap.json'
+    config 'mixins.bmbc.json'
+
+    debug.verbose = true
+    debug.export = true
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

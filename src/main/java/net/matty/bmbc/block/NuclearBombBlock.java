@@ -103,11 +103,6 @@ public class NuclearBombBlock extends Block {
             public @NotNull Optional<Float> getBlockExplosionResistance(@NotNull Explosion explosion, @NotNull BlockGetter getter, BlockPos pPos, @NotNull BlockState state, @NotNull FluidState fluidState) {
                 return pPos.equals(pPos) && flag1 ? Optional.of(Blocks.WATER.getExplosionResistance()) : super.getBlockExplosionResistance(explosion, getter, pPos, state, fluidState);
             }
-
-            public boolean shouldBlockExplode(Explosion explosion, BlockGetter getter, BlockPos pPos, BlockState state, float power) {
-                return super.shouldBlockExplode(explosion, getter, pPos, state, 1000);
-            }
-
         };
 
         if (!pLevel.isClientSide) {
@@ -115,7 +110,8 @@ public class NuclearBombBlock extends Block {
             if (d0 > 15.0D) { // Check blast radius of bomb
                 d0 = 250.0D;
             }
-            pLevel.explode(pEntity, pLevel.damageSources().generic(), explosiondamagecalculator, pPos.getX(), pPos.getY(), pPos.getZ(), 150, true, Level.ExplosionInteraction.TNT, true); // fix the nuke from making square crators
+            //pLevel.explode(pEntity, pLevel.damageSources().generic(), explosiondamagecalculator, pPos.getX(), pPos.getY(), pPos.getZ(), 150, true, Level.ExplosionInteraction.TNT, true); // fix the nuke from making square crators
+            pLevel.explode(pEntity, pPos.getX(), pPos.getY(), pPos.getZ(), 150, Level.ExplosionInteraction.TNT);
         }
     }
 

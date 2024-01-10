@@ -26,7 +26,6 @@ public class NuclearBombDetonator extends Item {
         super(properties);
     }
 
-    @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
             // Set a Cooldown

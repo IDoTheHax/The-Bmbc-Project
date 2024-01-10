@@ -29,6 +29,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<MaceratorMenu>> MACERATOR_MENU =
             registerMenuType(MaceratorMenu::new, "macerator_menu");
 
+    //public static final RegistryObject<MenuType<NuclearBombMenu>> NUCLEAR_BOMB_MENU =
+    //        registerMenuType(NuclearBombMenu::new, "nuclear_bomb_menu");
+
     public static final RegistryObject<MenuType<PressureVesselMenu>> PRESSURE_VESSEL_MENU =
             registerMenuType(PressureVesselMenu::new, "pressure_vessel_menu");
 
